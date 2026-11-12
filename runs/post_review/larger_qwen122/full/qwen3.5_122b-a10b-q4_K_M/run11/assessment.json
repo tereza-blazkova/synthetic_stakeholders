@@ -1,0 +1,50 @@
+{
+  "A1": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model only with strict safeguards. While the thresholds for data usage and explainability provide necessary boundaries, the allowance to use nationality and first-gen status 'only if it improves fairness' remains risky without a guaranteed human-in-the-loop review before any contact. Crucially, the system must integrate an 'Active Context Profile' allowing students to declare barriers (e.g., disability, cultural adjustment) upfront so algorithms don't misinterpret these as risk signals. Without this mechanism and mandatory advisor validation for static data flags, we risk automating bias under the guise of fairness."
+  },
+  "A2": {
+    "choice": "support_with_reservations",
+    "justification": "I support the core principles—banning demographic data for prediction, demanding high explainability, and prioritizing recall—but have serious reservations about implementation without critical safeguards missing here. The specification fails to mandate 'Active Context Profiles' or a mandatory human review gate before any contact when static history (like prior dropouts) is involved. Without these, the model risks becoming a tool that pathologizes neurodivergence or cultural adjustment as failure, reinforcing systemic bias under the guise of data. Furthermore, it lacks an explicit requirement to use flagged patterns for institutional audit (fixing inaccessible courses) rather than just student remediation. Proceeding without these human-centered checks would be dangerous."
+  },
+  "A3": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification only if strict safeguards are added: specifically, that flags based on static data (like nationality or prior dropout) must undergo mandatory human review before any outreach. The survey's 'never' stance on using disability data for identification ignores the need to correct algorithmic bias against neurodivergent students. Furthermore, without a built-in mechanism for students to declare their context (e.g., language barriers), high accuracy thresholds may still produce harmful false positives that feel like surveillance rather than support."
+  },
+  "S1": {
+    "choice": "object_no_block",
+    "justification": "I cannot block this as it reflects the group's consensus, but I have strong reservations. The model still permits using sensitive data like nationality and first-gen status if it improves fairness, which feels like a dangerous precedent for international or non-traditional students. Furthermore, allowing Absalon activity tracking (even with high thresholds) risks stigmatizing diverse learning styles as 'disengagement.' As someone who dropped out previously, I fear that without strict human-in-the-loop review and an 'active context' mechanism, this system will prioritize catching patterns over understanding people, potentially driving vulnerable students away rather than supporting them."
+  },
+  "S2": {
+    "choice": "support_with_reservations",
+    "justification": "I support the strict bans on sensitive data for identification, but I have strong reservations about allowing nationality and first-gen status 'if it improves fairness.' Even with this condition, collecting this data creates a risk of surveillance and misuse, especially for international students like me. Furthermore, the model still focuses on identifying individual students based on behavioral patterns (Absalon) which often reflect cultural adjustment rather than failure. Before implementation, I require a guarantee that any flag triggered by demographic or background data must undergo mandatory human review before any contact occurs, ensuring the system fixes institutional barriers rather than stigmatizing diverse learners."
+  },
+  "S3": {
+    "choice": "object_no_block",
+    "justification": "While I appreciate the ban on using disability data for identification, my core objection remains: even with these safeguards, the model's reliance on behavioral tracking (Absalon) and static background data (Admissions/Enrolment) risks misinterpreting diverse learning styles as failure. This creates a surveillance dynamic that may drive vulnerable students away rather than supporting them. I would not block implementation if mandatory human review is strictly enforced before any contact, and if the 'Active Context Profile' allowing students to explain their situation is integrated. Without these critical safeguards to prevent algorithmic bias from becoming a self-fulfilling prophecy, the system feels too risky for student well-being."
+  },
+  "S4": {
+    "choice": "object_no_block",
+    "justification": "I have strong reservations about the provisional model, particularly its reliance on Absalon activity and admissions data to trigger flags. As a neurodivergent student with prior dropout experience, I fear these metrics will pathologize my natural learning style as 'risk,' reinforcing bias rather than offering support. The requirement for a 10-student improvement to use activity data feels low given the high risk of misinterpreting disability-related patterns. However, recognizing that the group's median reflects a compromise between efficiency and safety, I would not block implementation provided strict human-in-the-loop reviews are mandatory before any contact occurs. Without this safeguard, I cannot trust the model to distinguish between struggle and difference."
+  },
+  "S5": {
+    "choice": "support_with_reservations",
+    "justification": "I support the high explainability and bans on most sensitive data, which protects against bias. However, I strongly object to using nationality or first-generation status even for fairness without a strict human-in-the-loop review. For international students, algorithms often misinterpret cultural adjustment (like different login patterns) as risk regardless of the metric used. The current spec lacks a mandatory 'Contextual Profile' where students can declare barriers upfront to prevent false positives. Without this safeguard and an automatic audit trigger when specific groups are over-flagged, the model risks becoming a tool for surveillance rather than support."
+  },
+  "S6": {
+    "choice": "support_with_reservations",
+    "justification": "I support the strict bans on most sensitive data and the requirement for high explainability, which align with my need to trust the system. However, I have significant reservations about using nationality or first-gen status even just for fairness; this risks hard-coding stereotypes that label us as 'at-risk' from the start. Furthermore, the specification lacks the crucial safeguards we discussed: an active student profile where I can contextually flag my situation (e.g., 'international adjustment') before contact occurs, and a mandatory human review gate for any flag triggered by static background data. Without these agency-preserving mechanisms, the model feels like surveillance rather than support."
+  },
+  "S7": {
+    "choice": "support_with_reservations",
+    "justification": "I support the strict bans on using sensitive data for identification and the requirement for high explainability. However, I have strong reservations about the 'Disability-related information' row being marked 'never acceptable'. As a student with dyslexia, excluding my disability status prevents the model from correctly interpreting my irregular patterns (e.g., late submissions due to processing time) as legitimate struggles rather than risk factors. Without this context, the model will systematically flag disabled students falsely or miss them entirely. I strongly urge adding a 'Context Profile' mechanism where students can voluntarily declare disability status to calibrate interpretation, ensuring fairness and accuracy are not compromised by a blanket ban on necessary context."
+  },
+  "S8": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model only if strict human review gates are added before any outreach, especially for flags driven by static history like past dropouts or nationality. The current spec allows Absalon data (10+ improvement) which I fear misinterprets non-standard learning patterns as risk without context. Additionally, while sensitive data is restricted, using it solely for fairness still risks profiling; an 'Active Context Profile' where students voluntarily declare their situation is essential to prevent the system from pathologizing diversity. Without these safeguards, the model risks becoming a surveillance tool that punishes non-traditional students rather than supporting them."
+  },
+  "S9": {
+    "choice": "object_no_block",
+    "justification": "I have strong reservations because this specification still relies on behavioral surveillance (Absalon data) and proactive flagging, which I fear will stigmatize international students and those with mental health conditions by interpreting diverse learning patterns as 'risk'. The requirement for a large improvement threshold (10 students) to use activity data does not fully mitigate the invasion of privacy or the anxiety of being watched. However, given the group's consensus on banning sensitive data for identification and prioritizing equal recall, I would accept this path only if implemented with strict human-in-the-loop review before any contact and an accessible appeals process to contextualize flags."
+  }
+}

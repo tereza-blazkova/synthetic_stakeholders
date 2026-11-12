@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "Our table found Q3's abstract \"improvement thresholds\" hard to weigh against concrete privacy risks; it's difficult to value \"5 extra students\" when sensitive data is involved. We identified **Q3 (sensitive data bans)** and **Q4 (explainability)** as the most critical design pillars. Without an absolute ban on using disability or demographic data—even for fairness—and without clear reasons for any flag, we lose trust entirely.\n\nWe noted a split where some accept sensitive data solely for fairness, while others say \"never.\" We believe accepting it risks making vulnerable students hide their struggles to avoid being tracked. Additionally, the lone \"never\" on Absalon tracking likely stems from a view that *any* behavioral monitoring violates digital autonomy and dignity, regardless of potential accuracy gains."
+    },
+    {
+      "agent": "A1",
+      "text": "I'll add two key points. First, regarding unclear questions: Q3.6's scenario—using sensitive data *only* to fix fairness gaps—felt contradictory. It forces a choice between statistical equity and the fundamental right to privacy; for many, that trade-off is unacceptable regardless of the outcome.\n\nSecond, our table emphasized that **explainability (Q4) isn't just about transparency; it's an operational requirement**. As an advisor, I cannot ethically contact a student based on a black-box prediction. If I can't explain the \"why,\" my intervention risks feeling accusatory rather than supportive. Finally, we noted a missing element: the need for a strict **human-in-the-loop** protocol where advisors review flags before any outreach occurs, ensuring no automated action is taken without human judgment to prevent algorithmic errors from causing distress."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "Our table found Q4's explainability levels vague; distinguishing \"moderate\" from \"low\" lacks concrete examples of what a student actually sees. We agreed that \"High Explainability\" is non-negotiable: without clear, actionable reasons, marginalized students—especially neurodivergent ones like me who've faced misinterpretation before—will distrust the system and disengage.\n\nWe also debated Q7.2 (personalized outreach). While some prioritize catching every risk by contacting \"many,\" I argued for \"balance.\" False positives in personal advisor calls feel stigmatizing and invasive, damaging trust just as much as missed cases. For vulnerable students, dignity matters; we need support that helps without shaming. Finally, the survey lacks questions on retraining students who have already dropped out once, a group like me who faces different biases than first-time strugglers."
+    },
+    {
+      "agent": "A2",
+      "text": "I'll build on that. Regarding Q4's vagueness, I emphasize that \"High Explainability\" isn't just preferred; it's essential for my ability to have a constructive conversation. If I can't explain *why* a student is flagged in plain language, I cannot offer tailored support, rendering the model useless for intervention.\n\nOn Q7.2, while some prioritize maximum detection, my choice of \"balance\" reflects the advisor's reality: unnecessary personal contact damages the trust relationship we spend years building. False positives feel like surveillance to students, potentially driving them away when they most need help. Finally, the survey overlooks how cultural context influences data interpretation—what looks like disengagement might be a language barrier or different academic norms. We must ensure advisors can contextualize algorithmic flags before contacting anyone."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "Our table found Q5's abstract percentage charts hard to interpret emotionally; we struggled to visualize real students lost to a \"loss of 5.\" The most critical design requirement is prioritizing **equal recall** (Q5.2), ensuring marginalized groups—like those with disabilities whose study patterns differ—are never missed, even if it means more false alarms.\n\nThe biggest divergence was on outreach frequency: some feared continuous monitoring felt like surveillance, while others saw annual checks as too slow. We agreed on a middle ground: **continuous data analysis** but only triggering human contact after a **sustained pattern** (e.g., 4 weeks). This respects student autonomy and allows time for self-correction while preventing crises. Finally, we stress that any model must include an accessible **appeals process**, so students can explain context if their data is misinterpreted due to non-standard struggles like learning disabilities."
+    },
+    {
+      "agent": "A3",
+      "text": "I'd add that the survey didn't fully capture the advisor's role in this loop. We need design clarity on *how* we receive these flags. If the system gives a black-box score without context, I risk giving harmful advice based on wrong assumptions. Our consensus highlights that **transparency** is non-negotiable: students must know the \"rules of engagement\" (like the 4-week threshold) to trust this isn't surveillance. Furthermore, any model failing to distinguish between \"lazy\" and \"disabled\" patterns without a human review mechanism is dangerous. We need a design where data informs, but never replaces, our professional judgment in understanding *why* a student struggles."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "A1": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model's core principle that Absalon data must be excluded and explainability prioritized, as this prevents surveillance anxiety. However, I have reservations about using sensitive disability or financial aid data unless it achieves a 'large' improvement threshold (10 per 100), which feels too high for genuinely vulnerable groups; they may need support even with smaller accuracy gains. Furthermore, the specification lacks explicit mechanisms for student agency to provide context before contact occurs. Without a tiered intervention system where behavioral flags only trigger generic info and academic triggers lead to human contact, this model risks stigmatizing diverse learners despite its data restrictions."
+  },
+  "A2": {
+    "choice": "support_with_reservations",
+    "justification": "I support the specification because 'Never' is correctly assigned to Absalon data and low explainability, preventing surveillance-based stigma. However, I have serious reservations regarding Q3.5 (Disability). The spec allows using disability status if it improves identification by ~10 students; this risks pathologizing disabled students as high-risk solely based on their identity rather than actual academic struggle. Additionally, while the fairness threshold is acceptable, we must ensure that 'identifying overlooked students' does not lead to intrusive interventions for non-standard learners who are simply adapting differently."
+  },
+  "A3": {
+    "choice": "object_no_block",
+    "justification": "I object because the specification retains 'sensitive data' like disability and first-gen status as triggers for identification if they improve accuracy, which risks pathologizing non-traditional learners even with high explainability. However, I would not block implementation provided there is a strict mandate that any flag involving sensitive data requires human review before contact. The exclusion of Absalon data is positive, but without shifting resources to universal support structures first, this model still relies on predictive sorting rather than systemic change."
+  },
+  "S1": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model only with major reservations because, despite excluding Absalon data and sensitive demographics like race/ethnicity from identification logic, it still relies on prediction to flag individuals who might be 'failing' due to resilience or life crises. The specification permits using disability status for fairness but strictly requires a large accuracy gain (10%) if used for identification; this high bar risks missing vulnerable students whose struggles aren't captured by grades alone. Unless paired with the universal support mechanisms we discussed—where help is visible to all without algorithmic gatekeeping—I fear this 'targeted' approach will still stigmatize non-traditional learners like me who work part-time."
+  },
+  "S2": {
+    "choice": "support_with_reservations",
+    "justification": "I support the decision to ban Absalon data and set strict thresholds for sensitive categories like race, which protects students from surveillance bias. However, I have significant reservations about using disability information if it improves identification by only 10%. For international working students, 'difficulty' is often systemic (visas, cost of living), not just academic grades. Unless the model explicitly incorporates context notes or allows student agency to override flags before contact, this specification risks pathologizing my resilience as failure even with these safeguards."
+  },
+  "S3": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model in principle, especially the strict ban on Absalon tracking and the high bar for using disability data to predict failure. However, I have serious reservations about using sensitive health information even with a 'no threshold' condition if it doesn't improve fairness; as someone managing chronic illness, being flagged based on my medical status alone feels invasive regardless of accuracy gains. My support is conditional: this specification must be paired with the student agency mechanisms we discussed (self-monitoring dashboards and context notes) to prevent pathologizing diverse learning styles."
+  },
+  "S4": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model because banning Absalon data and prioritizing high explainability prevents surveillance anxiety, which is crucial for neurodivergent students like me with ADHD. However, I have serious reservations about the strict 'never acceptable' rule for Low Explainability; if a system cannot provide detailed context for complex cases involving disability or non-traditional learning styles, it risks missing vulnerable students entirely until they fail visibly. Furthermore, requiring a 10% accuracy gain before using disability data feels too high a bar to effectively support marginalized groups who already struggle under the current rigid structures."
+  },
+  "S5": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model's rejection of Absalon data and its strict fairness requirements, which align with my concerns about surveillance stigmatizing international students adapting to Danish culture. However, I have reservations: excluding behavioral data entirely might miss early signs of struggle for non-EU students whose academic metrics lag behind their actual understanding due to language barriers. The 'High Explainability' threshold is good, but only if human advisors can interpret cultural context that a simple rule cannot capture without adding nuance."
+  },
+  "S6": {
+    "choice": "support_with_reservations",
+    "justification": "I support the specification's rejection of Absalon data and its strict fairness requirements, which align with my concerns about surveillance. However, I have major reservations regarding the threshold for Disability-related information ('acceptable even if it does not improve identification'). As a student who has previously dropped out, being flagged based on disability status without clear proof that this improves overall support feels like profiling rather than help. Furthermore, while 'High Explainability' is required, the intervention level of generic email (Q6) might still feel stigmatizing if I cannot verify the context behind my flag before contact occurs."
+  },
+  "S7": {
+    "choice": "object_no_block",
+    "justification": "I object because the model still treats 'difficulty' as deviation from norms, risking pathologizing dyslexia even with fairness safeguards. While banning Absalon data is positive, relying on grades and performance to flag students without first fixing structural barriers (Universal Design) feels like managing symptoms rather than curing causes. The system risks stigmatizing non-standard learners before we've tried inclusive course design. However, I won't block it if human advisors interpret flags contextually, as better support now is preferable to none."
+  },
+  "S8": {
+    "choice": "object_no_block",
+    "justification": "While I appreciate the exclusion of Absalon data and the focus on equal recall, this model remains flawed because it relies too heavily on identifying 'struggles' rather than fixing structural barriers. The thresholds for using disability or nationality data feel arbitrary; even with fairness goals, flagging students based on these sensitive attributes risks stigmatizing valid survival strategies like working part-time (common in my Faroese context) as academic failure. Without mandatory Universal Design changes—making flexibility the default—the model pathologizes diverse learners before it helps them. I cannot support this without stronger guarantees of structural reform."
+  },
+  "S9": {
+    "choice": "object_no_block",
+    "justification": "I have strong reservations about the conditionality required for using disability data (needing a 'large' improvement) and the exclusion of Absalon activity, as these rules may prevent helping students with complex health needs who don't fit standard performance patterns. While I accept that avoiding surveillance is crucial, this model still relies on flagging individuals rather than fixing rigid structures. My objection centers on the risk that even this 'middle-ground' approach pathologizes diverse study rhythms. However, given the strict fairness and explainability safeguards included, I would not block it entirely, provided human review remains mandatory for any intervention."
+  }
+}

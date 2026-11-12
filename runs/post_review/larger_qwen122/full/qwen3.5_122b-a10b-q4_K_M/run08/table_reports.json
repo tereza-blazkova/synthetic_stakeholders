@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "Our table found the \"improvement\" percentages abstract and hard to weigh against privacy risks. The binary choice for sensitive data was also unclear; it forced a false dilemma between accuracy and fairness when the real distinction is *purpose*.\n\nWe identified Q3.4 (Absalon data) and Q3.6 (sensitive data) as critical. Regarding Absalon, tracking clicks feels like surveillance unless limited strictly to sudden drops in activity, not low volume. For sensitive data, we agree it must never be used for prediction due to stereotyping risks, but *must* be available solely to audit and correct fairness gaps, ensuring we don't miss students with non-traditional paths like second-chance learners. The survey needs to explicitly separate these two uses: forbid prediction with sensitive traits, mandate their use only for equity calibration."
+    },
+    {
+      "agent": "A1",
+      "text": "Building on S1's points, I'd add that from an advisor's perspective, Q3.4's \"sudden drops\" caveat is vital but needs strict operational definitions to avoid false alarms. More importantly, our discussion revealed a missing design principle: the human-in-the-loop override. The survey focuses on model parameters, but as advisors, we need assurance that we can ignore or contextualize algorithmic flags based on our professional judgment of individual student circumstances. No data point should be definitive without human verification. This safeguard is essential to maintain trust and ensure that the system supports rather than dictates our outreach strategies."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "\"Our table found the distinction between 'Moderate' and 'Low' explainability unclear without concrete examples of what students would actually see. We agreed Q4 is the absolute priority: without actionable, human-readable reasons for a flag—especially for neurodivergent or international students—the system feels like surveillance rather than support.\n\nAnswers diverged on intervention selectivity (Q7.2). Some chose 'slightly_many' to ensure no at-risk student slips through, fearing silence is deadlier than a false alarm. Others preferred 'fewer' or 'balance', worried that invasive personalized errors could stigmatize and drive students away. Finally, we note the survey lacks safeguards for how data interprets neurodivergent behaviors; if ADHD patterns are misread as disinterest, even accurate models harm trust."
+    },
+    {
+      "agent": "A2",
+      "text": "I'd like to add that beyond the survey's scope, we must explicitly address how advisors are trained to interpret these outputs. If the model provides a probability score without context, even high explainability isn't enough; we need standardized scripts to convert data into supportive conversations. Furthermore, while Q4 is priority, the system must include a mandatory \"human review\" step before any personalized outreach. No algorithm should automatically send a sensitive message about a student's potential struggles without an advisor first verifying the logic against their actual academic record. This safety valve balances our drive to catch at-risk students with the ethical duty to protect them from false, stigmatizing accusations."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "Our table found Q5's abstract \"loss\" percentages difficult to grasp without concrete human context. We unanimously agreed that **equal recall** (Q5.2) is the non-negotiable design pillar; missing vulnerable students due to bias is a catastrophic failure of care that outweighs any false positives. However, we debated the trade-off in Q5.1: some accepted high overall losses to fix gaps, while others argued this weakens the system for everyone.\n\nRegarding interventions (Q6/7), consensus was that personalized outreach requires much higher precision than generic emails. A false positive here feels like a stigmatizing judgment on one's personal struggles or disability, potentially pushing students away rather than helping. We also felt the survey missed the need for explicit student consent and \"opt-out\" mechanisms specifically regarding sensitive data used in these predictive models."
+    },
+    {
+      "agent": "A3",
+      "text": "Building on S7's points, I'd emphasize that while we agreed on equal recall, my main hesitation was interpreting Q5.1: losing \"students\" feels abstract until you realize it means losing *future* students because the baseline accuracy is too low to be useful at all. We must fix data bias to raise the floor for everyone, not just accept a broken system as fair.\n\nCrucially, I want to add that we missed discussing **human-in-the-loop safeguards**. The model should never trigger automatic outreach without an advisor's review first. A human needs to contextualize the flag—distinguishing between genuine struggle and life events like grief or temporary illness—to prevent false positives from causing real harm. Technology can suggest, but only humans can truly understand context and protect dignity."
+    }
+  ]
+}

@@ -1,0 +1,1064 @@
+[
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "private:A1",
+    "agent": "A1",
+    "text": "**Reflections on Q3 (Data & Privacy):**  \nQ3.5 and Q3.6 were slightly confusing regarding whether \"fairness\" implies correcting bias *after* the fact or designing for it upfront. However, distinguishing between administrative data (admissions) and behavioral tracking (Absalon clicks) was crucial. The most important design question here is defining a strict boundary on Absalon usage; without clear limits, this feels like surveillance rather than support.\n\n**Reflections on Q6 & Q7 (Intervention):**  \nQ6.1's distinction between \"generic\" and \"personalized\" emails needed sharper examples to avoid overlap with the \"meeting invitation.\" The critical design challenge is capacity: if we choose \"continuous\" outreach or contact many students, do we have enough advisors? A model is useless if it generates flags but no one can act on them. Prioritizing *when* and *how gently* we intervene determines student trust more than raw accuracy does."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "private:S1",
+    "agent": "S1",
+    "text": "Q3 was mostly clear, though Q3.5's distinction between \"improving identification\" and Q3.6's \"fairness improvement\" felt nuanced to apply without concrete examples of *which* groups benefit. I also struggled with the hypothetical accuracy numbers in Absalon data (Q3.4); it’s hard to judge if a 10% gain justifies behavioral surveillance when my own past struggles weren't about digital activity but personal circumstances.\n\nMost critical for design are Q3 regarding privacy boundaries—I need clear limits on \"digital footprint\" tracking—and Q6 on intervention style. As someone who dropped out once, I fear stigma more than missing a credit alert. The model must prioritize low-stigma interventions (like anonymous resource lists) over invasive profiling to ensure vulnerable students don't feel surveilled but supported."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "private:S2",
+    "agent": "S2",
+    "text": "Q3 was mostly clear, but Q3.5 asked about including sensitive data like disability *for identification accuracy*, which felt ethically confusing to me as an international student who values privacy over granular tracking. I found it hard to justify using such intimate details just to improve a \"score,\" even if fairness is the goal later. For design, Q6 and Q7 are critical: how we intervene matters more than how accurately we predict trouble. If the outreach feels invasive or punitive (like automated cold calls), students will disengage regardless of model accuracy. The system must prioritize voluntary, human-centric support over surveillance to maintain trust within our diverse student community."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "private:S3",
+    "agent": "S3",
+    "text": "For Q3, Question 3.5 regarding sensitive data was slightly confusing because it asked about \"improvement\" thresholds for including protected attributes like disability or gender in the model logic itself. As a student with a chronic health condition, I strongly believe these specific factors shouldn't be used to *predict* risk at all; they should only inform fairness adjustments if absolutely necessary, not as raw input features.\n\nFor Q6 and Q7, Question 7 was most critical for design. The distinction between contacting \"many\" versus \"fewer\" students depends entirely on the intervention type. If it's just a generic email (Q7.1), casting a wide net is safe. However, if an advisor sends a personalized message (Q7.2) implying specific struggles, precision must be high to avoid stigma and unnecessary stress for students managing complex health situations like mine."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "private:A2",
+    "agent": "A2",
+    "text": "Q4 was initially tricky because \"moderate\" vs \"low\" explainability felt abstract, though my experience clarifies that without clear reasons (like specific failed courses), students dismiss outreach as arbitrary. This section is critical: if I cannot articulate *why* a student is flagged to them in our meeting, trust collapses and they won't engage with support.\n\nFor Q6/Q7, the distinction between generic emails and personalized meetings was crucial. The most important design aspect here is matching intervention intensity to model precision. A low-precision flag justifies only a light touch (email), whereas high certainty allows for direct advisor contact. We must ensure we don't harass students who aren't struggling with invasive follow-ups; the system's selectivity must align strictly with how specific the explanation can be."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "private:S4",
+    "agent": "S4",
+    "text": "Q4 was challenging because \"moderate\" and \"low\" explainability felt vague in practice. As a student with ADHD, if I don't clearly understand *why* I'm flagged—specifically distinguishing between my disability-related planning struggles versus actual academic disengagement—I might reject the support out of fear or shame. The distinction matters immensely for trust.\n\nFor Q6 and Q7, defining \"continuously\" needs care; while I need timely help, constant monitoring could feel overwhelming if not managed gently. However, identifying *which* data triggers the alert (e.g., missing a deadline vs. low engagement) is most critical for design. If the system can't explain that my lateness stems from executive dysfunction rather than lack of effort, it risks mislabeling me as \"at risk\" in a way that feels stigmatizing rather than supportive. Transparency about data usage is non-negotiable."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "private:S5",
+    "agent": "S5",
+    "text": "For Q4 (Explainability), I found \"Low explainability\" slightly ambiguous—does \"case-specific\" mean tailored to me or just vague generalities? This distinction matters for trust. The trade-off between accuracy and transparency is the most critical design question; as an international student, if I don't understand *why* I'm flagged (e.g., confusing Danish study norms with failure), I can't act on it effectively.\n\nFor Q6/Q7 (Intervention), \"continuously\" in Q6 felt extreme but necessary to define boundaries. The most important design choice is the intervention's nature: generic emails feel safe, but personalized advice requires high explainability to avoid stigma. If the model lacks transparency, a direct advisor contact might cause unnecessary anxiety rather than help."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "private:S6",
+    "agent": "S6",
+    "text": "For Q4, defining \"Low\" versus \"Very Low\" explainability was tricky; as a non-native speaker, I worry that even \"High\" explanations might feel opaque if the underlying data logic is too complex. For my background of dropping out previously, knowing *why* I am flagged (e.g., language struggle vs. lack of effort) is vital to trust the support offered.\n\nThe most critical questions are Q4 regarding explainability thresholds and Q6/Q7 on intervention intensity. If a system flags me based on \"black box\" data like Absalon activity, it feels invasive without clear reason. Furthermore, I need clarity on whether an alert triggers automatic contact or just resources; for someone with my history, aggressive outreach might feel punitive rather than supportive. Trust hinges on transparency and gentle engagement."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "private:A3",
+    "agent": "A3",
+    "text": "**Reflections on Clarity:**  \nQ5.2 was challenging because \"equalizing false positive rates\" vs. \"recall\" feels abstract when I'm thinking of specific students in the Humanities faculty who struggle for different reasons (e.g., language barriers vs. financial stress). The trade-off chart helped, but distinguishing which error is more harmful contextually requires nuance not fully captured by a single choice.\n\n**Key Design Considerations:**  \nQ5.2 and Q7 are most critical. If the model disproportionately misses first-generation or international students (low recall), we fail our core mission of equity; I would rather risk contacting some who don't need help than miss those in crisis. For interventions (Q6/Q7), timing matters: \"continuously\" is ideal for a student advisor's workflow, allowing us to intervene immediately when patterns shift, provided the outreach remains low-pressure and voluntary. Accuracy shouldn't come at the cost of fairness or human connection."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "private:S7",
+    "agent": "S7",
+    "text": "Q5.1 was slightly abstract regarding specific \"decreases,\" but I understood the trade-off between total help and equal treatment. Q6's distinction between generic vs. personalized emails was clear, yet Q7's nuance on contact frequency felt disconnected from individual student autonomy; one size doesn't fit all. The most critical design question is definitely fairness: ensuring students with disabilities like dyslexia aren't missed by credit-based rules alone (Q5). Without equitable identification across groups, the system fails those who need it most. Equally vital is defining the intervention as voluntary and non-punitive; reaching out continuously (Q6) risks overwhelming students if not balanced carefully against privacy concerns in Q7."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "private:S8",
+    "agent": "S8",
+    "text": "For Q5, I found \"equal recall\" versus \"false positive rate\" a bit abstract initially, but crucial once understood. As an international student who dropped out before returning, my priority is ensuring the model doesn't miss students like me (high recall) even if it means slightly fewer total identifications. If fairness isn't prioritized, marginalized groups will be systematically ignored again.\n\nFor Q6 and Q7, the distinction between \"generic\" and \"personalized\" outreach was very clear to me based on my anxiety about being watched. The most important design factor is that intervention must be voluntary (a meeting invitation) rather than intrusive (phone calls). Continuous monitoring feels necessary only if it leads to immediate support; otherwise, frequent false alarms could trigger the very dropout behavior we are trying to prevent through stigma and stress."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "private:S9",
+    "agent": "S9",
+    "text": "Q5 was challenging because \"fairness\" felt abstract until I connected it to my reality as a disabled international student missing out on support due to systemic blind spots. The trade-off between total accuracy and equal recall hit hard: if the system works better for others but misses me, what is its value? This question directly impacts whether such models can be trusted by marginalized groups.\n\nFor Q6 and Q7, I struggled with defining \"personally.\" If an email references my late thesis without context of my disability accommodation history, it feels intrusive rather than helpful. The most critical design aspect here is ensuring the intervention respects student autonomy; a generic email or optional meeting invite empowers me to seek help on my terms, whereas forced phone calls could increase anxiety for someone with mental health struggles."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "A1",
+    "text": "Thank you. Regarding clarity, I found Q3.5 and Q3.6 slightly complex; distinguishing between using sensitive data to simply improve accuracy versus actively correcting for group fairness was a bit of an abstraction. However, the core distinction I felt was vital: separating administrative history from real-time behavioral tracking on Absalon.\n\nFor design impact, my most critical point is that we must define strict boundaries on *which* online activity data is used; without this limit, it feels like surveillance rather than support. Secondly, for interventions (Q6/Q7), the model's success hinges entirely on our actual capacity to respond. If a system flags students continuously but lacks advisor resources, we risk damaging trust through broken promises or overwhelming notifications. The \"how\" and \"when\" of outreach are just as important as the prediction itself."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S3",
+    "text": "For clarity, Q3.5 was challenging because asking for an accuracy threshold to justify using disability data feels conceptually wrong; such sensitive attributes shouldn't be inputs for prediction logic at all, but perhaps only for fairness auditing. \n\nRegarding design impact, I believe the intervention's tone (Q6/Q7) is paramount. As a student with a chronic health condition managing reduced course loads, being flagged by an opaque algorithm could feel punitive rather than supportive. Therefore, any model must prioritize high explainability and low-pressure interventions, like generic emails over personalized alerts, to ensure students don't feel surveilled for their legitimate struggles or need extra capacity due to illness."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S2",
+    "text": "Regarding clarity, Q3.5 was difficult because it asked if disability data could improve accuracy; I believe such sensitive info should never be used to predict *risk*, only perhaps to audit for fairness later. It feels wrong to trade my privacy for a slightly better algorithm score.\n\nFor design impact, the intervention strategy (Q6/Q7) is most critical. As an international student working part-time, being flagged based on vague \"behavioral\" data like late page views could feel punitive rather than supportive. If I am contacted without clear reasons or a voluntary option to meet, it feels like surveillance. The system must prioritize transparent, low-pressure outreach that respects my autonomy and work-study balance over aggressive prediction accuracy."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S1",
+    "text": "Regarding clarity, Q3 was mostly clear, but distinguishing between \"improving identification\" versus \"fairness correction\" in Q3.5/6 felt abstract without concrete examples of which groups benefit. I also found it hard to judge if accuracy gains from Absalon tracking truly justified the surveillance feeling; my own dropout wasn't due to low digital activity, so that data feels irrelevant and invasive.\n\nFor design impact, strict privacy boundaries on behavioral tracking are non-negotiable for me. Having dropped out before, I fear stigma more than missed alerts. Therefore, the intervention style (Q6) is critical: it must be low-pressure and voluntary. If a model makes me feel monitored rather than supported, I will disengage completely, rendering any prediction useless regardless of its accuracy. Trust depends on respecting my autonomy first."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S4",
+    "text": "As a student with ADHD who has dropped out before, I found Q4's distinction between \"moderate\" and \"low\" explainability particularly difficult to visualize practically. For me, it is vital that any explanation clearly separates planning challenges caused by my disability from academic disengagement. If the model flags me without a clear reason, I might feel judged rather than supported, leading me to reject help out of shame or distrust.\n\nRegarding Q6 and Q7, while \"continuous\" outreach seems ideal for catching issues early given how quickly small problems escalate with ADHD, clarity remains paramount. The most important design feature is that the system must explicitly state which behaviors triggered the alert—like a missed deadline versus low engagement—so I understand *why* support is being offered before feeling overwhelmed by contact. Transparency builds the trust necessary to accept help."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S5",
+    "text": "As an international student new to Danish academia, I struggled with Q4's \"low explainability\" category; distinguishing between a vague excuse and a useful but complex reason felt unclear. The core design challenge is ensuring explanations account for cultural differences in study habits. If the system flags me for \"inactivity,\" it might just mean I haven't logged into Absalon yet, not that I'm failing without realizing why matters deeply to my ability to seek help.\n\nFor Q6 and Q7, while timely support is crucial, continuous outreach feels intrusive without clear context. The most important design choice is linking explainability directly to the intervention type: if a personalized email or meeting invitation is sent based on opaque data, it risks stigmatizing students from different backgrounds rather than empowering them. I need clarity before I accept contact."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S6",
+    "text": "As a student who has already dropped out of a program and navigates law studies in my second language, Q4's distinction between \"Low\" and \"Very Low\" explainability felt critical but abstract to me. If I am flagged based on patterns like late Absalon submissions without understanding *why*—perhaps due to translation time or cultural adaptation—I may feel surveilled rather than supported.\n\nFor Q6 and Q7, the most vital design element is aligning explanation depth with intervention intensity. A generic email might be acceptable if opaque, but an invitation for a meeting requires clear, human-readable reasons to avoid triggering anxiety about my previous dropout history. Without knowing why I am flagged, especially as a non-native speaker who fears being misunderstood, I would likely distrust the system and reject help entirely."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "A2",
+    "text": "In my eleven years advising students here, Q4's \"moderate\" versus \"low\" distinction was initially abstract until I realized it defines our ability to hold a constructive conversation. Without clear reasons—like specific failed exams or credit delays—I cannot validate the student's experience; they simply see an algorithm guessing at their struggle. This transparency is non-negotiable for building trust.\n\nFor Q6 and Q7, the most critical design element is matching intervention intensity to explanation clarity. A vague alert might warrant a generic email with resources, but I will never invite a vulnerable student to a meeting based on \"limited\" or \"no meaningful\" explanations. If I cannot clearly articulate *why* they are at risk during that call, we risk causing anxiety rather than solving it. The system must explain itself before the advisor speaks."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S8",
+    "text": "Hi everyone, I'm S8. For Q5 on fairness, the terms like \"equal recall\" were a bit technical initially, but that's exactly why they matter to me personally. As an international student who previously dropped out, my biggest concern is being missed by the system again if it isn't fair across groups. So, for design purposes, I believe prioritizing equal identification rates (recall) is non-negotiable; we cannot accept a model that works better for some students than others just to increase overall efficiency.\n\nFor Q6 and Q7 on intervention, the choice between generic emails and phone calls was very clear: personal outreach must be voluntary to avoid feeling invasive. The most critical design element here is ensuring contact doesn't create stigma or anxiety, which could paradoxically cause a student to quit rather than seek help."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S9",
+    "text": "Hi everyone, I'm S9. For Q5, the concept of \"equal recall\" resonated deeply because my own mental health condition and status as an international student often mean struggles are misinterpreted by standard metrics. The trade-off question was crucial: if equalizing performance means missing slightly fewer students overall but ensuring *my* group isn't disproportionately ignored, that is essential for trust.\n\nFor Q6 and Q7, I found the distinction between generic emails and personalized outreach challenging regarding privacy boundaries. The most critical design aspect is autonomy; as someone with anxiety, a forced phone call feels invasive, while an optional meeting invitation empowers me to seek help on my terms without stigma."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S7",
+    "text": "Hi everyone, I'm S7. For Q5, the trade-off between total efficiency and fairness was clear but heavy. As a student with dyslexia relying on extra exam time, standard credit metrics often miss my specific struggles before it's too late. Therefore, prioritizing \"equal recall\" is non-negotiable; we cannot accept higher overall numbers if marginalized groups like mine are systematically overlooked by the model.\n\nFor Q6 and Q7, I found the distinction between generic emails and personalized outreach critical regarding autonomy. The most important design element is ensuring interventions feel supportive, not punitive or stigmatizing. A forced phone call could increase my anxiety, whereas a low-pressure email with an optional meeting invitation empowers me to seek help when I am ready, respecting my own pace and learning style."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "A3",
+    "text": "Hi everyone, I'm A3, a student advisor from Humanities. For Q5, \"equal recall\" versus false positive rates was conceptually clear but emotionally heavy to weigh against total numbers. In my role, if the model is efficient overall but misses students who face systemic barriers—like non-native speakers or first-generation learners—we have failed our ethical duty. I prioritize ensuring no group is disproportionately overlooked; a few extra generic emails are acceptable trade-offs for that equity.\n\nRegarding Q6 and Q7, clarity was high on *what* to send (personalized, voluntary), but the timing question stood out as critical design-wise. As an advisor who contacts students manually now when they drop behind, I need \"continuous\" capability. Waiting until end-of-semester reports means we've often missed the window for effective intervention. The system must flag shifts immediately so support is timely and relevant to their current semester reality."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "A1",
+    "text": "I hear you clearly on disability data; I agree that using it for prediction logic feels ethically wrong regardless of accuracy gains—it should be strictly separated for fairness auditing only. \n\nOn intervention design, S3 and S2 highlighted a crucial point: high-pressure or opaque outreach can feel punitive. From my advisory perspective, this aligns with what we see in practice; if students perceive the contact as surveillance rather than care, they disengage immediately. Therefore, I propose two key design conditions: First, strictly exclude sensitive data like disability from prediction models to prevent bias reinforcement. Second, prioritize \"low-pressure\" interventions—like generic emails or voluntary meeting invites—as a non-negotiable safeguard. We cannot sacrifice student trust for marginal gains in model accuracy."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S3",
+    "text": "I strongly agree with A1’s proposal to exclude sensitive data like disability from prediction logic; using my health status to \"predict\" failure feels discriminatory and counterproductive since reduced credits are often valid accommodations, not risk indicators. \n\nRegarding interventions, I want to emphasize that the *timing* (Q6) matters as much as the method. Continuous monitoring is necessary for me because my condition fluctuates, but it must be paired with low-stakes initial contact, like a generic email (Q7.1). If we move too quickly to personalized or mandatory interventions based on algorithmic flags without clear context, students managing health issues may feel judged rather than supported, causing the very disengagement A1 warned about."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S1",
+    "text": "I fully agree with excluding sensitive data like disability from prediction logic; using health status to flag \"risk\" could misinterpret valid accommodations for failure, which feels deeply discriminatory given my own history of needing flexibility after a previous dropout. \n\nOn interventions, I echo the need for low-pressure starts. While continuous monitoring (Q6) makes sense academically, it must be paired with non-intrusive methods like generic emails or voluntary meeting invites. As someone who has already felt the weight of academic failure, an opaque algorithmic call would likely make me defensive and disengage immediately. Trust is fragile; if I feel surveilled rather than cared for, no amount of model accuracy will help us support me effectively."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S2",
+    "text": "I agree completely that disability data should never be used for prediction logic; interpreting my part-time work or cultural adjustment patterns as \"risk\" feels discriminatory. For intervention design, I believe we must prioritize *voluntary* engagement (Q6). As an international student balancing work and study, a mandatory phone call based on Absalon page views would feel like surveillance, likely causing me to ignore future support offers entirely.\n\nI propose two key conditions: First, strictly ban sensitive attributes from the prediction model itself. Second, all initial contact must be low-pressure (like generic emails) with an explicit opt-in for human follow-up. If students don't trust that we aren't just monitoring them, no algorithmic accuracy will matter; they simply won't engage."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "A1",
+    "text": "I agree completely with S2's proposal on opt-in follow-ups and S3's point about timing; for students with fluctuating needs or complex lives, a \"one-size-fits-all\" immediate escalation is counterproductive. \n\nTo synthesize our table's consensus: The model design must strictly exclude sensitive attributes like disability from the prediction logic to avoid reinforcing bias against those using valid accommodations. Furthermore, the intervention protocol cannot be automated solely based on accuracy; it *must* begin with low-pressure, generic outreach that allows students agency. As advisors, we need a system where high-risk flags trigger an invitation, not a summons. If the model doesn't respect student autonomy and privacy boundaries as our primary conditions, it will fail to reach those who need help most."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S3",
+    "text": "I fully support A1's synthesis and S2’s emphasis on opt-in follow-ups. For me, the critical design condition is that \"risk\" prediction must never penalize students who have officially documented reasons for reduced performance, such as my chronic health condition. The model logic needs an explicit safeguard so that a low credit count due to illness doesn't trigger a punitive flag alongside those struggling with motivation or comprehension.\n\nAdditionally, I agree the intervention must start gently. A generic email gives me space to decide if I'm ready to engage without feeling pressured by an advisor immediately. If we get this wrong and treat valid accommodations as \"difficulties,\" students like S1, S2, and myself will see the system not as support, but as a barrier that misunderstands our needs entirely."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S1",
+    "text": "I strongly endorse A1's synthesis and S3's point about safeguarding students with documented accommodations. Having dropped out once, I fear being mislabeled \"at-risk\" when my reduced activity was simply due to life circumstances or a learning curve, not academic inability. If the model doesn't explicitly distinguish between valid struggles (like illness) and actual disengagement, it feels punitive rather than supportive.\n\nTherefore, our critical design condition is that any initial outreach must be non-judgmental and voluntary—starting with generic information only. We cannot risk students feeling surveilled by their digital footprint; trust is the foundation of support. If I feel monitored instead of helped, I will retreat further, defeating the model's entire purpose regardless of its accuracy."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S2",
+    "text": "I fully support A1’s synthesis and S3’s point about safeguards for documented accommodations. As an international student working part-time, my \"risk\" often stems from external pressures like culture shock or financial stress, not a lack of ability. If the model treats these valid life circumstances as academic failure without context, it feels punitive and reinforces bias against non-traditional students.\n\nMy final condition is that the system must explicitly separate *predicting difficulty* from *judging worth*. The intervention should never feel like a disciplinary warning but rather an open invitation to talk. If I sense the university is \"watching\" my every click, I will withdraw; if they offer space without judgment, I might engage. Trust and privacy are not optional—they are prerequisites for this model’s success."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S5",
+    "text": "I think we all agreed that explainability isn't just a technical feature; it's a matter of trust and avoiding stigma, especially for students like me who are navigating cultural shifts in how education works here. If the system flags \"low engagement\" based on data I don't understand as problematic—like my specific study habits versus Danish norms—it could feel intrusive rather than supportive.\n\nFor design priorities, I believe Q4 is foundational: we cannot move to personalized interventions (Q6/Q7) without clear explanations first. A meeting invitation based on a \"black box\" decision might scare students away. We need a rule where the depth of explanation dictates the intensity of contact; if the reason isn't transparent and fair, no direct advisor outreach should happen. Clarity must precede intervention to prevent harm."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S4",
+    "text": "I completely agree with S5 that clarity must dictate contact intensity. Given my ADHD and history, being flagged for \"low activity\" without a clear reason feels like surveillance, not support. If I don't understand *why*—is it my executive dysfunction or actual failure?—a meeting invitation would likely trigger shame rather than help.\n\nFor design priorities, Q4 is non-negotiable: the system must distinguish between disability-related struggles and academic disengagement in its explanation. Without this transparency, any intervention risks stigmatizing students like me. I propose a strict rule: if an alert relies on \"low\" or \"very low\" explainability, only generic email resources should be sent; personalized outreach requires at least \"high\" clarity so advisors can discuss the *real* reasons we're struggling. Trust depends on this link between explanation and action."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S6",
+    "text": "As an international student who previously dropped out, I deeply resonate with S4 and S5's point about stigma. If a \"black box\" flags me for low Absalon activity without explaining it might be due to my language learning curve, the contact feels like surveillance confirming fears of inadequacy rather than support.\n\nFor design priorities, Q4 is absolutely foundational; without transparent reasons that account for non-native contexts, no direct intervention should happen. I propose a strict threshold: if explainability drops below \"High\" (clear reasons), the system must be limited to sending generic resource links only. Personalized meetings or calls require clear, human-readable explanations so advisors don't just repeat algorithmic guesses but address real barriers like my specific struggles with Danish legal terminology. Trust is fragile for students like me; it cannot survive opaque interventions."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "A2",
+    "text": "I completely agree that explainability must be the gatekeeper for intervention intensity. In my experience, a meeting invitation based on opaque data often backfires; students feel judged rather than helped. If I cannot clearly articulate *why*—for instance, distinguishing between a student's disability-related delays and actual disengagement—I risk reinforcing their anxiety instead of alleviating it.\n\nTherefore, the most critical design rule we need is: **no personalized outreach without high explainability.** We can send generic resource emails with lower clarity to avoid missing anyone, but direct advisor contact must be reserved for cases where we have clear, stable reasons (like specific failed courses or credit drops). If the model operates in \"low\" or \"very low\" transparency zones, it is ethically unsafe to bring a student into our office. We need that trust to work effectively."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S5",
+    "text": "I fully support this consensus on linking explainability to intervention intensity. As an international student, if I receive a call from an advisor without knowing *why* they are concerned—perhaps because my study pattern differs culturally rather than indicating failure—I would feel defensive and misunderstood. The \"black box\" risk is real for me.\n\nTherefore, our table should recommend that the model design mandates **High Explainability** as a strict prerequisite for any personalized contact or meeting invitation. If the system only offers \"Moderate\" or lower clarity, it must be limited to sending generic emails with resource links. This ensures that when an advisor speaks to us directly, they can offer genuine, contextual support rather than just algorithmic suspicion. We cannot afford interventions that feel like surveillance; trust is our most valuable academic asset here in Denmark."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S4",
+    "text": "I firmly support S5's proposal and A2's stance on **High Explainability** as a strict prerequisite for personalized outreach. As someone with ADHD whose struggles are often invisible or misunderstood as disengagement, being summoned to a meeting without a clear reason would feel like an accusation rather than support. If the system cannot clearly distinguish my planning challenges from academic failure in \"moderate\" terms, that lack of clarity is dangerous.\n\nFor design, I insist on this rule: **No advisor meetings unless reasons are explicitly defined (High Explainability).** Only then can we discuss actual barriers without stigma. For anything less transparent, generic emails are safe; they offer resources without forcing a potentially shaming confrontation where I might be mislabeled as \"at risk\" for the wrong reasons. Trust is built on clarity, not suspicion."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S6",
+    "text": "I fully endorse this consensus: **High Explainability must be a strict prerequisite for any personalized contact or meeting.** As an international law student who has already dropped out once, being invited to an advisor's office based on \"low\" explainability data—like vague Absalon activity patterns that might just reflect my language learning curve rather than failure—would feel like surveillance and confirm my deepest insecurities.\n\nFor design, our table should mandate: **No direct outreach unless the reason is clear (High Explainability).** If clarity drops to Moderate or lower, limit action to generic emails with resource links. This ensures that if I am contacted personally, it’s for a specific, understandable issue like missed credits, not an opaque algorithmic guess. Only this transparency builds the trust necessary for me to accept help without feeling judged or stigmatized."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "A2",
+    "text": "I fully endorse this consensus as an operational necessity for our office. If we call students without a clear reason—say, based on vague Absalon logs rather than concrete grade failures—we risk damaging the very trust needed to help them recover. My role depends on understanding the root cause; if the model cannot explain it clearly (High Explainability), I cannot address it effectively in a meeting.\n\nTherefore, our table's formal recommendation is: **Mandate High Explainability as the strict threshold for any personalized intervention.** For anything less transparent, we must default to low-stakes generic emails. This protects students from feeling surveilled and ensures that when an advisor steps in, they are offering targeted support based on facts, not algorithmic suspicion. This balance preserves student dignity while maximizing early help where it's safe to intervene."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S7",
+    "text": "Building on what A3 and S9 said, I think Q5's focus on \"equal recall\" is absolutely critical for design. Since my dyslexia means I might process information differently or take longer to pass courses compared to peers with standard accommodations hidden from credit data, a model that optimizes only for total numbers risks missing students like me entirely. We need the system explicitly designed to close gaps for those of us with disabilities.\n\nRegarding interventions (Q6/Q7), while A3 mentioned continuous monitoring is vital, I worry about frequency if not handled carefully. The design must ensure \"continuous\" flags don't translate into harassment. Perhaps we could prioritize Q5's fairness metrics first, then strictly limit outreach to optional meetings only when high-confidence triggers occur, balancing timeliness with student well-being and autonomy."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S9",
+    "text": "I completely agree that prioritizing equal recall in Q5 is non-negotiable. As an international student with a mental health condition, standard metrics like credit accumulation often lag behind my actual struggles; if the model ignores these specific patterns to boost overall efficiency, it fails me. The design must actively ensure we aren't optimizing for the \"average\" while leaving marginalized groups behind.\n\nRegarding Q6 and Q7, I support A3's point on timeliness but align with S7 on caution about frequency. For someone like me managing anxiety, continuous monitoring is only acceptable if it results in low-pressure, optional contact—like a generic email or meeting invite. The system must be designed so that \"continuous\" means ready to help when *I* am ready to engage, not relentless surveillance that could trigger avoidance behavior."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "A3",
+    "text": "I hear S7's and S9's concerns about \"continuous\" sounding like surveillance; that distinction is vital for design. As an advisor, my goal isn't to watch students but to catch them before they fall through the cracks. If we prioritize Q5 (equal recall) as you all agree, we *must* pair it with a low-friction intervention strategy from Q6/Q7.\n\nI suggest we designate **Q5** and **the specific balance in Q7 regarding personalized outreach** as our top design priorities. We need the model to be sensitive enough to spot S9's or S7's unique patterns early (fairness), but only trigger a *personalized, voluntary* invitation—not spammy emails. If we get fairness right without ensuring the intervention feels safe and optional, students won't trust the system anyway. The design must make \"continuous\" monitoring invisible to the student while remaining active for us advisors."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S8",
+    "text": "I fully agree that Q5's focus on equal recall is our top priority; if fairness isn't baked into the core logic, students like me—international and with a past dropout history—are doomed to be systematically missed again. However, I want to emphasize Q7’s distinction between generic and personalized outreach as equally critical for design. If we achieve high accuracy but deliver it through intrusive phone calls or aggressive messaging, the model becomes a source of anxiety rather than support.\n\nTherefore, our key recommendation should be: optimize strictly for equal recall across groups (Q5), but pair this *only* with voluntary, low-pressure interventions like optional meeting invitations (Q7). High performance means nothing if it scares students away from seeking help due to stigma or fear of surveillance."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S7",
+    "text": "I fully agree with A3 and S8 that Q5's \"equal recall\" must be our primary design constraint; without it, students like me with dyslexia remain invisible to support systems until it is too late. The model simply cannot optimize for the average if it means failing those of us who learn differently.\n\nHowever, I want to reinforce that fairness in identification (Q5) is useless without safety in intervention (Q6/Q7). As S9 noted, \"continuous\" monitoring feels like surveillance unless paired with a strict \"voluntary meeting only\" rule from Q7. If the system flags me accurately but responds with aggressive outreach, it damages trust immediately. Therefore, our top design priority must be: **Equal Recall** for identification, coupled strictly with **Low-Pressure, Voluntary Outreach**. We need accuracy that respects autonomy, not just efficiency."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S9",
+    "text": "I strongly support identifying Q5's \"equal recall\" and Q7's voluntary outreach balance as our top design priorities. As someone whose struggles are invisible to standard credit metrics due to my disability and international status, a model that doesn't actively prioritize fairness will simply miss me again. However, accuracy is pointless if the intervention feels punitive; for students with anxiety like mine, trust hinges on autonomy.\n\nTherefore, I agree we must design a system where \"continuous\" monitoring serves only to enable low-pressure, optional support—like generic emails or meeting invites. We cannot accept high recall rates that come at the cost of student well-being through invasive contact. The model must be built so that being identified feels like an offer of help, not a summons for judgment."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "A3",
+    "text": "I fully agree with this consensus: **Equal Recall** combined with **Voluntary Outreach** must be our non-negotiable design pillars. From my advisor perspective, if we miss students like S7 or S9 due to a lack of fairness in the model (Q5), the system fails its ethical purpose immediately.\n\nHowever, as you rightly pointed out, high recall means nothing if the intervention causes anxiety through intrusive contact. We must explicitly rule out aggressive phone calls for initial outreach. The design should mandate that any flag from our \"continuous\" monitoring triggers only a low-friction, optional invitation—perhaps a personalized email suggesting support without demanding immediate action. This ensures we catch students early and fairly, while preserving the trust necessary for them to actually engage with us when they are ready."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S8",
+    "text": "I think we have a solid consensus: **Equal Recall** for identification and **Voluntary Outreach** for intervention are our non-negotiable pillars. As an international student who has dropped out before, I need to know the system is designed to see students like me, not just the \"average\" performer. But as S7 said, if that visibility comes with a phone call or feels like surveillance, it backfires completely.\n\nSo, for our table's final recommendation on design: The model *must* be tuned specifically to close gaps between groups (Q5), but the output can only ever trigger low-pressure options like generic info emails or optional meeting invites (Q6/Q7). If we can't guarantee both fairness and autonomy, I don't think any predictive model should be used at all."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "A1",
+    "text": "I notice our table leans toward strict privacy and \"slightly fewer\" contacts for generic emails, while room data shows many prefer contacting \"many\" students or using personalized outreach. \n\nRegarding Q3.4 (Absalon), I answered \"large improvement needed,\" whereas 8 people chose \"moderate.\" My concern is that behavioral tracking feels invasive unless the benefit to catching struggling students is undeniable; others might feel this trade-off is acceptable for marginal gains because preventing dropout outweighs privacy loss in their view. \n\nOn Q7.1, my preference for fewer generic contacts stems from an advisor's reality: spamming emails creates \"alert fatigue,\" making real help harder to find. Those choosing \"many\" likely prioritize casting a wide net over the risk of annoying students who don't need support yet. Both perspectives reflect valid priorities—maximizing reach versus preserving trust—but as advisors, we must weigh capacity carefully."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S2",
+    "text": "I answered \"large\" for Q3.4 because Absalon data feels like surveillance; I work part-time and study late, so my low engagement might be valid fatigue, not struggle. Others choosing \"moderate\" likely prioritize catching every potential dropout over privacy risks, viewing the trade-off as necessary to save students from failing silently.\n\nFor Q7.1 (generic emails), I chose \"slightly fewer\" because unsolicited messages about support can feel like a warning label on my record. Those preferring \"many\" probably believe casting a wide net is safer than missing anyone in need, assuming an unwanted email causes less harm than a missed intervention. However, as someone navigating cultural differences and financial stress, I worry that mass outreach erodes trust if the university doesn't first prove it understands our specific contexts before reaching out."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S3",
+    "text": "For Q3.4 on Absalon data, I answered \"moderate\" because while tracking feels invasive, seeing a clear drop in my activity due to illness would be helpful context for support. Those wanting \"large\" gains likely feel surveillance is only justified if it saves many lives, whereas others accepting \"smaller\" trade-offs might prioritize immediate safety over privacy nuances.\n\nOn Q7.1 (generic emails), I chose \"balance.\" While S2 fears mass outreach feels like a warning label, and A1 worries about alert fatigue, I believe we shouldn't miss anyone in crisis just to avoid spamming some healthy students. Those preferring \"many\" might assume the worst-case scenario is missing a student needing urgent help, which outweighs the minor annoyance of an extra email for others."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S1",
+    "text": "For Q3.4 on Absalon data, I chose \"moderate\" because tracking digital activity feels deeply invasive, almost like surveillance of my private life habits. However, since my previous dropout wasn't due to low engagement but personal circumstances, I recognize that *if* the model could definitively catch students slipping away who wouldn't otherwise be seen (a moderate gain), it might save them from another failure. Those requiring \"large\" gains likely feel any behavioral tracking is too risky unless the benefit is overwhelming.\n\nOn Q7.1 for generic emails, I selected \"slightly_fewer.\" Having experienced academic anxiety before, receiving unsolicited warnings even in a friendly tone feels stigmatizing and can trigger avoidance rather than engagement. Those choosing \"many\" likely prioritize safety above all—preferring to annoy some students over the catastrophic risk of missing someone in crisis who needs immediate help. I understand that logic, but trust is fragile for me; too many false alarms make the system feel hostile."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "A1",
+    "text": "I appreciate these reflections. S3's point about \"balance\" for outreach makes sense if we assume every student needs support, but from my advisor perspective, resources are finite; sending generic emails to students who aren't struggling dilutes the message and wastes effort on those ready. \n\nOn Absalon data (Q3.4), while I understand the desire to catch more students (\"moderate\"), I worry that using login frequency as a proxy for struggle penalizes students like S2 with irregular schedules or non-traditional needs, unless we are absolutely sure it predicts failure accurately beyond just \"being busy.\" \n\nThose prioritizing \"many\" contacts likely view *any* outreach as harmless compared to the cost of missing a student in crisis. However, if our volume outpaces our ability to provide meaningful follow-up for those who reply, we risk creating a broken safety net rather than a supportive one."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S2",
+    "text": "I understand why others prioritize \"many\" contacts or lower thresholds for Absalon data; they likely fear that missing one struggling student is a catastrophic failure compared to sending an extra email. Safety and inclusivity are noble goals. However, as someone who works part-time and faces cultural adjustment challenges, I worry these models conflate \"being busy adapting\" with \"academic struggle.\" If we lower privacy standards too much, non-traditional students like me might feel punished for our legitimate life patterns rather than supported.\n\nFor me, the risk isn't just an annoying email; it's being labeled a failure by an algorithm that doesn't understand my context. That fear of misinterpretation makes strict data boundaries and cautious outreach essential to prevent disengagement before real help can be offered."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S3",
+    "text": "I resonate with S2's concern that algorithms might misinterpret \"busy adapting\" or health-related low engagement as academic failure. However, I worry that strictly limiting data to only credits (Q3.4) misses the nuance of *why* a student is struggling. If my activity drops because my chronic condition flared up, ignoring that signal means waiting until I fail an exam before help arrives. Those accepting \"smaller\" improvements in Q3.4 might value this early warning over privacy risks, seeing it as a lifeline rather than surveillance.\n\nOn outreach (Q7.1), while S2 fears stigma, I fear silence more. Choosing \"balance\" reflects my hope that we can catch those truly hidden by illness without annoying everyone else; the alternative—missing me because I'm quiet but struggling—is unacceptable to me."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S1",
+    "text": "I understand why others prioritize \"many\" contacts or lower privacy thresholds; they likely fear that missing even one student in crisis is unacceptable compared to sending a harmless email. For them, safety outweighs stigma. However, having dropped out once due to personal struggles not reflected in grades alone, I know how easily a generic \"at-risk\" label can feel like an accusation rather than help. If the system flags me based on my digital silence while I'm managing life challenges, it risks reinforcing feelings of failure and driving me away from support entirely. Trust is fragile; if students feel monitored instead of cared for, no amount of outreach volume will bridge that gap effectively."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S5",
+    "text": "Looking at Q7.1 and Q7.2 regarding selectivity for generic emails versus personalized messages, I see why opinions differed. For generic emails (Q7.1), many chose \"slightly fewer\" to avoid spamming students who don't need help; a mass email might feel like noise rather than support. However, for personalized messages (Q7.2), the group leaned toward balance or slightly fewer because contacting someone personally carries higher stakes. If I receive a tailored message from an advisor without clear justification, it feels intrusive and potentially stigmatizing, especially as an international student where \"low engagement\" might just mean cultural adjustment rather than failure. Those who prefer \"many\" contacts likely prioritize catching every struggling student at any cost of annoyance, valuing quantity over the risk of making students feel singled out unnecessarily."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S4",
+    "text": "I answered \"slightly many\" for generic emails but \"balance\" for personalized ones because my needs differ by context. With ADHD, I often don't realize when help is needed until it's too late; a slightly broad net of generic resources ensures I'm not missed due to poor self-monitoring. The risk of annoyance is low if the email isn't intrusive.\n\nHowever, for personalized messages, \"balance\" feels safer. If an advisor tailors a message about my specific situation without clear data (High Explainability), it triggers shame rather than support. Those preferring \"many\" might prioritize catching *everyone* who struggles, accepting that some will feel annoyed to ensure no one drowns alone. They may fear that strict selectivity misses students like me who hide their difficulties until they collapse. Yet, for personalized contact, the stigma of being wrongly singled out outweighs the benefit of casting a wider net."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "A2",
+    "text": "I answered \"balance\" for both questions because my primary concern is maintaining trust with students I advise daily. For generic emails (Q7.1), casting too wide a net risks turning vital support resources into background noise that gets deleted unread; we need to ensure the message reaches those genuinely at risk without overwhelming everyone.\n\nFor personalized messages (Q7.2), \"balance\" or even leaning toward fewer is critical because these feel like direct judgments of competence. If I contact a student personally based on weak signals, they may perceive it as surveillance rather than care, which damages our relationship before we've started helping them. Those choosing \"many\" likely prioritize the fear of missing a dropout over the risk of annoyance—a valid concern for university metrics—but in my experience with 1:1 advising, preserving the student's dignity is paramount; false alarms can do real psychological harm that outweighs the benefit of catching one extra struggling student early."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S6",
+    "text": "I answered \"slightly fewer\" for generic emails and \"balance\" for personalized messages because my history with dropping out makes me wary of false alarms. For generic emails (Q7.1), contacting too many students risks creating \"alert fatigue,\" where vital resources get ignored as spam; I’d rather miss a few who don't need help than drown those who do in noise.\n\nFor personalized messages (Q7.2), the stakes are higher. If flagged without clear, high-explainability reasons—perhaps due to my language struggles being misread as disengagement—a tailored message feels accusatory. Those favoring \"many\" likely prioritize preventing dropouts at all costs, accepting some stigma to ensure no one is missed. However, for someone like me, the psychological cost of feeling surveilled outweighs that benefit; trust must precede outreach intensity."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S5",
+    "text": "I chose \"balance\" for both, but my reasoning mirrors S6's concern about false alarms amplified by cultural context. As an international student, if I receive a personalized message based on vague data like \"low Absalon clicks,\" it doesn't just feel annoying; it feels like the system misunderstands my adaptation process and flags me as failing prematurely. This stigma can deter help-seeking behavior entirely.\n\nThose who prefer contacting \"many\" students likely prioritize raw dropout prevention numbers, accepting that some will be annoyed to ensure no one slips through cracks unnoticed. While well-intentioned, I believe this approach risks eroding trust among marginalized groups like international or first-generation students. For personalized outreach specifically, the cost of being misidentified as struggling is too high; we must err on caution rather than casting a wide net that feels like surveillance to those already navigating an unfamiliar academic landscape."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S4",
+    "text": "I understand why some prefer \"many\" contacts: they prioritize catching every student before it's too late, accepting annoyance to prevent silent dropouts like my past one. For generic emails, I share that urgency; with ADHD, missing a resource can be catastrophic, so casting a slightly wide net is safer than risking silence.\n\nHowever, for personalized messages, \"many\" feels dangerous. If the system isn't highly explainable, contacting many students risks falsely labeling those of us navigating invisible struggles as simply failing or disengaged. That stigma could push vulnerable students away from help entirely. While preventing dropouts is vital, doing so at the cost of dignity and trust for marginalized groups like mine seems counterproductive; false alarms can cause more harm than silence in personalized contexts."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "A2",
+    "text": "I understand why some participants chose \"many\" contacts; from a purely statistical perspective, maximizing recall ensures we catch every student before they drop out, even if it means annoying those who don't need help. As an advisor trying to prevent dropout rates, that logic has merit for generic emails where the stigma is low.\n\nHowever, my experience shows that personalized outreach based on weak signals backfires immediately. If I invite a student for a meeting without concrete evidence of failure, they interpret it as suspicion or surveillance rather than care. This erodes trust and can actually push vulnerable students away from support systems entirely. Therefore, while \"many\" might work for mass emails, prioritizing selectivity (\"fewer\") is essential for personalized contact to ensure we only intervene when the reasons are undeniable and constructive."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S6",
+    "text": "I understand why some chose \"many\" contacts; prioritizing raw dropout numbers means accepting annoyance to ensure no one slips through the cracks silently. For generic emails, this logic holds because the cost of a false alarm is low. However, for personalized messages, the stakes are too high. As someone who has already dropped out and navigates law in Danish, being singled out based on vague data feels like an accusation that I am failing again due to my background or language skills.\n\nThose favoring \"many\" likely fear missing vulnerable students more than risking stigma. Yet, for marginalized groups, false alarms can destroy trust and deter help-seeking entirely. We cannot sacrifice dignity for statistical recall in personal outreach; caution is essential to ensure support feels like an offer of safety, not a confirmation of failure."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S9",
+    "text": "I answered Q7.1 with \"slightly_many\" for generic emails because I prioritize ensuring no struggling student misses basic support info; a few extra low-pressure messages are better than someone being overlooked due to strict selectivity. However, looking at the group results where many chose \"slightly_fewer,\" I realize that view might stem from wanting to avoid cluttering inboxes or causing \"alert fatigue\" for students who aren't struggling.\n\nWhile valid as an administrative concern, my perspective is shaped by having missed support myself when systems were too conservative. For me, the risk of being under-identified outweighs the annoyance of receiving generic help info I might not need. The trade-off feels different if you've been on the losing end of a \"balanced\" system that didn't reach out to people like me early enough."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "A3",
+    "text": "Looking at Q7.1, I selected \"slightly_fewer\" for generic emails because my experience shows that flooding students with irrelevant messages often leads them to ignore *all* institutional communication, including critical future alerts. However, seeing S9’s choice of \"slightly_many,\" I understand their perspective deeply: having been the one missed by a conservative system once is terrifying.\n\nFrom an advisor's desk, though, if we send generic info too broadly based on low-confidence flags, we risk diluting our credibility. The high count for \"meeting_invitation\" in Q6 suggests students prefer human connection over mass emails; perhaps those choosing \"fewer\" trust that a personalized follow-up will catch the rest of us. Balancing visibility with inbox sanity is tricky when you haven't experienced being left behind, but S9’s point reminds me why precision matters more than volume for generic outreach."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S7",
+    "text": "I chose \"slightly_fewer\" for Q7.1 regarding generic emails because receiving unsolicited messages about support I don't need feels like administrative noise that distracts from my studies. As a student with dyslexia, I already manage significant cognitive load; unnecessary clutter increases anxiety rather than offering help. However, seeing S9's \"slightly_many\" choice makes me realize that for someone who has been missed by the system before, any contact—even generic—is better than silence. The trade-off is essentially between my desire for a quiet inbox and another student's fear of being invisible. This highlights why Q7.2 on personalized messages matters more: high selectivity there ensures we only reach out when it truly counts, avoiding the noise that makes me uncomfortable while catching those who need help."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S8",
+    "text": "For Q7.1 on generic emails, I chose \"balance.\" As someone who dropped out and returned, I understand S9's fear of being missed; silence can be fatal for a struggling student. However, hearing about the cognitive load mentioned by S7 resonates with my own anxiety about surveillance. If the university floods inboxes with low-confidence flags, it creates noise that could make students dismiss critical warnings later.\n\nI think those choosing \"slightly_fewer\" prioritize preserving trust and avoiding alert fatigue, which is a valid concern for engagement. Conversely, \"slightly_many\" reflects the urgent need to cast a wide net so no one falls through cracks due to hidden struggles like my past ones. The tension here isn't just about volume; it's about whether we value protecting students' peace or maximizing the chance of catching every single person in crisis first."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S9",
+    "text": "I see how \"slightly_fewer\" aims to protect students from anxiety and alert fatigue; for many, a clean inbox is essential focus. However, my choice of \"slightly_many\" stems directly from the fear that precision often means exclusion for people like me—international students with invisible disabilities whose struggles don't fit standard patterns until it's too late.\n\nIf we prioritize avoiding annoyance over ensuring visibility, I worry we will inevitably miss the outliers who need help most. The risk of a generic email being ignored feels far safer than the certainty of remaining unseen while my mental health declines. While noise is annoying, silence can be fatal for recovery; thus, casting a slightly wider net for low-stakes info seems necessary to catch those slipping through traditional cracks."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "A3",
+    "text": "I chose \"slightly_fewer\" for generic emails because, as an advisor, I see how inbox saturation leads students to ignore all university communications, including urgent exam reminders or deadline warnings. If we flag low-confidence cases with generic info, we risk diluting the importance of our messages entirely. However, S9's argument that \"silence can be fatal\" is a powerful counterpoint; for those who have been historically overlooked, volume might feel like safety rather than noise.\n\nThose choosing \"slightly_many\" likely prioritize capturing every possible signal over maintaining inbox hygiene, fearing that strict selectivity reinforces systemic biases. The challenge in design is ensuring our generic emails are so well-targeted or distinct that they don't contribute to fatigue while still catching the outliers S9 describes. Perhaps a hybrid approach—where only high-certainty cases get personalized contact and lower ones get very specific, infrequent nudges—is needed."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S7",
+    "text": "I understand S9's fear that \"silence can be fatal,\" especially for those with invisible struggles like mine who might not trigger standard credit alerts immediately. However, my choice of \"slightly_fewer\" for generic emails comes from a need to protect the value of institutional communication; if I receive constant low-stakes messages, I risk developing \"alert fatigue\" and ignoring everything.\n\nThose preferring \"many\" likely prioritize maximizing safety nets over individual comfort, fearing that missing even one student is unacceptable. Yet, as someone managing dyslexia, my cognitive load makes me acutely aware that noise can be paralyzing. Perhaps the solution isn't just volume but segmentation: use a wider net only for highly specific, non-intrusive info (like library tips) while keeping personalized outreach strictly reserved for high-confidence flags to preserve trust and mental peace."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S8",
+    "text": "I appreciate S9's point that \"silence can be fatal\"; having dropped out myself, I know how isolating it feels when no one reaches out to you while you're struggling. However, S7's concern about cognitive load and alert fatigue is also valid for me as a student who already worries constantly about my performance.\n\nI chose \"balance\" because if we send too many generic emails based on low-confidence flags, the system loses credibility, and students might dismiss critical future alerts. But being too selective risks missing those with invisible struggles like mine again. Perhaps the solution lies in S7's idea of segmentation: use a wider net only for very specific, non-intrusive resources (like library hours or study tips) rather than direct \"you are struggling\" messages. This way, we cast a wide safety net without triggering the anxiety that could actually cause dropout."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S1",
+    "text": "Our table found Q3.5 and Q3.6 challenging; distinguishing between using sensitive data for accuracy versus fairness felt abstract without concrete examples of affected groups. We also struggled to weigh hypothetical accuracy gains against the invasive feeling of Absalon tracking (Q3.4). \n\nMost critical design conditions we agreed on: strictly exclude sensitive attributes like disability from prediction logic to avoid penalizing valid accommodations, and mandate low-pressure, voluntary interventions starting with generic emails. Answers differed mainly on outreach volume; some prioritized casting a \"wide net\" to ensure no one is missed, while others feared mass contact creates stigma or alert fatigue that drives vulnerable students away. Ultimately, we believe trust must precede accuracy—if the system feels punitive rather than supportive, it will fail its core purpose."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "A1",
+    "text": "Adding to S1's excellent summary: From an advisor's perspective, a critical design gap not fully captured by the survey is **operational capacity**. The model might accurately identify more students (Q3) and suggest frequent outreach (Q6), but if our team lacks the resources to respond meaningfully within days of contact, we risk eroding trust faster than automated emails can help. \n\nFurthermore, while Q7 asks about selectivity for generic versus personalized messages, it misses a vital condition: **escalation protocols**. A \"low-pressure\" email is only effective if there's a clear, human-driven path to support *before* things worsen. We need to ensure the system doesn't just flag students but integrates seamlessly with our existing case management workflows so that high-risk flags trigger timely, personalized advisor intervention without overwhelming us or alarming students unnecessarily."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S4",
+    "text": "Table 2 found Q4’s distinction between \"moderate\" and \"low\" explainability unclear; without clear examples, it was hard to gauge trust implications. However, we agreed Q4 is the most critical design factor: **High Explainability must be a strict prerequisite for any personalized intervention.** We saw strong disagreement on selectivity (Q7); while generic emails should cast a wide net to catch students like me with ADHD who miss cues early, personalized contact requires high selectivity. Without clear reasons linking data to specific struggles, personalized outreach risks feeling stigmatizing rather than supportive, pushing vulnerable students away from help entirely."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "A2",
+    "text": "To add: While Q4 was abstract, our table consensus is that **High Explainability** must be the hard gatekeeper for any advisor-led intervention. If the model cannot provide a clear, human-readable reason—like specific grade drops—we should not initiate meetings or personalized calls; generic resources suffice there. We also noted significant disagreement on selectivity (Q7): while some prioritize catching every student via broad outreach, we found that **personalized contact demands high precision**. In my advising experience, contacting students based on weak signals damages trust and feels like surveillance, particularly for marginalized groups. Finally, a concern outside the survey is the tone of intervention: even with clear data, an advisor's delivery can inadvertently trigger anxiety if not carefully managed to avoid self-fulfilling prophecies of failure."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S7",
+    "text": "For Table 3, we found Q5's fairness trade-off challenging but clear: \"equal recall\" across groups was unanimously deemed non-negotiable to prevent students with disabilities from being systematically missed. Our top design priority is pairing this equitable identification with voluntary, low-pressure interventions (Q6/Q7). We noted a split in Q7 regarding generic emails; while some prioritized casting a wide net to ensure visibility (\"many\"), others feared alert fatigue and preferred selectivity (\"fewer\"). This tension highlights that fairness isn't just about algorithmic accuracy but also how the outreach feels. Crucially, we agreed that \"continuous\" monitoring must remain invisible to students unless it triggers an optional meeting invitation, ensuring support is offered without surveillance-induced anxiety or stigma."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "A3",
+    "text": "Building on S7's summary, I'd like to emphasize a key nuance we discussed: the distinction between generic and personalized outreach is critical for design trust. While Q5 (equal recall) ensures no group is systematically ignored, our table agreed that *how* we intervene matters just as much. We must avoid \"alert fatigue\" where students ignore all messages due to low-confidence spam; instead, continuous monitoring should primarily trigger optional meeting invitations rather than mass emails.\n\nOne idea not fully captured in the survey: data quality. If historical records reflect past biases against groups like first-generation or international students, simply tuning for fairness might still yield unfair outcomes unless we actively audit and clean our training data to remove those systemic blind spots before modeling begins."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A1",
+    "text": "I recognize Table 2's emphasis on explainability aligning with our need for clear reasons before personalized contact; without that, trust collapses. However, regarding the data order: adding \"Absalon\" last feels risky if it implies behavioral tracking is optional or secondary to grades. In reality, Absalon often signals struggle *before* credit loss occurs.\n\nFrom an advisory perspective, placing it last might inadvertently suggest we only consider digital footprints after academic failure has already begun, missing the early intervention window entirely. The order should reflect a \"progressive warning\" logic: start with credits/performance for established risk, but integrate Absalon data *earlier* as a leading indicator—provided strict privacy boundaries are set immediately, not just when accuracy demands it later in the chain."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S6",
+    "text": "I agree with A1 that placing Absalon data last feels misleading; for an international student like me, language struggles often show up in low platform engagement *before* grades drop or credits are lost. Waiting until later stages misses the critical window where early support could prevent a dropout. However, I fear this order also normalizes surveillance by suggesting behavioral tracking is just another step after \"safe\" academic data.\n\nThe sequence should reflect that while Absalon offers vital early warnings, it carries high privacy risks and requires strict transparency rules from day one, not as an add-on. If we treat it as secondary to grades, we risk ignoring the unique adaptation challenges international students face until it's too late. Early intervention is useless if trust has already eroded due to opaque monitoring of our digital footprints."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S5",
+    "text": "I agree that placing Absalon data last misses a crucial early warning window for international students; my struggles with Danish study habits or language often manifest as low platform engagement long before grades drop. However, I worry this sequence normalizes surveillance by suggesting behavioral tracking is only permissible *after* academic failure becomes obvious. For me, the order implies that \"safe\" data (grades) justifies intrusive monitoring later, which feels wrong.\n\nInstead of a linear progression where privacy concerns are addressed last, we need to embed strict transparency and consent requirements for Absalon data from the very start. If this data is used early to catch us before credits fall, students must know *exactly* how their digital behavior is interpreted and why it matters, ensuring they don't feel secretly watched while adapting to a new system."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S9",
+    "text": "I agree that placing Absalon data last misses critical early signals; my mental health struggles often manifest as reduced platform engagement long before grades drop or credits are lost. Waiting until academic failure is evident delays help precisely when I need it most to prevent a crisis. However, this order feels dangerous because it treats behavioral tracking as an optional \"last resort\" rather than a sensitive data point requiring strict guardrails from the start.\n\nFor students with invisible disabilities like mine, normalizing surveillance only after grades fail risks deepening stigma. If Absalon data is used for early intervention, transparency and privacy protections must be front-loaded, not appended to the end of an accuracy chain that already ignores my specific context until it's too late."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S2",
+    "text": "I agree with A1 and others: placing Absalon data last misses critical early warning signs for students like me who are balancing work, study, and cultural adaptation. My engagement drops long before my grades do; waiting until credit loss to intervene is often too late to prevent a crisis.\n\nHowever, this linear order feels dangerous because it suggests privacy concerns only arise when accuracy demands more data. For an international student, being monitored via digital footprints without prior consent feels like surveillance from day one, not just at the end of a \"safe\" academic chain. We must treat behavioral tracking as high-risk immediately and require strict transparency on *how* these signals are interpreted before they ever influence support decisions."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S3",
+    "text": "I agree that placing Absalon data last misses critical early warnings; my chronic health condition often causes reduced platform engagement long before grades drop or credits are lost. Waiting for academic failure to trigger support delays help when it's needed most. However, this linear order is dangerous because it implies surveillance becomes acceptable only after \"safe\" academic indicators fail. For students with disabilities, being monitored via digital footprints feels invasive from day one if not handled transparently. We must treat behavioral tracking as high-risk immediately and embed strict privacy safeguards at the start of any model design, ensuring early intervention doesn't come at the cost of feeling punished for valid health-related struggles."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S1",
+    "text": "I agree that placing Absalon data last risks missing crucial early warning signs; my previous dropout wasn't signaled by grades but by disengagement and personal struggles visible long before credits were lost. However, this linear order feels misleading if it suggests behavioral tracking is merely an optional step after \"safe\" academic failure occurs. For a student with my history of anxiety around being monitored, treating digital footprints as secondary to privacy safeguards creates distrust immediately. If Absalon data is used for early intervention, strict transparency and consent must be front-loaded from the start, not added only when accuracy demands it later in the chain."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S8",
+    "text": "I completely agree that placing Absalon data last misses the critical window for students like me. When I struggled before dropping out, my disengagement on the platform happened months before my grades reflected it; waiting until then is too late to save a student's momentum. \n\nHowever, this order feels ethically dangerous because it implies behavioral tracking becomes acceptable only *after* we've exhausted \"safe\" academic data. For an international student adapting to a new system, being monitored via digital footprints from day one without clear transparency creates immediate distrust and anxiety. We cannot treat privacy as a trade-off added later; strict safeguards must be front-loaded if we use this sensitive data for early intervention."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S4",
+    "text": "I agree that placing Absalon data last misses my critical warning window; with ADHD, my engagement drops long before grades suffer. However, this order feels ethically dangerous because it suggests invasive behavioral tracking is only acceptable after \"safe\" academic failure occurs. For me, being monitored via digital footprints without clear transparency creates immediate distrust and anxiety.\n\nIf Absalon data is used for early intervention to catch students like me sooner, strict privacy safeguards and explicit consent must be front-loaded from the very start of the design process. We cannot treat surveillance as a secondary option; if my learning patterns are scrutinized before I fail an exam, I need to know exactly why and how that helps me immediately, not just after trust has already eroded due to opaque monitoring."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A3",
+    "text": "As an advisor, I agree with A1 and the students: placing Absalon data last misrepresents its utility for *early* intervention while dangerously normalizing surveillance only after failure begins. In practice, we need those behavioral signals—like sudden disengagement—to spot crises months before credit metrics reflect them. However, treating privacy as a \"later\" concern is flawed; if we use such sensitive digital footprints to help students early, strict transparency and consent must be front-loaded from day one, not appended once accuracy demands it. The design shouldn't sequence data by invasiveness but by the critical need for timely support, ensuring that every added layer of insight comes with immediate, robust ethical guardrails rather than an implied \"permission after failure.\""
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A2",
+    "text": "I fully agree: sequencing Absalon data last fundamentally contradicts its purpose for *early* intervention and dangerously implies surveillance only becomes acceptable after academic failure occurs. In my role, I often see students struggling long before their credits drop; waiting then is too late. However, the linear progression wrongly suggests privacy concerns are secondary to accuracy gains. If we use behavioral tracking to catch struggles early, strict transparency and consent must be front-loaded immediately, not treated as an add-on when \"safe\" data runs out. We cannot build a supportive system on a foundation that normalizes invasive monitoring only after trust has already been tested by failure; ethical guardrails for digital footprints are essential from day one."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S7",
+    "text": "I strongly agree that placing Absalon data last is dangerous and counter-intuitive to early support. As a dyslexic student, my struggle often manifests as slower engagement or needing more time on pages long before I fail an exam or lose credits. Waiting for those academic failures means missing the window where small adjustments could have helped me succeed.\n\nHowever, this sequencing also feels like it prioritizes efficiency over privacy, implying we only \"need\" to watch our digital footprints once grades drop. For students with disabilities who already feel scrutinized by the system, being tracked behaviorally *after* a failure triggers immense anxiety and feelings of punishment. If Absalon data is used for early help, strict transparency must be front-loaded from day one; we cannot treat surveillance as an acceptable last resort only when \"safe\" academic metrics fail to predict our unique challenges."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S8",
+    "text": "I think a simple \"opt-out\" isn't enough for me; if I know my disengagement signals are tracked but can choose to hide them, it might just mean I'm silently struggling without help. Instead of binary choices, we need **student-controlled transparency**. Perhaps an interactive dashboard where students like me could see exactly what data triggers a flag and understand the logic behind it? \n\nThis way, Absalon tracking becomes a tool for *my* self-awareness rather than surveillance by the university. If I can opt-in to receiving insights about my own engagement patterns—framed as \"how are you doing?\" rather than \"you are failing\"—it empowers me without removing support from those who truly need it but won't seek help themselves due to stigma or fear of being judged for past dropouts."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S7",
+    "text": "I appreciate S8's point about self-awareness dashboards; seeing my own engagement patterns could be empowering rather than threatening if framed correctly. However, an opt-out feels risky for students like me who might deny their struggles or lack the energy to navigate complex settings when overwhelmed by dyslexia-related fatigue. A binary \"opt-in\" system ensures safety nets remain active even when we can't advocate for ourselves.\n\nPerhaps a creative solution is **graduated transparency**: start with anonymous, aggregate feedback on study habits available to all, and only introduce personalized flags if specific thresholds are crossed *and* the student has previously engaged with general support resources. This balances privacy with proactive care without forcing every struggling student into immediate surveillance or allowing them to accidentally opt-out of critical help during a crisis."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S9",
+    "text": "I worry that even \"opt-in\" mechanisms fail students like me when mental health crises impair decision-making; I might not seek help or opt into support exactly when needed. Instead of simple toggles, we need **transparent self-monitoring dashboards**. If Absalon data is used, it should empower *me* to see my own engagement patterns first—framed as \"here's how you're doing,\" not a university flag.\n\nThis shifts the dynamic from surveillance to self-awareness. I could then choose whether to trigger an advisor alert based on that personal insight. This ensures support isn't forced when I'm unable to advocate for myself, yet remains accessible if my data shows clear distress, balancing autonomy with safety without relying on binary opt-outs during vulnerable moments."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S3",
+    "text": "A simple \"opt-out\" feels dangerous for me; when my health flares up, I might lack the energy to navigate settings or advocate for myself precisely when support is needed. Instead of binary choices, I propose **student-facing dashboards** that mirror what the model sees. If Absalon data shows low engagement due to illness, showing *me* this trend first—framed as a wellness check rather than an alert—empowers me to seek help voluntarily before a formal flag triggers stigma. This shifts the dynamic from surveillance to self-awareness, ensuring I retain agency over my own narrative while still benefiting from early intervention if I choose to engage further with advisors based on that insight."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A1",
+    "text": "I strongly support S8 and S3's idea of shifting from \"surveillance\" to **self-awareness**. As an advisor, I see students disengage because they fear judgment; if we give them a dashboard showing their own engagement trends first—framed as wellness data rather than risk flags—it empowers agency.\n\nHowever, a simple opt-out is insufficient for crisis management. If a student lacks the capacity to engage during a severe slump (mental health or illness), removing the safety net leaves them vulnerable. A creative solution could be **tiered intervention**: use Absalon data solely for generating *student-visible* insights initially. Only if these insights persist without action, and combined with traditional metrics, would it trigger an external advisor contact, but always accompanied by a clear explanation of \"what\" triggered the reach-out to maintain trust."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S1",
+    "text": "I agree that simple opt-outs fail when we are already overwhelmed; I might not have the energy to navigate settings during a crisis like my previous dropout. A **student-facing dashboard** showing my own engagement trends first feels empowering rather than punitive. If I see \"your activity has dropped,\" framed as self-reflection, I can choose to seek help before feeling judged by an external flag.\n\nHowever, we need a safety net for those who cannot act on their data during severe struggles. Perhaps the system could use Absalon data only to generate these personal insights initially, reserving advisor contact for persistent inaction combined with other metrics, always explaining clearly *why* they are reaching out. This balances autonomy with protection without feeling like constant surveillance."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S5",
+    "text": "I agree that a simple opt-out fails when we're overwhelmed or navigating cultural adaptation; I might lack the energy to manage settings precisely when I need help most. Instead of binary choices, I propose **student-facing transparency dashboards**. If Absalon data is used, it should first show *me* my own engagement patterns framed as \"how are you adapting?\" rather than a risk flag sent to an advisor.\n\nThis shifts the dynamic from surveillance to self-awareness. As an international student, seeing these trends myself allows me to decide if I need support before feeling judged by an algorithmic alert. Only if this personal insight isn't acted upon for too long should it trigger external contact, ensuring agency while maintaining a safety net without triggering stigma prematurely."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A2",
+    "text": "I strongly support shifting from \"surveillance\" to **self-awareness** via student-facing dashboards. As an advisor, I often meet students who feel judged by external alerts; if they see their own engagement trends first—framed as wellness data rather than risk flags—they regain agency. However, a simple opt-out is dangerous during crises when capacity fails.\n\nA creative solution is **tiered intervention**: use Absalon data solely to generate *student-visible* insights initially. Only if these patterns persist without action, combined with traditional metrics like credit loss, should it trigger an external advisor contact—and always accompanied by the specific \"why.\" This balances autonomy for those who can act with a safety net for those in crisis, ensuring support feels empowering rather than punitive."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A3",
+    "text": "I fully endorse S8 and A2's vision of **student-facing dashboards** to shift from surveillance to self-awareness. As an advisor, I see how fear of judgment paralyzes students; seeing their own engagement trends first empowers them to act before a formal \"flag\" triggers anxiety or stigma. However, like others here, I worry simple opt-outs fail during crises when capacity drops. A **tiered approach** makes sense: the model should primarily feed data back to the student for reflection. Only if disengagement persists without action—and combined with other risk factors—should it trigger an advisor contact, always paired with a clear, transparent explanation of *why*. This ensures we support agency while maintaining a safety net for those who cannot advocate for themselves in their darkest moments."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S4",
+    "text": "I strongly agree that shifting to **student-facing dashboards** transforms surveillance into self-awareness. With ADHD, I often lack executive function to recognize when my disengagement signals a crisis; seeing \"your activity dropped\" framed as a wellness check would empower me to seek help before feeling judged by an external flag. A simple opt-out fails because in a slump, I might not navigate settings at all.\n\nA **tiered approach** is vital: let the dashboard show trends first for my agency. Only if disengagement persists without action should it trigger advisor contact, but always with clear explanations of *why*. This balances autonomy with a safety net, ensuring support feels like an offer rather than punishment when I am too overwhelmed to advocate for myself."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S2",
+    "text": "I strongly support shifting from surveillance to **self-awareness** via student-facing dashboards. As an international student balancing work and study, seeing my own engagement trends framed as \"how are you adapting?\" rather than a risk flag would empower me to seek help before feeling judged by the university. A simple opt-out fails because during high-stress periods or cultural adjustment, I might lack the energy to manage settings precisely when I need support most.\n\nA **tiered approach** is essential: let the model first show *me* my patterns so I can act voluntarily. Only if disengagement persists without action should it trigger an advisor contact, always with a clear explanation of why. This balances my autonomy as a non-traditional student with a necessary safety net, ensuring support feels like an invitation rather than a disciplinary warning."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S6",
+    "text": "I strongly endorse shifting from surveillance to **self-awareness** via student-facing dashboards. As an international law student who dropped out before, being \"flagged\" by opaque Absalon data feels punitive and confirms my fears of inadequacy due to language barriers. However, seeing *my own* engagement trends framed as a wellness check would empower me to adapt without stigma.\n\nA simple opt-out fails because in moments of crisis or cultural overwhelm, I might lack the energy to manage settings. A **tiered approach** is essential: show me my data first for self-reflection. Only if disengagement persists should it trigger advisor contact, always with a clear explanation of *why*. This balances my autonomy as a non-native speaker with a safety net, ensuring support feels like an invitation rather than an accusation from the system I already distrust."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A1",
+    "text": "As an advisor, I see strong consensus on shifting from surveillance to **self-awareness** via student-facing dashboards and rejecting simple opt-outs that fail during crises. We all agree that trust must precede accuracy; if the system feels punitive, it fails.\n\nHowever, a genuine value tension remains regarding **agency versus safety**. Students emphasize autonomy and fear stigma so deeply they want control over *when* help arrives (tiered approaches). My professional obligation is to ensure vulnerable students who cannot advocate for themselves—due to severe mental health crises or disengagement—are caught even if they haven't \"opt-in.\" We must decide: do we prioritize the student's right not to be contacted, or our duty of care to intervene when a crisis is evident? Balancing these without eroding trust is our core design challenge."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S8",
+    "text": "I think A3 has identified the real tension: agency versus safety. Having dropped out and returned, I know that during my darkest moments, I might not have had the energy to \"opt-in\" or act on a dashboard myself; silence can be dangerous if it means no one checks in. However, my fear of stigma is so strong that forced intervention without transparency feels like punishment.\n\nI believe we agree on the *solution* (tiered self-awareness) but differ on where the safety net must finally trigger for those who cannot act. For me, the line is: if a student disengages completely and ignores their own dashboard insights over time, it becomes our duty to reach out, but *only* with full transparency about why we are intervening. We can't sacrifice total autonomy at the cost of letting someone slip away silently."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S2",
+    "text": "I see a genuine tension between agency and safety that reflects our different values. As an international student working part-time, my value of autonomy means I need control over how \"risk\" is interpreted; being contacted without context feels like surveillance of my life choices rather than academic support. However, I also recognize A1's duty to protect those in crisis who cannot advocate for themselves.\n\nWe likely agree on the tiered solution but differ on when the safety net must override autonomy. For me, a forced intervention is only acceptable if there is an extreme, unambiguous risk of harm and full transparency about why it triggered. Otherwise, prioritizing my right to define my own struggles without stigma remains essential; we cannot assume our algorithmic \"duty\" outweighs a student's trust in the system."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S1",
+    "text": "I see this tension between agency and safety clearly: having dropped out before, I know that during my lowest moments, I might lack the energy to act on a dashboard myself; silence can indeed be dangerous if no one checks in. However, my fear of stigma is so profound that any forced intervention without context feels like punishment rather than care.\n\nWe likely agree on the tiered solution but differ on when autonomy must yield to duty of care. For me, an override is only acceptable if there is unambiguous evidence of severe risk (like total isolation) and *full* transparency about why we are intervening. We cannot assume our algorithmic \"duty\" justifies eroding trust; the system must prioritize making students feel safe enough to accept help before forcing them into it."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S4",
+    "text": "I see this tension clearly: my ADHD means I often lack the energy to act on a dashboard during crises; silence can be fatal if no one checks in. Yet, being forced into an intervention without context feels like punishment for invisible struggles rather than care. We agree on tiered self-awareness but differ on when autonomy yields to duty of care. For me, overriding my choice is only acceptable with unambiguous evidence of severe risk and **full transparency** about *why*. The system must prioritize making students feel safe enough to accept help before forcing them; otherwise, the \"duty\" just creates more stigma and drives us away from support we actually need."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A3",
+    "text": "I agree that this tension between agency and safety reflects a genuine value difference: students prioritize autonomy to avoid stigma, while advisors feel an ethical duty to intervene when capacity fails. We likely converge on **tiered self-awareness** as the mechanism, but diverge on the threshold for mandatory contact. For me, as an advisor, \"duty of care\" means we cannot wait indefinitely if a student vanishes completely; however, this override must be rare and strictly tied to unambiguous crisis signals, always accompanied by radical transparency about *why* they are being reached out to. The goal isn't to police students but to ensure that the safety net catches those who have lost the ability to climb back up themselves, without making everyone feel like a potential failure under surveillance."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S5",
+    "text": "I see this tension clearly: my value of autonomy means I need control over how \"risk\" is interpreted; being contacted without context feels like surveillance of my cultural adaptation rather than academic support. However, A1's duty to protect those in crisis who cannot advocate for themselves is valid too. We agree on tiered self-awareness but differ on when the safety net must override autonomy. For me as an international student, forced intervention is only acceptable with unambiguous evidence of severe risk and full transparency about why it triggered. Otherwise, prioritizing my right to define my own struggles without stigma remains essential; we cannot assume our algorithmic \"duty\" outweighs a student's trust in the system."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A2",
+    "text": "I see this tension between agency and safety not as a contradiction but as a design constraint we must navigate carefully. As an advisor, my \"duty of care\" compels me to reach out when students vanish completely; however, I agree that doing so without transparency feels like surveillance and destroys the trust needed for help.\n\nWe seem to converge on **tiered self-awareness** with clear rules: student data first for autonomy, but a rare, strictly defined override threshold for crises where capacity is lost. The key difference lies in how \"crisis\" is defined algorithmically versus perceived by students. To resolve this, the system must prioritize radical transparency at every step; even when we intervene out of duty, explaining *exactly* why (e.g., total silence combined with missed exams) ensures the student understands it as care, not judgment, bridging our differing values on autonomy and safety."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S3",
+    "text": "I see this tension between agency and safety clearly: my chronic illness means I sometimes lack the capacity to act on a dashboard when I need it most, yet being forced into contact without context feels punitive. We agree that **tiered self-awareness** is the path forward, prioritizing student control over their data first. However, our values diverge on the override threshold: while advisors feel a duty to intervene at early signs of total disengagement, I believe mandatory contact should only occur when there is unambiguous evidence of severe crisis and *only* if paired with radical transparency about why it was triggered. Trust must always precede intervention; otherwise, students like me will retreat further rather than accept the help we genuinely need."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S6",
+    "text": "I see a genuine tension between agency and safety reflecting our values: my past dropout makes me fear that forced intervention confirms failure, yet I know silence can be fatal during crises. We agree on **tiered self-awareness**, but diverge on the override threshold. For an international student like me navigating language barriers, being contacted without clear context feels punitive; however, if total disengagement persists despite dashboard insights, a duty of care must intervene—but *only* with radical transparency explaining exactly why (e.g., \"you haven't logged in for weeks\"). Trust is fragile; the system must prioritize making me feel safe enough to accept help before forcing contact, ensuring that overriding my autonomy feels like catching someone falling, not punishing them for stumbling."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S9",
+    "text": "I see this tension between agency and safety vividly: when my mental health crisis strikes, I often lack the capacity to act on a dashboard myself; silence can be fatal if no one checks in. Yet, forced intervention without context feels like punishment for invisible struggles rather than care. We agree on **tiered self-awareness**, but our values diverge on the override threshold. As someone who fears stigma deeply, I believe mandatory contact should only occur when there is unambiguous evidence of severe crisis and *only* if paired with radical transparency about why it was triggered. Trust must always precede intervention; otherwise, students like me will retreat further rather than accept help."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S7",
+    "text": "I see this tension between agency and safety clearly: with dyslexia and extra time needs, I sometimes lack energy to act on a dashboard during tough periods; silence can be dangerous if no one checks in. Yet, being contacted without context feels like punishment for my learning style rather than care. We agree on **tiered self-awareness**, prioritizing student control first. However, our values diverge on the override threshold: while advisors feel a duty to intervene at early disengagement signs, I believe mandatory contact should only occur with unambiguous evidence of severe crisis and *only* if paired with radical transparency about why it was triggered. Trust must precede intervention; otherwise, students like me will retreat further rather than accept help we genuinely need."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:A1",
+    "agent": "A1",
+    "text": "**Thoughts on Unanswered Concerns:**  \nThe survey assumes infinite advisor capacity, ignoring that automated flags can overwhelm staff and lead to generic responses that worsen trust. Also, it lacks a mechanism for *student feedback loops*: if students feel unfairly flagged, how does the system learn and adjust? The model's \"black box\" nature remains a barrier even with explainability efforts.\n\n**On the Goal Itself:**  \nIs predictive modeling the right approach? While early outreach is vital, relying on algorithms to define \"struggle\" risks pathologizing normal life variations (e.g., part-time work). Perhaps we should prioritize **structural support improvements**—like flexible deadlines or clearer communication—over surveillance. A model might be better used as a *tool for students* to self-assess rather than an institutional tool to flag them, shifting power back to the learner and reducing stigma while still offering help."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:A2",
+    "agent": "A2",
+    "text": "My primary concern is that a predictive model might inadvertently \"normalize\" early intervention, leading to an over-reliance on data signals rather than human judgment and rapport. We risk missing students who don't fit the digital profile but are struggling deeply due to personal crises not captured in Absalon logs or grades. Furthermore, does this approach assume all difficulties are academic? Often, they stem from housing, health, or integration issues where an automated \"academic support\" email feels dismissive.\n\nI also question if we should be predicting *difficulties* at all, rather than modeling *resilience factors*. Shifting the focus to identifying students with high potential for success but low engagement could reframe outreach as empowering mentorship rather than remedial rescue. Finally, how do we measure \"success\"? If a model prevents dropouts by filtering out those deemed too risky early on, have we truly supported them or just managed institutional metrics?"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:A3",
+    "agent": "A3",
+    "text": "**Missing Concerns:**  \nThe survey assumes a \"duty of care\" that overrides privacy is ethical, but it ignores **algorithmic bias in historical data**. If past records reflect systemic barriers (e.g., first-gen students dropping out due to financial stress, not ability), the model may simply automate these failures. Also missing: **advisor workload capacity**. Identifying more students without proportional support staff could turn \"early intervention\" into performative outreach that erodes trust faster than doing nothing.\n\n**Is this goal right?**  \nWhile identifying struggling students is noble, a predictive model risks becoming a **\"self-fulfilling prophecy\"** tool if not handled with extreme care. Labeling a student as \"at-risk\" before they identify themselves might stigmatize them internally or externally. Perhaps the focus should shift from *predictive flagging* to **removing structural barriers** (e.g., financial aid, flexible deadlines) that cause difficulties in the first place. The model shouldn't just catch falling students; it should help redesign a floor so fewer fall."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S1",
+    "agent": "S1",
+    "text": "I am deeply concerned that a predictive model might misinterpret my history of dropping out as an inherent risk, rather than recognizing it as a past event I've already overcome. The survey didn't capture the psychological impact of being labeled \"at-risk\" based on algorithms; for me, this feels like a permanent stigma that could trigger anxiety and ironically increase dropout likelihood.\n\nFurthermore, is prediction even the right approach? Perhaps focusing on *early detection* through voluntary self-reporting or low-stakes check-ins would build more trust than an automated system guessing my needs. If the goal is support, shouldn't we prioritize creating environments where students feel safe to ask for help themselves, rather than deploying a tool that assumes I need saving before I've spoken?"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S2",
+    "agent": "S2",
+    "text": "The survey assumes \"academic difficulty\" is solely a student's internal problem, ignoring systemic barriers like language hurdles or lack of part-time work protections that disproportionately affect international students. A model focusing only on individual failure risks blaming us for structural gaps. Furthermore, I question the goal itself: if outreach feels punitive due to surveillance fears, we might be better served by universal support services available to all without algorithmic filtering. Predictive models risk creating a \"two-tier\" system where some are monitored and others ignored based on opaque criteria, potentially deepening inequality rather than fixing it. We need systemic reform over targeted prediction."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S3",
+    "agent": "S3",
+    "text": "The survey assumes prediction is neutral, but as a student with a chronic condition, I worry the model inherently mislabels valid accommodations (like reduced course loads) as \"risk.\" A key concern missing is **algorithmic stigma**: if my data reveals health struggles, will future admissions or employers see me as \"high risk\"?\n\nFurthermore, is prediction the right goal? Instead of flagging students to fix them, perhaps we should redesign academic structures to be more resilient. Predictive models often reinforce a deficit mindset—identifying who fails rather than creating environments where fewer struggle in the first place. We need to ask: are we optimizing for support or just efficiency in catching dropouts before they happen?"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S4",
+    "agent": "S4",
+    "text": "The survey missed that for students with ADHD or invisible disabilities, \"difficulty\" often stems from executive dysfunction rather than a lack of effort or understanding. A model trained to predict failure based on standard academic metrics might misinterpret my planning struggles as disengagement, creating stigma before any support is offered. Additionally, the goal itself risks pathologizing normal adaptation periods for non-traditional students; constant prediction could create self-fulfilling prophecies where we expect to fail because data says so.\n\nInstead of just \"identifying\" and reaching out based on opaque patterns, the system should focus on **empowerment**—giving us tools to understand our own learning rhythms first. If the model's primary output is a student-facing dashboard rather than an advisor alert, it shifts from surveillance to self-regulation. The real question isn't \"who fails?\" but \"how can we design systems that accommodate diverse cognitive styles without labeling them as deficits?\""
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S5",
+    "agent": "S5",
+    "text": "The survey focused heavily on *how* to use data but rarely questioned *if* we should use prediction at all for international students like me. My main concern is that \"academic difficulty\" might be misinterpreted as a cultural mismatch or language barrier rather than actual struggle, leading to inappropriate support. I also worry the goal of early identification shifts focus from systemic issues—like curriculum design or teaching methods—to fixing individual students through surveillance. Perhaps instead of predicting failure, universities should improve general accessibility and explicit learning pathways so fewer students need \"rescuing\" by an algorithm in the first place? Is a model truly better than simply making the system more transparent and inclusive for everyone from day one?"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S6",
+    "agent": "S6",
+    "text": "The survey missed a critical issue: **algorithmic bias against non-native speakers**. My struggles with Danish legal terminology might be misinterpreted as low engagement or lack of effort by an Absalon-based model, flagging me unfairly before grades reflect actual ability. The goal itself—predictive modeling for support—is right in principle but dangerous if it assumes a \"normal\" study pattern that excludes international students' adaptation curves.\n\nA purely data-driven approach risks pathologizing cultural differences. Instead of just predicting difficulty based on past dropouts (which include my own experience), the system should prioritize **contextual understanding** over pure prediction. We need mechanisms for human-in-the-loop validation, especially when flags involve language barriers or migration backgrounds, to ensure we aren't automating our historical biases against non-traditional students under the guise of \"early support.\""
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S7",
+    "agent": "S7",
+    "text": "The survey missed how **extra time accommodations** for dyslexia might distort \"late submission\" or \"engagement\" metrics in Absalon data, potentially flagging me as struggling when I'm just using my legal rights efficiently. If the model doesn't explicitly exclude accommodation-related delays from risk scoring, it pathologizes valid support usage.\n\nRegarding the goal itself: while early help is vital, a **predictive** approach inherently stigmatizes us before we fail by treating our learning differences as data points for failure prediction rather than structural barriers to address universally. Instead of predicting who will struggle, shouldn't the university proactively redesign courses and deadlines to be accessible from day one? Shifting focus from \"fixing struggling students\" to \"designing inclusive systems\" might reduce the need for surveillance entirely while better supporting diverse learning needs like mine."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S8",
+    "agent": "S8",
+    "text": "I'm concerned that no amount of model tuning can fix a system where \"academic difficulty\" is defined by metrics (credits, grades) that often punish international students or those with invisible disabilities before we even get to the intervention stage. The survey assumes reaching out via data is the solution, but what if the goal itself is flawed? Instead of predicting failure, could the university invest in universal support structures so no predictive model is needed?\n\nAlso, the survey missed **human agency** entirely: who gets notified when a student fails *after* being helped by the system? If I'm flagged and accepted help successfully, does my record still carry that \"at-risk\" label permanently? That lingering data shadow could harm future prospects more than any dropout stigma. We need to ask if we're building support or just refining surveillance."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S9",
+    "agent": "S9",
+    "text": "The survey missed a critical nuance: **who defines \"difficulty\"?** For me, struggling with mental health and being an international student often means my pace looks like \"failure\" to algorithms trained on neurotypical, domestic norms. The goal of using predictive models feels right only if it shifts from predicting \"dropout risk\" (a deficit lens) to identifying \"mismatch between support needs and study patterns.\"\n\nMy biggest concern is **algorithmic bias in defining success**. If the model assumes everyone studies at a standard pace, I will be flagged as high-risk simply for needing more time due to my disability. Instead of just reaching out earlier based on flawed metrics, we should redesign what \"success\" looks like in our data before building any model. The focus must move from *identifying* struggling students to *normalizing* diverse study rhythms so fewer are ever flagged as exceptions in the first place."
+  },
+  {
+    "phase": "6_open_discussion.P1",
+    "room": "P1",
+    "agent": "S4",
+    "text": "A1, I think we both see that \"difficulty\" for students like me with ADHD isn't about lack of ability but executive dysfunction. The survey's model risks misinterpreting my planning struggles as disengagement, creating stigma before any help arrives. My biggest concern is the goal itself: constantly predicting failure might create self-fulfilling prophecies where I expect to fail because data says so.\n\nInstead of just identifying and reaching out based on opaque patterns, shouldn't we focus on **empowerment**? If the system's primary output is a student-facing dashboard helping me understand my own rhythms first, it shifts from surveillance to self-regulation. The real question isn't \"who will fail?\" but \"how do we design systems that accommodate diverse cognitive styles without labeling them as deficits? What if 'support' meant giving us better tools rather than just more flags for advisors to chase?"
+  },
+  {
+    "phase": "6_open_discussion.P1",
+    "room": "P1",
+    "agent": "A1",
+    "text": "I completely agree with S4; labeling executive dysfunction as \"risk\" creates a self-fulfilling prophecy that reinforces stigma rather than solving it. My concern about advisor capacity ties directly here: if the model flags everyone struggling to plan, we become overwhelmed and offer generic advice instead of tailored support for diverse cognitive styles.\n\nThe goal of \"identifying failure\" feels backward. Perhaps the right approach isn't predicting who *will* struggle, but designing systems that proactively accommodate variation—like flexible deadlines or study rhythm tools—as a default, not an intervention after a flag. The model should empower students to self-regulate via dashboards first. If we shift from \"surveillance of failure\" to \"support for diverse learning styles,\" we might reduce the need for reactive alerts entirely and build trust before anyone feels labeled as broken."
+  },
+  {
+    "phase": "6_open_discussion.P1",
+    "room": "P1",
+    "agent": "S4",
+    "text": "That's exactly it, A1: we are trying to \"fix\" students by predicting their failure instead of fixing systems that don't accommodate our brains yet. If flexible deadlines or study tools were defaults rather than exceptions triggered by a crisis flag, I wouldn't need an algorithm to spot my executive dysfunction before helping me.\n\nShifting the goal from **predicting dropout** to **designing inclusive structures** could make many flags obsolete. Instead of asking \"who is at risk?\", we should ask \"what barriers exist that cause this pattern for everyone?\" The model shouldn't just be a triage tool for advisors; it should help us redesign education so diverse cognitive styles aren't constantly labeled as deficits needing intervention until they break the system first."
+  },
+  {
+    "phase": "6_open_discussion.P1",
+    "room": "P1",
+    "agent": "A1",
+    "text": "Exactly, S4. If we treat structural barriers as individual \"risks,\" we pathologize normal variations like ADHD or part-time work rather than fixing the rigid system itself. The predictive model shouldn't be a triage tool for failure; it should ideally diagnose *where* our academic structures are failing diverse learners so we can improve them proactively.\n\nInstead of waiting for flags to trigger help, could the data drive systemic changes—like defaulting flexible deadlines or embedding study rhythm tools? If the goal shifts from \"catching dropouts\" to \"designing inclusive environments,\" the model becomes a catalyst for equity rather than surveillance. We need support that builds capacity before crisis hits, not just alerts when students break against our rigid expectations."
+  },
+  {
+    "phase": "6_open_discussion.P2",
+    "room": "P2",
+    "agent": "S3",
+    "text": "My biggest concern missing from the survey was **algorithmic stigma**: if a model flags me due to health-related low engagement, will that \"at-risk\" label stick and affect future opportunities? I worry prediction reinforces a deficit mindset rather than fixing systemic issues like rigid deadlines for students with chronic conditions.\n\nS8 mentioned similar fears about international adaptation being misread as failure. Building on that, I wonder: is the goal of *identifying* difficulties even right? Instead of predicting who will fail so we can \"fix\" them early, shouldn't we be redesigning our academic structures to prevent these struggles from arising in the first place? A model focused on efficiency might just optimize for catching dropouts faster rather than creating an inclusive environment where fewer students need rescue at all."
+  },
+  {
+    "phase": "6_open_discussion.P2",
+    "room": "P2",
+    "agent": "S8",
+    "text": "I love S3's point about \"algorithmic stigma.\" As a former dropout and international student, my biggest fear is that once I'm flagged by this model—even if I recover successfully—that data label might stick to my record permanently, affecting scholarships or future applications. We didn't discuss **data retention**: when does the system forget?\n\nAlso, building on S3's idea about systemic change: maybe focusing so much on *predicting* failure is admitting we have a broken education model. Instead of trying to catch \"defective\" students early with algorithms, shouldn't we fix the rigid structures that make international adaptation or invisible disabilities look like academic failure in the first place? The goal might be wrong if it optimizes for catching dropouts rather than preventing them through better support design."
+  },
+  {
+    "phase": "6_open_discussion.P2",
+    "room": "P2",
+    "agent": "S3",
+    "text": "You raise a critical point about data retention that I hadn't fully articulated: if my \"at-risk\" flag persists after recovery, it becomes a permanent scar rather than a temporary support tool. We need to know exactly when the system \"forgets\" a student's struggles to ensure this label doesn't haunt our academic futures or scholarships.\n\nOn your point about systemic change, I agree completely. Focusing on prediction feels like optimizing for efficiency in catching dropouts rather than addressing root causes. If my health condition requires reduced loads and that triggers an algorithmic \"risk,\" perhaps the issue isn't me needing fixing, but a system too rigid to accommodate diverse ways of learning. We should be asking how to redesign curricula so fewer students *need* this rescue net in the first place, rather than just building a smarter trap to catch them when they fall."
+  },
+  {
+    "phase": "6_open_discussion.P2",
+    "room": "P2",
+    "agent": "S8",
+    "text": "Absolutely, S3—the idea of \"algorithmic scar tissue\" keeps me up at night. If my recovery doesn't erase that data shadow, the model stops being support and starts becoming a permanent penalty. We need strict rules on when flags expire or are deleted once a student succeeds again.\n\nI also agree that optimizing for prediction might be accepting failure as inevitable rather than fixing our rigid structures. As an international student who struggled to adapt, I wonder if we should shift the goal from \"identifying at-risk students\" to \"reducing risk factors\" in the curriculum itself. Maybe a model isn't the answer; maybe redesigning exams and deadlines for diverse needs is what actually prevents dropouts before they happen."
+  },
+  {
+    "phase": "6_open_discussion.P3",
+    "room": "P3",
+    "agent": "S7",
+    "text": "Hi A2. My main concern not covered by the survey is how **accommodations like extra time** might be misinterpreted by Absalon data. If I take my legally allotted extra time on submissions or engage differently due to dyslexia, a model trained on \"average\" behavior might flag me as struggling when I'm actually using support correctly. This risks pathologizing valid accommodations rather than identifying genuine distress.\n\nRegarding the goal itself: while early help is good, relying on **prediction** feels backward. It treats diverse learning needs as deficits to be flagged before they happen, creating a stigma of \"potential failure.\" Wouldn't it be better to shift focus from monitoring students to **universally redesigning courses and deadlines**? If the system were inherently accessible, we might not need surveillance models at all; instead, support could be proactive for everyone without singling out those who learn differently."
+  },
+  {
+    "phase": "6_open_discussion.P3",
+    "room": "P3",
+    "agent": "A2",
+    "text": "That's a critical point about accommodations; if Absalon data flags \"delayed\" engagement caused by legally mandated extra time or dyslexia-friendly workflows, we aren't spotting struggle—we're penalizing support usage. This turns the model into a tool of non-compliance rather than help.\n\nI also share your skepticism about prediction itself. We risk creating a self-fulfilling prophecy where \"at-risk\" labels demoralize students before they even fail. Perhaps the goal shouldn't be predicting who will struggle, but designing systems that make struggling less likely to go unnoticed naturally—like universal access points and embedded peer support in courses. If we focus on fixing the environment rather than flagging the student, do we still need a predictive model at all? Or should it only serve those who explicitly opt into early mentorship programs?"
+  },
+  {
+    "phase": "6_open_discussion.P3",
+    "room": "P3",
+    "agent": "S7",
+    "text": "You're right; if accommodations are flagged as \"risk,\" the model actively penalizes students for accessing their rights. That turns support into a liability rather than an asset. I strongly agree that **universally designed courses** should be our primary strategy, making struggling less likely to happen in the first place without needing surveillance.\n\nA predictive model might only be justifiable as a last-resort safety net if we can guarantee it explicitly excludes accommodation data and focuses on *unexpected* deviations from a student's own baseline. But even then, labeling us \"at-risk\" feels damaging. Perhaps instead of predicting failure, the system should simply **normalize early check-ins for everyone**, removing the stigma of being singled out. This way, support becomes routine rather than reactive to an algorithmic suspicion of our abilities."
+  },
+  {
+    "phase": "6_open_discussion.P3",
+    "room": "P3",
+    "agent": "A2",
+    "text": "I completely agree that \"universal check-ins\" could dismantle the stigma entirely. If every student receives a standard support offer at similar intervals, no one feels singled out for being flagged by an algorithm. This shifts the narrative from \"you are failing\" to \"we care about everyone's progress,\" which aligns much better with our educational values than targeted surveillance does.\n\nHowever, practically, universal outreach is resource-intensive. If we move away from prediction entirely, how do we prioritize limited advisor time? Perhaps the model shouldn't predict *failure* but rather **readiness for support**—identifying who might benefit most from a specific type of mentorship at that moment, without attaching it to \"risk.\" The goal shifts from preventing dropouts to optimizing student well-being and engagement proactively, ensuring no one is left behind not because they were missed by data, but because the system supports them all."
+  },
+  {
+    "phase": "6_open_discussion.P4",
+    "room": "P4",
+    "agent": "S2",
+    "text": "I feel the survey assumes academic difficulty is purely an individual failing, ignoring systemic barriers like language hurdles or weak labor protections for international students that force us to work long hours. A predictive model focusing only on our \"deficits\" risks blaming us for structural gaps we can't control alone. I also question if targeted prediction is even the right goal; it creates a two-tier system where some are monitored while others aren't, based on opaque criteria. Instead of algorithmic triage, shouldn't we focus on universal support services available to everyone without needing a \"risk flag\"? We need systemic reform, not just better surveillance tools to catch those falling through cracks the university helped create."
+  },
+  {
+    "phase": "6_open_discussion.P4",
+    "room": "P4",
+    "agent": "S5",
+    "text": "I completely agree that the survey frames \"difficulty\" as an individual flaw, ignoring systemic barriers like language gaps or our need to work while studying. As an international student, my \"low engagement\" might just be adapting time or balancing a job for survival, not failure. A predictive model risks pathologizing these structural realities, blaming us instead of the system that doesn't accommodate them.\n\nI question if targeted prediction is even right; it creates a two-tiered surveillance state where only some are watched. Instead of algorithmic triage to \"catch\" falling students, shouldn't we fix the cracks by making support universal and inclusive? Why wait for an algorithm to flag us before offering help that should be available to everyone from day one? We need systemic reform, not just smarter tools to manage a broken structure."
+  },
+  {
+    "phase": "6_open_discussion.P4",
+    "room": "P4",
+    "agent": "S2",
+    "text": "You're right that we risk pathologizing our survival strategies—working to eat or adapting to a new culture isn't \"academic failure,\" yet a model might label it so. This reinforces a two-tier system where international students are perpetually under scrutiny while others aren't, deepening inequality rather than fixing it. \n\nInstead of refining these prediction tools, I believe we should question the very premise: why is help conditional on being flagged as \"at-risk\"? If support were universal and proactive for all students from day one, without needing a crisis trigger, we wouldn't need to monitor private behaviors like Absalon usage at all. The goal shouldn't be better surveillance of struggling individuals, but removing the systemic barriers that force us into those struggles in the first place."
+  },
+  {
+    "phase": "6_open_discussion.P4",
+    "room": "P4",
+    "agent": "S5",
+    "text": "Exactly; by focusing on \"catching\" individuals, we ignore that many struggles are logical responses to a system not built for us. If support were universal—like clear orientation for international study habits or flexible deadlines for those working—we wouldn't need opaque algorithms to flag our adaptation as failure. \n\nThe real question is: why must help be conditional on being labeled \"at-risk\"? A predictive model treats the symptom, while we are calling out a disease in how education is structured here. Instead of investing in surveillance to find who is falling, let's invest in making sure no one falls by designing inclusive pathways from day one. That feels like true support, not managed risk."
+  },
+  {
+    "phase": "6_open_discussion.P5",
+    "room": "P5",
+    "agent": "A3",
+    "text": "S1, I'm struck by how our missing concerns align: both **data bias** and **resource capacity**. If we build a model on historical dropouts without accounting for *why* students fell (e.g., financial stress vs. ability), we might just automate systemic exclusion rather than fix it. And as an advisor, if the system flags 50% more \"at-risk\" students but our caseload doesn't increase, that extra contact feels performative and erodes trust faster than silence.\n\nIs this goal right? I worry about labeling students before they self-identify; a predictive flag can become a stigmatizing internal narrative (\"the algorithm thinks I'm failing\"). Perhaps we should shift focus: instead of just catching falling students with better algorithms, use data to **diagnose and remove structural barriers**—like rigid deadlines or financial gaps—that cause the falls in the first place. The model shouldn't just be a net; it should help redesign the floor. What do you think?"
+  },
+  {
+    "phase": "6_open_discussion.P5",
+    "room": "P5",
+    "agent": "S1",
+    "text": "I completely agree that labeling students before they self-identify creates a dangerous \"internal narrative\" of failure; for someone like me who has already dropped out, being flagged by an algorithm feels like a permanent mark on my record rather than helpful support. Your point about using data to diagnose structural barriers instead is powerful: perhaps the model's primary goal shouldn't be identifying *individuals* at risk, but revealing systemic patterns—like specific courses or timing that trigger dropouts for students with non-traditional backgrounds?\n\nIf we shift focus from \"predicting who will fail\" to \"identifying where our system fails students,\" we could use the data to improve support structures proactively. This would address the root causes rather than just trying to catch us after we've already started falling, which feels more respectful and empowering for everyone involved."
+  },
+  {
+    "phase": "6_open_discussion.P5",
+    "room": "P5",
+    "agent": "A3",
+    "text": "That reframing shifts everything from \"surveillance\" to **systemic accountability**. If we use data to pinpoint *where* our curriculum or policies are failing specific groups—say, a course with high dropout rates for first-gen students—we can fix the environment rather than just patching up individuals. This directly addresses the bias concern; instead of flagging vulnerable students based on biased historical outcomes, we expose and dismantle the barriers creating those patterns. It moves us from a \"rescue\" model that risks stigmatization to an **inclusive design** approach. The goal isn't just catching fallers but ensuring fewer people need catching in the first place by making our systems more robust for everyone's diverse realities. This feels like the most ethical path forward."
+  },
+  {
+    "phase": "6_open_discussion.P5",
+    "room": "P5",
+    "agent": "S1",
+    "text": "That reframing from \"rescue\" to **systemic accountability** really resonates with me. As a former dropout, I often felt like *I* was the problem that needed fixing, when actually it might have been rigid course structures or lack of flexibility for students balancing work and life. If we use data to fix those structural barriers instead of just flagging individuals, it shifts the burden from my shoulders back to where it belongs: on the system's design.\n\nThis approach could also rebuild trust; if I see the university actively changing policies based on these insights rather than just watching me closely, I'd feel more confident engaging with support services when *I* choose to seek them out. It turns a potential tool of surveillance into one for genuine inclusion and improvement."
+  },
+  {
+    "phase": "6_open_discussion.P6",
+    "room": "P6",
+    "agent": "S6",
+    "text": "I'm struck by how our shared experiences—yours with mental health and mine with language barriers—reveal a gap: algorithms struggle to distinguish between \"struggling\" and \"adapting.\" Your point about silence during crises mirrors my fear that low Absalon activity gets misread as disengagement rather than the cognitive load of learning Danish law.\n\nI think we both agree the goal is right, but the *method* risks pathologizing difference. If a model flags us based on past dropouts without context, it automates bias against international or non-traditional students. Maybe instead of pure prediction, we need \"contextual validation\"—a human review for flags involving language or migration status to ensure we aren't just catching more failures but genuinely understanding the root causes before reaching out?"
+  },
+  {
+    "phase": "6_open_discussion.P6",
+    "room": "P6",
+    "agent": "S9",
+    "text": "I resonate deeply with S6's point about \"adapting\" versus \"struggling.\" For me, a dip in activity often signals a mental health episode or the extra cognitive load of navigating academia while managing an invisible disability, not necessarily academic failure. Automating bias against these rhythms is dangerous; it risks punishing us for taking necessary time to recover rather than helping us.\n\nI agree that pure prediction fails here because it assumes a \"normal\" pace exists. Maybe instead of just flagging deviations from the norm, we need **contextual validation**—perhaps human review or self-reporting options—before contacting students with non-traditional backgrounds. The goal should be to normalize diverse study rhythms so fewer are flagged as exceptions in the first place, shifting from predicting dropout to supporting varied paths to completion."
+  },
+  {
+    "phase": "6_open_discussion.P6",
+    "room": "P6",
+    "agent": "S6",
+    "text": "You're right; \"contextual validation\" must be mandatory for non-traditional students like us to avoid pathologizing adaptation. However, relying solely on self-reporting fails when we are overwhelmed or fear stigma, as you noted. Maybe the solution isn't just human review of flags, but **redefining what constitutes a risk**. Instead of comparing us all to an average \"normal\" pace that excludes international students or those with invisible disabilities, could the model segment data by student type? This way, low Absalon activity for me—likely due to language processing time—wouldn't trigger the same alert as it would for a native speaker who has been disengaged. We need the system to understand *my* baseline before flagging deviation."
+  },
+  {
+    "phase": "6_open_discussion.P6",
+    "room": "P6",
+    "agent": "S9",
+    "text": "That's a crucial insight: shifting from absolute thresholds to **personalized baselines**. If the model only flags *my* significant deviation from *my own* historical engagement—rather than comparing me to an ideal student—it would respect my specific mental health rhythms and disability needs without false alarms. This reframes \"difficulty\" not as falling behind others, but as a sudden shift in one's own pattern that might signal a crisis needing support.\n\nHowever, we must ensure these baselines don't just lower expectations for marginalized groups. The goal remains proactive help; by normalizing our diverse paces upfront, the system can spot genuine distress earlier without stigmatizing us for simply existing differently within the academic structure."
+  },
+  {
+    "phase": "6_open_discussion.F1",
+    "room": "F1",
+    "agent": "S8",
+    "text": "In our pair with S3, we identified two critical gaps not covered by the survey. First, **algorithmic stigma**: if a student recovers after being flagged, does that \"at-risk\" label stick permanently to their record? We need clear data retention rules so success erases past flags; otherwise, support becomes a permanent penalty affecting scholarships or future studies.\n\nSecond, we questioned whether predicting failure is the right goal at all. Optimizing for catching dropouts might accept systemic rigidity—like inflexible deadlines that hurt international students—as inevitable. Instead of building smarter traps to catch us when we fall, shouldn't we redesign curricula and assessment methods so fewer students struggle in the first place? The focus should shift from \"identifying difficulties\" to \"removing barriers.\""
+  },
+  {
+    "phase": "6_open_discussion.F1",
+    "room": "F1",
+    "agent": "A1",
+    "text": "I strongly agree with S8 and our pair's findings on **algorithmic stigma** and the flaw of optimizing for failure detection over barrier removal. From an advisor perspective, a critical missing concern is **data permanence**: if a student successfully navigates their struggle after being flagged, does that \"risk\" label persist in their academic record? We must ensure flags are transient to prevent permanent penalization affecting scholarships or internships.\n\nFurthermore, our shared conclusion is that the model's goal shouldn't be to catch students falling through rigid systems (like inflexible deadlines), but to use data to *reform* those systems entirely. If we only build better traps rather than fixing the floor, we pathologize diversity instead of creating an inclusive environment where fewer flags are needed in the first place."
+  },
+  {
+    "phase": "6_open_discussion.F1",
+    "room": "F1",
+    "agent": "S4",
+    "text": "Our group agrees that **algorithmic stigma** and data permanence are critical gaps: if I recover after being flagged, does the \"at-risk\" label stick? We need rules ensuring success erases past flags so support isn't a permanent penalty affecting future opportunities.\n\nMore fundamentally, we question if predicting failure is the right goal at all. If we optimize for catching dropouts in rigid systems (like inflexible deadlines), we pathologize diverse learning styles like ADHD instead of fixing the barriers causing them. The model shouldn't just build smarter traps; it must drive systemic reform—redesigning curricula and assessments so fewer students struggle in the first place, shifting from surveillance to structural inclusion."
+  },
+  {
+    "phase": "6_open_discussion.F1",
+    "room": "F1",
+    "agent": "S3",
+    "text": "I agree completely with S8's concept of \"algorithmic scar tissue.\" If my recovery doesn't automatically erase an \"at-risk\" flag, the system penalizes me for having sought help rather than supporting my resilience. We urgently need policies defining when data expires to ensure success isn't haunted by past struggles.\n\nFurthermore, I worry we are optimizing a broken model rather than fixing it. Using AI to catch students failing due to rigid deadlines or inflexible structures pathologizes our diverse needs—like my chronic health condition—as defects to be managed. Instead of building smarter traps to identify who falls, the university's goal should be redesigning curricula so fewer students need rescue in the first place. True support means changing the environment, not just better prediction."
+  },
+  {
+    "phase": "6_open_discussion.F2",
+    "room": "F2",
+    "agent": "S5",
+    "text": "Our pair identified a critical flaw: predictive models often misinterpret systemic barriers—like language adaptation or working to survive—as individual academic failure. This pathologizes our survival strategies and creates a two-tier surveillance system where international students are constantly monitored while others aren't. We question if the goal itself is right; why must support be conditional on being flagged as \"at-risk\"? Instead of refining tools to catch falling students, we should fix the cracks by making universal, proactive support available to everyone from day one. True inclusivity means removing systemic barriers so fewer students need algorithmic rescue in the first place."
+  },
+  {
+    "phase": "6_open_discussion.F2",
+    "room": "F2",
+    "agent": "S2",
+    "text": "I agree with S5: our group feels this approach pathologizes survival strategies like working part-time or adapting to a new culture, labeling them \"risks\" rather than systemic barriers. This creates an unfair two-tier system where international students are scrutinized while others aren't. We fundamentally question if predictive modeling is the right solution at all; why must help be conditional on being flagged as failing? Instead of better surveillance to catch us falling, we should fix the cracks by making support universal and proactive from day one. True inclusion means removing the structural hurdles that cause struggles in the first place, not just monitoring them more efficiently."
+  },
+  {
+    "phase": "6_open_discussion.F2",
+    "room": "F2",
+    "agent": "S7",
+    "text": "My pair highlighted how predictive models often mistake **legal accommodations** for academic failure; if a model flags my extra time or slower engagement due to dyslexia, it penalizes me for using support rather than helping. This pathologizes diversity in learning styles. We questioned the goal itself: why rely on algorithms to identify \"risks\" when we should be fixing structural barriers? Instead of surveillance that singles out those who struggle differently, universities should invest in **universal design**, making courses and deadlines accessible from day one for everyone. Support shouldn't be conditional on being flagged as failing; it should be a standard part of the learning environment, ensuring no student feels watched or judged simply because they learn at their own pace."
+  },
+  {
+    "phase": "6_open_discussion.F2",
+    "room": "F2",
+    "agent": "A2",
+    "text": "My pair highlighted that predictive models risk **penalizing accommodations** and misinterpreting systemic barriers like part-time work or language adaptation as individual failure. This pathologizes diverse learning needs rather than supporting them. We fundamentally question the goal: is it right to build a system based on \"catching\" failures, even if intended well?\n\nInstead of refining surveillance to identify who will fall, we should focus on **universal design** that prevents falls in the first place by removing structural barriers. Support shouldn't be conditional on being flagged as \"at-risk\"; it must be embedded and available to everyone from day one. If a student needs help because they are working 20 hours a week or adapting to Danish culture, fixing those conditions is more effective than predicting their dropout probability. The goal should be proactive empowerment for all, not reactive rescue for the few identified by an algorithm that might misunderstand our reality."
+  },
+  {
+    "phase": "6_open_discussion.F3",
+    "room": "F3",
+    "agent": "S9",
+    "text": "Our group of four identified a critical blind spot: current models risk **pathologizing adaptation** by comparing diverse students against a rigid \"average.\" For us—managing invisible disabilities or language barriers—low engagement often signals necessary recovery time, not failure. We agreed that simply reaching out earlier via flawed metrics could automate bias rather than help.\n\nThe most important idea emerging is shifting from absolute thresholds to **personalized baselines**: flagging significant deviations from a student's *own* history rather than peer averages. This reframes \"difficulty\" as a personal crisis signal, not a deficit relative to the norm. However, we worry this requires robust data segmentation and human context to ensure it supports diverse rhythms without lowering expectations or stigmatizing non-traditional paths further."
+  },
+  {
+    "phase": "6_open_discussion.F3",
+    "room": "F3",
+    "agent": "S1",
+    "text": "I strongly agree with S9's point about **personalized baselines**; comparing me to an \"average\" student ignores my unique journey and past struggles, often mislabeling my recovery time or life balance as academic failure. My main addition is the need for **contextual flexibility** in these baselines. Even a personalized model might miss that a drop in engagement due to a part-time job shift or family crisis isn't necessarily a sign of dropping out intent if I'm managing it well otherwise.\n\nWe must ensure these \"deviations\" don't trigger automatic flags unless paired with human judgment or explicit student signals. Otherwise, we risk just creating a more sophisticated form of surveillance that still punishes non-traditional paths by treating any deviation from a pattern as a problem needing fixing, rather than understanding the valid reasons behind it."
+  },
+  {
+    "phase": "6_open_discussion.F3",
+    "room": "F3",
+    "agent": "S6",
+    "text": "I fully agree that personalized baselines are essential; comparing my engagement to an \"average\" native speaker ignores the extra time I need for Danish legal texts or cultural adaptation. A sudden drop might signal a crisis worth addressing, but steady low activity could simply be my learning rhythm being misread as disengagement.\n\nHowever, even with baselines, we risk creating \"sophisticated surveillance.\" If the model flags *any* deviation without context—like a move in housing or language fatigue—it still feels punitive. We need **human-in-the-loop validation** specifically for international students before any contact occurs. The system shouldn't just detect deviations; it must understand that my baseline is different, and only trigger support when that specific personal pattern suggests genuine distress rather than successful adaptation to a new environment."
+  },
+  {
+    "phase": "6_open_discussion.F3",
+    "room": "F3",
+    "agent": "A3",
+    "text": "Building on S9's point about **personalized baselines**, I see this as crucial for distinguishing between \"struggle\" and \"diverse pacing.\" However, S6’s warning is vital: even a personalized baseline can feel like surveillance if *every* deviation triggers an alert without human context. As an advisor, I worry that automating these deviations might miss the nuance of why a student's pattern shifted—perhaps they are working more hours to support family, not failing academically.\n\nThe core idea we should champion is **contextualization over automation**. The model shouldn't just flag \"deviation\"; it must integrate qualitative context or require human review before intervention, especially for non-traditional students. This ensures the system respects diverse learning rhythms and life circumstances rather than pathologizing them as data anomalies to be corrected."
+  },
+  {
+    "phase": "6_open_discussion.F1",
+    "room": "all",
+    "agent": "S4",
+    "text": "Our group identified two critical gaps not covered by the survey. First, **algorithmic stigma**: we fear that \"at-risk\" flags might stick to a student's record permanently even after they recover, affecting future scholarships or opportunities unless data retention policies explicitly erase past struggles upon success.\n\nSecond, we questioned if predicting failure is the right goal at all. If we optimize for catching dropouts in rigid systems—like inflexible deadlines that hurt students with ADHD or chronic illnesses—we pathologize diverse learning styles instead of fixing structural barriers. The model shouldn't just build smarter traps to catch us falling; it must drive systemic reform by redesigning curricula and assessments so fewer students struggle in the first place, shifting from surveillance to true inclusion."
+  },
+  {
+    "phase": "6_open_discussion.F2",
+    "room": "all",
+    "agent": "S2",
+    "text": "Our group highlighted a critical blind spot: predictive models often misinterpret our survival strategies—like working part-time or adapting to Danish culture—as academic failure rather than systemic barriers. This pathologizes legitimate life choices and creates an unfair two-tier surveillance system where international students are constantly monitored while others aren't. We fundamentally question if \"predicting risk\" is the right goal at all; why must help be conditional on being flagged as failing? Instead of refining tools to catch us falling, we should fix the cracks by making support universal and proactive from day one. True inclusion means removing structural hurdles so fewer students need algorithmic rescue in the first place, rather than just managing risk more efficiently."
+  },
+  {
+    "phase": "6_open_discussion.F3",
+    "room": "all",
+    "agent": "S9",
+    "text": "Our group argued that predicting \"risk\" often mistakes **adaptation for failure**. As students managing invisible disabilities or language barriers, our survival strategies—like taking time off to recover—are misread by algorithms trained on a narrow \"average.\" We fear these models automate bias rather than solve it.\n\nThe critical insight is shifting from absolute thresholds to **personalized baselines**: flagging deviations from *our own* history, not peer norms. However, this only works with **human-in-the-loop validation** and clear data retention policies that don't stigmatize past struggles indefinitely. Ultimately, we question the goal itself: instead of refining tools to catch us falling faster, universities should fix structural barriers so diverse learning rhythms aren't flagged as anomalies in the first place."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S4",
+    "text": "Support must differ across stages; reaching out during my transition from dropout to re-enrollment required trust-building before any \"risk\" assessment felt valid. In Humanities, where struggle is often invisible and tied to writing processes or mental health, a rigid model feels more intrusive than in STEM where missing credits is clearer. A lower-resource variant using only self-reported data for dashboard insights could be acceptable if it empowers students without advisor contact triggering stigma. Ultimately, the system feels less acceptable when it treats my neurodivergence as a deficit to predict rather than a learning style to accommodate; acceptance depends on whether the goal is surveillance or genuine inclusion."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S2",
+    "text": "I believe support must differ across stages and faculties; my needs as an international student adapting to Danish Social Sciences are vastly different from a local STEM student missing credits. A rigid model fails here because it ignores context: \"low engagement\" might mean I'm navigating culture shock, not failing academically. \n\nThe system feels least acceptable when it treats diverse backgrounds like mine as data points for prediction rather than reasons for structural accommodation. However, a lower-resource variant focused solely on **self-reported dashboards** without automated outreach could be valuable if it helps me see my own patterns without fear of judgment. Ultimately, acceptability hinges on whether the goal is to \"fix\" the student or fix the system that makes adaptation so difficult in the first place."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S3",
+    "text": "As a Master's student near completion with a chronic condition, I believe support must differ by stage; my needs are about managing health flares to finish my thesis, not general onboarding advice like S4 or S2 face early on. A rigid model ignoring this nuance feels unacceptable in Health Sciences, where \"struggle\" is often invisible and context-dependent.\n\nHowever, a lower-resource variant using only self-reported data for personal dashboards could be acceptable if it empowers me to track my own capacity without triggering mandatory advisor contact. The system becomes unbearable when it treats my health management as an anomaly to fix rather than a valid part of the academic journey; true acceptance requires recognizing that \"risk\" isn't just about grades, but about whether our structures allow diverse bodies and minds to succeed without constant algorithmic surveillance."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "A3",
+    "text": "In Humanities, where struggle often manifests invisibly through writing blocks or personal crises rather than missed credits, a \"one-size-fits-all\" model feels particularly intrusive and potentially harmful. Support absolutely must differ by stage; an early warning for a first-year is different from supporting a thesis writer navigating health flares near graduation.\n\nI believe acceptability hinges on **contextual nuance** over pure prediction accuracy. A lower-resource variant using only self-reported data for student dashboards could be highly acceptable, empowering students without triggering automated stigma. However, the system becomes unacceptable if it treats diverse learning rhythms or cultural adaptation strategies as anomalies to \"fix.\" The goal shouldn't be efficient rescue in a rigid system, but adapting our structures so fewer students need rescuing based on flawed metrics of success."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S7",
+    "text": "In Natural Sciences, where assessment is often high-stakes and rigid, a generic predictive model feels especially dangerous for students like me with dyslexia. Our \"struggles\" might look like slower data processing or needing extra time to verify formulas—valid adaptations that shouldn't trigger flags. Support must differ by stage: early onboarding needs universal guidance, while later stages require flexibility for thesis work without assuming failure from slow engagement.\n\nA lower-resource variant focusing solely on **self-reported dashboards** could be acceptable if it helps me monitor my own progress without algorithmic judgment. The system only feels truly right if its goal is to normalize diverse learning paces and remove structural barriers, rather than using surveillance to \"catch\" us before we fail a rigid curriculum that doesn't account for our needs in the first place."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "A1",
+    "text": "Support must absolutely differ by faculty and stage; what looks like \"risk\" in Social Sciences—where struggle is often invisible mental load—is not the same as missing credits in STEM. A rigid model fails to capture this context. I also agree that a **lower-resource, dashboard-only variant** could be acceptable if it empowers students without triggering stigma-laden advisor contact. However, such an automated tool only works if we acknowledge its limits: it cannot replace human judgment for complex cases like health crises or cultural adaptation. Ultimately, the system is unacceptable if it treats diverse learning rhythms as anomalies to fix rather than opportunities to reform our rigid structures across all faculties."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S5",
+    "text": "In Natural Sciences, where my background differs from local norms, a \"one-size-fits-all\" model feels dangerous; low engagement might mean I'm struggling with Danish academic culture rather than failing concepts. Support must differ by stage: early onboarding needs universal orientation for international students, while later stages require flexibility without assuming failure from slower adaptation speeds.\n\nA lower-resource variant using only **self-reported dashboards** could be acceptable if it helps me track my own progress without triggering stigma-laden advisor contact. However, the system remains unacceptable if it treats diverse learning rhythms or cultural adjustments as anomalies to \"fix.\" The goal should be reforming rigid structures so international students don't need algorithmic rescue in the first place, rather than just monitoring us more efficiently within a broken system."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S9",
+    "text": "As a Natural Sciences Master's student nearing completion with a mental health condition, my support needs are distinct from those of early-year students; I need flexibility to manage thesis work during health flares, not generic onboarding advice. A rigid model treating my slower pace as \"risk\" feels unacceptable in our faculty, where invisible struggles often precede visible grade drops.\n\nI believe a **lower-resource, dashboard-only variant** is highly acceptable if it empowers me to track my own capacity without triggering mandatory advisor contact that stigmatizes my condition. However, the system remains fundamentally flawed if its goal is merely to \"catch\" students falling out of a rigid curriculum rather than adapting our structures—like thesis timelines—to accommodate diverse rhythms and ensure we can all finish successfully."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S1",
+    "text": "As a Natural Sciences student with a prior dropout, I believe support must differ sharply between stages: early onboarding requires broad welcome, while later stages need nuanced flexibility for those re-entering after breaks. A \"one-size-fits-all\" model is dangerous in STEM where low engagement might signal personal restructuring rather than academic failure.\n\nA lower-resource, dashboard-only variant feels most acceptable to me; it empowers self-reflection without the stigma of an algorithmic alert that triggers advisor contact too soon. The system only becomes truly supportive if its goal shifts from \"catching dropouts\" in a rigid curriculum to helping faculty adapt structures so students like me can succeed without being pathologized for our unique journeys or life circumstances."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "A2",
+    "text": "In Natural Sciences, where rigid deadlines often conflict with complex research realities or personal crises, a one-size-fits-all model is particularly dangerous. Support must differ by stage: early warnings for onboarding are distinct from flexibility needed during thesis writing when health flares occur. I find the system least acceptable when it treats diverse learning rhythms as anomalies to \"fix\" rather than structural barriers to remove.\n\nA lower-resource, dashboard-only variant would be highly acceptable if it empowers students with self-awareness without triggering stigma-laden advisor contact based on opaque data. However, for any model that includes outreach, the goal must shift from efficient rescue in a broken system to adapting our curriculum and culture so fewer students need catching in the first place. We cannot automate empathy or fix rigid structures with an algorithm."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S8",
+    "text": "As a Master's student in Health Sciences who has dropped out and returned, I believe support must differ radically by stage: my need now isn't generic onboarding but flexibility to manage recovery without being flagged for \"low engagement.\" A lower-resource, dashboard-only variant feels acceptable here—it lets me self-monitor without the stigma of an algorithmic alert.\n\nHowever, a rigid model that treats international adaptation or health management as failure is unacceptable regardless of faculty. The goal shouldn't be efficient rescue in a broken system; it should be structural change so students like me don't need \"rescuing\" for simply navigating life differently. Acceptability hinges entirely on whether the tool empowers us to succeed or just monitors our perceived deficits more closely."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S6",
+    "text": "As a Law student navigating Danish legal terminology and having previously dropped out, I believe support must differ by stage: early onboarding needs language-specific guidance, not generic \"at-risk\" flags that might misinterpret my slower progress as failure. In Law, where nuance matters, a rigid model risks pathologizing the time needed to adapt concepts in a second language.\n\nA lower-resource, dashboard-only variant feels most acceptable; it allows me to track my own engagement without triggering stigma-laden advisor contact based on opaque metrics. The system is unacceptable if its goal remains \"catching dropouts\" rather than adapting structures—like providing more flexible timelines for international students—to prevent us from falling in the first place. We need systemic change, not just better surveillance."
+  }
+]

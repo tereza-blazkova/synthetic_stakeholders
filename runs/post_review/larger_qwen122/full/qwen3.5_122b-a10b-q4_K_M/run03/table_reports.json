@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "The abstract \"improvement\" thresholds made weighing privacy gains difficult, especially for Q3.4 on Absalon logs; we couldn't quantify if tracking clicks was worth it without concrete examples of bias. We found Q3.5/6 and the intervention design most critical: sensitive data must never predict failure, only audit fairness, combined with mandatory human review before any outreach.\n\nAnswers diverged on using sensitive traits for fairness checks. Some accepted them to catch hidden struggles like financial stress; others, including me, feared permanent stigmatization if the system \"learns\" disability or status equals risk. This split reflects differing trust in human safeguards versus the fear that the initial flag itself causes harm. Ultimately, we agree: data boundaries must be strict, and empathy through human interpretation is non-negotiable to prevent profiling vulnerable students."
+    },
+    {
+      "agent": "A1",
+      "text": "I add that the intervention design is equally critical as data inputs. The survey options for outreach felt too binary; generic emails often get ignored. We must prioritize personalized invitations to voluntary meetings with trusted advisors. Without human discretion to override algorithmic flags based on context—like a student intentionally taking fewer credits due to illness—the system risks being punitive rather than supportive. Our consensus is clear: no sensitive data for prediction, strict limits on activity tracking, and a \"human-in-the-loop\" review before any contact. The model should serve as a trigger for empathy, not an automated judgment tool."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "Our table found Q4's \"moderate vs. low\" explainability distinction too vague for non-experts to trust. We identified Q4 and Q6 as critical: without clear, actionable reasons (\"High\" explainability), any intervention feels like surveillance, not support. We debated the frequency of outreach (Q6.2). While some argued for \"continuous\" monitoring to catch silent dropouts, I, along with others fearing past trauma from failure, worried that constant tracking triggers avoidance and hides struggles. The tension lies between statistical urgency and psychological safety; if a student feels hunted, they won't seek help. We need a system that balances immediate risk detection with respect for a student's emotional capacity to engage, perhaps through adjustable contact frequencies rather than one-size-fits-all surveillance."
+    },
+    {
+      "agent": "A2",
+      "text": "To build on S4’s points: our biggest struggle was interpreting abstract accuracy gains versus concrete trust; without clarity, higher detection rates are meaningless if students disengage. While we agreed Q4 is non-negotiable—requiring \"High\" explainability as a baseline—the divergence in Q6.2 highlighted a real tension between my role's need for early warning and the students' fear of surveillance.\n\nAn idea not covered by the survey: we should design the system with adaptive thresholds. Instead of rigid \"continuous\" or \"annual\" checks, the contact frequency could adjust based on student consent or sensitivity levels. This ensures urgent risks are caught without triggering the fight-or-flight response in those already overwhelmed, truly balancing efficiency with psychological safety."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "Our table found Q5's abstract \"percentage loss\" hard to quantify without imagining real students. We identified data calibration—specifically filtering for approved accommodations like extra exam time—as the most critical design element; without it, fairness is impossible because disabled patterns are misread as failure.\n\nThe biggest divergence was in Q7.2 on personalized outreach: some chose \"fewer\" to avoid stigmatizing false positives, while others prioritized high recall. We resolved this by proposing a two-tier system: use broad recall for generic emails to catch everyone, but strictly reserve personalized contact for cases where an advisor has manually verified the data and ruled out valid accommodations first. This balances reaching hidden struggles with protecting student dignity."
+    },
+    {
+      "agent": "A3",
+      "text": "I'd like to add that our table believes the \"human-in-the-loop\" verification isn't just a safety step; it's a fundamental design requirement for *data quality*. The survey treats data as static inputs, but we must explicitly filter out valid accommodations—like extended deadlines or alternative formats—before the model calculates risk. Without this, \"equal recall\" is impossible because disabled and international students will be systematically misflagged as high-risk due to legitimate differences in their study patterns. Our proposed two-tier approach ensures broad outreach via low-stakes generic emails while reserving sensitive personalized contact only for advisor-verified cases, ensuring we catch hidden struggles without eroding trust or reinforcing stigma through algorithmic error."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "Our table found the abstract \"improvement\" metrics hard to visualize—knowing a model catches \"5 more students\" doesn't help weigh that against privacy loss without concrete examples. We identified Q3 (data) and Q6 (intervention) as most critical: we need absolute bans on demographic data like race or nationality, while carefully using contextual factors like financial status *only* to fix fairness gaps, not as risk labels.\n\nThe biggest split was on Absalon activity logs. Some demanded \"never\" due to surveillance fears; others saw value in detecting silent struggles. We realized this divide stems from trust: without a model that distinguishes between \"avoiding work\" and \"struggling while working late shifts,\" this data risks mislabeling part-time students as disengaged, repeating the exclusion I faced before. Finally, we feel any automated flag must trigger human connection immediately; otherwise, it's just surveillance."
+    },
+    {
+      "agent": "A1",
+      "text": "I’d add that Q3.6’s distinction between using sensitive data for accuracy versus fairness was unclear; practically, if a variable improves fairness, it often indirectly boosts accuracy too, making the trade-off artificial. For S1’s point on Absalon logs: I want to emphasize *why* some voted \"large.\" As advisors, we see students who pass everything but are burning out silently—activity patterns might be their only early warning sign. However, this is only viable if the system accounts for \"contextual irregularity,\" not just frequency. Ultimately, our report must stress that no data strategy matters without Q6’s human intervention: a flag is useless unless it leads to an empathetic conversation that validates the student’s specific reality, rather than assuming laziness from a data gap."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "\"Table 2 found Q4's distinction between 'Moderate' and 'Low' explainability confusing; we couldn't visualize what a vague explanation looks like for a student. We unanimously agreed that **Q4 (Explainability)** is the most critical design factor, specifically requiring a hard 'High' threshold to ensure transparency.\n\nThe biggest divergence was on accepting lower explainability for small gains. While some might accept this for marginal reach, our table argues it destroys trust. Having experienced dropout and ADHD-related struggles, we know that opaque logic feels like surveillance, not support. If students can't instantly understand *why* they are flagged—especially due to cultural or neurodivergent differences—they will disengage. We believe catching a few more students isn't worth the risk of alienating those who need help most by making them feel judged.\""
+    },
+    {
+      "agent": "A2",
+      "text": "\"I'd like to add that for us advisors, Q4 isn't just about student trust; it's a professional necessity. If I cannot clearly articulate *why* a model flagged a student to their face during our mandatory meetings, the intervention fails immediately. We need 'High' explainability so every flag comes with a defensible, human-readable narrative we can discuss with empathy.\n\nRegarding Q6, our table strongly favors pairing this transparency with voluntary meeting invitations rather than automated emails. A conversation allows us to contextualize data—distinguishing between genuine struggle and cultural or linguistic differences—that an opaque explanation cannot capture. We must design for the *interaction*, not just the algorithm; without a human bridge to explain the 'why', even the most accurate model becomes counterproductive.\""
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "For me, Q5's trade-off between accuracy and fairness was hard because quantifying \"loss\" felt abstract when my real struggle is being misinterpreted due to dyslexia. The most critical design element is **equal recall**: the model must catch every struggling group, even if it flags some neurodivergent students who are actually coping well via accommodations. We saw a split on Q7.2 (personalized outreach): some preferred \"balance\" or \"many,\" while I chose \"slightly fewer.\" This was because personalized messages risk confirming internal fears of failure if the algorithm misinterprets our unique study patterns. A generic offer feels safer than an invasive diagnosis that might stigmatize us before we even know we need help."
+    },
+    {
+      "agent": "A3",
+      "text": "I agree Q5's abstract trade-offs were hard to visualize. For our table, **equal recall** is non-negotiable; missing marginalized students due to different struggle patterns is unacceptable. The main divergence was on personalized outreach (Q7.2). While S7 and I chose \"slightly fewer\" or \"balance,\" others favored \"many.\" This stems from the tension between reaching everyone early versus avoiding stigmatizing false positives, especially for neurodivergent or international students who fear algorithmic mislabeling. As advisors, we must ensure personalized messages only follow human review to prevent them from feeling like surveillance. An idea missing here is a mandatory **\"human-in-the-loop\" gate**: no personalized contact should go out without an advisor verifying the risk signals first, ensuring support feels helpful, not accusatory."
+    }
+  ]
+}

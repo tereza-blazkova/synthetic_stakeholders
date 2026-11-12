@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "Our table found Q3.4 vague regarding what \"Absalon activity\" actually tracks—is checking a page enough? We agreed that high explainability is non-negotiable; without clear reasons for flags, students feel surveilled rather than supported. While we largely rejected race data due to profiling risks (Q3.5), the minority accepting it highlighted an equity concern: ignoring disparities might leave marginalized groups unsupported. Crucially, our design priority must distinguish between legitimate life factors—like working shifts or health issues—and actual academic struggle. If models can't transparently explain this distinction, invasive tracking does more harm than good by stigmatizing students who are already struggling silently."
+    },
+    {
+      "agent": "A1",
+      "text": "Adding to S1's points: As an advisor, I also found quantifying \"small\" versus \"large\" accuracy gains abstract without real data examples. Our table strongly prioritized **High Explainability (Q4)** as the gatekeeper for any sensitive data usage. We believe that if a model cannot clearly distinguish between academic disengagement and external factors like illness or work shifts, it risks generating false positives that alienate students rather than helping them.\n\nWhile most rejected race/ethnicity data due to profiling fears, we acknowledged the tension: some argued excluding such data blinds us to systemic inequities. Ultimately, our recommendation is strict transparency; without clear reasons for flags, invasive tracking like Absalon activity erodes trust and may even discourage vulnerable students from using university platforms, defeating the system's purpose."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "As Table 2's student representative, we found Q4's distinction between \"Moderate\" and \"Low\" explainability vague without concrete examples of how explanations would appear to students. We identified the critical link: High Explainability must be a mandatory gatekeeper for any personalized intervention (Q6/Q7). Without clear reasons, outreach feels like surveillance, not support.\n\nWe saw strong disagreement on Q4 thresholds; some prioritized catching more students at the cost of opacity, fearing missed dropouts. Others, including myself and my peers with ADHD or international backgrounds, argued that opaque flags cause alienation, making those \"saved\" by accuracy impossible to reach due to broken trust. We also propose a missing idea: advisors should verify complex model signals against human context before contacting students."
+    },
+    {
+      "agent": "A2",
+      "text": "Building on S4's excellent summary, I want to emphasize our consensus that \"High Explainability\" is non-negotiable for personalized interventions like meeting invitations. While we recognized valid concerns about missing students if transparency limits accuracy, the group agreed that unexplainable alerts often trigger avoidance rather than help-seeking. Our key design insight was proposing a hybrid model: use complex data patterns to *flag* potential risks internally, but require human advisors to translate these into clear, verifiable reasons before any direct contact occurs. This ensures we leverage advanced detection without sacrificing the trust necessary for effective support, particularly for vulnerable groups like international students or those with neurodiversity who might be misread by opaque algorithms."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "Our table found Q5 and Q6 crucial but challenging regarding fairness definitions. We unanimously agree that **equal recall** is non-negotiable; without it, students with disabilities like my dyslexia are systematically missed by \"average\" models. The biggest divergence was on intervention selectivity: while some wanted strict precision to avoid stigma (S8/S9), I argued for a balance in personalized outreach to ensure neurodivergent struggles aren't overlooked due to high filters. A key insight not captured is that **explainability** must accompany fairness; simply flagging me isn't enough if the system can't explain *why* my data looks \"risky\" when it's actually how I learn."
+    },
+    {
+      "agent": "A3",
+      "text": "I would add that our table emphasizes a critical link between fairness and intervention quality: **personalized outreach must have higher precision thresholds than generic emails** to preserve trust. We diverged on this balance because while some prioritize catching every struggling student (safety-first), others fear false positives cause psychological harm or stigma, especially for marginalized groups.\n\nFinally, the survey didn't fully capture our concern that **advisors need context**, not just alerts. If a model flags a Humanities student based on \"low page views\" without noting disability accommodations, it risks misdiagnosis. We propose that any personal contact requires an explainable reason specific to the student's reality, ensuring support feels human-led rather than algorithmic surveillance."
+    }
+  ]
+}

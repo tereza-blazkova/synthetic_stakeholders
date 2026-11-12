@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "\"Hi everyone, this is S1 from Table 1. We found Q3's definition of 'Absalon data' unclear—does it mean every click? This ambiguity made weighing privacy hard. Our table identified two critical design constraints: first, strictly limiting behavioral tracking unless accuracy gains are massive to avoid punishing non-traditional students for life circumstances; second, sensitive demographic data must be used *only* for fairness audits (Q3.6), never as direct predictors of risk.\n\nAnswers differed sharply on Q3.5 regarding disability and nationality data. Some argued that using these factors improves safety by catching silent struggles early, while others feared it creates pre-emptive stigmatizing labels regardless of accuracy thresholds. Finally, we worry about a missing issue: ensuring being flagged doesn't permanently 'blacklist' students in their records if they decline help.\""
+    },
+    {
+      "agent": "A1",
+      "text": "\"I'd like to add two points to our report. First, regarding clarity: Q3's thresholds for 'moderate' versus 'large' improvement were abstract without knowing our baseline error rates; it was hard to judge if a gain justified the privacy cost. Second, beyond fairness audits (Q3.6), we identified that *intervention selectivity* is equally critical for design. As advisors, we must prioritize precision over volume: while generic emails can be broad ('slightly fewer' contacts), personalized outreach requires high confidence and very low false positives to avoid wasting resources and eroding trust. Finally, a concern not fully captured in the survey is ensuring students retain full control; they need clear opt-out mechanisms if data usage makes them feel surveilled rather than supported.\""
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "Our table found Q4's distinction between \"Moderate\" and \"Low\" explainability vague; without clear examples, it was hard to judge accuracy trade-offs for students with neurodivergent conditions like my ADHD. The most critical design requirement is strict \"High\" explainability: we cannot accept opaque flags that feel like surveillance rather than support. While Q7.1 showed slight disagreement on generic emails (some prioritized volume as a safety net), our consensus was strong: outreach must be personalized and timely, specifically via voluntary meeting invitations. Crucially, if the system cannot clearly articulate *why* a student is flagged based on transparent data, no intervention will work; clarity is non-negotiable to prevent alienating vulnerable students who need help most."
+    },
+    {
+      "agent": "A2",
+      "text": "To add to S4's points, our table emphasized that \"High\" explainability isn't just ethical; it's a functional requirement for Natural Sciences advisors. Without specific triggers like missed deadlines or low grades—rather than vague patterns—we cannot tailor advice effectively during limited meetings. Regarding the disagreement on Q7.1 (generic emails), those favoring volume likely aimed to catch silent crises caused by shame, but we concluded that without high explainability, mass emailing creates \"alert fatigue\" and erodes trust. The system must prioritize precision: if a flag isn't transparent enough for me to have a supportive conversation, it should not be generated. We propose the model strictly links data transparency directly to intervention types, ensuring every contact feels like genuine care, not surveillance."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "For Table 3, Q5 on fairness was clear but emotionally weighty; we agreed *equal recall* must be non-negotiable to prevent models from automating inequality for neurodivergent or international students whose struggles look different. The intervention questions (Q6/Q7) were our other priority. We saw strong disagreement in selectivity: while many feared alert fatigue, S8 and S9 argued that missing a student with invisible disabilities is catastrophic, favoring \"slightly many\" generic contacts as a safety net. However, for personalized messages, we unanimously agreed on high precision to avoid stigma. A key idea not fully captured was the need for students to opt-in to personalization only after trust is built via initial generic contact."
+    },
+    {
+      "agent": "A3",
+      "text": "Adding to S7's excellent summary: I would emphasize that while Q5 was conceptually clear, the trade-off of losing overall accuracy for fairness felt practically difficult until we heard personal stories. This reinforced our consensus on *equal recall* as an ethical imperative, not just a statistical one. Regarding disagreement in selectivity (Q7), my advisor perspective highlights a resource constraint: excessive false positives dilute our capacity to help those truly in crisis. However, I now see that for vulnerable groups like S8 and S9 described, the risk of \"missing\" someone outweighs annoyance from generic emails. Finally, an idea missing from the survey is data governance: students need explicit control over how sensitive data informs personalization before they trust a system enough to accept personalized outreach."
+    }
+  ]
+}

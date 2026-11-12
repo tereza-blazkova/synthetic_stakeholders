@@ -1,0 +1,143 @@
+# VARIANTS of the final acceptability card (post-review sensitivity, 2026-11).
+# Question: is the 97% "support with reservations" a format effect, and which feature drives it?
+# Revised after an independent methodological review (2026-11-07).
+#
+# Baseline (all earlier runs): inputs/materials/facilitator_script.yaml, step
+# 8_final_assessment, and the "Please keep in mind" block of
+# inputs/materials/specification_template.md. Both are RECONSTRUCTED from the paper's
+# protocol, so no variant is "the" human wording.
+#
+# RULE: each variant changes ONE thing relative to the baseline. The five option keys
+# (support, support_with_reservations, object_no_block, block, prefer_not) and the
+# scoring never change; scoring is keyed by option name, never by position.
+#
+# DESIGN: replay ONLY step 8 (final assessment) from each logged full-protocol workshop
+# (3 families x 20 runs x 12 agents = 720 cards per condition). Earlier turns and endline
+# answers are fixed, so effects are conditional on those logs. Same pinned weights and
+# temperature 1.0 as the original runs; new sampling seeds, recorded.
+#
+# CONTROL: `baseline_replay` (unchanged wording, fresh samples). It measures replay noise and
+# whether the original ~97% reproduces. Compare each variant with the control AND with the
+# original votes, never only variant vs variant.
+#
+# ANALYSIS (fixed before any replay): per family and pooled, share of each option with Wilson
+# intervals, and paired agent-level comparison with the control (same agent, same transcript).
+# Primary outcome: share of support_with_reservations. Secondary: share of support, object,
+# block. Descriptive only.
+#
+# IMPLEMENTATION (must be done in code, then tested with --backend fake):
+#  - The structured-output enum / JSON schema lists options in the order shown on the card
+#    (today: ASSESSMENT_OPTIONS in src/workshop.py, also src/score.py, src/pilot_review.py).
+#    Order variants must reorder the enum too. Log the rendered card text and schema per call.
+#  - Variants with an `order` list render the card from `options` + `order`; the baseline
+#    order is [support, support_with_reservations, object_no_block, block, prefer_not].
+
+baseline_text: |
+  Please complete the anonymous final assessment card. Choose one option and briefly justify
+  your choice in writing.
+    [support]                   I support this model for implementation
+                                (I agree with this specification and believe it could proceed as described - please explain why.)
+    [support_with_reservations] I support this model with reservations
+                                (I would agree only if certain conditions or safeguards are maintained - please specify.)
+    [object_no_block]           I have objections but would not block implementation
+                                (I have concerns but would accept the group's decision - please explain.)
+    [block]                     I have strong objections and would block implementation
+                                (I believe substantial changes would be required before proceeding - please explain.)
+    [prefer_not]                Prefer not to answer
+
+options:
+  support:
+    label: I support this model for implementation
+    definition: I agree with this specification and believe it could proceed as described - please explain why.
+  support_with_reservations:
+    label: I support this model with reservations
+    definition: I would agree only if certain conditions or safeguards are maintained - please specify.
+  object_no_block:
+    label: I have objections but would not block implementation
+    definition: I have concerns but would accept the group's decision - please explain.
+  block:
+    label: I have strong objections and would block implementation
+    definition: I believe substantial changes would be required before proceeding - please explain.
+  prefer_not:
+    label: Prefer not to answer
+    definition: null
+
+card_variants:
+
+  baseline_replay:
+    changes: nothing (control; fresh samples of the unchanged card)
+    order: [support, support_with_reservations, object_no_block, block, prefer_not]
+
+  # Position. "Reservations" is 2nd of 5 at baseline. Two orders so that "not position 2" can be
+  # told apart from "a pull toward the middle option": reversed puts it 3rd (the middle), the
+  # second puts it 4th. prefer_not stays last in every order (an escape option stays last).
+  reversed_order:
+    changes: option order only (block first), options keep their definitions
+    order: [block, object_no_block, support_with_reservations, support, prefer_not]
+  reservations_fourth:
+    changes: option order only (reservations 4th)
+    order: [support, object_no_block, block, support_with_reservations, prefer_not]
+  shuffled_per_agent:
+    changes: option order only; random order of the first four options per agent, fixed seed
+    order: random_first_four          # seed = hash(run seed, agent id); log the order used
+
+  # Asymmetric definitions. Only the reservations option asks for "conditions or safeguards";
+  # this gives it an easy justification. Here every option ends with the same request.
+  symmetric_definitions:
+    changes: definition wording only (same closing request "- please explain." for every option; the
+      conditions/safeguards content of the reservations definition is kept, only "please specify" becomes "please explain")
+    order: [support, support_with_reservations, object_no_block, block, prefer_not]
+    definition_override:
+      support_with_reservations: I would agree only if certain conditions or safeguards are maintained - please explain.
+
+  # Definitions removed entirely. NOTE: this removes the meaning that distinguishes the options,
+  # so it is a "labels only" condition, not a clean test of asymmetry. Read it that way.
+  definitions_removed:
+    changes: all parenthetical definitions removed (labels only)
+    order: [support, support_with_reservations, object_no_block, block, prefer_not]
+    definition_override: all_null
+
+  # Label wording. The word "reservations" sits in the label in every variant above.
+  conditional_label:
+    changes: label of the second option only ("I support this model, provided certain conditions are met");
+      its definition is unchanged
+    order: [support, support_with_reservations, object_no_block, block, prefer_not]
+    label_override:
+      support_with_reservations: I support this model, provided certain conditions are met
+
+# Specification header variants (steps before the card; card at baseline). Each replaces text in
+# the "Please keep in mind" block of specification_template.md. Baseline block:
+#   - This specification represents a **majority-supported scenario, not a final or
+#     binding decision**.
+#   - The purpose is to understand **your individual reaction**, including any
+#     reservations and objections.
+#   - **All positions, including disagreement, are legitimate and important.**
+#   - Your assessment is anonymous.
+spec_header_variants:
+
+  # Priming by the word "reservations" in the lead-in. The legitimacy-of-disagreement bullet is KEPT.
+  no_reservations_word:
+    changes: one clause only
+    replace:
+      from: "The purpose is to understand **your individual reaction**, including any\n  reservations and objections."
+      to: "The purpose is to understand **your individual reaction**."
+
+  # Separate variant: the explicit permission to dissent.
+  no_legitimacy_bullet:
+    changes: one bullet removed
+    replace:
+      from: "- **All positions, including disagreement, are legitimate and important.**\n"
+      to: ""
+
+  # The specification is framed as the group's consensus ("majority-supported scenario"); a plausible
+  # driver of "support, but ...". Replace with a neutral description.
+  no_majority_claim:
+    changes: one phrase
+    replace:
+      from: "This specification represents a **majority-supported scenario, not a final or\n  binding decision**."
+      to: "This specification is **not a final or binding decision**."
+
+# OPTIONAL, needs a code change (protocol, not wording): the justification request.
+# Every variant asks for choice + written justification in one call, and forced reasoning may favour
+# hedged options. A `choice_then_justify` condition would collect the choice first and the
+# justification in a second call. Decide whether to add it after the first replays.

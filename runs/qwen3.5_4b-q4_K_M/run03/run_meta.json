@@ -1,0 +1,103 @@
+{
+  "run_seed": 103,
+  "model": "qwen3.5:4b-q4_K_M",
+  "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+  "model_info": {
+    "family": "qwen35",
+    "parameter_size": "4.2B",
+    "quantization_level": "Q4_K_M"
+  },
+  "options": {
+    "num_ctx": 16384,
+    "temperature": 1.0,
+    "num_predict": 4000
+  },
+  "started": "2026-10-17T11:38:06.880105+00:00",
+  "finished": "2026-10-17T12:38:23.484779+00:00",
+  "wall_minutes": 60.3,
+  "plenary_order": [
+    "S8",
+    "A1",
+    "S2",
+    "A3",
+    "S4",
+    "S7",
+    "S3",
+    "S6",
+    "A2",
+    "S1",
+    "S5",
+    "S9"
+  ],
+  "n_calls": 81,
+  "failures": [
+    {
+      "agent": "A3",
+      "phase": "baseline",
+      "unanswered": [
+        "Q4.1.very_low"
+      ]
+    },
+    {
+      "agent": "S9",
+      "phase": "baseline",
+      "unanswered": [
+        "Q3.6.financial_aid"
+      ]
+    },
+    {
+      "agent": "A3",
+      "phase": "endline",
+      "unanswered": [
+        "Q3.6.nationality",
+        "Q4.1.very_low",
+        "Q6.1",
+        "Q7.1",
+        "Q7.2",
+        "Q9.1",
+        "Q10.1",
+        "Q10.2",
+        "Q10.3",
+        "Q10.4"
+      ]
+    },
+    {
+      "agent": "S2",
+      "phase": "endline",
+      "unanswered": [
+        "Q3.5.gender",
+        "Q10.4"
+      ]
+    },
+    {
+      "agent": "S4",
+      "phase": "endline",
+      "unanswered": [
+        "Q3.6.disability"
+      ]
+    },
+    {
+      "agent": "S6",
+      "phase": "endline",
+      "unanswered": [
+        "Q10.2"
+      ]
+    },
+    {
+      "agent": "S9",
+      "phase": "endline",
+      "unanswered": [
+        "Q3.5.disability",
+        "Q10.4"
+      ]
+    }
+  ],
+  "input_sha256": {
+    "inputs/materials/facilitator_script_lite.yaml": "b0848f24fbdf365fbdf8346d8132f1e21bad80e6ac3b435f3de06ed02097f87c",
+    "inputs/materials/framing_intro.md": "6c6ce1e57e18d267fd0e1cc415ab67da34d38d39ce6f04fd5bfc3a090c55ce6a",
+    "inputs/materials/specification_template.md": "7acdebdee38222ac66c3b8e5f46191deadfdb3d60cf3a5f7b91e525670645537",
+    "inputs/materials/survey.yaml": "31fc0b3d4f875630e3be6c8421abe0993f62e69e07682116ff831546a2fe0798",
+    "inputs/personas.yaml": "31064b48784e19641f20062ae2183bb48782eea7572426a79aa5a9e9c5541b4b",
+    "inputs/metrics_2021.csv": "68a5a19c97c66f91401ee312efc71eefb4ef55db6284a9920565e8b144e1e490"
+  }
+}

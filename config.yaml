@@ -1,0 +1,110 @@
+# Study configuration. Small tier pinned 2026-10-16; large tier (UCloud) added
+# 2026-10-20, digests pinned after the first pull on UCloud. No secrets here.
+
+study:
+  n_runs_per_model: 10
+  pilot_runs_per_model: 1
+  # Run k uses seed seeds[k] for every model, so speaking orders are matched
+  # across model conditions. The seed shuffles turn order within each room.
+  # Runs 11-20 (seeds 111-120) are the optional second batch (Tereza, 2026-10-20).
+  seeds: [101, 102, 103, 104, 105, 106, 107, 108, 109, 110,
+          111, 112, 113, 114, 115, 116, 117, 118, 119, 120]
+  pilot_seed: 100
+  test_year: 2021
+
+inputs:
+  personas: inputs/personas.yaml
+  survey: inputs/materials/survey.yaml
+  facilitator_script: inputs/materials/facilitator_script.yaml
+  framing_intro: inputs/materials/framing_intro.md
+  specification_template: inputs/materials/specification_template.md
+  metrics: inputs/metrics_2021.csv
+  ground_truth: inputs/human_ground_truth.yaml
+
+# Sampling: identical for all three conditions.
+sampling:
+  temperature: 1.0          # gives run-to-run variation; same everywhere
+  reasoning: lowest         # lowest reasoning setting, or off where the model allows
+  max_output_tokens: 4000   # per call; surveys are the longest outputs
+
+budget:
+  hard_cap_usd: null        # only if a hosted API is used
+
+local:
+  num_ctx: 16384             # small tier, lite protocol: longest prompt ~10-12k tokens
+gpu:
+  num_ctx: 65536             # large tier (lite and full); raised from 40960 after a full pilot reached 40.2k
+  unload_others: false       # 192 GB GPU: keep all three models loaded and run them in parallel
+
+# Open-weight models only (Tereza, 2026-10-16), three developers, 3-4B, same
+# 4-bit quantisation (q4_K_M), run locally with Ollama 0.30.11. Downloaded and
+# pinned 2026-10-16 (digest = Ollama manifest digest; also logged per call).
+models:
+  family_1:
+    developer: Alibaba (Qwen), China
+    model_id: qwen3.5:4b-q4_K_M          # 3.3 GB
+    digest: d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04
+  family_2:
+    developer: Google (Gemma), US
+    model_id: gemma3:4b-it-q4_K_M        # 3.4 GB
+    digest: 68ceab7e468a31c988b44d5a4984a0e21f58c4f7158c6ce29c1804babac38df7
+  family_3:
+    developer: Mistral AI (Ministral), EU
+    model_id: ministral-3:3b-instruct-2512-q4_K_M   # 3.0 GB
+    digest: f04aa1c738f64e13c625b82ae92504fc0260fa6723b509ed1ece0fa188179b1d
+
+# Large tier, run on UCloud (SDU, NVIDIA B200) with Ollama 0.30.11 (same version as the
+# laptop), same 4-bit quantisation as the small tier. Digests pinned 2026-10-20 after pull.
+models_large:
+  family_1:
+    developer: Alibaba (Qwen), China
+    model_id: qwen3.5:27b-q4_K_M                    # 17 GB
+    digest: 64ae5b1d651fb2709d5928ccb8dcfb4bb2cc9c2c8001ac34497e36a6cf905b59
+  family_2:
+    developer: Google (Gemma), US
+    model_id: gemma3:27b-it-q4_K_M                  # 17 GB
+    digest: 6be2e2ba6843b9255820e2de2cbbe75cfdef0294ac7a531572e654d6e0eefe7d
+  family_3:
+    developer: Mistral AI (Mistral Small), EU
+    model_id: mistral-small3.2:24b-instruct-2506-q4_K_M   # 15 GB
+    digest: 5a408ab55df5c1b5cf46533c368813b30bf9e4d8fc39263bf2a3338cfa3b895b
+
+# Post-review robustness runs (B3, B4; analysis/post_review_plan.md). Not part of the
+# pre-registered design; logged under runs/post_review/<condition>/ and scored apart.
+# Run with: python -m src.run --tier post_review --protocol full --condition <cond> --family <key>
+# Same Ollama 0.30.11, sampling, gpu.num_ctx and prompts as the large tier.
+models_post_review:
+  # B4 (approved by Tereza 2026-11-06): the three reference models at 8-bit instead of 4-bit.
+  # Pulled on UCloud 2026-11-07; digests from `ollama list` there.
+  q8_qwen:
+    condition: precision_q8
+    developer: Alibaba (Qwen), China
+    model_id: qwen3.5:27b-q8_0                      # 30 GB
+    digest: 59b47cf42256fe88439772dd6842fda39d154a8b44426a016daf565e83d052b5
+  q8_gemma:
+    condition: precision_q8
+    developer: Google (Gemma), US
+    model_id: gemma3:27b-it-q8_0                    # 30 GB
+    digest: 62dc427fec6b7cff90352c38e3e8b14b025b39d6833e021056a212ce9d0b98b1
+  q8_mistral:
+    condition: precision_q8
+    developer: Mistral AI (Mistral Small), EU
+    model_id: mistral-small3.2:24b-instruct-2506-q8_0   # 26 GB
+    digest: 9b58e7bb625cc16ba3ff689a57b01fffa2557854712cc0094750cbcc02cae17a
+  # B4 extension (exploratory, added 2026-11-09 AFTER seeing the B4 results; approved by Tereza):
+  # Gemma at q8 diverged from Gemma at q4, so Gemma is also run unquantised (16-bit) to see
+  # which precision the q4 reference resembles. Gemma only. Pulled on UCloud 2026-11-09.
+  fp16_gemma:
+    condition: precision_fp16
+    developer: Google (Gemma), US
+    model_id: gemma3:27b-it-fp16                    # 55 GB
+    digest: 1bc907263cde3282f5825da2f88edc77cbccb733b85b61c996e1f938fdba3eca
+  # B3 (larger open model approved by Tereza 2026-11-06; exact version chosen by Claude
+  # 2026-11-07 on her delegation, after an independent researcher-agent review): same
+  # family as the Qwen reference, same quantisation and thinking setting, so it isolates
+  # scale within one family. MoE: 122B total, ~10B active per token. Digest pinned after pull.
+  large_qwen122:
+    condition: larger_qwen122
+    developer: Alibaba (Qwen), China
+    model_id: qwen3.5:122b-a10b-q4_K_M              # 81 GB
+    digest: 8b9d11d807c57feb1e2ecb0d6cbf40334c37dcc3523bed5540af4f927f112a37   # pulled on UCloud 2026-11-07

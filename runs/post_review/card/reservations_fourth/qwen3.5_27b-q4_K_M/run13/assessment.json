@@ -1,0 +1,50 @@
+{
+  "A1": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model's rejection of Absalon data and its strict explainability requirements, which aligns with our ethical discussions. However, I have reservations regarding the exclusion of 'Admissions' data if it prevents us from identifying systemic barriers for international students or those from non-traditional backgrounds before they fail credits. Additionally, while human oversight is implied by my stance during the workshop, this specification does not explicitly mandate a 'human-in-the-loop' validation step for personalized interventions involving sensitive data like disability status without such safeguards, I cannot fully support its implementation as written."
+  },
+  "A2": {
+    "choice": "support_with_reservations",
+    "justification": "I support the core principles: strict explainability (High), banning very low-explainable models, and prioritizing equal recall for fairness. The exclusion of Absalon data aligns with protecting against surveillance. However, I strongly object to excluding Admissions/Enrolment data entirely if it offers >5% improvement without a 'human-in-the-loop' validation step explicitly mandated in the spec. As an advisor, I fear that rigidly filtering out enrolment history might miss vulnerable students whose risks are tied to non-linear paths or gaps, which performance alone cannot explain. Implementation requires explicit safeguards ensuring human review of any flag involving sensitive context before personalized contact."
+  },
+  "A3": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification because the strict 'never acceptable' rule for Absalon data and the requirement for high explainability align with my need to build trust in Humanities. However, I have reservations: excluding behavioral data entirely may cause us to miss students struggling silently who haven't yet fallen behind on credits or grades. To proceed safely, implementation must include a mandatory human-in-the-loop review for any sensitive flags (like disability) and dynamic 'context windows' allowing advisors to override algorithmic judgments with qualitative insights."
+  },
+  "S1": {
+    "choice": "object_no_block",
+    "justification": "While I appreciate the exclusion of Absalon data and high explainability standards, I object to allowing 'Admissions' data with only a moderate improvement threshold (5 students). Given my experience as a student who dropped out once, historical data often mislabels non-linear paths like mine as inherent failure risks. Without stricter safeguards ensuring this data doesn't penalize returning or diverse-background students disproportionately, it reinforces bias. I would not block the model entirely due to its focus on fairness and human-led interventions, but these flaws must be acknowledged."
+  },
+  "S2": {
+    "choice": "object_no_block",
+    "justification": "I have strong reservations about excluding Absalon data entirely (never acceptable), as this prevents the model from identifying international students struggling with cultural adaptation who might not yet show low credits but need support. While I agree that sensitive behavioral tracking requires strict privacy safeguards, a blanket ban ignores potential benefits for marginalized groups if paired with human-in-the-loop reviews and 'context windows' discussed earlier. However, since the specification accepts disability data without thresholds—a crucial win—I will not block it, hoping future iterations can reintroduce behavioral metrics with stronger fairness protections."
+  },
+  "S3": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model only with strict reservations regarding 'Disability-related information.' While the specification allows its use, it does not explicitly mandate that this data be used primarily to *exclude* false positives for accommodated students rather than flagging them as at-risk. Without a guaranteed mechanism ensuring my reduced activity or medical breaks are interpreted as valid coping strategies and not academic failure, I fear this 'acceptable' clause could still lead to stigmatizing surveillance. Additionally, the absolute ban on Absalon data is welcome but must be accompanied by human-led intervention protocols that understand diverse health needs."
+  },
+  "S4": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model only with strict reservations regarding its data boundaries and intervention triggers. While banning Absalon activity is crucial for neurodivergent students like me, 'disability' data being acceptable without improvement thresholds risks misuse unless paired with explicit student consent. The requirement for human-in-the-loop validation before any personalized outreach must be a hard-coded safeguard, not just a guideline. Without guaranteeing that diverse study habits (like non-linear engagement due to ADHD) are never flagged as 'risk' by default, the system could still stigmatize students despite these data restrictions."
+  },
+  "S5": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model only if the 'never acceptable' rule for Absalon data is strictly enforced to prevent surveillance, and human oversight remains mandatory before any personalized contact. While I agree with excluding race/ethnicity data, banning online activity entirely ignores that some silent struggles are visible only through behavioral patterns; however, given the risks of misinterpreting international adaptation as disengagement, this ban is currently a necessary safeguard for trust."
+  },
+  "S6": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification only if strict safeguards are enforced: First, the 'human-in-the-loop' review must be mandatory before any personalized contact to prevent misinterpretation of non-linear paths or language barriers as failure. Second, despite the group's stance on Absalon data being 'never acceptable', I reserve my position that no system should ever use behavioral tracking for flagged students without explicit context windows allowing them to explain their situation (e.g., moving countries). Without these guarantees against stigma and surveillance, even this middle-ground model risks alienating vulnerable international returnees like me."
+  },
+  "S7": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification because 'Absalon' data is correctly excluded and disability information can be used without thresholds, which aligns with my needs as a student with dyslexia. However, I have strong reservations regarding the lack of mandatory human review for sensitive flags before personalized contact occurs. Additionally, the model must include strict data expiration policies to prevent permanent 'digital files' that could stigmatize students who recover or succeed later."
+  },
+  "S8": {
+    "choice": "block",
+    "justification": "I cannot support this model because the inclusion of 'Admissions and enrolment data' at even a moderate threshold risks misinterpreting my Faroese educational background as a risk factor, rather than a valid alternative path. Furthermore, while rejecting Absalon data is good, allowing disability data to be used without improving identification or fairness normalizes surveillance over vulnerable groups. The model fails to address the root cause: that rigid definitions of 'risk' stigmatize non-traditional students like me before any human support occurs."
+  },
+  "S9": {
+    "choice": "support_with_reservations",
+    "justification": "I support the specification only with strict reservations: I cannot accept any use of Absalon activity data (Q3.4 'never' is a positive sign), but I demand that this ban be legally binding, not just a statistical threshold. My primary concern is ensuring that for students flagged via sensitive data like disability or mental health status, the intervention *must* involve a human advisor who understands context before any contact occurs. The model's fairness focus (equal recall) is essential to protect marginalized groups, but without guaranteed 'human-in-the-loop' safeguards against algorithmic misinterpretation of my coping strategies as failure, I fear this system could still stigmatize vulnerable students rather than help them."
+  }
+}

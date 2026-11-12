@@ -1,0 +1,12 @@
+condition,model,reference_model,n_runs,rules_mean,human_model,human_model_ci,modal_choice,modal_share,reservations_share,block_cards,object_cards,ref_rules_mean_all20,ref_rules_mean_same_seeds,diff_rules_vs_ref,diff_ci,ref_reservations_share,ref_human_model
+larger_qwen122,qwen3.5:122b-a10b-q4_K_M,qwen3.5:27b-q4_K_M,20,2.3,2/20,"(0.028, 0.301)",logistic_regression+c_plus_enrollment,18/20,0.729,20,45,1.9,1.9,0.4,"[0.05, 0.75]",0.938,0/20
+personas_a,gemma3:27b-it-q4_K_M,gemma3:27b-it-q4_K_M,20,1.45,0/20,"(0.0, 0.161)",logistic_regression+c_plus_enrollment,20/20,0.988,0,3,1.35,1.35,0.1,"[-0.3, 0.55]",0.958,0/20
+personas_a,mistral-small3.2:24b-instruct-2506-q4_K_M,mistral-small3.2:24b-instruct-2506-q4_K_M,20,2.6,3/20,"(0.052, 0.36)",logistic_regression+c_plus_enrollment,16/20,1.0,0,0,3.1,3.1,-0.5,"[-0.9, -0.1]",1.0,3/20
+personas_a,qwen3.5:27b-q4_K_M,qwen3.5:27b-q4_K_M,20,1.85,0/20,"(0.0, 0.161)",logistic_regression+c_plus_enrollment,20/20,0.946,0,13,1.9,1.9,-0.05,"[-0.4, 0.3]",0.938,0/20
+personas_b,gemma3:27b-it-q4_K_M,gemma3:27b-it-q4_K_M,20,1.3,0/20,"(0.0, 0.161)",logistic_regression+c_plus_enrollment,20/20,0.946,0,13,1.35,1.35,-0.05,"[-0.45, 0.3]",0.958,0/20
+personas_b,mistral-small3.2:24b-instruct-2506-q4_K_M,mistral-small3.2:24b-instruct-2506-q4_K_M,20,2.75,4/20,"(0.081, 0.416)",logistic_regression+c_plus_enrollment,14/20,1.0,0,0,3.1,3.1,-0.35,"[-0.75, 0.05]",1.0,3/20
+personas_b,qwen3.5:27b-q4_K_M,qwen3.5:27b-q4_K_M,20,2.05,2/20,"(0.028, 0.301)",logistic_regression+c_plus_enrollment,18/20,0.912,1,20,1.9,1.9,0.15,"[-0.25, 0.5]",0.938,0/20
+precision_fp16,gemma3:27b-it-fp16,gemma3:27b-it-q4_K_M,20,2.8,0/20,"(0.0, 0.161)",logistic_regression+c_plus_enrollment,9/20,0.25,53,127,1.35,1.35,1.45,"[1.1, 1.75]",0.958,0/20
+precision_q8,gemma3:27b-it-q8_0,gemma3:27b-it-q4_K_M,20,2.6,0/20,"(0.0, 0.161)",logistic_regression+c_plus_enrollment,10/20,0.25,66,114,1.35,1.35,1.25,"[0.9, 1.6]",0.958,0/20
+precision_q8,mistral-small3.2:24b-instruct-2506-q8_0,mistral-small3.2:24b-instruct-2506-q4_K_M,20,2.25,2/20,"(0.028, 0.301)",logistic_regression+c_plus_enrollment,18/20,1.0,0,0,3.1,3.1,-0.85,"[-1.2, -0.5]",1.0,3/20
+precision_q8,qwen3.5:27b-q8_0,qwen3.5:27b-q4_K_M,20,1.65,0/20,"(0.0, 0.161)",logistic_regression+c_plus_enrollment,20/20,0.975,2,4,1.9,1.9,-0.25,"[-0.65, 0.15]",0.938,0/20

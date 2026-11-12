@@ -1,0 +1,70 @@
+% !TeX program = xelatex
+% Extended abstract, Agent Evaluation Science symposium (2 pages excl. references).
+% Build: cd paper/abstract && latexmk -xelatex main.tex
+% Numbers come from ../../analysis/tables/numbers.tex (python -m src.report);
+% never type a result into the prose. "% CHECK" marks sentences to re-read
+% against the final numbers once all runs are scored.
+\documentclass[11pt,a4paper]{article}
+\usepackage{aes}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+
+\graphicspath{{../../analysis/figures/}}
+\input{../../analysis/tables/numbers.tex}
+
+\title[Synthetic Stakeholders?]{Synthetic Stakeholders? Agreement and Stability of Open-Weight LLM Agent Panels in Participatory Model Selection}
+
+\aesauthor[affil={1},corresponding]{Tereza Bla\v{z}kov\'a}
+\aesaffiliation{1}{Center for Social Data Science, University of Copenhagen}
+\aesemails{\aesemail{tereza.blazkova@sodas.ku.dk}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+LLM agents are proposed as synthetic participants, but rarely tested against a real deliberation.
+We replay a workshop in which 12 students and advisors set the rules for selecting a university dropout early-warning model with 12-agent panels from three open-weight model families, at two sizes and under an abridged or the full workshop protocol (\nWorkshopsAll{} workshops).
+Small models matched \rulesMistralSmall--\rulesQwenSmall{} of the 7 rules the humans set (random panels: \chanceRules{}; the same humans before deliberation: \humanSelfRules{}); at 24--27B, two of three families chose the same configuration in every run while matching about as many rules as random panels, the full protocol helped only slightly, and panels almost never objected (\blockCardsAll{} blocking votes in \nCardsAll{}): synthetic panels are more uniform and agreeable than the one human panel we can compare them with.
+\end{abstract}
+
+\section{Motivation}
+Participatory AI asks affected people to shape algorithmic systems \citep{birhanePowerPeopleOpportunities2022,delgadoParticipatoryTurnAI2023}; because this is slow and costly, LLM-simulated participants are proposed as substitutes \citep{argyle2023outofone,aher2023using}, although they misrepresent and flatten the groups they stand in for \citep{santurkar2023whose,wang2025misportray} and, as simulated users, are ``excessively cooperative'' and ``stylistically uniform'' \citep{zhou2026sim2real}.
+Whether they are valid proxies is an open question for agent evaluation \citep{chen2026trends}; we compare synthetic stakeholder panels with what one real participatory process \emph{produced}: binding selection rules and the model they select.
+
+\begin{figure}[b]
+  \centering
+  \input{fig_design.tex}
+  \caption{Design. Both lanes share the survey, aggregation and selection algorithm; within each setting, only the model family varies.}
+  \label{fig:design}
+\end{figure}
+
+\section{Human reference and design}
+In a three-hour deliberative workshop at a Danish university \citep{blazkova2026participatory}, 9 students and 3 student advisors answered a survey before and after deliberation \citep{fishkin2009people}, pricing each step on two ladders in students identified per 100: adding data (course performance, enrolment, LMS activity, sensitive attributes) and lowering explainability (from a credit rule to a neural network).
+Their endline medians, applied to all candidate models on the 2021 cohort, selected logistic regression on credits and performance (recall 62.3\% vs.\ 23.5\% for the current credit rule).
+This workshop is one draw, not a ground truth: how much workshops with similar or the same people would differ is unknown, and its own participants' pre-deliberation rules match their final ones on only \humanSelfRules{} of 7. We therefore report agreement with this reference next to random panels and the same humans before deliberation.
+Synthetic panels replay this process (Figure~\ref{fig:design}) with 12 fictional personas matching the published role and demographic mix, the verbatim survey and a scripted facilitator, in a \emph{lite} protocol (one plenary round) and the \emph{full} human protocol (tables, plenary, 1-2-4-All).
+Families are Qwen 3.5, Gemma 3 and Mistral (Ministral 3, Mistral Small 3.2; 4-bit, temperature~1), small (3--4B, lite, 10 runs) and large (24--27B, lite and full, 20 runs), with seeded speaking orders matched across families.
+The scoring checklist and a random-panel reference were fixed before any model output; no personal data or transcripts were used, and \pctAnsweredAll{} of choice items were answered.
+
+\section{Results}
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{fig_settings.pdf}
+  \caption{(a)~Selection rules matching the human workshop per run (marker area = runs; bar = mean). (b)~Agreement against stability (share of runs choosing the family's modal configuration); arrows go from small to large models and from lite to full. Dashed: random panels; dotted: the same humans before deliberation.}
+  \label{fig:settings}
+\end{figure}
+
+% Table 1 (all nine settings) moved out for the 2-page version: ../../analysis/tables/table_main.tex
+
+Small panels recover more selection rules than random panels, but at most half, and the families err in different directions; they select the human model in \decisionQwenSmall{}, \decisionGemmaSmall{} and \decisionMistralSmall{} runs (Qwen, Gemma, Mistral; random panels \chanceDecision{}), large panels in \decisionQwenLargeLite{} to \decisionMistralLargeLite{} in either protocol.
+Scaling up makes panels more stable but further from the human rules (Figure~\ref{fig:settings}): Qwen and Gemma panels choose the same configuration in every run while their rule agreement falls to or below random-panel level (size effect $\sizeDiffQwen$ $\sizeCIQwen$ and $\sizeDiffGemma$ $\sizeCIGemma$ rules; Mistral $\sizeDiffMistral$ $\sizeCIMistral$).
+Large panels price admissions and enrolment data at a small or moderate gain in \enrolLowLarge{} of \nRunsLarge{} runs (humans: large), the threshold that flips the selection in the human study's robustness analysis; \lrcLarge{} of \nRunsLarge{} large panels thus select logistic regression with enrolment data ($+6.1$~pp recall) instead of the human model.
+The full protocol raises agreement slightly but reliably (Qwen $\protocolDiffQwen$ $\protocolCIQwen$, Gemma $\protocolDiffGemma$ $\protocolCIGemma$, Mistral $\protocolDiffMistral$ $\protocolCIMistral$) and never restores the human decision for Qwen or Gemma.
+
+\paragraph{Limitations and implications.}
+With one human workshop, agreement is distance to one reference, not validity; two descriptive findings do not depend on it: large Qwen and Gemma panels repeat one choice in every run while one human group revised \humanChangedRules{} of 7 rules in an afternoon, and panels almost never dissent (\blockCardsAll{} blocking votes in \nCardsAll{}; humans: a blocking minority), the cooperative-AI risk of manufactured consensus \citep{dafoe2020open,tessler2024habermas}.
+
+\bibliography{references}
+
+\end{document}

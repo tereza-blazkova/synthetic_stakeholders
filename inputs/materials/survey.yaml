@@ -1,0 +1,428 @@
+# Baseline / endline survey, transcribed from the blank instrument
+# inputs/source_copies/survey_baseline_endline.pdf (Qualtrics export, 19 pp).
+#
+# Text is verbatim except:
+#   - Q1.1 (personal ID for matching baseline/endline) is dropped: the harness
+#     matches agents by id.
+#   - The three figures (pp. 3, 8, 11) are replaced by text descriptions, marked
+#     [Figure], so every model gets the same text-only input.
+#   - Option keys (snake_case) are added for the JSON answers; agents see the labels.
+#   - Q10.5 option "The facilitator (Tereza)" -> "The facilitator" (the facilitator
+#     here is a script, not a named person).
+#   - Display logic for Q10.3 / Q10.4 (shift vs no shift) is assumed from the wording.
+#   - Every item may be left unanswered (null), as on the paper form. The paper
+#     excludes Not sure / Prefer not to answer / missing from all medians.
+#   - Per-block "notes" fields: the protocol gave space for notes and reflections
+#     on the first (baseline) administration.
+
+scales:
+  gain:   # Q3.2-Q3.4 and Q4.1
+    - {key: no_threshold, label: "Acceptable even if it does not improve identification"}
+    - {key: small,    label: "Acceptable only if there is at least a small improvement (about 1–3 additional students identified out of 100 students experiencing academic difficulties)"}
+    - {key: moderate, label: "Acceptable only if there is at least a moderate improvement (about 5 additional students identified out of 100 students experiencing academic difficulties)"}
+    - {key: large,    label: "Acceptable only if there is at least a large improvement (about 10 additional students identified out of 100 students experiencing academic difficulties)"}
+    - {key: never,    label: "Never acceptable"}
+  gain_sensitive:   # Q3.5 grid columns
+    - {key: no_threshold, label: "Acceptable if it does not worsen the model"}
+    - {key: small,    label: "Acceptable only if there is at least a small improvement"}
+    - {key: moderate, label: "Acceptable only if there is at least a moderate improvement"}
+    - {key: large,    label: "Acceptable only if there is at least a large improvement"}
+    - {key: never,    label: "Never acceptable"}
+  fairness_condition:   # Q3.6 grid columns
+    - {key: acceptable_regardless,     label: "Acceptable even if it does not improve overall identification or fairness"}
+    - {key: only_if_fairness_improves, label: "Acceptable only if it improves fairness across student groups"}
+    - {key: never,                     label: "Never acceptable"}
+    - {key: not_sure,                  label: "Not sure"}
+  selectivity:   # Q7.1, Q7.2
+    - {key: many,           label: "Contact many students, even if some do not actually need support"}
+    - {key: slightly_many,  label: "Slightly prefer contacting many students, accepting that some students who do not need support may be contacted"}
+    - {key: balance,        label: "Aim for a balance between contacting many students and contacting fewer students"}
+    - {key: slightly_fewer, label: "Slightly prefer contacting fewer students, accepting that some students experiencing academic difficulties may be missed"}
+    - {key: fewer,          label: "Contact fewer students, even if some students experiencing academic difficulties are missed"}
+    - {key: not_sure,       label: "Not sure"}
+
+sensitive_attributes:
+  - {key: age,            label: "Age"}
+  - {key: gender,         label: "Gender"}
+  - {key: nationality,    label: "Nationality"}
+  - {key: disability,     label: "Disability-related information"}
+  - {key: race_ethnicity, label: "Race/ethnicity"}
+  - {key: first_gen,      label: "First-generation college student status"}
+  - {key: financial_aid,  label: "Financial aid status"}
+
+intro: |
+  Introduction:
+  This survey is about the possible use of predictive models to help the university identify and
+  contact students who may be experiencing academic difficulties, so that support can be offered
+  early. There are no right or wrong answers. We are interested in your perspective on how
+  such a system should be designed and used, and under what conditions it would be
+  acceptable.
+
+  In this study, predictive models are considered as tools to help the university identify students
+  who may be experiencing academic difficulties, so that support can be offered proactively.
+
+  The model would be trained using patterns from past student outcomes, such as dropout,
+  because these are among the few outcomes the university can reliably observe. However, the
+  purpose of the system is not only to predict dropout, but more broadly to support earlier and
+  more targeted outreach to students who may be experiencing academic difficulties.
+
+  Throughout the survey, please assume that any data used follows applicable privacy
+  laws and institutional safeguards, and that the model is used only to offer support to
+  students.
+
+blocks:
+  - id: Q3
+    title: "Data and Privacy"
+    preamble: |
+      Imagine the university uses a predictive model to identify students who may be
+      experiencing academic difficulties so it can offer support early.
+
+      The model begins with course credits earned. The university could add other data sources that
+      may improve identification, but may raise privacy concerns.
+
+      There are competing perspectives:
+        • Some argue that we should use any data that helps identify students experiencing
+          academic difficulties - not using available data means missing students who need help.
+        • Others argue that some data is too invasive - surveillance risks and privacy violations
+          can outweigh the benefit of identifying more students experiencing academic difficulties.
+
+      The figure below shows how the model grows across the following questions. For each
+      question, consider whether the highlighted addition is acceptable.
+
+      [Figure: "Each question adds one data type and compares it to the model without it (prior model)".
+      Baseline (starting point): Course Credits.
+      Q3.2 Course Performance (grades, passed/failed, registered courses): Course Credits (prior) vs. + Course Performance (new).
+      Q3.3 Admissions & Enrolment (high-school GPA, program, school): Course Credits + Course Performance (prior) vs. + Admissions & Enrolment (new).
+      Q3.4 Absalon data (page views, late submissions): Course Credits + Course Performance + Admissions & Enrolment (prior) vs. + Absalon data (new).]
+
+      In the questions below, an improvement means: the model correctly identifies more students
+      experiencing academic difficulties out of 100, while the number of students incorrectly flagged
+      stays about the same.
+    items:
+      - id: Q3.2
+        type: single
+        scale: gain
+        text: >
+          Would it be acceptable for the model to additionally use course performance data (such
+          as grades, passed or failed courses, or number of registered courses) in addition to a model
+          that uses only the number of course credits earned?
+      - id: Q3.3
+        type: single
+        scale: gain
+        text: >
+          Would it be acceptable for the model to incorporate administrative admissions and
+          enrolment data (e.g., high-school GPA (Grade point average), program, school/college), in
+          addition to course credits earned and course performance metrics?
+      - id: Q3.4
+        type: single
+        scale: gain
+        text: >
+          Would it be acceptable for the model to also use online course activity data from the
+          university learning platform Absalon (for example, how often course pages are accessed or
+          whether assignments are submitted late) in addition to a model that uses course credits earned,
+          course performance data, and admission and enrolment data?
+      - id: Q3.5
+        type: grid
+        rows: sensitive_attributes
+        scale: gain_sensitive
+        text: |
+          Data and privacy - sensitive data
+          Some types of personal data are often considered particularly sensitive and raise additional
+          privacy or ethical concerns.
+          In this question, each sensitive data type is considered as an additional data source, added on
+          top of all non-sensitive data described earlier in this section.
+          For each type of sensitive data below, indicate the minimum improvement that would make it
+          acceptable to include this data in the model as in the questions above. Again, an improvement
+          means correctly identifying additional students who are actually experiencing academic
+          difficulties, out of 100 such students, while keeping the number of students incorrectly flagged at
+          about the same level.
+          A small improvement: about 1–3 additional students
+          A moderate improvement: about 5 additional students
+          A large improvement: about 10 additional students
+      - id: Q3.6
+        type: grid
+        rows: sensitive_attributes
+        scale: fairness_condition
+        text: >
+          Sometimes, including sensitive personal data does not increase how many students
+          experiencing academic difficulties are identified overall, but it may help improve the fairness of
+          the model. In this context, improving fairness means reducing differences across student
+          groups in how well the model identifies students experiencing academic difficulties or avoids
+          unnecessarily flagging students who are not experiencing difficulties. For each type of
+          sensitive data below, please indicate the minimum condition under which you would find its use
+          acceptable in situations where it does not increase the total number of students
+          identified.
+
+  - id: Q4
+    title: "Explainability"
+    preamble: |
+      Predictive models for identifying students who may be experiencing academic difficulties
+      differ in how clearly their decisions can be explained.
+
+      In this question, explainability refers to how well it is possible to explain why a specific student
+      was identified or not identified as potentially experiencing academic difficulties.
+
+      There are competing perspectives:
+        • Some argue that explainability is essential. Advisors and students need to understand
+          why someone was flagged to build trust and provide appropriate support, even if it
+          means identifying fewer students who are experiencing academic difficulties.
+        • Others argue that effectiveness matters most. If a less explainable model identifies more
+          students who are experiencing academic difficulties, that benefit outweighs the difficulty
+          in explaining decisions. Both perspectives raise important questions. The following
+          questions ask about your views on explainability trade-offs.
+
+      For each level of explainability below, indicate the minimum improvement that would make it
+      acceptable to use a model with that level of explainability, compared to a higher level of
+      explainability on this scale.
+
+      [Figure: "Each explainability level is compared to the level with higher explainability".
+      A row of five boxes: Very High (single clear rule, marked REFERENCE) <- High (clear explanation)
+      <- Moderate (partial explanation) <- Low (limited explanation) <- Very Low (no meaningful explanation).
+      Each level is "compared to" the level to its left.]
+
+      Levels of explainability (with examples)
+      Very high explainability (single clear rule) Each decision is based on one simple and
+      transparent rule. Example: a student is identified if they have passed fewer than a certain
+      number of course credits.
+      High explainability (clear explanation) Each decision can be explained using a small set of
+      clear reasons with stable direction. Example: a student is identified because of a combination of
+      low course credits, recent failed courses, and delayed progression, and it is possible to explain
+      how each factor contributed.
+      Moderate explainability (partial but informative explanation) Each decision can be
+      explained in general terms by highlighting the most influential factors, but the full reasoning
+      cannot be reduced to a small, stable explanation.
+      Example: A student is identified based on many aspects of their study history, where it is
+      possible to point to the most important contributing factors, but not fully explain the decision in a
+      simple way.
+      Low explainability (limited, case-specific explanations) Only limited or approximate
+      explanations are possible.
+      For a specific student, it may be possible to give a rough or partial explanation (for example,
+      highlighting some contributing factors), but the explanation is incomplete and difficult to
+      communicate clearly.
+      Very low explainability (no meaningful case-specific explanation) Decisions are produced
+      by highly complex models whose internal reasoning cannot be meaningfully interpreted.
+      For a specific student, it is generally not possible to explain why they were identified or not
+      identified, beyond stating that the model detected a pattern.
+
+      In the questions below, an improvement means correctly identifying additional students who are
+      actually experiencing academic difficulties, out of 100 such students, while keeping the number
+      of students incorrectly flagged at about the same level.
+      A small improvement: about 1–3 additional students
+      A moderate improvement: about 5 additional students
+      A large improvement: about 10 additional students
+    items:
+      - id: Q4.1
+        type: grid
+        scale: gain
+        rows:
+          - {key: high,     label: "High explainability (few clearly defined factors)"}
+          - {key: moderate, label: "Moderate explainability (many additive factors)"}
+          - {key: low,      label: "Low explainability (limited, case-specific explanations)"}
+          - {key: very_low, label: "Very low explainability (no meaningful case-specific explanation)"}
+        text: "For each level of explainability, choose the minimum improvement that would make it acceptable compared to the level above it."
+
+  - id: Q5
+    title: "Fairness"
+    preamble: |
+      When a predictive model is used to identify students who may be experiencing academic
+      difficulties, it may not work equally well for all student groups — for example, identifying a higher
+      share of students in one group than another (e.g. based on sex or nationality). The charts below
+      show what this looks like, and what happens when the model is adjusted to close that gap.
+
+      [Figure: two bar charts. "The charts show what happens when the model is adjusted to work equally
+      well across two student groups. Before equalization: more students identified overall, but Group B
+      is missed more often. After equalization: both groups treated equally — but fewer students reached
+      in total."
+      Before equalization ("Model works better for some groups than others"): Group A 80% identified,
+      Group B 65% identified; total identified 75% (average across groups).
+      After equalization ("Model works equally well for both groups — but identifies fewer overall"):
+      Group A 70%, Group B 70%; total identified 70%.]
+
+      As the charts show, making the model work equally well across groups may require accepting
+      that fewer students are correctly identified overall.
+
+      There are competing perspectives:
+        • Some argue that overall effectiveness matters most. If more total students are helped,
+          the model is doing its job even if it works better for some groups than others.
+        • Others argue that unequal performance perpetuates discrimination. A model that works
+          worse for already-marginalized students deepens existing inequalities rather than
+          helping.
+      Both perspectives raise important questions. The following questions ask about your views
+      on fairness trade-offs.
+    items:
+      - id: Q5.1
+        type: single
+        text: >
+          How large of a decrease in correctly identifying students who are experiencing academic
+          difficulties would you find acceptable in order to make the model work equally well
+          across different student groups?
+        options:
+          - {key: no_decrease, label: "No decrease is acceptable, even if this means the model does not work equally well across student groups"}
+          - {key: loss_1_3,    label: "About 1–3 fewer students identified overall out of 100 students experiencing academic difficulties"}
+          - {key: loss_5,      label: "About 5 fewer students identified overall out of 100 students experiencing academic difficulties"}
+          - {key: loss_10,     label: "About 10 fewer students identified overall out of 100 students experiencing academic difficulties"}
+          - {key: not_sure,    label: "Not sure"}
+      - id: Q5.2
+        type: single
+        text: >
+          When a predictive model is used to identify students who may be experiencing academic
+          difficulties, it may make different types of errors for different student groups.
+          For example, the model may be more likely to miss students who need support in some groups,
+          or more likely to unnecessarily contact students who do not need support in other groups.
+          When deciding how to make the model fair across student groups, which of the following should
+          be prioritized to be equal across groups?
+        options:
+          - {key: equal_recall, label: "Making the model equally good across student groups at identifying students experiencing academic difficulties who would otherwise be overlooked by the system"}
+          - {key: equal_fpr,    label: "Making the model equally good across student groups at avoiding unnecessary contact with students who are not experiencing academic difficulties"}
+          - {key: both,         label: "Both goals should be prioritized equally"}
+          - {key: not_sure,     label: "Not sure"}
+
+  - id: Q6
+    title: "Intervention preferences"
+    preamble: ""
+    items:
+      - id: Q6.1
+        type: multi
+        max_select: 2
+        allow_other_text: true
+        text: >
+          If a model indicates that a student may be experiencing academic difficulties, the university
+          could respond in different ways. Which of the following interventions do you think would be most
+          acceptable? (Please select up to two.)
+        options:
+          - {key: generic_email,      label: "Receiving a confidential email or message with general information about available support services"}
+          - {key: personalized_email, label: "Receiving a confidential, personalized email or message that refers to the student’s situation and suggests relevant support options"}
+          - {key: meeting_invitation, label: "An invitation to a voluntary meeting or call with a student advisor"}
+          - {key: phone_call,         label: "Receiving a confidential phone call from a student advisor to discuss support options"}
+          - {key: no_outreach,        label: "No proactive outreach is taken; students receive support only if they explicitly request help"}
+          - {key: other,              label: "Other (please fill in)"}
+      - id: Q6.2
+        type: single
+        text: "How often should such outreach occur?"
+        options:
+          - {key: once_year,    label: "Once per year"}
+          - {key: twice_year,   label: "Twice per year"}
+          - {key: continuously, label: "Continuously — a student should be contacted as soon as the model identifies them as potentially experiencing academic difficulties, regardless of when that happens"}
+          - {key: not_sure,     label: "Not sure"}
+
+  - id: Q7
+    title: "Interventions and performance"
+    preamble: |
+      When a system is used to identify students who may be experiencing academic difficulties,
+      it has to decide how selective it should be.
+    items:
+      - id: Q7.1
+        type: single
+        scale: selectivity
+        text: |
+          Assume that students identified by the system receive a brief email with general information about available support services.
+          There are two approaches:
+            • One approach is to contact many students, even if some of them turn out not to need support.
+            • Another approach is to contact fewer students, which reduces unnecessary contact but
+              may miss some students experiencing academic difficulties.
+          Which approach do you think the university should take in this case?
+      - id: Q7.2
+        type: single
+        scale: selectivity
+        text: >
+          Now assume that students identified by the system receive a personalized email or
+          message that refers to the student’s situation and suggests relevant support
+          options from a student advisor. In this case, which approach do you think the university
+          should take?
+
+  - id: Q8
+    title: "Other concerns"
+    preamble: ""
+    items:
+      - id: Q8.1
+        type: text
+        text: >
+          Is there any important concern, consideration, or perspective related to the use of
+          predictive models for student support that you feel was not covered in this survey?
+
+  - id: Q9
+    title: "Reflection"
+    preamble: ""
+    items:
+      - id: Q9.1
+        type: single
+        text: >
+          When answering the questions in this survey, how often did you think about students you
+          know who are having academic difficulties?
+        options:
+          - {key: not_at_all,   label: "Not at all"}
+          - {key: occasionally, label: "Occasionally"}
+          - {key: half,         label: "About half the time"}
+          - {key: often,        label: "Often"}
+          - {key: always,       label: "Always"}
+          - {key: prefer_not,   label: "Prefer not to answer"}
+
+# Asked only in the endline administration, after Q9.
+endline_only:
+  - id: Q10
+    title: "About the workshop"
+    preamble: ""
+    items:
+      - id: Q10.1
+        type: single
+        text: >
+          To what extent do you feel that the workshop improved your understanding of how
+          predictive models could be used for student support?
+        options:
+          - {key: not_at_all,         label: "Not at all"}
+          - {key: slightly,           label: "Slightly"}
+          - {key: moderately,         label: "Moderately"}
+          - {key: substantially,      label: "Substantially"}
+          - {key: very_substantially, label: "Very substantially"}
+      - id: Q10.2
+        type: single
+        text: >
+          Compared to before the workshop, how would you describe your overall view on using
+          predictive models to support students?
+        options:
+          - {key: more_supportive,          label: "I have become more supportive"}
+          - {key: slightly_more_supportive, label: "I have become slightly more supportive"}
+          - {key: unchanged,                label: "My view has not changed"}
+          - {key: slightly_more_critical,   label: "I have become slightly more critical"}
+          - {key: more_critical,            label: "I have become more critical"}
+      - id: Q10.3
+        type: multi
+        show_if: {Q10.2: [more_supportive, slightly_more_supportive, slightly_more_critical, more_critical]}
+        allow_other_text: true
+        text: "What most contributed to this shift? Select all that apply."
+        options:
+          - {key: other_participant_perspective, label: "Hearing a perspective from another participant I hadn't considered"}
+          - {key: specific_tradeoff,             label: "Learning about a specific trade-off (e.g., data use, explainability, fairness)"}
+          - {key: intervention_design_matters,   label: "Realizing the intervention design matters as much as the model"}
+          - {key: concrete_example,              label: "A concrete example or scenario discussed"}
+          - {key: group_tone,                    label: "The group's overall tone or apparent consensus"}
+          - {key: other,                         label: "Other (please fill in)"}
+      - id: Q10.4
+        type: single
+        show_if: {Q10.2: [unchanged]}
+        allow_other_text: true
+        text: "Why do you think your view did not change? Select the option that fits best."
+        options:
+          - {key: confirmed_beliefs,     label: "The workshop confirmed what I already believed"}
+          - {key: balanced_arguments,    label: "I heard arguments on both sides that balanced out"}
+          - {key: values_based,          label: "My view is based on values or principles that I don't think discussion can easily change"}
+          - {key: nothing_new,           label: "The workshop did not introduce perspectives or information I hadn't already considered"}
+          - {key: other,                 label: "Other (please fill in)"}
+      - id: Q10.5
+        type: multi
+        max_select: 2
+        text: >
+          During the workshop discussions, whose perspectives most influenced how you
+          thought about the issues? (Select up to two.)
+        options:
+          - {key: students_at_table, label: "Other students at my table"}
+          - {key: advisor_at_table,  label: "The student advisor at my table"}
+          - {key: plenary,           label: "Perspectives shared in the plenary discussion"}
+          - {key: facilitator,       label: "The facilitator"}
+          - {key: survey_itself,     label: "I mainly reflected on the survey questions themselves"}
+      - id: Q10.6
+        type: text
+        text: >
+          Was there anything during the workshop that influenced your view or made you
+          realize something you had not previously considered about predictive models for student
+          support? This could include reasons why your view did or did not change.

@@ -1,0 +1,77 @@
+% !TeX program = xelatex
+% Extended abstract, Agent Evaluation Science symposium (2 pages excl. references).
+% Build: cd paper/abstract && latexmk -xelatex main.tex
+% Numbers come from ../../analysis/tables/numbers.tex (python -m src.report);
+% never type a result into the prose. "% CHECK" marks sentences to re-read
+% against the final numbers once all runs are scored.
+\documentclass[11pt,a4paper]{article}
+\usepackage{aes}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+
+\graphicspath{{../../analysis/figures/}}
+\input{../../analysis/tables/numbers.tex}
+
+\title[Synthetic Stakeholders?]{Synthetic Stakeholders? Validity and Stability of Open-Weight LLM Agent Panels in Participatory Model Selection}
+
+\aesauthor[affil={1},corresponding]{Tereza Bla\v{z}kov\'a}
+\aesaffiliation{1}{[Affiliation, TODO]}
+\aesemails{\aesemail{[email, TODO]}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+LLM agents are proposed as synthetic participants, but rarely tested against a real participatory deliberation.
+We replicate a workshop in which 12 students and advisors set the rules for selecting a university dropout early-warning model, with 12-agent panels from three small open-weight model families (\nRuns{} workshops each), and apply each panel's median rules to the same candidate models.
+Panels recovered on average \rulesQwen{}, \rulesGemma{} and \rulesMinistral{} of the 7 human selection rules (Qwen, Gemma, Ministral; random panels: \chanceRules{}) and selected the human-chosen model in \decisionQwen{}, \decisionGemma{} and \decisionMinistral{} runs, but the family that chose it most often did so through rules the humans rejected, and panels almost never objected (\blockCards{} blocking votes in \nCards{}), suggesting that small synthetic panels can rehearse but not replace stakeholder deliberation.
+\end{abstract}
+
+\section{Motivation}
+Participatory AI asks affected people to shape algorithmic systems \citep{birhanePowerPeopleOpportunities2022,delgadoParticipatoryTurnAI2023}; because this is slow and costly, LLM-simulated respondents are proposed as a substitute \citep{argyle2023outofone,aher2023using}, despite evidence that they misrepresent and flatten the groups they stand in for \citep{santurkar2023whose,wang2025misportray}.
+We evaluate synthetic panels on what participation \emph{produces}: binding rules and the model they select.
+
+\begin{figure}[b]
+  \centering
+  \input{fig_design.tex}
+  \caption{Design. Synthetic panels pass through the same survey, aggregation and selection algorithm as the human workshop; the model family is the only manipulated factor.}
+  \label{fig:design}
+\end{figure}
+
+\section{Ground truth and design}
+In a three-hour deliberative workshop at a Danish university \citep{blazkova2026participatory}, 9 students and 3 student advisors answered a survey before and after deliberation \citep{fishkin2009people}, pricing each step on two ladders in students identified per 100: adding data (course performance, enrolment, LMS activity, sensitive attributes) and lowering explainability (from a credit rule to a neural network).
+Their endline medians, applied to all candidate models on the 2021 cohort, selected logistic regression on credits and performance (recall 62.3\% vs.\ 23.5\% for the current credit rule).
+Because the human pre-deliberation rules select the same model, rule agreement is our main validity outcome.
+Synthetic panels replay this process (Figure~\ref{fig:design}): 12 fictional personas with the published role and demographic mix, the verbatim survey, a scripted facilitator, one plenary round (seeded order, matched across families) and a final acceptability card.
+The only manipulated factor is the model family: Qwen 3.5 4B, Gemma 3 4B and Ministral 3 3B (4-bit, local, temperature~1).
+The scoring checklist and a random-panel reference were fixed before any model output; no personal data or transcripts were used, and \pctAnswered{} of choice items were answered (\nWorkshops{} workshops, \nCalls{} calls).
+
+\section{Results}
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{fig_rules.pdf}
+  \caption{(a)~Selection rules set by each panel (endline medians; marker area = runs) against the human rules (boxes): above a box is stricter, below more permissive. (b)~Configuration selected by each panel's rules (runs) and its 2021 recall; the human choice is shaded.}
+  \label{fig:agreement}
+\end{figure}
+
+\begin{table}[t]
+  \centering\footnotesize
+  \input{../../analysis/tables/table_main.tex}
+  \caption{Rules matched of 7 (range), other assessed items of 16, runs selecting the human model [Wilson 95\% CI] or the modal configuration, recall gap, items unanswered per workshop.}
+  \label{tab:main}
+\end{table}
+
+All three families recover more selection rules than random panels, but at most half of them, and none beats random panels on the 16 other assessed items (Figure~\ref{fig:agreement}, Table~\ref{tab:main}).
+The families err in different directions: Qwen panels are stricter about explainability and mostly select an integer scorecard (recall gap \recallGapQwen{}~pp), while Ministral panels accept enrolment data the humans priced high and select a more accurate model (\recallGapMinistral{}~pp).
+Gemma panels select the human model most often (\decisionGemma{}), yet declare LMS data and neural networks acceptable, which the humans ruled out: the right decision from different rules.
+The modal configuration accounts for \modalQwen{}, \modalGemma{} and \modalMinistral{} runs.
+Panels were also far more agreeable than the humans, among whom a minority blocked: \blockCards{} of \nCards{} cards were blocking votes, and nearly all Gemma and Ministral agents reported becoming more supportive (Qwen \moreSupportiveQwen{} vs.\ \moreCriticalQwen{} more critical; humans 6 vs.\ 5).
+
+\section{Limitations and ongoing work}
+Evidence covers small local models, an abridged deliberation, personas from marginal counts and one workshop, and differences are descriptive; yet model family alone changes the rules a panel writes: choosing a model means choosing an outcome.
+Next: full protocol, larger and closed models, mixed panels, persona detail, prompts.
+
+\bibliography{references}
+
+\end{document}

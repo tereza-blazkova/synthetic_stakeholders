@@ -1,0 +1,59 @@
+% Design diagram, poster version (horizontal, as in the abstract).
+% Copied from paper/abstract/fig_design.tex (2026-11-08); labels and lanes
+% unchanged. Changes for the poster: absolute font sizes (pt), because
+% main.tex scales the picture to its slot with \resizebox, a slightly wider grid,
+% and the families note moved below the synthetic lane.
+% The human workshop (top lane) and a synthetic panel (bottom lane) pass through the
+% same stages (the compare arrows were removed for the poster, 2026-11-10). Grey dashed stages
+% are not simulated: endline medians become rules and a model programmatically,
+% identically in both lanes.
+\begin{tikzpicture}[
+    font=\fontsize{10.5}{12}\selectfont,
+    stage/.style={rectangle, rounded corners=2pt, align=center, minimum height=12mm,
+                  text width=22mm, inner sep=1.5pt, draw=#1!75!black, fill=#1!10, line width=0.5pt,
+                  execute at begin node={\hyphenpenalty=10000\relax}},
+    derived/.style={rectangle, rounded corners=2pt, align=center, minimum height=12mm,
+                  text width=22mm, inner sep=1.5pt, draw=black!30, fill=black!4, text=black!55,
+                  line width=0.5pt, dashed, execute at begin node={\hyphenpenalty=10000\relax}},
+    flow/.style={-{Stealth[length=1.6mm]}, line width=0.5pt, draw=black!50},
+    gflow/.style={-{Stealth[length=1.6mm]}, line width=0.5pt, draw=black!25},
+    cmp/.style={{Stealth[length=1.7mm]}-{Stealth[length=1.7mm]}, line width=0.9pt, draw=black},
+    cmplabel/.style={font=\fontsize{7.5}{8.5}\selectfont\bfseries, fill=white, inner sep=1pt, align=center},
+    lane/.style={font=\fontsize{10.5}{12}\selectfont\bfseries, anchor=east, align=right},
+    note/.style={font=\fontsize{7.5}{9}\selectfont, text=black!60, inner sep=1pt, align=center},
+  ]
+  \def\dx{25.5mm}
+  \def\dy{17mm}
+  \colorlet{hum}{black!45}
+  \colorlet{syn}{ucphred}
+
+  % ---- human lane ----
+  \node[stage=hum] (h1) at (0,0)      {9 students\\+ 3 advisors};
+  \node[stage=hum] (h2) at (\dx,0)    {Baseline survey};
+  \node[stage=hum] (h3) at (2*\dx,0)  {3\,h deliberation};
+  \node[stage=hum] (h4) at (3*\dx,0)  {Endline survey};
+  \node[derived] (h5) at (4*\dx,0)    {Median rules};
+  \node[derived] (h6) at (5*\dx,0)    {Logistic regression\\+ performance};
+
+  % ---- synthetic lane ----
+  \node[stage=syn] (s1) at (0,-\dy)     {12 LLM agents};
+  \node[stage=syn] (s2) at (\dx,-\dy)   {Baseline survey};
+  \node[stage=syn] (s3) at (2*\dx,-\dy) {Fixed protocol};
+  \node[stage=syn] (s4) at (3*\dx,-\dy) {Endline survey};
+  \node[derived] (s5) at (4*\dx,-\dy)   {Median rules};
+  \node[derived] (s6) at (5*\dx,-\dy)   {Selected model};
+
+  \foreach \i/\j in {1/2,2/3,3/4} {
+    \draw[flow] (h\i) -- (h\j);
+    \draw[flow] (s\i) -- (s\j);
+  }
+  \foreach \i/\j in {4/5,5/6} {
+    \draw[gflow] (h\i) -- (h\j);
+    \draw[gflow] (s\i) -- (s\j);
+  }
+
+
+  % lane labels
+  \node[lane, text=black!70] at ($(h1.west)+(-1.5mm,0)$) {Human\\workshop};
+  \node[lane, text=ucphred] at ($(s1.west)+(-1.5mm,0)$) {Synthetic\\panel};
+\end{tikzpicture}

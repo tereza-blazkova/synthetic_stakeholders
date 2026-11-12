@@ -1,0 +1,63 @@
+% Design diagram: the human workshop (top lane) and a synthetic panel (bottom
+% lane) pass through the same stages. The two are compared at the baseline and
+% at the endline survey (and on the change between them). The grey stages are
+% not part of the simulated workshop: the endline medians are turned into rules
+% and a model programmatically, identically in both lanes.
+% Edit labels freely; layout is a 6-column grid.
+\begin{tikzpicture}[
+    font=\scriptsize,
+    stage/.style={rectangle, rounded corners=2pt, align=center, minimum height=9mm,
+                  text width=20mm, inner sep=1.5pt, draw=#1!75!black, fill=#1!10, line width=0.5pt,
+                  execute at begin node={\hyphenpenalty=10000\relax}},
+    derived/.style={rectangle, rounded corners=2pt, align=center, minimum height=9mm,
+                  text width=20mm, inner sep=1.5pt, draw=black!30, fill=black!4, text=black!55,
+                  line width=0.5pt, dashed, execute at begin node={\hyphenpenalty=10000\relax}},
+    flow/.style={-{Stealth[length=1.5mm]}, line width=0.5pt, draw=black!50},
+    gflow/.style={-{Stealth[length=1.5mm]}, line width=0.5pt, draw=black!25},
+    cmp/.style={{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, line width=0.9pt, draw=black},
+    cmplabel/.style={font=\tiny\bfseries, fill=white, inner sep=1pt, align=center},
+    lane/.style={font=\scriptsize\bfseries, anchor=east, align=right},
+    note/.style={font=\tiny, text=black!60, fill=white, inner sep=1pt, align=center},
+  ]
+  \def\dx{22.5mm}
+  \def\dy{15mm}
+  \colorlet{hum}{black!45}
+  \colorlet{syn}{aespurple}
+
+  % ---- human lane ----
+  \node[stage=hum] (h1) at (0,0)      {9 students\\+ 3 advisors};
+  \node[stage=hum] (h2) at (\dx,0)    {Baseline survey};
+  \node[stage=hum] (h3) at (2*\dx,0)  {3\,h deliberation};
+  \node[stage=hum] (h4) at (3*\dx,0)  {Endline survey};
+  \node[derived] (h5) at (4*\dx,0)    {Median rules};
+  \node[derived] (h6) at (5*\dx,0)    {Logistic regression\\+ performance};
+
+  % ---- synthetic lane ----
+  \node[stage=syn] (s1) at (0,-\dy)     {12 LLM agents\\(fictional personas)};
+  \node[stage=syn] (s2) at (\dx,-\dy)   {Baseline survey};
+  \node[stage=syn] (s3) at (2*\dx,-\dy) {same protocol\\(scripted)};
+  \node[stage=syn] (s4) at (3*\dx,-\dy) {Endline survey};
+  \node[derived] (s5) at (4*\dx,-\dy)   {Median rules};
+  \node[derived] (s6) at (5*\dx,-\dy)   {Selected model};
+
+  \foreach \i/\j in {1/2,2/3,3/4} {
+    \draw[flow] (h\i) -- (h\j);
+    \draw[flow] (s\i) -- (s\j);
+  }
+  \foreach \i/\j in {4/5,5/6} {
+    \draw[gflow] (h\i) -- (h\j);
+    \draw[gflow] (s\i) -- (s\j);
+  }
+
+  % the comparisons: the same survey, before and after deliberation
+  \draw[cmp] (h2.south) -- node[cmplabel] {compare\\baseline} (s2.north);
+  \draw[cmp] (h4.south) -- node[cmplabel] {compare\\endline} (s4.north);
+
+  % lane labels, the manipulated factor, the programmatic (not simulated) steps
+  \node[lane, text=black!70] at ($(h1.west)+(-1.5mm,0)$) {Human\\workshop};
+  \node[lane, text=aespurple!80!black] at ($(s1.west)+(-1.5mm,0)$) {Synthetic\\panel};
+  \node[note, text=aespurple!80!black, anchor=north] at ($(s2.south)!0.5!(s4.south)+(0,-0.8mm)$)
+       {3 open-weight families (Qwen 3.5 27B, Gemma 3 27B, Mistral Small 3.2 24B) $\times$ 20 seeded runs};
+  \node[note, text=black!50, anchor=south] at ($(h5.north)!0.5!(h6.north)+(0,0.8mm)$)
+       {not simulated: same median rule and selection algorithm in both lanes};
+\end{tikzpicture}

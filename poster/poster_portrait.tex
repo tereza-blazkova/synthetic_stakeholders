@@ -1,0 +1,241 @@
+% Poster, Agent Evaluation Science symposium (NYC, Nov 20, 2026). DRAFT v2.
+% Build:   cd poster && latexmk -pdf main.tex
+% Figures: poster versions in figs/, made by make_figures.py (see README.md).
+% Numbers: every result is a macro from ../analysis/tables/numbers.tex (main study)
+%          or ../analysis/tables/numbers_post_review.tex (post-review). Never type one.
+%          \PH{name} = red box, value missing; \Interim{..} = orange, runs incomplete.
+%          Put \def\phfinal{} before the \input lines to turn any leftover into an error.
+% Quotes:  verbatim human and agent quotes in the "Same themes" column (see the theme-row comment).
+% Layout, top to bottom: title band; setup band (small); results band (dominant);
+% robustness and context band (smaller); footer (code, paper, contact).
+\documentclass[final,t]{beamer}
+
+% =====================================================================
+% POSTER SIZE: the only place to change it.
+%   size=a0 | a1 | a2 ... ; orientation=portrait | landscape
+%   custom: size=custom,width=<cm>,height=<cm> (numbers only, in cm)
+%   scale: font scale; 1.2 for A0, about 0.85 for A1.
+% Widths below are fractions of \paperwidth; the figures were made for A0
+% (make_figures.py records the printed widths), so remake them for another size.
+\usepackage[size=a0,orientation=portrait,scale=1.2]{beamerposter}
+% =====================================================================
+
+% =====================================================================
+% COLOURS (poster chrome): University of Copenhagen identity.
+% CHECK the hex values against the official UCPH design guide before printing.
+\definecolor{ucphred}{HTML}{901A1E}    % primary: title band, headings, accents
+\definecolor{ucphdark}{HTML}{4D4D4D}   % dark grey: body text, tags
+\definecolor{ucphlight}{HTML}{E6E6E6}  % light grey: setup and robustness bands
+% Data colours (family names in text, figure colours) follow src/figures.py and are
+% not chrome: Qwen, Gemma, Mistral.
+\definecolor{qwen}{HTML}{6B4EE6}
+\definecolor{gemma}{HTML}{1A9BE8}
+\definecolor{mistral}{HTML}{FA520F}
+% =====================================================================
+
+\usepackage[T1]{fontenc}
+\usepackage{tgheros}          % Helvetica clone, matches the figures (src/paper_style.py)
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{qrcode}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+
+\graphicspath{{portrait_snapshot/figs/}}
+\input{../analysis/tables/numbers_post_review.tex}   % defines \PH and \Interim
+\input{../analysis/tables/numbers.tex}
+% Compact placeholder for the robustness table (same warning, short box).
+\newcommand{\PHcompact}[1]{\textcolor{red}{\fbox{\scriptsize\ttfamily ?}}\PackageWarning{numbers}{Placeholder #1}}
+
+% ---------------- beamer look: plain ----------------------------------------------
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=ucphdark,bg=white}
+\setbeamercolor{structure}{fg=ucphred}
+\setbeamertemplate{itemize items}{\raisebox{0.15em}{\scriptsize$\blacktriangleright$}}
+\setbeamersize{text margin left=0cm,text margin right=0cm}
+\setbeamerfont{itemize/enumerate body}{}
+\setlength{\parskip}{0pt}
+
+\newlength{\contentwidth}\setlength{\contentwidth}{\dimexpr\paperwidth-4.8cm\relax}
+\newcommand{\Qwen}{\textcolor{qwen}{\textbf{Qwen}}}
+\newcommand{\Gemma}{\textcolor{gemma}{\textbf{Gemma}}}
+\newcommand{\Mistral}{\textcolor{mistral}{\textbf{Mistral}}}
+
+% Full-width band with a background colour; content is \contentwidth wide.
+\newsavebox{\bandbox}
+\newenvironment{band}[2]{% #1 background, #2 vertical padding
+  \def\bandcol{#1}\def\bandpad{#2}%
+  \begin{lrbox}{\bandbox}\begin{minipage}{\paperwidth}\vspace*{\bandpad}\centering
+  \begin{minipage}{\contentwidth}}%
+  {\end{minipage}\vspace*{\bandpad}\end{minipage}\end{lrbox}%
+  \par\noindent{\setlength{\fboxsep}{0pt}\colorbox{\bandcol}{\usebox{\bandbox}}}\par}
+
+% Headings, three levels of the hierarchy.
+\newcommand{\bandlabel}[1]{{\small\bfseries\color{ucphred}\MakeUppercase{#1}}\par\vspace{0.5cm}}
+\newcommand{\headS}[1]{{\large\bfseries\color{ucphred}#1}\par\vspace{0.15cm}%
+  {\color{ucphred}\rule{\linewidth}{3pt}}\par\vspace{0.4cm}}
+\newcommand{\headL}[1]{{\LARGE\bfseries\color{ucphred}#1}\par\vspace{0.2cm}%
+  {\color{ucphred}\rule{\linewidth}{5pt}}\par\vspace{0.5cm}}
+\newcommand{\postreview}{{\setlength{\fboxsep}{4pt}\colorbox{ucphdark}{\color{white}\footnotesize\bfseries\strut post-review}}}
+\newcommand{\figcap}[1]{\par\vspace{0.3cm}{\small\color{ucphdark}#1\par}}
+
+% Theme rows: humans (left), agents (right). Human quotes are verbatim from the FAccT paper
+% (ews-paper/main.tex, Results l.432 and SI l.1107; Tereza confirmed 2026-11-10 that consent covers this).
+% Agent side: count over all 60 full-protocol 4-bit workshops (11,340 turns incl. final-vote
+% justifications; regex "good student|successful student" and, for the data-point theme,
+% "not just a(nother) data point/number/statistic" or "feel/treated like a(nother) ...") and a verbatim agent quote.
+\newcommand{\themerow}[3]{%
+  {\large\bfseries\color{ucphred}#1}\par\vspace{0.3cm}
+  \begin{minipage}[t]{0.485\linewidth}\small\raggedright{\footnotesize\bfseries HUMANS}\par\vspace{0.1cm}#2\end{minipage}\hfill
+  \begin{minipage}[t]{0.485\linewidth}\small\raggedright{\footnotesize\bfseries AGENTS}\par\vspace{0.1cm}#3\end{minipage}\par}
+
+% Family chip: colour, name, human model chosen, modal-choice share.
+\newcommand{\famchip}[4]{%
+  \begin{minipage}[t]{0.31\linewidth}\centering
+    {\color{#1}\rule{\linewidth}{8pt}}\par\vspace{0.25cm}
+    {\Large\bfseries\color{#1}#2}\par\vspace{0.2cm}
+    human model: \textbf{#3}\par
+    same model: \textbf{#4}
+  \end{minipage}}
+
+% Takeaway statement, set large.
+\newcommand{\takeaway}[2]{%
+  \begin{minipage}[t]{0.08\linewidth}\vspace{0pt}{\fontsize{72}{72}\selectfont\bfseries\color{ucphred}#1}\end{minipage}%
+  \begin{minipage}[t]{0.92\linewidth}\vspace{0pt}\raggedright #2\end{minipage}\par}
+
+% ---------------- title band (headline) -------------------------------------------
+\setbeamertemplate{headline}{%
+  \noindent\makebox[\paperwidth][l]{%
+  \begin{tikzpicture}[every node/.style={inner sep=0pt,
+        execute at begin node={\normalfont\spaceskip=0pt\xspaceskip=0pt\relax}}]
+    \fill[ucphred] (0,0) rectangle (\paperwidth,11.4cm);
+    \node[anchor=north west, text width=\dimexpr\paperwidth-20.2cm\relax, align=flush left, text=white]
+      at (2.4cm,10.2cm) {%
+      {\fontsize{78}{86}\selectfont\bfseries Synthetic Stakeholders?}\par\vspace{0.35cm}
+      {\fontsize{68}{76}\selectfont Agreement and Stability of Open-Weight LLM Agent Panels\\in Participatory Model Selection}\par\vspace{0.45cm}
+      {\large\bfseries Tereza Blazkova}\quad\textbullet\quad{\large University of Copenhagen}};
+  \end{tikzpicture}}}
+
+% ---------------- footer: none --------
+\setbeamertemplate{footline}{}
+
+\begin{document}
+\begin{frame}[t]
+\vspace*{-0.25cm}% closes the white gap between the title band and the setup band
+
+% =====================================================================
+% SETUP BAND (small): question, human workshop, design, models and runs
+% =====================================================================
+\begin{band}{ucphlight}{0.8cm}
+\normalsize
+\begin{minipage}[c]{0.19\linewidth}\centering
+  \begin{tikzpicture}
+    \node[draw=ucphred, line width=3pt, rounded corners=0.8cm, fill=white, inner sep=1.0cm,
+          text width=\dimexpr\linewidth-2.3cm\relax, align=left, text=ucphdark,
+          font=\large\bfseries, execute at begin node={\hyphenpenalty=10000\exhyphenpenalty=10000}]
+      {How do LLM agent panels compare with a human stakeholder workshop when choosing an AI model?};
+  \end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.79\linewidth}
+  \begin{minipage}[c]{0.73\linewidth}
+    \headS{\normalsize\raggedright Context: Participatory deliberative workshop with 9 students + 3 student advisors\\about a dropout early-warning model used in student advising\par}
+    \resizebox{\linewidth}{!}{\input{portrait_snapshot/fig_design.tex}}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.25\linewidth}\normalsize
+    \begin{itemize}
+      \item Open weights, 4-bit
+      \item \nWorkshopsFull{} workshops
+      \item Fictional personas with the humans' role mix
+      \item Verbatim survey, scripted facilitator
+      \item Scoring and random-panel reference fixed before any model output
+    \end{itemize}
+  \end{minipage}
+\end{minipage}
+\end{band}
+
+% =====================================================================
+% RESULTS BAND (dominant)
+% =====================================================================
+\begin{band}{white}{0.8cm}
+
+% Takeaways in two columns (A, C | B, D) above the one results figure; letters match its panels:
+% A rules, B final votes, C model chosen, D answers moved (figs/fig_results.pdf, poster/fig_results.py).
+{\Large\bfseries\color{ucphred}Takeaways:\par}\vspace{0.4cm}
+{\large\bfseries
+\begin{minipage}[t]{0.485\linewidth}
+  \takeaway{A}{Low agreement with the one human reference: only one of the 7 rules is matched by every run.}\vspace{0.7cm}
+  \takeaway{C}{Uniform choices at 4-bit: \lrcFull{} of \nRunsFullAll{} panels chose the same model, not the humans'.}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\linewidth}
+  \takeaway{B}{No dissent at 4-bit (\reservationsFull{} ``support with reservations''), but at 8- and 16-bit Gemma's consensus breaks.}\vspace{0.7cm}
+  \takeaway{D}{Little movement after deliberation: \shiftItemsGemmaLargeFull{}--\shiftItemsQwenLargeFull{} of 23 panel answers moved per run, against \humanShiftItems{} for the humans.}
+\end{minipage}\par}
+\vspace{1.0cm}
+\includegraphics[width=\linewidth]{fig_results.pdf}
+\end{band}
+
+% =====================================================================
+% ROBUSTNESS AND CONTEXT BAND (smaller); its grey runs down to the page edge
+% =====================================================================
+\noindent\begin{tikzpicture}[remember picture, overlay]
+  \fill[ucphlight] ($(current page.west |- 0,0)+(0,-1cm)$) rectangle (current page.south east);
+\end{tikzpicture}%
+\begin{band}{ucphlight}{0.8cm}
+\normalsize
+\begin{minipage}[t]{0.40\linewidth}
+  \headS{Is the hedge an artefact of the vote card?}
+  \includegraphics[width=\linewidth]{fig_card_conditions.pdf}
+  \par\vspace{0.3cm}
+  Out of \nWorkshopsFull{} workshops, none selected plain ``support'' under any of the 10 card versions.
+\end{minipage}\hfill
+\begin{minipage}[t]{0.35\linewidth}
+  \headS{Quotes from the workshops}
+  \themerow{What counts as a good student?}
+    {``what is the role of the study guidance, how do we see students role in getting help, what is the good way to be studying aka what is a good student''\par\vspace{0.1cm}{\footnotesize Workshop participant}}
+    {\textbf{2 of 11,340} agent turns. ``It risks shifting resources from fixing structural issues to just patching individuals with generic emails, potentially stigmatizing those who don't fit the standard mold of a successful student.''\par\vspace{0.1cm}{\footnotesize Qwen, run 20, agent S8}}
+  \par\vspace{1.0cm}
+  \themerow{Harm to the student}
+    {``the danger is not so much that AI or predictive models will counsel students badly: rather it is that it will counsel them efficiently. Efficiency here is the reduction of the student to a tractable profile\ldots''\par\vspace{0.1cm}{\footnotesize Workshop participant}}
+    {\textbf{29 of 11,340} agent turns. ``\ldots it's so easy to lose sight of the human impact when focusing on data and algorithms. [\ldots] As someone with a long-term health condition, I particularly value transparency and being treated as an individual, not just another data point in a system.''\par\vspace{0.1cm}{\footnotesize Gemma, run 8, agent S9}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.215\linewidth}
+  \headS{Other runs}
+  Rules matched (mean, of 7) and runs choosing the human model.
+  \par\vspace{0.3cm}
+  \begin{adjustbox}{max width=\linewidth}
+  \setlength{\tabcolsep}{0.35em}\let\PH\PHcompact
+  \begin{tabular}{@{}l rr@{\hspace{0.9em}}rr@{\hspace{0.9em}}rr@{}}
+  \toprule
+   & \multicolumn{2}{c}{\Qwen} & \multicolumn{2}{c}{\Gemma} & \multicolumn{2}{c}{\Mistral} \\
+  \midrule
+  Reference & \rulesQwenLargeFull & \decisionQwenLargeFull & \rulesGemmaLargeFull & \decisionGemmaLargeFull & \rulesMistralLargeFull & \decisionMistralLargeFull \\
+  Personas A & \bTwoARulesQwen & \bTwoADecisionQwen & \bTwoARulesGemma & \bTwoADecisionGemma & \bTwoARulesMistral & \bTwoADecisionMistral \\
+  Personas B & \bTwoBRulesQwen & \bTwoBDecisionQwen & \bTwoBRulesGemma & \bTwoBDecisionGemma & \bTwoBRulesMistral & \bTwoBDecisionMistral \\
+  8-bit & \bFourRulesQwen & \bFourDecisionQwen & \bFourRulesGemma & \bFourDecisionGemma & \bFourRulesMistral & \bFourDecisionMistral \\
+  Qwen 122B & \bThreeRulesQwen & \bThreeDecisionQwen & -- & -- & -- & -- \\
+  16-bit & -- & -- & \bFourFullRulesGemma & \bFourFullDecisionGemma & -- & -- \\
+  \bottomrule
+  \end{tabular}
+  \end{adjustbox}\par\vspace{0.3cm}
+  {\small Reference: 4-bit, original personas.}\par\vspace{0.6cm}
+  \headS{Limitations}
+  \begin{itemize}
+    \item One human workshop; 20 runs per family
+    \item Mostly 4-bit weights (see B)
+  \end{itemize}
+  \par\vspace{1.2cm}
+  \begin{minipage}[t]{0.45\linewidth}\vspace{0pt}\headS{Code}\end{minipage}\hfill
+  \begin{minipage}[t]{0.5\linewidth}\vspace{0pt}\raggedleft{\setlength{\fboxsep}{0.4cm}\colorbox{white}{\color{black}\qrcode[height=4.8cm]{https://github.com/tereza-blazkova/synthetic\_stakeholders}}}\end{minipage}
+\end{minipage}
+\end{band}
+
+% UCPH logo, white (logo/ucph_logo_white.png, 16 cm wide), top right: its horizontal line sits on the
+% lower edge of the red title band (11.389 cm from the page top; the line is 5.106 cm below the image top).
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=north east, inner sep=0pt] at ($(current page.north east)+(-1.2cm,-6.283cm)$)
+    {\includegraphics[width=16cm]{logo/ucph_logo_white.pdf}};
+\end{tikzpicture}
+\end{frame}
+\end{document}

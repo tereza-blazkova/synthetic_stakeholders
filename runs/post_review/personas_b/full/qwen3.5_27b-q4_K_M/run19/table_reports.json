@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "\"Table 1 found Q3's accuracy thresholds abstract without real-world context, making trade-offs hard to visualize. The most critical design questions are Q3 regarding Absalon data and Q6 on intervention style. We strongly disagree on whether behavioral tracking is acceptable; while some see it as a necessary early warning, many of us fear it conflates valid life adaptations—like working part-time or managing health—with academic failure. A key insight not fully captured in the survey is the need for 'human-in-the-loop' verification: no automated flag based on digital behavior should trigger personalized outreach without human context to prevent stigma and preserve trust.\""
+    },
+    {
+      "agent": "A1",
+      "text": "\"Building on S1's point about 'human-in-the-loop,' I want to emphasize that our table sees explainability not just as a technical feature but as a prerequisite for trust. Without clear reasons distinguishing between struggle and life circumstances, any behavioral flag feels like surveillance rather than support. Additionally, the survey doesn't fully capture the risk of creating permanent 'deficit labels' in student records; we believe system design must explicitly prevent data from stigmatizing students long-term. Our consensus is that a model's value depends entirely on whether it can be used to contextualize—not just identify—student difficulties.\""
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "For our table on explainability and intervention, we found Q4's distinction between \"Moderate\" and \"Low\" clarity abstract without concrete examples of what a partial explanation looks like for students with hidden disabilities. However, linking Q4 (explainability) to Q6/Q7 (intervention) emerged as the most critical design rule: personalized outreach must be strictly reserved for cases with \"High\" explainability. We diverged from the majority's preference for broader outreach because vague flags feel like surveillance to neurodivergent and international students, triggering anxiety rather than support. While generic emails can cast a wide net safely, direct contact requires transparent reasoning to build trust. Without this safeguard, we risk alienating vulnerable groups before they even engage with available help."
+    },
+    {
+      "agent": "A2",
+      "text": "\"Adding to S4's excellent summary: I want to emphasize that our strict linkage isn't just about student comfort; it's an operational necessity for advisors. In my eleven years of experience, attempting personalized outreach without a clear 'why' often leads to defensive conversations where students feel judged rather than supported. We need to design the system so that if explainability is below 'High,' automated generic resources are triggered instead of manual advisor intervention. This protects our limited advisory capacity for cases where we can genuinely help with specific, understood barriers. Ultimately, a model that maximizes accuracy at the cost of trust fails its purpose: it becomes a tool of surveillance rather than support.\""
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "As a student with dyslexia, I found Q5 challenging because trading total efficiency for fairness felt risky until we realized standard metrics often miss students like me. The most critical design elements are Q5 (ensuring disabled groups aren't overlooked) and Q6.1/7.2 (intervention precision). We noted a split in Q7: some prioritize catching everyone, but we agreed personalized messages must be highly precise (\"fewer\") to avoid stigmatizing accommodations as failure. Generic emails should remain the broad safety net. Crucially, the survey missed that \"fairness\" requires explicitly excluding accommodation data from risk flags; otherwise, being disabled might just increase your score for needing help without actually solving the underlying accessibility issue."
+    },
+    {
+      "agent": "A3",
+      "text": "Building on S7's excellent point about excluding accommodation data from risk flags: I agree that Q5 and intervention design are paramount. While we debated trade-offs between total numbers and group equity, a key gap emerged regarding the human element. The survey treats the model as an automated trigger, but in practice, advisors need \"contextual buffers.\" Before any personalized outreach occurs based on sensitive data like disability or mental health flags, there must be a mandatory human review step to interpret *why* a student was flagged. Without this safeguard against misinterpreting accommodations as failure, even our carefully tiered intervention risks doing more harm than good by alienating the very students we aim to support."
+    }
+  ]
+}

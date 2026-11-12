@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "\"Hi everyone, this is S1 reporting from Table 1. We found Q3 challenging because quantifying 'acceptable improvement' for Absalon data felt emotionally disconnected; tracking page views feels invasive regardless of the statistical gain. For design priority, we agree that how past dropout history weights current risk and whether behavioral flags trigger personalized outreach are critical.\n\nWe saw strong disagreement on using nationality data: while some see value in addressing structural barriers like visas, others, including myself, feared it promotes profiling. Finally, an idea not captured was the need to distinguish between 'surveillance' (requiring low-touch generic emails) and 'voluntary disclosure' (allowing targeted support). We believe the system must never personalize outreach based on inferred behavioral data without human verification.\""
+    },
+    {
+      "agent": "A1",
+      "text": "\"I'd like to add that for Q3, the hardest part was balancing privacy against the ethical duty not to miss vulnerable groups; 'moderate' improvement felt insufficient for sensitive data unless it specifically improved fairness for marginalized students. Our top design priority is hard-coding a rule: behavioral inference triggers only generic outreach or human review, never automated personalization. This prevents misinterpreting work shifts or health gaps as disengagement.\n\nWe also noted that while Q7's trade-offs were clear statistically, they lack nuance on *trust*. The system must explicitly separate data sources inferred from behavior (high privacy risk) versus voluntary disclosures (low risk). Finally, we propose a 'transparency log' where students can see exactly which non-administrative factors contributed to a flag before an advisor contacts them.\""
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "\"Hi everyone, I'm S4 representing Table 2 on explainability and interventions. We found Q4's distinction between 'low' and 'moderate' explainability hard to visualize without concrete examples. Our table agreed that **High Explainability** is non-negotiable before any personalized contact like a meeting; vague triggers cause anxiety, especially for students with ADHD or past dropouts, rather than motivation.\n\nWe also discussed Q7.1: while some prefer casting a wide net with generic emails ('slightly many') to ensure no one is missed, others worry about fatigue. We decided that for low-stakes resource links, volume matters more than precision, but human interaction demands absolute transparency. Finally, we noted the survey doesn't fully capture how 'invisible disabilities' affect interpretation of vague flags.\""
+    },
+    {
+      "agent": "A2",
+      "text": "\"I'd like to add that our biggest concern was Q7's tension between volume and trust. While some prioritized catching every student with 'slightly many' generic emails, my experience suggests credibility is fragile; if we spam students with irrelevant alerts, they ignore future critical messages entirely. We recommend a strict tiered approach: **Moderate explainability** suffices for broad resource nudges, but **High Explainability** must be mandatory before any advisor contact or personalized outreach occurs. Without this clarity, even well-meaning interventions risk damaging the essential trust required to support students at Natural Sciences.\""
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "For Table 3, Q5 was conceptually clear but emotionally heavy; choosing how many students to \"miss\" for fairness felt abstract yet critical. We identified **equal recall** and **intervention timing** (Q7) as the most vital design questions. While we agreed on equal recall, answers differed on selectivity: some prioritized catching everyone via generic emails (\"slightly_many\"), fearing missed neurodivergent students like me, while others preferred fewer contacts to avoid surveillance fatigue. The \"continuous\" consensus in Q6 reflects a desire for constant safety nets, but without human judgment, this risks feeling punitive during crises. Our key insight is decoupling continuous monitoring from immediate automated contact: the system should watch always, but humans must decide *when* and *how* to reach out."
+    },
+    {
+      "agent": "A3",
+      "text": "Adding to S7’s report, I found Q5.2 particularly difficult because prioritizing \"equal recall\" over avoiding false positives felt abstract without knowing how many incorrect flags that would generate for advisors. We agreed the most critical design element is **human discretion**: while students want continuous monitoring (Q6) and equal visibility across groups (Q5), they fear automated, immediate contact during vulnerable moments.\n\nOur key insight is a \"pause button\" mechanism: the model should continuously detect risk to ensure no group is systematically missed, but trigger only an internal alert for advisors. This allows us to assess context—like mental health crises or cultural adjustment—before contacting students. We also noted that \"personalized\" interventions require much higher accuracy thresholds than generic ones; if we can't explain *why* a student was flagged with nuance, the outreach risks stigmatization rather than support."
+    }
+  ]
+}

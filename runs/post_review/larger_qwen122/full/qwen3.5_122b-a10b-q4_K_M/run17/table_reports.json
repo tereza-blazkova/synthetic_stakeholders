@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "Our table found the abstract \"improvement\" percentages in Q3 hard to answer without concrete scenarios; we couldn't judge if tracking my every click was worth a \"large\" gain. The most critical design question is absolutely Q3.4: using Absalon activity data feels like surveillance, not support, especially for students working part-time or needing health accommodations.\n\nWe also debated Q7.2 on personalized outreach. While many voted to contact \"many\" students to avoid missing anyone, we argued that over-contacting with opaque, invasive data erodes trust. If a student feels judged by their background or habits rather than supported, they will withdraw. We believe privacy is the foundation of engagement; without it, even perfect identification fails because no one seeks help from a system they distrust."
+    },
+    {
+      "agent": "A1",
+      "text": "I add that Q3.5's distinction between using sensitive data for accuracy versus fairness was confusing; we agreed it should generally be excluded unless strictly for correcting bias. Our strongest consensus is on the human element: predictive power means nothing if the intervention destroys trust. We must prioritize \"ethical trust\" over \"comprehensive safety.\" Using Absalon logs or background data to flag students risks punishing those managing health issues or part-time work, turning support into surveillance. Furthermore, personalized outreach based on opaque algorithms feels accusatory; it can drive vulnerable students further away. The design must ensure that identifying a student doesn't alienate them from the very help they need. Trust is the prerequisite for any successful intervention."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "Our table found Q4's distinctions between \"moderate\" and \"low\" explainability vague; we lacked concrete examples of what an advisor would actually say to a student. Most importantly, we agreed that **explainability is the non-negotiable foundation**. Without clear, human-readable reasons—like \"missed three deadlines\"—even accurate models fail because students with ADHD or international backgrounds won't trust opaque flags.\n\nAnswers diverged on whether *any* partial explanation is better than none. While some accepted \"low\" explainability for a large accuracy gain, others chose \"never,\" fearing misleading reasons (e.g., blaming language barriers) could be more damaging than silence by confirming feelings of inadequacy. Our key idea: the model must prioritize **contextual dignity** over raw stats; if an explanation risks misdiagnosing culture or disability as failure, it should not be used at all."
+    },
+    {
+      "agent": "A2",
+      "text": "Building on S4's point about contextual dignity, I want to emphasize that for us advisors, explainability isn't just a student preference; it's our professional requirement. If we can't articulate *why* a student is flagged, we risk becoming enforcers of an algorithm rather than guides. The key missing insight from the survey is that \"low\" explainability creates a liability: if an explanation is wrong or culturally insensitive, it actively harms the trust relationship we spend years building. Therefore, our condition for accepting any model with limited transparency must be rigorous vetting to ensure reasons are never misleading. Without this safeguard, the risk of alienating the very students we aim to help outweighs marginal statistical gains."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "For Q5, framing fairness as a \"loss\" was unclear; for students with disabilities, equal recall often *improves* overall detection by learning non-standard struggle patterns. The most critical design element is Q5.2: prioritizing equal recall to ensure we don't miss marginalized groups who fall outside standard credit metrics.\n\nOur table diverged on Q7.2 (personalized outreach): some chose \"fewer\" fearing invasive misinterpretation of disability data could destroy trust, while I chose \"slightly many.\" My view is that an awkward email is safer than being ignored until dropout occurs, but only if a human verifies the flag before sending. We also noted that models must be trained on disability-inclusive data; otherwise, they will systematically fail students like me."
+    },
+    {
+      "agent": "A3",
+      "text": "I'll add to S7's report. We found Q5.1's \"loss\" framing misleading; fairness isn't a trade-off but a correction of existing bias. Our key disagreement on Q7.2 revealed a vital nuance: while generic emails can cast a wide net, personalized outreach demands higher precision or human verification to avoid stigmatizing students with non-linear paths.\n\nThe most critical design principle emerging from our table is that **trust depends on the intervention type**. We should prioritize high recall for detection, but *personalized* contact must never be fully automated; it requires a mandatory human review step to contextualize data before outreach. This balances catching every at-risk student with protecting their dignity and preventing invasive misinterpretations of their struggles."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+% !TeX program = xelatex
+% Extended abstract, Agent Evaluation Science symposium (2 pages excl. references).
+% Build: cd paper/abstract && latexmk -xelatex main.tex
+% Numbers come from ../../analysis/tables/numbers.tex (python -m src.report);
+% never type a result into the prose. "% CHECK" marks sentences to re-read
+% against the final numbers once all runs are scored.
+\documentclass[11pt,a4paper]{article}
+\usepackage{aes}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+
+\graphicspath{{../../analysis/figures/}}
+\input{../../analysis/tables/numbers.tex}
+
+\title[Synthetic Stakeholders?]{Synthetic Stakeholders? Agreement and Stability of Open-Weight LLM Agent Panels in Participatory Model Selection}
+
+\aesauthor[affil={1},corresponding]{Tereza Blazkova}
+\aesaffiliation{1}{Center for Social Data Science, University of Copenhagen}
+\aesemails{\aesemail{tereza.blazkova@sodas.ku.dk}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+LLM agents are proposed as synthetic participants, but rarely compared with a real deliberation.
+We replay a three-hour workshop in which 9 students and 3 advisors set the rules for selecting a university dropout early-warning model, using 12-agent panels from three open-weight model families under the same scripted protocol (20 runs each).
+On average, the panels matched only one to three of the seven rules the humans set, and two of the three families chose the same model, not the humans' one, in every run.
+Deliberation barely changed the agents' answers (a few of 23 items; humans: \humanShiftItems{}), and they hedged: \reservationsFull{} of their final votes were ``support with reservations'', while the humans' votes ranged from support to block.
+\end{abstract}
+
+\section{Motivation}
+Participatory AI asks affected people to shape algorithmic systems \citep{birhanePowerPeopleOpportunities2022,delgadoParticipatoryTurnAI2023}, which is costly; LLMs can simulate survey respondents and human-subject studies \citep{argyle2023outofone,aher2023using}, suggesting stand-in participants, but they misportray and flatten groups \citep{wang2025misportray}, diverge from their opinions \citep{santurkar2023whose} and, as simulated users, are ``excessively cooperative'' and ``stylistically uniform'' \citep{zhou2026sim2real}.
+\citet{chen2026trends} list as an open question for which use cases simulated users are a useful proxy for human ones; we test one, comparing synthetic panels with what a real participatory process produced, before and after deliberation.
+
+\begin{figure}[b]
+  \centering
+  \input{fig_design.tex}
+  \caption{Design. Both lanes take the same survey before and after the same protocol and are compared at both points. Grey steps are not simulated: one algorithm turns endline medians into rules and a model. Only the model family varies.}
+  \label{fig:design}
+\end{figure}
+
+\section{Human reference and design}
+In a three-hour deliberative workshop at a Danish university \citep{blazkova2026participatory}, 9 students and 3 student advisors answered a survey before and after deliberation \citep{fishkin2009people}, pricing each step on two ladders in students identified per 100: adding data (course performance, enrolment, LMS activity, sensitive attributes) and lowering explainability (from a credit rule to a neural network).
+Applied to the candidate models on a held-out test cohort, their endline medians selected logistic regression on credits and performance (recall 62.3\% vs.\ 23.5\% for the credit rule).
+This workshop is one draw, not a ground truth: how much workshops with similar people would differ is unknown, and its participants' own baseline rules match their endline ones on only \humanSelfRules{} of 7, so we report agreement next to random panels and the same humans before deliberation.
+Synthetic panels replay the full process (Figure~\ref{fig:design}): 12 fictional personas matching the human workshop's role and demographic mix, the verbatim survey, and a scripted facilitator running the human protocol (table discussions, plenary, 1-2-4-All, final assessment).
+Families are Qwen 3.5 27B, Gemma 3 27B and Mistral Small 3.2 24B (4-bit, temperature~1), 20 seeded runs each, since consistency across runs is part of reliability \citep{rabanser2026reliability}.
+Scoring and the random-panel reference were fixed before any model output; no personal data or transcripts were used.
+
+\section{Results}
+\noindent\textbf{Rules and selected model.}
+Qwen and Gemma panels matched fewer human rules than the humans' own baseline answers did, Mistral about as many (Figure~\ref{fig:full}a).
+The decisive difference is enrolment data: the humans admitted it only for a large gain, while almost all panels (\lrcFull{} of \nRunsFullAll{}) accepted it for less and so selected logistic regression with enrolment data instead of the human model.
+This choice was already in their baseline answers, as the humans' was in theirs; only Mistral ever chose the human model, and Qwen and Gemma never varied.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{fig_full.pdf}
+  \caption{(a)~Panels' endline answer per rule; marker size = runs (of 20) giving that answer; boxes: human endline (solid), baseline if different (dashed). Rules matched (of 7, mean): Qwen \rulesQwenLargeFull{}, Gemma \rulesGemmaLargeFull{}, Mistral \rulesMistralLargeFull{} (humans' baseline: \humanSelfRules{}); human model chosen: \decisionQwenLargeFull{}, \decisionGemmaLargeFull{}, \decisionMistralLargeFull{} runs. (b)~Items (of 23) whose panel median moved; \% = share of human moves repeated. (c)~Final votes.}
+  \label{fig:full}
+\end{figure}
+
+\noindent\textbf{What deliberation changed.}
+Deliberation changed humans far more than agents (Figure~\ref{fig:full}b).
+The humans revised \humanShiftItems{} of 23 answers, mostly toward more restriction, including \humanChangedRules{} of the 7 rules and most sensitive attributes.
+Agent panels revised few, rarely in the humans' direction: Qwen also became stricter, but mostly on other items, while Gemma and Mistral mostly loosened sensitive attributes.
+Nearly all Gemma and Qwen agents reported becoming more critical.
+No agent gave plain support in the final assessment: \reservationsFull{} of votes were ``support with reservations''; humans' ranged from support to block (Figure~\ref{fig:full}c).
+
+\noindent\textbf{Limitations and implications.}
+With one workshop, agreement is not validity, but uniform choices, little movement and hedged votes hold regardless and match the ``systematically more cooperative'' simulated users \citet{chen2026trends} warn of, and may manufacture rather than reach consensus \citep[cf.][]{dafoe2020open,tessler2024habermas}. \textbf{Ongoing work} compares deliberation: like humans, agents weighed surveillance against helping students in need and named the harm of being flagged; they dwelt on advisor resources and student wellbeing but did not raise intersectionality or question the system's purpose or its idea of a ``good'' student.
+
+\bibliography{references}
+
+\end{document}

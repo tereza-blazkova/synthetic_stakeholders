@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "As Table 1, we found Q3.4 on Absalon data and Q7.2 on personalized outreach most critical for design. We struggled with justifying privacy loss for small accuracy gains; tracking login patterns felt like surveillance rather than support, especially for working students or those managing health conditions. Our table split on intervention selectivity: some prioritized avoiding false positives to protect mental energy, while others feared missing vulnerable students if thresholds were too high. Crucially, we argued that \"personalized\" messages referencing specific behavioral data should be banned from automated outreach entirely; such details must remain internal for advisors only. We also need a mechanism for students to opt-out of being flagged before any contact occurs, which the survey didn't cover but is essential for trust."
+    },
+    {
+      "agent": "A1",
+      "text": "Building on S1's points about Q3.4 and internal data use: As an advisor, I emphasize that while high accuracy matters, trust is the true metric of success. We found answers diverged on intervention intensity (Q7) because students weigh \"safety from intrusion\" against \"fear of being missed.\" My key addition to our report is a design condition: **Human-in-the-loop verification.** Before any student receives contact—especially personalized messages—an advisor must review the model's flag. This prevents algorithmic errors from becoming stigmatizing accusations and ensures that sensitive data like Absalon activity informs *how* we help, not just *that* we reach out. The survey missed this crucial step of human judgment before action."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "For Table 2, Q4's distinction between \"Low\" and \"Very Low\" explainability was clear to me but feels abstract without examples of what a \"partial\" explanation looks like in practice. The most critical design question is that high explainability must be mandatory for *any* proactive contact; students with disabilities or past dropouts cannot trust opaque systems, as they feel stigmatizing rather than supportive.\n\nAnswers differed significantly on Q7's selectivity: I argued for contacting \"slightly many\" via generic email to catch silent crises like my own ADHD struggles, while others feared alert fatigue and surveillance. We also noted that the survey didn't fully address how to ensure flagged students aren't later stigmatized by faculty based solely on model output before any support occurs."
+    },
+    {
+      "agent": "A2",
+      "text": "I agree that Q4's abstract categories needed concrete examples to be useful for design. Beyond this, I would add a critical concern missing from the survey: resource capacity. The model's output directly impacts my team's ability to help; if we flag too many students without sufficient human resources or clear reasons, our support becomes ineffective bureaucracy rather than genuine care. We must ensure that any \"high accuracy\" gain in identification doesn't overwhelm our advisors with unmanageable caseloads, which would ultimately hurt the very students we aim to reach. The system design must account for our operational limits, not just algorithmic performance."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "\"Table 3 found Q5's trade-off between fairness and accuracy challenging but vital; we agree 'equal recall' for vulnerable groups like students with disabilities is non-negotiable. We also stressed that explainability (Q4) must accompany this, or interventions fail due to distrust. For Q7, our table preferred fewer contacts than the room average because unsolicited emails feel stigmatizing if reasons aren't clear. Finally, we worry about models conflating disability-related behaviors—like my late submissions for extra time—with actual academic failure. The survey doesn't fully capture how this misclassification harms trust before support is even offered.\""
+    },
+    {
+      "agent": "A3",
+      "text": "\"I add that Q6's intervention types need stricter linkage to explainability levels: a personalized email feels unsafe without 'High' or 'Very High' clarity on *why* it was sent. While we prioritized fairness (Q5), our table identified data limitations as the real bottleneck; if models rely on opaque Absalon metrics, they risk misinterpreting disability-related patterns as failure, causing stigma regardless of outreach intent. Thus, for a system to be acceptable, it must restrict data sources to what advisors can honestly explain in conversation, even if this limits detection accuracy.\""
+    }
+  ]
+}

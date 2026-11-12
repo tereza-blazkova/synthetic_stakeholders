@@ -1,0 +1,50 @@
+{
+  "A1": {
+    "choice": "support_with_reservations",
+    "justification": "I support the direction but have critical reservations regarding the inclusion of Absalon data and sensitive proxies. The 'moderate' threshold for behavioral activity (10 students) ignores the high risk of bias against non-traditional learners, working students, and those with disabilities, as discussed in our group. Additionally, allowing First-Gen status only at a 10-student improvement threshold feels too restrictive; it should be used to correct fairness gaps even without massive accuracy gains. Before implementation, we must mandate the 'human validation gate' where an advisor reviews any flag based on behavioral or sensitive data to ensure context is considered and bias is prevented."
+  },
+  "A2": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model's emphasis on high explainability and human validation, but I have serious reservations about the data thresholds. Allowing Absalon activity only if it identifies '10 more students' risks automating bias against non-Danish study habits before a single student is flagged, as offline learning is common. Furthermore, while sensitive data for fairness is permitted, excluding disability data for *identification* is problematic; we must use such data to ensure the model recognizes diverse struggle patterns, not just to fix false positives later. The model needs an explicit 'human validation gate' before any behavioral data triggers outreach, regardless of improvement metrics."
+  },
+  "A3": {
+    "choice": "support_with_reservations",
+    "justification": "I support the strong safeguards on data types and explainability, which address critical bias risks. However, I object to the 'continuous' monitoring implied by the lack of scheduled checks. Without a mandatory human validation gate for any flags triggered by behavioral data (like Absalon logs), this model risks automating surveillance against non-traditional learners. The specification must explicitly include a rule that no automated intervention occurs based solely on activity patterns without prior human review of context. Additionally, strict data deletion policies are essential to prevent 'support creep,' ensuring flagged data is ephemeral and never used for disciplinary purposes."
+  },
+  "S1": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model only if the mandatory human validation gate we agreed upon is legally binding before any behavioral data (Absalon) triggers outreach. The specification allows using activity logs for identification, but without a required advisor check to confirm context (e.g., work schedules vs. disengagement), it risks automating bias against non-traditional students. Additionally, data must be strictly ephemeral: once used for support, flags and behavioral patterns should be deleted to prevent permanent 'risk' labels that could haunt my future. The model is acceptable only as a tool for human advisors, not an automated judge."
+  },
+  "S2": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model only if strict safeguards are added that the survey omitted: (1) A mandatory 'human validation gate' before any outreach based on Absalon activity or first-gen/financial data, ensuring context like work schedules or cultural study habits isn't misinterpreted as failure. (2) Explicit exclusion of disability and nationality data to prevent bias. Without these, the model risks flagging resilient international students as 'at-risk' simply for managing survival strategies offline. The current specification sets high accuracy thresholds but lacks the institutional burden-of-proof needed to protect non-traditional learners from algorithmic stereotyping."
+  },
+  "S3": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model's emphasis on explainability and fairness, but I object to the inclusion of Absalon data (even with a high threshold) and sensitive disability data for fairness. As a student with a chronic condition, my 'inactivity' often reflects necessary health management, not struggle. Using this data risks pathologizing valid coping strategies. Before implementation, we must mandate that behavioral flags undergo human validation to check context (e.g., disability accommodations) and ensure the model is trained on faculty-specific norms so 'offline study' isn't automatically flagged as failure."
+  },
+  "S4": {
+    "choice": "support_with_reservations",
+    "justification": "I support the high explainability and fairness goals, but I object to using Absalon activity without stricter safeguards. The requirement for a '10 student' improvement threshold is insufficient given my experience that such data often penalizes neurodivergent study styles. For this model to be acceptable, it must include a mandatory human validation gate where advisors review flags triggered by behavioral logs *before* any contact is made. Additionally, disability data should only be used if consented to explicitly for fairness adjustments. Without these conditions, the risk of mislabeling valid coping strategies as 'struggle' remains too high."
+  },
+  "S5": {
+    "choice": "support_with_reservations",
+    "justification": "I support the high explainability and fairness goals, but I strongly object to the 'never acceptable' ruling on sensitive data like nationality for *fairness correction*. As an international student, excluding this data prevents fixing bias against my cultural study patterns. Without using it to ensure equal recall across groups, the model will likely perpetuate false flags for students like me. Additionally, while Absalon data has high thresholds, I insist that any use of it requires mandatory human validation to check context before outreach occurs."
+  },
+  "S6": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model's high explainability and rejection of most sensitive data, but I object to allowing Absalon activity at all without explicit human validation first. The '10 more students' threshold is dangerous for international students whose offline study habits look like disengagement. Without a mandatory gate where an advisor checks context (e.g., work status, cultural norms) before the model ingests this data, it will automate bias against non-Danish learners. I support implementation only if behavioral data triggers a human review *before* any flag is generated."
+  },
+  "S7": {
+    "choice": "support_with_reservations",
+    "justification": "I support the emphasis on equal recall and high explainability, but I have strong reservations about using Absalon data even with strict thresholds (10+ improvement). As a dyslexic student, my offline study patterns are valid; if the model still flags me based on digital logs, it reinforces bias despite the 'human validation' we discussed in the workshop. The specification must explicitly mandate that behavioral data is excluded by default for students with known disabilities or non-traditional backgrounds, and that human validation occurs *before* any outreach, not just after a flag triggers. Without this explicit safeguard, the model risks automating the very exclusion we sought to prevent."
+  },
+  "S8": {
+    "choice": "object_no_block",
+    "justification": "I accept this model only because the group agreed on 'equal_recall' and mandatory human validation, which addresses my fear of being missed due to bias. However, I still object to using Absalon activity data; for students like me (international, former dropout) or those with disabilities, low login counts often reflect different study cultures or health needs, not struggle. Without the group's consensus on human verification to interpret this context before any flag triggers action, these logs would automate bias. While I support the principle of catching everyone who struggles, the inclusion of behavioral data remains a significant risk that requires strict, case-by-case human oversight to prevent stigmatizing diverse learners."
+  },
+  "S9": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification only if the 'human validation gate' is mandatory before any behavioral data (Absalon) triggers outreach. The model still risks flagging students with non-traditional study patterns (e.g., offline work, mental health breaks) as 'at-risk' despite the high accuracy threshold. Without a human verifying context to distinguish between actual struggle and valid coping strategies, the system remains biased against diverse learners like myself. Additionally, I insist that this tool drives structural changes (flexible deadlines) rather than just managing individual remediation."
+  }
+}

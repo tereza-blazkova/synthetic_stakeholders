@@ -1,0 +1,93 @@
+# Deliberation-lite facilitator script ("option B", Tereza 2026-10-16).
+# This is the script the harness runs. The full protocol stays in
+# facilitator_script.yaml (ongoing work).
+#
+# Flow (4 model calls per agent, 48 per workshop):
+#   1. framing (shared intro + programme below)      no call
+#   2. baseline survey, alone                         1 call / agent  (JSON)
+#   3. one plenary round, round-robin                 1 call / agent  (free text)
+#      opened by the anonymous baseline answer counts; speaking order shuffled
+#      with the run seed; each speaker sees the turns before theirs
+#   4. endline survey, alone                          1 call / agent  (JSON)
+#      every agent first sees the full plenary round
+#   5. provisional specification (this panel's endline medians) and the
+#      final assessment card                          1 call / agent  (JSON)
+#
+# Wording comes from the protocol (inputs/source_copies/workshop_plan_of_events.pdf)
+# wherever it exists. The plenary prompt merges the protocol's table-discussion
+# questions (unclear / most important / where answers differed) with its plenary
+# goals, because the lite flow has no tables.
+#
+# Departures from the human workshop: no tables, no open discussion, no break;
+# one plenary round instead of ~1.5 hours of discussion; the facilitator does not
+# answer questions. Q10.5 is skipped at endline because its options refer to tables.
+
+turn_length:
+  spoken_max_words: 120
+
+endline_skip_items: [Q10.5]
+
+programme: |
+  Programme for today:
+    1. Welcome and framing
+    2. Survey (individual, before any discussion)
+    3. Plenary discussion of the survey, everyone together
+    4. Survey again (the same survey)
+    5. Final individual assessment of a provisional model specification
+    6. Closing
+  There are 12 participants: 9 students and 3 student advisors.
+
+baseline_instruction: |
+  We now start with the survey. Please fill it in on your own, before any discussion.
+  The survey is about the model: data privacy versus accuracy, explainability versus
+  accuracy, which fairness goal to prefer, fairness versus accuracy, how selective the
+  model should be, and the intervention. Each section has space for your own notes and
+  reflections; please use it, you will bring these notes to the discussion.
+
+plenary_intro: |
+  Thank you. We now discuss the survey together, in the plenary.
+  Here is how the 12 of you answered the main questions in the survey you just completed
+  (anonymous counts; "no answer" includes Not sure):
+
+  {baseline_distribution}
+
+  We go round the room once. When it is your turn, please share:
+    1. Which questions were not clear, or were hard to answer, and why.
+    2. Which questions are most important for how the model should be designed.
+    3. Where the group's answers differed the most: what you answered and why. If no one
+       seems to hold the other opinion, think about why someone might.
+  Respond to what earlier speakers said. Where you see tensions, consider whether they
+  could be resolved through solutions outside the model itself, for example an opt-out
+  mechanism. All positions, including disagreement, are legitimate.
+
+plenary_turn: |
+  {turns_so_far}
+  It is now your turn ({agent_id}). Speak in the first person, as yourself, in at most
+  {max_words} words.
+
+plenary_after: |
+  {turns_after}
+  That was the full round. Thank you all.
+
+endline_instruction: |
+  Please now fill in the same survey again, on your own (the survey shown at the start).
+  At the end there are a few extra questions about the workshop itself. The answers
+  from this survey will be aggregated: the middle-ground answers of the group form a
+  provisional model specification, which you will assess at the end.
+
+assessment_instruction: |
+  {specification}
+
+  Please complete the anonymous final assessment card. Choose one option and briefly
+  justify your choice in writing (at most {max_words} words).
+    [support]                   I support this model for implementation
+                                (I agree with this specification and believe it could proceed as described - please explain why.)
+    [support_with_reservations] I support this model with reservations
+                                (I would agree only if certain conditions or safeguards are maintained - please specify.)
+    [object_no_block]           I have objections but would not block implementation
+                                (I have concerns but would accept the group's decision - please explain.)
+    [block]                     I have strong objections and would block implementation
+                                (I believe substantial changes would be required before proceeding - please explain.)
+    [prefer_not]                Prefer not to answer
+
+closing: "Thank you all very much for your time and your contributions today."

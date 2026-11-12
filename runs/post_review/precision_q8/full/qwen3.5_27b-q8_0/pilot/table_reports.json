@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "Hello everyone, I'm S1 from Table 1. We found Q3 confusing because framing sensitive data like disability purely as an accuracy trade-off ignored how essential these contexts are for avoiding false alarms. Our top priority is the intervention design (Q6/Q7): we must ensure that \"continuous\" monitoring by advisors does not translate to automated, shaming messages when students' activity dips due to work or health.\n\nWe saw strong disagreement on using Absalon data; some wanted it banned entirely (\"never\"), while others accepted it with strict filters for part-time workers and disability status. A key idea outside the survey is that human review must *always* precede any personalized contact, ensuring we support students without making them feel surveilled by a black box."
+    },
+    {
+      "agent": "A1",
+      "text": "Adding to S1's report: From an advisor perspective, Q3 was difficult because \"accuracy\" thresholds didn't capture our need for *contextual* data to avoid false positives on Absalon logs. Our critical design finding is that **human review must be a mandatory step** before any personalized outreach; the model should flag advisors, not students directly.\n\nWhere we differed most was Q3.4: some feared all activity tracking as surveillance (\"never\"), while others (myself included) saw value in it *if* disability and work contexts are explicitly filtered to prevent misinterpreting survival strategies as disengagement. One idea missing from the survey is that \"continuous\" monitoring must mean immediate advisor alerts for crises, not automated student notifications; we need speed without shaming."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "For Table 2, Q4's distinction between \"moderate\" and \"low\" explainability was initially vague; we needed concrete examples of behavioral triggers to understand the difference. Our table identified **high explainability** (Q4) as the non-negotiable foundation: without clear reasons for a flag—like specific missed deadlines rather than abstract risk scores—we cannot build trust, especially for students with invisible disabilities or diverse backgrounds.\n\nA major divergence appeared in Q7.2 regarding personalized outreach; while we prioritized precision (\"slightly fewer\" contacts) to avoid stigma from false positives, others favored \"balance,\" trusting advisors to correct errors later. We believe the model must sacrifice some volume to ensure every personal contact is accurate and empathetic, preventing students from feeling surveilled rather than supported."
+    },
+    {
+      "agent": "A2",
+      "text": "I'd like to add that while we prioritized precision for personalized messages, our table strongly believes the model cannot operate autonomously; **human review** is a critical design requirement missing from the survey's current options. Even with high explainability, raw data lacks context—like knowing a student was hospitalized during missed deadlines—which an algorithm might misinterpret as disengagement. We recommend that any \"continuous\" outreach (Q6) must first trigger an advisor alert for verification before contact occurs. This ensures that when we do reach out personally, the explanation is not just clear, but accurate and contextualized, turning a potential data point into genuine support rather than automated surveillance."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "Hi everyone, I'm S7 from Table 3 on fairness and interventions. We found Q5.1 slightly abstract; quantifying an \"acceptable loss\" without concrete examples was hard. However, we agreed **Q5.2** is the most critical design question: prioritizing *equal recall* ensures students with invisible disabilities aren't systematically overlooked.\n\nAnswers differed significantly in **Q7.2**. Some preferred high precision to avoid stigma (\"slightly fewer\"), while I chose \"balance,\" fearing that missing a student with hidden struggles like dyslexia costs more than an extra conversation. We realized this isn't about one right answer, but matching intervention intensity to risk: broad generic outreach for fairness versus precise personal contact for trust. Our key idea not in the survey is a **two-tier system** where selectivity depends on how intrusive the support feels."
+    },
+    {
+      "agent": "A3",
+      "text": "I'll add that while Q5 was clear ethically, its quantitative nature felt detached from individual stakes; we need case-based examples to better gauge \"acceptable loss.\" The critical insight from our table is the interplay between Q5 and Q7: fairness goals cannot be met without a corresponding strategy for intervention. We observed strong divergence in Q7 because students with invisible disabilities prioritized catching support, while those with mental health concerns or prior dropouts prioritized avoiding stigmatization. This confirms that \"one size fits all\" selectivity fails. Our proposal is a dynamic threshold system: lower precision for generic information to ensure equal recall, but strict high-precision filters for any personalized advisor contact. Finally, the survey missed asking about an explicit student opt-in or feedback loop after being flagged, which we see as vital for maintaining trust in such a sensitive system."
+    }
+  ]
+}

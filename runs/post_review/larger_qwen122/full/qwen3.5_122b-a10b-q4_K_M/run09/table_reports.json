@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "Our table found Q3.4 hard to answer because \"Absalon activity\" feels like surveillance rather than support; low logins often mean working shifts or managing illness, not disengagement. We identified Q3.4 and Q3.6 as most critical: we must exclude behavioral data from triggering flags entirely. Instead, for fairness, we need consented sensitive data—like disability status—to recalibrate success metrics so reduced loads aren't misdiagnosed as failure.\n\nAnswers diverged sharply on whether to include Absalon data; those favoring it likely view activity as a neutral metric of engagement, ignoring how non-traditional schedules skew the data. We also debated if sensitive data ever helps without risking profiling. Our consensus: use it strictly with consent to adjust expectations, not predict outcomes. Finally, we felt the survey didn't cover opt-out mechanisms or real-time data correction rights."
+    },
+    {
+      "agent": "A1",
+      "text": "I'd like to add that a crucial gap is the lack of \"human-in-the-loop\" design. The survey asks about model specifications but doesn't explicitly cover the workflow: every flag must be reviewed by an advisor *before* any contact, preventing automated harm. Additionally, Q3.6's binary choice missed a vital nuance: using sensitive data solely as a \"calibration parameter\" to adjust credit-load thresholds, rather than as an input feature for prediction, could satisfy both fairness and privacy concerns. We need the system to understand *why* a student has fewer credits, not just that they do."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "At our table, we found Q4's \"Moderate\" vs. \"Low\" explainability vague; abstract numbers made trade-offs hard to weigh. We agreed Q4 is critical: without clear reasons like specific grades or missed deadlines, students—especially neurodivergent ones or internationals—feel surveilled, not supported. A \"black box\" erodes trust instantly.\n\nDifferences arose on Q7's selectivity for personalized messages. While I chose \"many,\" fearing false negatives are catastrophic for struggling students who won't ask for help, others preferred \"fewer\" to avoid feeling shamed by intrusive contact without context. Ultimately, we believe transparency is non-negotiable; if students can't verify the logic behind a flag due to cultural or learning differences, they will disengage, rendering even perfect accuracy useless."
+    },
+    {
+      "agent": "A2",
+      "text": "\"Building on S4's report, I want to highlight a practical gap: while we prioritize explainability and balance selectivity, the survey misses the human capacity required for follow-up. Even if we identify students perfectly with transparent reasons, do we have enough advisors to handle continuous, personalized outreach? If the system flags too many, or uses 'many' contacts as S4 suggested, our limited staff could get overwhelmed, turning support into a bureaucratic bottleneck rather than a safety net.\n\nAlso, the survey treats intervention as static, but in practice, trust is dynamic. A student might ignore an email but respond to a gentle call—or vice versa. We need design flexibility that lets advisors choose the method *after* seeing the transparent reason, rather than hard-coding one approach for everyone.\""
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "Our table found Q5's trade-off charts abstract, making it hard to quantify \"acceptable loss.\" For us, fairness is non-negotiable: the model *must* account for disability accommodations so we aren't flagged as struggling due to different work patterns. Without this, identification itself is unjust.\n\nWe identified Q6 (intervention) and Q5 (fairness) as critical. Answers diverged most on Q6.2 (\"continuous\" vs. periodic contact). Some feared constant monitoring creates surveillance anxiety, while others needed immediate crisis support. We realized the solution lies in design: run continuous risk assessment invisibly in the background, but make outreach frequency student-led via an opt-in plan. This balances early safety with autonomy. Finally, we need transparency on exactly what data triggers a flag; without knowing why I'm contacted, I will disengage."
+    },
+    {
+      "agent": "A3",
+      "text": "I agree with S7 that Q5's abstract charts obscured real-world impact for disabled and international students. For our table, fairness (Q5) and intervention design (Q6) are inseparable; a fair model fails if the outreach feels invasive. The divergence on contact frequency (\"continuous\" vs. periodic) stems from different needs: crisis prevention versus autonomy preservation. We resolved this by proposing a \"hybrid\" approach: run continuous background monitoring to catch early risks, but decouple it from automated alerts. Instead, make outreach student-led via an opt-in support plan where students choose their contact rhythm and see exactly what data triggers a flag. This ensures the system acts as a safety net, not a surveillance leash, preserving the trust essential for effective support."
+    }
+  ]
+}

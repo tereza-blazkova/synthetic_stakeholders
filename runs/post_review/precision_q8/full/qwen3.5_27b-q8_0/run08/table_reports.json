@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "\"Hello everyone, I'm S1 from Table 1. We found Q3's abstract 'improvement' metrics hard to weigh against real privacy feelings; does identifying one more student justify feeling watched? Most importantly for design, we agreed that sensitive data like disability or first-gen status must never predict risk directly—only audit fairness later—to prevent institutional stigma.\n\nWe noted a divide: some wanted lower thresholds for this data to catch hidden struggles early, while others (like me) feared it creates permanent 'at-risk' labels before any academic failure occurs. On interventions, we stressed that personalized contact requires high confidence; otherwise, non-standard student lives get mistaken for disengagement. Our key idea not in the survey: frame all outreach as an open invitation to support, never a disciplinary check-in, to rebuild trust for those of us returning after dropout.\""
+    },
+    {
+      "agent": "A1",
+      "text": "\"Adding to S1's excellent summary: As an advisor, I want to highlight that Q3.5 was particularly hard because it pits two ethical duties against each other: protecting privacy versus identifying invisible barriers early. While we agreed on banning sensitive data from *prediction*, my experience suggests a middle ground: using disability or financial context only when academic metrics *already* show decline can prevent students from falling through the cracks without preemptively labeling them.\n\nRegarding Q7, our discussion revealed that 'balance' is too vague for personalized outreach; it risks alienating non-traditional students if based on noisy behavioral data like login times. We propose a design rule: human-initiated contact should require a 'high confidence' threshold combining grades and behavior, never relying solely on activity logs. Finally, the survey missed that *how* we explain the flag matters as much as accuracy; without clear reasons, even accurate outreach feels like surveillance.\""
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "\"Regarding Q4, we found 'Moderate' versus 'Low' explainability abstract but critical; without clear reasons, flags trigger anxiety for neurodivergent students like me rather than trust. Our key design rule: **Personalized outreach must require 'Very High' explainability**, allowing specific data points to be clearly understood before contact.\n\nOn Q6/Q7, answers diverged on intervention types. While many preferred generic emails or meetings due to fears of text-based surveillance, I noted that some need written clarity first. However, we agree: **Precision must override volume** for personalized messages. False positives can shame international and disabled students, destroying the trust needed to accept help. Any system flagging specific behaviors without high confidence risks alienating those it aims to support.\""
+    },
+    {
+      "agent": "A2",
+      "text": "Adding to S4's excellent summary: We found that **trust is the primary bottleneck**. While generic outreach can tolerate some opacity, any personalized intervention demands \"High\" or \"Very High\" explainability to be effective; without it, students perceive support as surveillance and reject it. \n\nOur key design insight was a split in risk tolerance: while volume matters for catching dropouts, **precision is non-negotiable** for targeted contact involving specific data points. False positives here don't just waste time—they cause shame, especially for international or neurodivergent students whose engagement patterns differ from the norm but aren't necessarily signs of failure. Therefore, the model must prioritize clarity and accuracy over breadth when personalizing outreach to preserve the student-advisor relationship."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "\"Table 3 found Q5's trade-off between accuracy and fairness challenging but ultimately agreed that 'equal recall'—ensuring no group like international students or those with disabilities is systematically missed—is non-negotiable. We believe the survey underestimated a critical design need: **data pre-filtering**. Before predicting risk, the model must automatically exclude signals caused by legitimate accommodations (like my extra exam time) to avoid penalizing us for using support systems.\n\nWhile we generally agreed on 'continuous' monitoring, S8 highlighted that this feels like surveillance unless decoupled from contact frequency. Thus, our top recommendation is a system where continuous background detection feeds only into low-stakes, voluntary interventions, ensuring fairness is technical and human-led.\""
+    },
+    {
+      "agent": "A3",
+      "text": "\"Building on S7's point about pre-filtering data for accommodations, I'd add that our table believes **human discretion** must remain central to the design. No algorithm should ever replace an advisor's judgment; a 'flag' is merely a prompt for conversation, not a final verdict. We found Q6 critical: interventions like voluntary meeting invitations are essential to transform potential surveillance into trusted support. Ultimately, while technical fairness (equal recall) ensures *who* gets help, the human-led intervention determines whether students actually accept it. Our consensus is that continuous monitoring must be strictly decoupled from intrusive contact to preserve trust.\""
+    }
+  ]
+}

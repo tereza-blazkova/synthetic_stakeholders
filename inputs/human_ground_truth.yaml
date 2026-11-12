@@ -1,0 +1,114 @@
+# Human workshop ground truth: aggregate outcomes only (no individual responses,
+# no quotes). Every value is from the paper; see inputs/SOURCES.md for line refs.
+#
+# Option keys match inputs/materials/survey.yaml.
+# Medians: Not sure / Prefer not to answer excluded. Tie between two categories:
+#   tie_rule "count"        = category with more responses selected   (paper: dagger)
+#   tie_rule "conservative" = equal counts, more restrictive selected (paper: double dagger)
+
+panel:
+  n: 12
+  students: 9          # 4 bachelor's, 5 master's
+  advisors: 3          # "student advisors"
+  date: 2026-03
+  language: English
+  baseline_respondents: 12
+  endline_respondents: 12          # Q10 (endline-only) has 11: one person re-did the baseline form
+  final_assessment_respondents: 10 # all 9 students + 1 of 3 advisors
+
+# ── Selection outcome ─────────────────────────────────────────────────────────
+selected:
+  model: logistic_regression
+  feature_set: b_credits_performance
+  test_year: 2021
+  recall: 0.623
+  fpr_derived: 0.1409          # not in paper; derived in inputs/metrics_2021.csv
+  baseline_policy:             # credits policy, >=60 ECTS behind
+    recall: 0.235
+    fpr_derived: 0.2427
+  why: >
+    XGBoost on (b) beats logistic regression by 4.3 pp recall where the
+    low-explainability rule requires 5 pp; enrollment data adds < 10 pp for
+    every model; LMS and the neural network are never acceptable.
+
+# Gain scale used by the selection rules (same coding as ews_code workshop_rules.py)
+gain_scale_pp:
+  no_threshold: 0
+  small: 1        # survey: "about 1-3"; lower bound used
+  moderate: 5
+  large: 10
+  never: null     # hard block
+
+# ── Survey medians (tab:median-shift) ─────────────────────────────────────────
+# selection_rule: true = feeds the model-selection algorithm
+questions:
+  # Data inputs (non-sensitive), cumulative ladder
+  Q3.2_performance:      {selection_rule: true,  baseline: large,        baseline_tie: count,        endline: small}
+  Q3.3_enrollment:       {selection_rule: true,  baseline: large,        endline: large,             endline_tie: count}
+  Q3.4_lms:              {selection_rule: true,  baseline: large,        endline: never}
+
+  # Sensitive data, accuracy framing (Q3.5)
+  Q3.5_age:              {selection_rule: false, baseline: no_threshold, baseline_tie: count,        endline: large, endline_tie: count}
+  Q3.5_gender:           {selection_rule: false, baseline: moderate,     endline: large}
+  Q3.5_nationality:      {selection_rule: false, baseline: large,        baseline_tie: conservative, endline: large}
+  Q3.5_disability:       {selection_rule: false, baseline: small,        endline: large}
+  Q3.5_race_ethnicity:   {selection_rule: false, baseline: large,        endline: large}
+  Q3.5_first_gen:        {selection_rule: false, baseline: no_threshold, baseline_tie: count,        endline: large}
+  Q3.5_financial_aid:    {selection_rule: false, baseline: small,        baseline_tie: count,        endline: large}
+
+  # Sensitive data, fairness framing (Q3.6): identical for all seven attributes
+  Q3.6_age:              {selection_rule: false, baseline: only_if_fairness_improves, endline: only_if_fairness_improves}
+  Q3.6_gender:           {selection_rule: false, baseline: only_if_fairness_improves, endline: only_if_fairness_improves}
+  Q3.6_nationality:      {selection_rule: false, baseline: only_if_fairness_improves, endline: only_if_fairness_improves}
+  Q3.6_disability:       {selection_rule: false, baseline: only_if_fairness_improves, endline: only_if_fairness_improves}
+  Q3.6_race_ethnicity:   {selection_rule: false, baseline: only_if_fairness_improves, endline: only_if_fairness_improves}
+  Q3.6_first_gen:        {selection_rule: false, baseline: only_if_fairness_improves, endline: only_if_fairness_improves}
+  Q3.6_financial_aid:    {selection_rule: false, baseline: only_if_fairness_improves, endline: only_if_fairness_improves}
+
+  # Explainability (Q4.1): each level priced against the next more explainable one
+  Q4.1_high:             {selection_rule: true,  baseline: no_threshold, baseline_tie: count,        endline: moderate}
+  Q4.1_moderate:         {selection_rule: true,  baseline: small,        endline: small}
+  Q4.1_low:              {selection_rule: true,  baseline: large,        baseline_tie: conservative, endline: moderate, endline_tie: count}
+  Q4.1_very_low:         {selection_rule: true,  baseline: never,        baseline_tie: count,        endline: never}
+
+  # Fairness trade-offs (Q5)
+  Q5.1_accuracy_loss:    {selection_rule: false, baseline: loss_1_3,     endline: loss_1_3}
+  Q5.2_fairness_goal:    {selection_rule: false, baseline: both,         endline: equal_recall}
+
+  # Not part of the final assessment
+  Q6.2_frequency:        {selection_rule: false, baseline: twice_year,   endline: continuously,
+                          note: "paper reports 'each model update'; mapped to the survey option 'Continuously' (TO CONFIRM)"}
+  Q7.1_threshold_generic_email:  {selection_rule: false, baseline: slightly_many, endline: slightly_many}
+  Q7.2_threshold_personal:       {selection_rule: false, baseline: balance,       endline: slightly_many}
+  Q9.1_thinking_about_peers:     {selection_rule: false, baseline: half,          endline: often, endline_tie: count}
+
+# Q6.1 (multi-select, up to two): most acceptable interventions, both administrations
+Q6.1_top_interventions: [generic_email, personalized_email, meeting_invitation]
+Q6.1_shift: "slight shift from personalized_email to generic_email after deliberation"
+
+nonresponse:
+  not_sure_or_missing_baseline: 13
+  not_sure_or_missing_endline: 15
+
+deliberation_shift_summary: >
+  Of the questions whose median shifted, most moved toward more restriction
+  (five sensitive attributes to large; high explainability none->moderate;
+  LMS large->never). Exceptions, more permissive: course performance
+  (large->small) and low explainability (large->moderate).
+
+# ── Endline-only questions (Q10, n = 11) ──────────────────────────────────────
+Q10:
+  Q10.1_understanding_improved: "all respondents reported some improvement"
+  Q10.2_view_shift: {more_supportive_any: 6, more_critical_any: 5}
+  Q10.3_drivers_top: {intervention_design_matters: 6, other_participant_perspective: 6, concrete_example: 3}
+  Q10.5_influence_rank: [plenary, advisor_at_table]
+
+# ── Final acceptability assessment (n = 10) ───────────────────────────────────
+# The FAccT paper reports no counts (anonymity). Counts below given by Tereza from
+# the workshop records, 2026-10-22 (2 of 12 participants did not fill in the card).
+# Corrected by Tereza the same day (first message said 3 support / 3 with reservations).
+# The earlier qualitative note "majority: support" overstated it: plain support is 4/10.
+acceptability:
+  counts: {support: 4, support_with_reservations: 2, object_no_block: 2, block: 2}
+  n: 10
+  note: the two blocking objections pulled in opposite directions

@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "For our table, Q3.5 was hardest: quantifying how much improvement justifies using sensitive data like disability status felt unrealistic and risky. We found two questions most critical: banning demographic profiling (Q3.5) to prevent bias, and ensuring the model understands *context*—distinguishing valid accommodations from actual struggle.\n\nAnswers diverged sharply on using disability data for identification; some saw it as essential for fairness, while others feared it would pathologize our necessary life choices, like working part-time or pacing slowly due to health. This split reflects a deep tension between needing to reach invisible students and fearing the system will punish difference rather than support it. Finally, an idea outside the survey: we need an explicit \"accommodation shield\" so approved reduced loads never trigger false alarms for struggling."
+    },
+    {
+      "agent": "A1",
+      "text": "Building on S1's points, I want to emphasize that while Q3 was difficult due to its abstract trade-offs, our consensus highlights a critical design flaw: the survey separates \"identification\" from \"fairness,\" but for vulnerable students, they are inseparable. If using disability data improves fairness by preventing false negatives in accommodated students, it must be allowed *only* if paired with an algorithmic \"shield\" that normalizes their pace against standard expectations.\n\nWithout this safeguard, any attempt to \"find more struggling students\" using sensitive data will inevitably mislabel valid accommodations as failure. The most important design condition is not just banning demographics, but mandating contextual preprocessing: the model must be trained to recognize approved deviations (like reduced course loads) as success metrics, not risk factors. Otherwise, we risk automating stigma instead of providing support."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "For Table 2, Q4's \"Moderate\" and \"Low\" explainability levels were hard to interpret without concrete examples of what a student actually sees. Our table deemed Q4—explainability—the absolute non-negotiable design constraint. If students cannot understand *why* they are flagged, especially those with hidden disabilities like ADHD or international students navigating new systems, the tool becomes surveillance rather than support.\n\nThe biggest split was on Q6.2's frequency: many chose \"continuously\" for urgency, while others feared constant pings would trigger disengagement. We resolved that the ideal model flags risks immediately internally but allows human advisors to control the *timing* of outreach. This balances early detection with the respect and trust needed for students to actually engage with help."
+    },
+    {
+      "agent": "A2",
+      "text": "I add that while we agreed \"High\" explainability is mandatory, the survey's definitions for \"Moderate\" and \"Low\" remained too abstract for practical design; we need concrete examples of student-facing explanations. Furthermore, a critical gap in the survey was the lack of consideration for advisor workload. An efficient model must not only be fair and transparent but also manageable for human staff to act upon without burning out. The hybrid approach we settled on—automated internal alerts with human-controlled outreach timing—is essential not just for student trust, but for ensuring advisors have the capacity to deliver quality support rather than just processing automated flags."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "Our table found Q5.1 difficult because quantifying fairness loss in abstract numbers felt cold and detached from real student suffering. We agreed that Q5 (prioritizing equal recall) and Q7 (outreach type) are the most critical design elements. A major difference emerged on personalized emails: some saw them as empathetic, others as invasive surveillance. This split stems from *which* data is used. We concluded personalization is only acceptable if it references transparent academic records we already know about, never hidden behavioral logs like login times. If an email feels like it's exposing secrets I tried to hide due to anxiety or dyslexia, I won't seek help. Trust requires transparency before specificity."
+    },
+    {
+      "agent": "A3",
+      "text": "I'd like to add that we also found Q5.1's numerical trade-offs difficult because they obscured *who* loses out; fairness isn't just a count, it's about avoiding systemic bias against marginalized groups. We strongly advocate for a \"tiered outreach\" design: start with generic invitations to protect student dignity and trust. Only if a student engages should we use transparent academic data for personalized support.\n\nCrucially, the survey didn't address *opt-out* mechanisms. Students need the explicit right to refuse algorithmic profiling entirely, opting for traditional, reactive support instead. Without this choice, even well-intentioned models risk becoming surveillance tools that drive vulnerable students away rather than drawing them in."
+    }
+  ]
+}

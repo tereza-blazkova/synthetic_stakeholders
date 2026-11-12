@@ -1,0 +1,50 @@
+{
+  "A1": {
+    "choice": "support_with_reservations",
+    "justification": "I support the strong guardrails on sensitive data and explainability, which align with my core concerns about trust and bias. However, I have significant reservations regarding the fixed data order (adding admissions/Absalon late) and the lack of a student 'Context Dashboard' to proactively define baselines. Without these mechanisms, the model risks misinterpreting valid non-linear paths as failure before human context is applied. The specification focuses heavily on *how* we detect struggle but ignores *why* it occurs structurally. Implementation must strictly require that flagged cases are reviewed by an advisor who has access to student-declared contexts, ensuring support adapts to the student rather than forcing conformity."
+  },
+  "A2": {
+    "choice": "support_with_reservations",
+    "justification": "I support the group's emphasis on explainability and equal recall, but I have strong reservations about two aspects. First, requiring a 'large' (10 student) gain for Admissions data ignores how crucial context is to avoid bias against non-traditional students early in the process; this threshold seems too high for fairness. Second, the specification lacks the 'Context Dashboard' we discussed, where students declare their baseline circumstances. Without this self-advocacy layer, even a fair model risks pathologizing valid life choices as academic failure. I would only support implementation if these structural safeguards are added to ensure the system adapts to students rather than just flagging them."
+  },
+  "A3": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification's emphasis on fairness (equal recall) and explainability, but I have strong reservations about the data usage conditions. The requirement for '10 more students' to add admissions data ignores the critical need for that context early to prevent bias against non-traditional students. Furthermore, the model lacks the 'Context Dashboard' mechanism we discussed, where students proactively define their baselines. Without this student agency and explicit opt-out, even a fair algorithm risks misinterpreting valid coping strategies as failure. I support proceeding only if these safeguards are integrated to ensure the system adapts to student realities rather than enforcing a rigid norm."
+  },
+  "S1": {
+    "choice": "support_with_reservations",
+    "justification": "I support the ban on sensitive data and the requirement for explainability, which aligns with my need to avoid surveillance. However, I strongly object to including Absalon activity data, even at a high threshold, as it risks misinterpreting valid coping strategies (e.g., working or illness) as disengagement. Furthermore, the model lacks the crucial 'Context Dashboard' we discussed: without allowing students to declare their baseline circumstances *before* analysis, any automated flag remains a rigid judgment of non-linear paths rather than a supportive tool. I would only proceed if the system integrates self-advocacy context first and strictly prohibits using activity data as a proxy for struggle."
+  },
+  "S2": {
+    "choice": "support_with_reservations",
+    "justification": "I support the exclusion of nationality and sensitive data, which protects against bias. However, I object to using admissions or Absalon activity even with high improvement thresholds, as these can still create 'surveillance profiles' for international or working students. Crucially, this specification lacks a mandatory 'Context Dashboard' where students can declare their circumstances before flags trigger. Without this self-advocacy layer, the system risks pathologizing valid survival strategies (like part-time work) as academic failure based on rigid norms. The model must include an opt-out and allow students to define their own baselines; otherwise, it automates stigma rather than offering genuine support."
+  },
+  "S3": {
+    "choice": "support_with_reservations",
+    "justification": "I support the strict bans on using disability data for prediction and the requirement for explainability. However, I object to adding Absalon activity and admissions data without a 'Context Dashboard'. As a student with a chronic condition, my irregular online activity or reduced pace is a valid survival strategy, not a risk signal. If the model interprets these patterns as 'struggle' before understanding my context, it will falsely flag me for help I don't need and punish those who manage their health responsibly. Implementation must be conditional on students proactively defining their baseline first; otherwise, this system automates stigma against non-linear paths."
+  },
+  "S4": {
+    "choice": "block",
+    "justification": "I must block this model because its fundamental design assumes 'difficulty' is an individual deficit to be flagged, ignoring that my struggle as a neurodivergent student with ADHD often stems from rigid structural norms. This specification requires 'large' improvements for admissions data, which prevents the 'context-first' integration we agreed is vital to avoid misinterpreting valid non-linear paths as failure. Furthermore, it deems disability data 'never acceptable,' ensuring the algorithm will pathologize my coping strategies. Without the proposed 'Context Dashboard' and structural flexibility built-in first, this model automates stigma rather than offering genuine support."
+  },
+  "S5": {
+    "choice": "support_with_reservations",
+    "justification": "I support the strict limits on sensitive data and the requirement for high explainability, which protect international students from bias. However, I strongly object to the model's premise of identifying 'struggle' based on rigid norms without context. The specification must be conditional on a 'Context Dashboard' where students define their own baselines (e.g., work hours, cultural adjustment) *before* analysis. Without this mechanism to distinguish valid coping strategies from actual failure, the model risks pathologizing normal adaptation and automating stigma against diverse student populations. Implementation is only acceptable if structural flexibility accompanies the flags."
+  },
+  "S6": {
+    "choice": "support_with_reservations",
+    "justification": "I support this middle-ground as an improvement over the baseline, particularly with its demand for high explainability and equal recall. However, my strong reservation is the exclusion of sensitive data like nationality or disability *unless* it only improves fairness. This still risks bias if the model lacks immediate context on why I study slower (e.g., language barriers). Crucially, this specification omits the 'Context Dashboard' we proposed, where students declare constraints before flagging. Without this self-advocacy mechanism, the system remains a tool of surveillance that may misinterpret valid coping strategies as failure, potentially harming the very students it aims to help."
+  },
+  "S7": {
+    "choice": "block",
+    "justification": "I cannot support this model because it excludes disability-related data even when needed for fairness, which is fatal for students like me with dyslexia. Without contextualizing my slower pace or irregular activity as valid adaptations rather than failure, the model will inevitably flag legitimate coping strategies as 'at-risk.' This creates a bias trap where non-traditional paths are automatically stigmatized before any human intervention can correct the record. Furthermore, requiring 10+ improvements for sensitive data sets an impossibly high bar for equity, ignoring that even small fairness gains prevent harm to marginalized groups. A tool that cannot account for disability is not support; it is automated surveillance enforcing a narrow norm."
+  },
+  "S8": {
+    "choice": "support_with_reservations",
+    "justification": "I support the emphasis on equal recall and high explainability, but I have strong reservations about the data conditions. The specification excludes sensitive data like disability status even for fairness, which risks automating bias against non-traditional students. As a former dropout, I fear flags will be triggered before context is understood. Crucially, this model lacks the 'Context Dashboard' we discussed: students must proactively declare their baseline (e.g., part-time work or illness) *before* any analysis occurs to prevent valid coping strategies from being flagged as failure. Without this student-controlled layer and a mandatory human-in-the-loop review before outreach, implementation could deepen stigma rather than provide support."
+  },
+  "S9": {
+    "choice": "support_with_reservations",
+    "justification": "I support the strict fairness goals (equal recall) and explainability limits, which align with my need to avoid stigmatization. However, I strongly object to the lack of a mandatory 'Context Dashboard' where students declare their baseline *before* analysis. Without this, admitting disability or international status is forbidden for improving identification (only allowed if it fixes fairness), forcing the model to interpret my valid coping strategies as 'struggle' by default. A system that cannot learn from my context until I am already flagged risks automating bias against non-traditional paths. Implementation must include student-controlled context declaration as a prerequisite, not an afterthought."
+  }
+}

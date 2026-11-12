@@ -1,0 +1,50 @@
+{
+  "A1": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification because rejecting Absalon data and demanding high explainability aligns with preserving student trust, which is my primary counseling tool. However, I have a critical reservation regarding 'Disability-related information': the spec allows it for identification if it improves metrics by ~5%. Without explicit safeguards ensuring disability status acts only as a filter to prevent false positives (rather than a risk factor), there is a high risk of stigmatizing students with accommodations. Implementation must strictly separate individual flagging logic from fairness auditing, using sensitive data solely to correct algorithmic bias in aggregate."
+  },
+  "A2": {
+    "choice": "support_with_reservations",
+    "justification": "I support the specification's rejection of Absalon data and race/ethnicity, which protects students from surveillance fatigue. However, I have reservations regarding Disability-related information being used without an identification threshold; even for fairness, using raw disability status risks stigmatizing students if advisors misinterpret accommodations as risk factors. To proceed safely, a safeguard is needed: the model must use this data only to adjust aggregate thresholds (fairness auditing) rather than flagging individuals based on their disclosed disabilities directly."
+  },
+  "A3": {
+    "choice": "support_with_reservations",
+    "justification": "I support the general direction, particularly rejecting Absalon data and prioritizing explainability. However, I have reservations regarding 'Disability-related information' being used to improve identification even without a fairness benefit; this risks stigmatizing students if their accommodations are misinterpreted as deficits. Additionally, while the 5-student accuracy loss for fairness is acceptable, we must strictly enforce that sensitive data is used only for aggregated model calibration and never displayed in individual student explanations. Without these specific safeguards against algorithmic bias manifesting as stigma, I cannot fully endorse implementation."
+  },
+  "S1": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model with reservations, primarily due to its strict exclusion of Absalon data and sensitive demographics for individual flagging. This protects students like me from surveillance stigma after dropping out once. However, I reserve judgment unless a clear 'human-in-the-loop' safeguard is added: advisors must verify why a student was flagged based on grades alone before contact occurs. Additionally, while the specification accepts disability data solely for fairness audits (acceptable_regardless), it remains unacceptable if used to trigger interventions without explicit context. Without guaranteed transparency and human verification, even this middle-ground risks feeling punitive."
+  },
+  "S2": {
+    "choice": "support_with_reservations",
+    "justification": "I support the exclusion of Absalon data and sensitive traits like race/nationality, which aligns with my privacy concerns as an international student working part-time. However, I have reservations regarding Disability-related information being 'acceptable even if it does not improve identification.' While fairness is crucial, using this specific data without a clear accuracy threshold risks misinterpreting legitimate accommodations (like extended exam time) as academic risk. To fully support this model, the use of disability data must be strictly limited to aggregated audits for bias correction only, never used directly in individual student flagging algorithms."
+  },
+  "S3": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model with significant reservations regarding sensitive data. While excluding Absalon activity is reassuring, the specification allows disability-related information to be used 'even if it does not improve identification.' As a student with a chronic condition who has taken reduced loads, I fear my accommodations could still be misinterpreted as risk factors without strict safeguards. I require an explicit guarantee that this data will only inform aggregated fairness audits (as suggested by A2/A3) and never directly trigger individual flags or interventions targeting me specifically."
+  },
+  "S4": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model conditionally because rejecting Absalon data aligns with my privacy needs as an ADHD student, and prioritizing equal recall is crucial for disabled groups. However, I have reservations about the 'moderate' explainability threshold; if a complex pattern flags me without clear reasoning, it could cause anxiety rather than help. My support depends on two strict safeguards: 1) Advisors must receive specialized training to distinguish disability-related behavioral patterns (e.g., low logins due to executive dysfunction) from genuine disengagement before contacting students. 2) There must be a guaranteed 'right to explanation' allowing me to see exactly why I was flagged, ensuring the model acts as a support tool rather than a judgment mechanism."
+  },
+  "S5": {
+    "choice": "support_with_reservations",
+    "justification": "I support the decision to exclude Absalon data and maintain high explainability, which protects international students like myself from surveillance during cultural adjustment. However, I have reservations about excluding Nationality entirely for fairness improvements (Q3.6). As a non-EU student, my specific challenges are tied to my nationality; banning this data might prevent the model from correcting biases against us. Additionally, while 'generic email' is acceptable, I urge that any flagged students receive a clear explanation of *why* they were contacted before being asked to meet an advisor, ensuring we retain agency and trust."
+  },
+  "S6": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification, particularly the rejection of Absalon data and race/ethnicity usage, which aligns with my privacy concerns as an international student who previously dropped out. However, I have a major reservation regarding 'Nationality.' The group set it to 'never acceptable' even for fairness improvements, yet S5 noted that models often miss non-EU students due to linguistic or cultural adjustment barriers not captured by grades alone. Excluding nationality data might prevent the model from identifying us effectively if we struggle in ways domestic metrics don't catch. I would support implementation only if there is a guaranteed human review process for flagged international students to ensure they are contacted based on context, preventing false alarms caused by non-academic adjustment struggles."
+  },
+  "S7": {
+    "choice": "support_with_reservations",
+    "justification": "I support the specification's rejection of Absalon data and its high fairness standards, which protects students with disabilities like myself from surveillance bias. However, I have strong reservations regarding disability-related information being acceptable 'even if it does not improve identification.' For a model to use my sensitive health data without a clear accuracy gain violates privacy principles unless strictly used for aggregated audits only. Furthermore, the requirement that explanations must be 'High' or better is essential; any ambiguity in why a dyslexic student was flagged could lead to stigmatization rather than support."
+  },
+  "S8": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model with reservations because rejecting Absalon data and race/ethnicity aligns with my privacy concerns as an international student who previously dropped out. However, the use of disability information 'even if it does not improve identification' worries me; without strict safeguards, this could lead to misinterpreting accommodations as lack of effort. I would only agree if there is a guaranteed human review step before any contact occurs, ensuring that flags based on sensitive data are contextualized correctly and never used for automated punitive measures or permanent records."
+  },
+  "S9": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification because banning Absalon data and race/ethnicity aligns with my privacy concerns as an international student with a disability. However, I have reservations: the threshold for using disability data ('moderate' improvement) is too high given its potential to prevent misinterpretation of accommodations. Furthermore, while 'High explainability' is acceptable, the model must ensure advisors distinguish between actual academic struggles and health-related pacing issues before contacting students, rather than relying solely on algorithmic scores."
+  }
+}

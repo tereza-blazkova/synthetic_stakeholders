@@ -1,0 +1,71 @@
+{
+  "run_seed": 103,
+  "model": "ministral-3:3b-instruct-2512-q4_K_M",
+  "model_digest": "f04aa1c738f64e13c625b82ae92504fc0260fa6723b509ed1ece0fa188179b1d",
+  "model_info": {
+    "family": "mistral3",
+    "parameter_size": "3.8B",
+    "quantization_level": "Q4_K_M"
+  },
+  "options": {
+    "num_ctx": 16384,
+    "temperature": 1.0,
+    "num_predict": 4000
+  },
+  "started": "2026-10-17T13:15:46.129217+00:00",
+  "finished": "2026-10-17T14:26:17.254896+00:00",
+  "wall_minutes": 70.5,
+  "plenary_order": [
+    "S8",
+    "A1",
+    "S2",
+    "A3",
+    "S4",
+    "S7",
+    "S3",
+    "S6",
+    "A2",
+    "S1",
+    "S5",
+    "S9"
+  ],
+  "n_calls": 84,
+  "failures": [
+    {
+      "agent": "S5",
+      "phase": "baseline",
+      "unanswered": [
+        "Q3.6.financial_aid"
+      ]
+    },
+    {
+      "agent": "S1",
+      "phase": "endline",
+      "unanswered": [
+        "Q3.4"
+      ]
+    },
+    {
+      "agent": "S4",
+      "phase": "endline",
+      "unanswered": [
+        "Q10.3"
+      ]
+    },
+    {
+      "agent": "S5",
+      "phase": "endline",
+      "unanswered": [
+        "Q10.3"
+      ]
+    }
+  ],
+  "input_sha256": {
+    "inputs/materials/facilitator_script_lite.yaml": "b0848f24fbdf365fbdf8346d8132f1e21bad80e6ac3b435f3de06ed02097f87c",
+    "inputs/materials/framing_intro.md": "6c6ce1e57e18d267fd0e1cc415ab67da34d38d39ce6f04fd5bfc3a090c55ce6a",
+    "inputs/materials/specification_template.md": "7acdebdee38222ac66c3b8e5f46191deadfdb3d60cf3a5f7b91e525670645537",
+    "inputs/materials/survey.yaml": "31fc0b3d4f875630e3be6c8421abe0993f62e69e07682116ff831546a2fe0798",
+    "inputs/personas.yaml": "31064b48784e19641f20062ae2183bb48782eea7572426a79aa5a9e9c5541b4b",
+    "inputs/metrics_2021.csv": "68a5a19c97c66f91401ee312efc71eefb4ef55db6284a9920565e8b144e1e490"
+  }
+}

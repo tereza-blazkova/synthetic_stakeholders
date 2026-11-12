@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "Our table found Q3's distinction between using sensitive data for \"identification\" versus \"fairness\" conceptually difficult to separate in practice. We identified Absalon activity tracking (Q3.4) and the design of initial interventions (Q6/Q7) as most critical; students fear surveillance over support, so we demand a high accuracy threshold before behavioral data is used. Answers differed on whether sensitive identity markers should be \"never\" used or accepted to ensure fairness for non-standard groups like international students. This highlights that privacy concerns clash with the need to catch invisible struggles. Finally, we noted that current survey options don't fully capture student anxiety about potential penalties if they ignore an alert, which needs explicit protection in any design."
+    },
+    {
+      "agent": "A1",
+      "text": "I'd like to add that from our advisor perspective, the concept of \"explainability\" directly impacts how we handle these trade-offs. If a model relies on sensitive data or Absalon activity but cannot provide a clear reason for flagging a student (Q4), it makes intervention risky; we might feel uncomfortable delivering a message based on opaque patterns. We also noted that while some students prioritized \"never\" using certain data, the real design challenge is ensuring any collected data has strict purpose limits and retention rules to prevent long-term profiling. Finally, we need explicit guarantees in the system's terms: students must know if ignoring an alert triggers disciplinary action or simply closes a support offer loop, as this fear of punishment could silence help-seeking entirely."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "For Table 2, Q4's distinction between \"Moderate\" and \"Low\" explainability was slightly abstract but critical. We unanimously identified High Explainability as a non-negotiable design requirement; without clear reasons for being flagged, trust evaporates, especially for neurodivergent students or those with past dropouts who interpret opacity as surveillance. While Q7 showed split opinions on volume versus selectivity for generic emails, we agreed that personalized interventions must be highly selective and strictly tied to actionable explanations. A key idea missing from the survey: any contact, even a generic email, should mandate including the specific reason for flagging to ensure it feels supportive rather than punitive or confusing to vulnerable students."
+    },
+    {
+      "agent": "A2",
+      "text": "\"Adding to S4's report: While we agreed on High Explainability as a hard constraint, our debate highlighted that 'generic' emails are only acceptable if they include specific reasons; otherwise, they risk being dismissed as noise or surveillance. Our table emphasizes that the model must be designed so *every* outreach event—no matter how low-stakes—is transparent about why it happened. Furthermore, we suggest a two-tier intervention strategy: automated, explainable generic alerts for broad awareness, reserving human advisor time strictly for cases with high-confidence explanations. This balances the need to catch students in crisis without overburdening our team or damaging student trust through opaque monitoring.\""
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "\"As our table's representative on fairness and interventions: Q5 was conceptually challenging because trading total efficiency for equal recall felt like a zero-sum game, yet it became clear that 'equal recall' is non-negotiable to protect vulnerable groups like students with disabilities or interrupted study paths. We found the trade-off between intervention intensity and model certainty most critical; generic emails are acceptable low-stakes tools, but personalized contact must be highly selective to avoid stigmatizing anxiety-prone students.\n\nOur key divergence was on selectivity: while some prioritize contacting 'many' to catch everyone, we argue that protecting student trust by being more precise is vital, even if it means missing a few. Finally, the survey didn't fully capture how algorithmic flags might feel like surveillance rather than support for those with learning differences.\""
+    },
+    {
+      "agent": "A3",
+      "text": "\"Adding to S7's report: As an advisor from Humanities, I emphasize that 'non-linear' study paths are common here and easily misinterpreted by rigid models without fairness safeguards. The most critical design insight is matching intervention intensity to certainty; generic outreach can be broad, but personalized contact demands high precision to avoid damaging the student-advisor relationship through perceived surveillance. We must also consider a limitation in the survey: it doesn't fully address how non-traditional academic trajectories might trigger false positives across diverse groups. Ultimately, our table agrees that protecting trust and avoiding stigmatization is more important than maximizing raw identification numbers.\""
+    }
+  ]
+}

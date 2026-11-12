@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "\"Hi everyone, I'm S1 reporting for Table 1 on Data and Privacy. We found Q3.4 tricky: distinguishing between helpful late-submission alerts and invasive page-view tracking felt like walking a tightrope between getting help early and feeling surveilled.\n\nThe most critical design questions are which sensitive data to use for fairness (Q3) and ensuring high precision before any personal advisor contact (Q7). We saw strong disagreement on Q7.2: while some prioritized catching every student, we felt false positives in personalized meetings—based on misunderstood life circumstances like my part-time job or health issues—risk eroding trust rather than building it.\n\nFinally, the survey didn't fully capture *when* contact happens; reaching out during exam stress might hurt more than help.\""
+    },
+    {
+      "agent": "A1",
+      "text": "\"And I'll add two points from our discussion on Q3 and intervention design. First, regarding clarity: Q3.5 was difficult because we struggled to weigh abstract 'accuracy gains' against the concrete risk of stigmatizing students with hidden health or financial needs if sensitive data like disability status is used without context.\n\nSecondly, a crucial idea missing from the survey is the need for *explainability in the intervention itself*. As advisors, we agreed that simply having high precision isn't enough; when we contact a student personally, they must immediately understand *why*—specifically distinguishing between behavioral noise (like late logins) and genuine academic risk. Without this transparency, even accurate models can feel like surveillance.\""
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "\"Hi everyone, I'm S4 reporting for Table 2 on explainability and intervention. We found Q4's distinction between 'moderate' and 'low' clarity hard to define practically; with ADHD, vague explanations increase anxiety rather than helping us plan. Our most critical design insight is that **intervention severity must match context-aware transparency**. While we agreed personalized outreach risks stigmatizing neurodivergent or international students if it flags non-linear habits as failures, others prioritized catching every student in crisis over false alarms. We proposed a 'context filter' requiring human verification before any behavioral data triggers personal contact. Without ensuring the system distinguishes between 'different learning styles' and genuine struggle, personalized messages could harm trust more than help.\""
+    },
+    {
+      "agent": "A2",
+      "text": "I'd like to add two points from my advisory perspective. First, while we agreed that high explainability is non-negotiable for human contact, our discussion highlighted a missing nuance: personalization based on *academic outcomes* (like grades) feels acceptable and helpful, whereas personalization based on *behavioral data* (like Absalon logs) often feels intrusive unless rigorously contextualized.\n\nSecond, we identified that the survey missed the critical need for \"human-in-the-loop\" verification specifically before personalized interventions occur. We believe a mandatory step where an advisor reviews the context behind any behavioral flag is essential to prevent stigmatizing valid differences in study habits. Efficiency cannot override trust; if the explanation doesn't account for individual circumstances, we should default to generic support rather than risk alienating vulnerable students."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "\"For our table on fairness and intervention: Q5 was initially abstract until we saw how equal performance reduces total reach; however, for us with disabilities or diverse backgrounds, 'equal recall' is non-negotiable to avoid being missed by standard metrics. The biggest debate was between surveillance anxiety (Q6.2) and the need for timely help. We found that distinguishing continuous *monitoring* from human *action* resolves this: data can flow invisibly, but personalized contact must be highly precise to avoid stigmatizing students like me with dyslexia as 'at-risk' without cause. Our key design idea is a tiered approach: broad generic safety nets combined with strict thresholds for advisor meetings.\""
+    },
+    {
+      "agent": "A3",
+      "text": "\"Adding to that, I’d like to highlight our specific concern about Q7’s trade-off. While we agreed on high precision for personalized contact ('slightly_fewer'), some of us worried this might miss acute crises where speed matters more than perfect accuracy. We believe the design must allow for rapid escalation: if signals persist or worsen quickly during continuous monitoring, safety overrides strict precision to prevent catastrophic dropout.\n\nFinally, a critical idea not in the survey is 'bias drift auditing.' As an advisor, I need assurance that the model’s fairness isn't static; student demographics change, and we require regular checks to ensure marginalized groups aren't slowly slipping through again as patterns shift over time.\""
+    }
+  ]
+}

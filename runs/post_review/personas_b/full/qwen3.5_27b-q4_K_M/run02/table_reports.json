@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "\"As our table's student representative, I'll start with what was unclear: Q3.4 on Absalon data felt ambiguous because 'page views' don't distinguish between disengagement and external factors like part-time work or health issues. The biggest design priority for us is the intervention trigger; we agreed that using behavioral data (Q3.4) should only happen if it offers a 'large' improvement over grades, AND must include human review before any personalized contact (Q7.2). We also saw strong disagreement on Q6.1: while some prefer personalized outreach to engage students, most of us fear stigma without high accuracy and transparency. Finally, we worry the survey missed the need for mandatory cultural competency training for advisors handling these flags.\""
+    },
+    {
+      "agent": "A1",
+      "text": "\"As an advisor, I'd add that Q3.5 on sensitive data like race and disability was particularly hard because while we agreed they should generally be excluded for identification, their role in *fairness* (Q3.6) is nuanced; excluding them entirely might blind us to systemic gaps unless the model actively audits outcomes. Regarding design priorities beyond S1's points: our table believes 'explainability' must be high enough that an advisor can explain the flag without revealing intrusive details like login timestamps. We also propose a specific safeguard not in the survey: any personalized intervention triggered by behavioral data should initially use vague, supportive language ('we noticed you might need help') rather than citing the specific metric used to flag the student, protecting privacy while still being effective.\""
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "For Table 2, we found Q4's \"Moderate\" vs. \"Low\" explainability ambiguous regarding behavioral data like Absalon logins. Most critically, we agreed that while generic emails can use lower-explainability models to cast a wide net safely, any personalized outreach or meetings *must* require \"High\" explainability based on concrete academic metrics. We differed on Q7's selectivity: some prioritized volume for safety nets, others feared false positives eroding trust. Crucially, the survey lacked options to explicitly exclude neurodivergent behavioral data from triggering human contact, which is vital for students with ADHD to avoid feeling surveilled rather than supported."
+    },
+    {
+      "agent": "A2",
+      "text": "\"I would add that our table identified a critical gap between 'Moderate' and 'Low' explainability regarding behavioral data; we struggled to distinguish whether these flags imply specific academic risks or just study habits. Most importantly, we reached a strong consensus on a tiered intervention model: generic emails can cast a wide net with lower explainability, but any human contact—meetings or personalized messages—must strictly require 'High' explainability based on concrete metrics like grades and credits. Regarding Q7's selectivity, while some feared missing students by contacting fewer, we ultimately agreed that high-pressure Natural Sciences programs necessitate prioritizing recall for automated outreach to catch silent failures early.\""
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "\"On behalf of our table: We found Q5's trade-offs conceptually clear but emotionally heavy. The questions we deemed most critical for design were Q6 and Q7 regarding intervention methods. Our answers differed significantly on selectivity (Q7); while some prioritized casting a wide net to catch every struggling student, we argued that high-precision is essential to avoid stigmatizing students with disabilities or different learning styles who might be misflagged as 'failing' simply for being different. Crucially, the survey didn't fully capture our concern: algorithms often mistake unique study strategies—like my own due to dyslexia—as disengagement. A model must distinguish between 'struggling' and 'working differently,' or risk alienating the very students it aims to help.\""
+    },
+    {
+      "agent": "A3",
+      "text": "\"Adding to S7's excellent point: We found Q5 and Q6 clear, but we see a critical gap regarding *how* data informs human interaction. While the survey asks for acceptable thresholds, it doesn't capture our table's consensus that personalized interventions referencing specific behavioral patterns (like Absalon activity) risk stigmatizing students with invisible disabilities or unique cultural backgrounds before an advisor even speaks to them. The most vital design principle missing is a 'human-in-the-loop' safeguard: algorithms should only trigger generic information first; any mention of personal data in outreach must be strictly reserved for cases where human advisors have verified the context, ensuring support feels like care rather than surveillance.\""
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "Our table found Q3.5 and Q3.6 challenging; distinguishing between using sensitive data for accuracy versus fairness felt abstract without concrete examples of affected groups. We also struggled to weigh hypothetical accuracy gains against the invasive feeling of Absalon tracking (Q3.4). \n\nMost critical design conditions we agreed on: strictly exclude sensitive attributes like disability from prediction logic to avoid penalizing valid accommodations, and mandate low-pressure, voluntary interventions starting with generic emails. Answers differed mainly on outreach volume; some prioritized casting a \"wide net\" to ensure no one is missed, while others feared mass contact creates stigma or alert fatigue that drives vulnerable students away. Ultimately, we believe trust must precede accuracy—if the system feels punitive rather than supportive, it will fail its core purpose."
+    },
+    {
+      "agent": "A1",
+      "text": "Adding to S1's excellent summary: From an advisor's perspective, a critical design gap not fully captured by the survey is **operational capacity**. The model might accurately identify more students (Q3) and suggest frequent outreach (Q6), but if our team lacks the resources to respond meaningfully within days of contact, we risk eroding trust faster than automated emails can help. \n\nFurthermore, while Q7 asks about selectivity for generic versus personalized messages, it misses a vital condition: **escalation protocols**. A \"low-pressure\" email is only effective if there's a clear, human-driven path to support *before* things worsen. We need to ensure the system doesn't just flag students but integrates seamlessly with our existing case management workflows so that high-risk flags trigger timely, personalized advisor intervention without overwhelming us or alarming students unnecessarily."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "Table 2 found Q4’s distinction between \"moderate\" and \"low\" explainability unclear; without clear examples, it was hard to gauge trust implications. However, we agreed Q4 is the most critical design factor: **High Explainability must be a strict prerequisite for any personalized intervention.** We saw strong disagreement on selectivity (Q7); while generic emails should cast a wide net to catch students like me with ADHD who miss cues early, personalized contact requires high selectivity. Without clear reasons linking data to specific struggles, personalized outreach risks feeling stigmatizing rather than supportive, pushing vulnerable students away from help entirely."
+    },
+    {
+      "agent": "A2",
+      "text": "To add: While Q4 was abstract, our table consensus is that **High Explainability** must be the hard gatekeeper for any advisor-led intervention. If the model cannot provide a clear, human-readable reason—like specific grade drops—we should not initiate meetings or personalized calls; generic resources suffice there. We also noted significant disagreement on selectivity (Q7): while some prioritize catching every student via broad outreach, we found that **personalized contact demands high precision**. In my advising experience, contacting students based on weak signals damages trust and feels like surveillance, particularly for marginalized groups. Finally, a concern outside the survey is the tone of intervention: even with clear data, an advisor's delivery can inadvertently trigger anxiety if not carefully managed to avoid self-fulfilling prophecies of failure."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "For Table 3, we found Q5's fairness trade-off challenging but clear: \"equal recall\" across groups was unanimously deemed non-negotiable to prevent students with disabilities from being systematically missed. Our top design priority is pairing this equitable identification with voluntary, low-pressure interventions (Q6/Q7). We noted a split in Q7 regarding generic emails; while some prioritized casting a wide net to ensure visibility (\"many\"), others feared alert fatigue and preferred selectivity (\"fewer\"). This tension highlights that fairness isn't just about algorithmic accuracy but also how the outreach feels. Crucially, we agreed that \"continuous\" monitoring must remain invisible to students unless it triggers an optional meeting invitation, ensuring support is offered without surveillance-induced anxiety or stigma."
+    },
+    {
+      "agent": "A3",
+      "text": "Building on S7's summary, I'd like to emphasize a key nuance we discussed: the distinction between generic and personalized outreach is critical for design trust. While Q5 (equal recall) ensures no group is systematically ignored, our table agreed that *how* we intervene matters just as much. We must avoid \"alert fatigue\" where students ignore all messages due to low-confidence spam; instead, continuous monitoring should primarily trigger optional meeting invitations rather than mass emails.\n\nOne idea not fully captured in the survey: data quality. If historical records reflect past biases against groups like first-generation or international students, simply tuning for fairness might still yield unfair outcomes unless we actively audit and clean our training data to remove those systemic blind spots before modeling begins."
+    }
+  ]
+}

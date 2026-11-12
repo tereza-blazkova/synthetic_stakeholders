@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "For Table 1, Q3 on Absalon data was hardest because \"page views\" blurs the line between engagement and surveillance; it doesn't account for burnout or health needs like mine. We found Q3 critical: excluding behavioral tracking is essential to avoid stigmatizing students who rest differently. Answers differed when others accepted moderate accuracy gains, but we argued any risk of misinterpreting necessary pacing as failure outweighs those benefits.\n\nFor Q6/Q7, personalized contact must be rare (\"fewer\") and strictly explainable; otherwise, it feels accusatory. A key idea missing from the survey: models should explicitly exclude data reflecting health accommodations or non-traditional work schedules to prevent punishing students for managing their lives effectively rather than failing academically."
+    },
+    {
+      "agent": "A1",
+      "text": "Building on S1's point about Q3, I would add that Q5 was equally challenging when deciding if sensitive data like disability status should ever be used for accuracy versus fairness. Our table agreed it must never increase false flags for these groups. The most important design takeaway is that high-explainability (Q4) and strict data boundaries are prerequisites: we cannot implement personalized interventions unless the \"why\" is transparent to both advisor and student. A missing piece in the survey was discussing *how* advisors verify flagged reasons before contacting students; without a human-in-the-loop review for sensitive cases, even accurate models risk doing more harm than good by triggering anxiety instead of trust."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "\"Table 2 found Q4's 'Low' explainability particularly challenging because a system offering no meaningful reasons felt ethically unacceptable to us all regarding student welfare. We identified **Explainability (Q4)** as the non-negotiable design priority: if we cannot clearly articulate *why* a student is flagged, automatic intervention should not occur, especially for students with disabilities or diverse backgrounds who fear being mislabeled.\n\nWe also saw divergent views on Q7 regarding 'safety nets.' While some argued generic emails should be sent widely ('many') to catch silent failures, others like myself preferred caution, fearing that low-precision outreach creates anxiety and erodes trust for vulnerable students.\""
+    },
+    {
+      "agent": "A2",
+      "text": "\"I will add to S4's report regarding Q7: our table highlighted a critical tension between 'safety nets' and trust. While some students feared false positives causing anxiety or alert fatigue, I argued that for high-stakes fields like Natural Sciences, being too selective risks missing silent failures until it is too late. We concluded the model must distinguish intervention types: generic emails can cast a wider net to catch those struggling quietly, but personalized contact requires strict precision and clear explanations to avoid stigmatization. A single 'one-size-fits-all' threshold cannot balance these competing needs.\""
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "\"Hello everyone, from Table 3: We found Q5's technical trade-offs between accuracy and fairness challenging to visualize without concrete disability examples. For us, the most critical design element was ensuring 'equal recall' doesn't just mean flagging disabled students more often due to slower pacing or accommodations; true fairness requires filtering out data points linked to known support needs before triggering alerts.\n\nWhile many participants favored efficiency with generic emails, we argued that without human verification in Q6/Q7, even a 'low-pressure' message could stigmatize students by misinterpreting difference as failure. We suggest the survey missed a crucial question: Can the model explicitly exclude or weight down metrics tied to approved accommodations?\""
+    },
+    {
+      "agent": "A3",
+      "text": "\"Building on that, I'd add two points missing from our survey results. First, while Q5 focused on algorithmic fairness, we found it crucial to address *data hygiene*: without explicitly excluding accommodation data or weighting it down before the model runs, 'fairness' simply automates surveillance for vulnerable groups in Humanities. Second, regarding interventions (Q6/Q7), a generic email is often insufficient; true support requires an immediate human-in-the-loop verification step. We propose that no automated contact should trigger unless a staff member can contextualize the flag to distinguish between genuine distress and legitimate study differences.\""
+    }
+  ]
+}

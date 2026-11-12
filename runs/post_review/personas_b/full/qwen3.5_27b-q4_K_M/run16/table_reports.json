@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "For Table 1, we found Q3.4 challenging because \"Absalon data\" blurred the line between support and surveillance; tracking page views felt intrusive compared to grades. We deemed this question critical: if students feel watched rather than helped, they won't engage. On interventions (Q6/Q7), there was a clear split: while generic emails were widely accepted as low-stakes, personalized contact required \"fewer\" false positives to avoid triggering anxiety in vulnerable students like me who have dropped out before. A key idea missing from the survey is the need for an explicit student opt-in mechanism; without control over *when* we engage with advisors based on algorithmic flags, even well-intentioned support risks feeling punitive and causing avoidance rather than connection."
+    },
+    {
+      "agent": "A1",
+      "text": "Adding to S1's excellent points: We also found Q3.5 challenging regarding *why* sensitive data like race or disability should be used for prediction versus fairness; many of us felt these shouldn't predict struggle but could ensure equity checks. For design, we believe strict boundaries on Absalon data are non-negotiable unless accuracy gains are massive to justify the privacy cost. While the survey focused on model precision (Q7), a critical missing piece is **staff capacity**: even with perfect targeting, if we flag more students without increasing advisor hours, support becomes superficial or leads to burnout, failing both students and staff. We need resources matched to our outreach goals."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "Our table found Q7's distinction between generic and personalized interventions crucial for design: we agreed that while broad outreach via email is acceptable, any human-led or personalized contact requires high explainability and strict precision to avoid stigmatizing vulnerable students like us with ADHD or international backgrounds. We also noted a trade-off where some prioritize catching every student (\"many\"), but others fear false positives in personal messages more than missing cases. A key idea beyond the survey is that trust depends on transparency; without clear reasons for flags, support feels like surveillance. Finally, we suggest an opt-out mechanism to let students control their data usage if they feel uneasy about tracking."
+    },
+    {
+      "agent": "A2",
+      "text": "Building on S4's excellent point about trust and surveillance, I would add that our table identified a critical gap: current survey questions assume explainability levels are static for all interventions. In practice, we need a dynamic tiered approach where \"Low\" or \"Very Low\" explainability triggers only generic resources, while any escalation to personalized human contact strictly requires re-evaluating the case with higher-explainability tools first. Without this procedural safeguard, advisors like myself risk delivering support based on opaque data patterns that students can't contest or understand. Furthermore, we need clear protocols for how often these flags are checked; continuous monitoring without student awareness could create a \"panopticon\" effect, so transparency about the system's existence itself is vital alongside data explainability."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "Table 3 found Q5 challenging: quantifying exactly how many students we could lose for fairness felt abstract without real data on group impacts. We agreed the most critical design principle is \"Equal Recall\" (Q5) combined with strict thresholds for personalized interventions (Q7). While some preferred accepting larger accuracy losses or a balance in contact frequency, our table argued that false positives in sensitive messages cause more harm than missing students who can still access generic support.\n\nA key idea not covered by the survey is \"Decoupling Identification from Intrusion.\" We propose that achieving fairness shouldn't automatically trigger invasive outreach; instead, fair identification of marginalized groups should default to low-stakes options like voluntary meetings or generic emails, allowing students control over their privacy."
+    },
+    {
+      "agent": "A3",
+      "text": "I'd add that while we agreed on \"Decoupling,\" the survey also missed a crucial layer: **Human Review**. A model shouldn't automatically trigger even generic outreach without an advisor checking for context—like whether low grades stem from known accommodations or personal crises, not just risk. Additionally, regarding Q4's explainability trade-offs, our table felt that *how* we explain results matters as much as the accuracy. If a student can't understand why they were flagged (e.g., \"your pattern looks like X\"), trust collapses regardless of fairness metrics. We need transparent reasoning to ensure students see this as support, not surveillance, especially when sensitive data is involved."
+    }
+  ]
+}

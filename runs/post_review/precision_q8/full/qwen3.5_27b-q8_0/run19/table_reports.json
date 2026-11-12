@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "\"From Table 1's perspective, quantifying 'improvement' thresholds was abstract against real privacy risks; we struggled to weigh statistical gains against psychological harm. Our most critical design insight is **conditional escalation**: high-surveillance data like Absalon logs must never trigger automated personalized contact without human review and context verification.\n\nWe saw a split on Q7.2: many preferred 'fewer' contacts for safety, while others balanced reach versus risk. This highlights that intervention intensity must match the certainty of need. Finally, we worry about **unconscious bias**: even 'audit-only' use of sensitive data like race or disability might stigmatize students in advisor interactions, a concern not fully captured by the survey's binary choices.\""
+    },
+    {
+      "agent": "A1",
+      "text": "\"I would add that for Q3.4 and Q7, we need to explicitly design a **'human-in-the-loop' workflow**. As advisors, we cannot act on behavioral data like Absalon logs without verifying the context first; otherwise, risk outweighs benefit. \n\nOn differences: while some prioritized minimizing contact (Q7.2) to avoid stigma, I see a critical tension between that and early intervention for students who can't self-advocate. The survey didn't fully capture how **transparency about data usage** impacts trust. We need clear rules on *why* specific flags are sent so students don't feel surveilled but supported. Finally, the distinction between using sensitive data to build fairness versus flag individuals remains a complex trade-off requiring strict governance beyond simple thresholds.\""
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "Hi everyone from Table 2. We found Q4's distinction between \"Low\" and \"Moderate\" explainability vague; we need concrete examples of what students actually *see*. Most critically, we agreed that **explainability must dictate intervention intensity**: personalized contact (Q7) is only acceptable with \"High\" explainability to prevent stigma for neurodivergent or international students.\n\nWhile Q6/Q7 answers split on frequency and selectivity (\"continuously\" vs. fixed intervals; \"many\" vs. \"fewer\"), the underlying tension was between catching everyone early versus avoiding false positives that feel like surveillance. A key idea missing from the survey: **student control**. We suggest allowing students to opt-in to continuous monitoring or adjust notification frequencies themselves, rather than having a rigid system imposed on them."
+    },
+    {
+      "agent": "A2",
+      "text": "I'll add two points. First, we need to clarify that \"continuous monitoring\" doesn't necessarily mean constant contact; it means continuous *data assessment* so advisors can act immediately when a crisis hits, without waiting for fixed intervals like S6 suggested as a compromise. Second, regarding the trade-off between catching everyone and avoiding stigma: I propose a tiered approach where generic resources are sent broadly (accepting \"many\"), but personalized advisor contact is strictly gated by high explainability and accuracy (\"fewer\"). Finally, we felt Q4's abstract levels needed real-world examples to truly understand what information students receive. Without that clarity, the model risks failing its primary goal: building trust rather than suspicion."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "\"Hello everyone from Table 3. We found Q5's numerical trade-offs between fairness and total accuracy abstract but critical; we agreed that 'equal recall' is non-negotiable to ensure students with disabilities or non-linear paths aren't invisible due to averaging data. For interventions, the distinction in Q7 was hardest: while generic emails can be broad, personalized outreach requires high certainty to avoid making neurodivergent students feel surveilled rather than supported. We noted that 'precision' must account for *why* a student is flagged—distinguishing between different pacing and genuine crisis. Ultimately, we believe the model's design must prioritize fairness in detection and ensure continuous outreach feels like tailored support, not an accusation based on flawed metrics.\""
+    },
+    {
+      "agent": "A3",
+      "text": "\"I'd add that our table identified a critical gap: the survey assumes 'continuous' outreach and high certainty are compatible for personalized contact, but my experience suggests they often conflict without contextual logic. We emphasized that advisor burnout is a real design constraint; we cannot sustainably offer deep, personalized support to many students based on uncertain data. Furthermore, no one at our table could fully address how the model adapts when human advisors *override* it with qualitative insights—a safeguard not covered in Q6 or Q7. We recommend that any final system must explicitly allow for these overrides and distinguish between 'different' pacing and actual crisis to maintain trust.\""
+    }
+  ]
+}

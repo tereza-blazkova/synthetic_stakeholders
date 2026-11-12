@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "\"Hello everyone from Table 1. We found Q3's thresholds for 'improvement' difficult to quantify; how many students must be saved to justify feeling surveilled? Most critically, we agreed the design depends on distinguishing *voluntarily disclosed* data (like disability records) versus *inferred patterns*. Using sensitive attributes like financial status or nationality is only acceptable if it leads to human-led support, not automated flags. We noted a split: some prioritized catching everyone at all costs ('no_threshold'), while others demanded high accuracy barriers to prevent stigmatizing students with different work-study balances as 'at risk'. For us, privacy intrusion must always match the empathy of the intervention.\""
+    },
+    {
+      "agent": "A1",
+      "text": "\"As an advisor, I want to add two points our discussion highlighted but weren't fully captured by the survey options. First, we need a design principle: 'No Inference without Disclosure.' The model should not infer sensitive statuses like disability or financial struggle from behavioral data (like Absalon logs) unless that information is already explicitly provided and consented for support purposes; otherwise, it risks stigmatization. Second, regarding intervention selectivity (Q7), we agreed the threshold must shift based on outreach type: generic emails can be broader, but any personalized contact using sensitive triggers requires near-perfect accuracy to prevent causing anxiety or damaging trust before a human conversation even starts.\""
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "\"Hi everyone from Table 2. We found Q4's distinction between 'Low' and 'Moderate' explainability hard to distinguish, yet crucial. For us, High Explainability is non-negotiable for personalized interventions; vague triggers feel like surveillance and trigger anxiety, especially for neurodivergent or international students.\n\nWe noticed a split in Q7: while some accept contacting many via generic emails as a safety net, we argue precision must increase with intrusion. If the outreach becomes personal, false positives become harmful accusations rather than support. One key idea outside the survey: models must account for non-linear learning patterns (like ADHD) to avoid mislabeling valid strategies as failures before any contact occurs.\""
+    },
+    {
+      "agent": "A2",
+      "text": "\"Thank you, S4. I’d add two points for our table's report. First, while Q7 showed a split on generic outreach volume, we agree that 'High Explainability' is the absolute baseline for any personalized contact; accuracy gains from less explainable models aren't worth eroding trust. Second, beyond the survey’s trade-offs, transparency about *what* data drives the flag is essential. Students need to know if they are flagged by grades or behavioral patterns like Absalon usage, so we can tailor our advice and reassure them it's support, not surveillance.\""
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "I'll start by reporting on Table 3's findings regarding fairness and intervention. Q5 was conceptually clear but emotionally difficult; deciding how much overall efficiency to sacrifice for equal recall felt heavy because we fear being the students missed due to non-linear struggles like dyslexia or mental health crises. We agreed Q5 is paramount: prioritizing \"equal recall\" over total volume ensures marginalized groups aren't systematically overlooked.\n\nFor interventions (Q6/Q7), personalized outreach was preferred but required high precision (\"slightly_fewer\") to avoid stigma from false positives, whereas generic emails could cast a wider net. Opinions differed on the acceptable loss of efficiency in Q5; some prioritized maximizing total help, while we argued that ignoring bias leaves specific groups behind entirely. Crucially, trust is fragile for us; an inaccurate personal contact feels like surveillance rather than support, so fairness must drive both detection and intervention design."
+    },
+    {
+      "agent": "A3",
+      "text": "Adding to S7's points: As an advisor, I emphasized that while Q5's \"equal recall\" is non-negotiable for ethical design, we must carefully distinguish between outreach types. My table agreed that generic emails can safely cast a wider net, but personalized messages from advisors demand high precision (\"slightly_fewer\") to avoid eroding trust or overwhelming staff resources. One idea not fully captured by the survey was the need for \"human-in-the-loop\" governance; we shouldn't rely solely on algorithms to trigger direct contact. Instead, model outputs should flag students for human review before personalized intervention occurs, ensuring context is understood and preventing the stigmatization of false positives that S8 highlighted so clearly."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "run_seed": 110,
+  "model": "gemma3:4b-it-q4_K_M",
+  "model_digest": "68ceab7e468a31c988b44d5a4984a0e21f58c4f7158c6ce29c1804babac38df7",
+  "model_info": {
+    "family": "gemma3",
+    "parameter_size": "3.9B",
+    "quantization_level": "Q4_K_M"
+  },
+  "options": {
+    "num_ctx": 16384,
+    "temperature": 1.0,
+    "num_predict": 4000
+  },
+  "started": "2026-10-18T08:35:27.850640+00:00",
+  "finished": "2026-10-18T09:12:56.749249+00:00",
+  "wall_minutes": 37.5,
+  "plenary_order": [
+    "S8",
+    "A2",
+    "S6",
+    "A1",
+    "S2",
+    "A3",
+    "S3",
+    "S5",
+    "S9",
+    "S1",
+    "S7",
+    "S4"
+  ],
+  "n_calls": 86,
+  "failures": [
+    {
+      "agent": "S3",
+      "phase": "baseline",
+      "unanswered": [
+        "Q3.6.disability"
+      ]
+    },
+    {
+      "agent": "S5",
+      "phase": "baseline",
+      "unanswered": [
+        "Q3.6.nationality"
+      ]
+    },
+    {
+      "agent": "S9",
+      "phase": "baseline",
+      "unanswered": [
+        "Q3.6.financial_aid"
+      ]
+    },
+    {
+      "agent": "S1",
+      "phase": "endline",
+      "unanswered": [
+        "Q6.1"
+      ]
+    },
+    {
+      "agent": "S2",
+      "phase": "endline",
+      "unanswered": [
+        "Q6.1"
+      ]
+    },
+    {
+      "agent": "S4",
+      "phase": "endline",
+      "unanswered": [
+        "Q3.6.financial_aid",
+        "Q6.1"
+      ]
+    },
+    {
+      "agent": "S8",
+      "phase": "endline",
+      "unanswered": [
+        "Q6.1"
+      ]
+    }
+  ],
+  "input_sha256": {
+    "inputs/materials/facilitator_script_lite.yaml": "b0848f24fbdf365fbdf8346d8132f1e21bad80e6ac3b435f3de06ed02097f87c",
+    "inputs/materials/framing_intro.md": "6c6ce1e57e18d267fd0e1cc415ab67da34d38d39ce6f04fd5bfc3a090c55ce6a",
+    "inputs/materials/specification_template.md": "7acdebdee38222ac66c3b8e5f46191deadfdb3d60cf3a5f7b91e525670645537",
+    "inputs/materials/survey.yaml": "31fc0b3d4f875630e3be6c8421abe0993f62e69e07682116ff831546a2fe0798",
+    "inputs/personas.yaml": "31064b48784e19641f20062ae2183bb48782eea7572426a79aa5a9e9c5541b4b",
+    "inputs/metrics_2021.csv": "68a5a19c97c66f91401ee312efc71eefb4ef55db6284a9920565e8b144e1e490"
+  }
+}

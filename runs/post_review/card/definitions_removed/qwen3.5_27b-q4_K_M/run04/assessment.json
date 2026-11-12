@@ -1,0 +1,50 @@
+{
+  "A1": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model's high explainability thresholds and cautious approach to sensitive data, which aligns with our table's emphasis on trust. However, I have significant reservations regarding the 'large improvement' (10 students) required for Absalon activity data; this feels too lenient given how easily such metrics can misinterpret non-traditional work schedules or health-related patterns as disengagement, potentially pathologizing diverse student needs. Furthermore, while the fairness trade-off is acceptable in theory, without a guaranteed mechanism to distinguish 'misalignment' from 'failure,' there remains a risk that this system enforces conformity rather than supporting structural adaptation."
+  },
+  "A2": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification because its strict 'Low Explainability = Never' rule and high thresholds for Absalon data align with my core concern: preventing surveillance stigma. However, I have significant reservations about the operational reality. The survey assumes a model can be built to these specs while still being effective; in practice, achieving 10 additional identifications via complex patterns often requires 'Low Explainability.' Without explicit governance guarantees that flagged students are reviewed by humans who understand context (e.g., disability or work constraints) before contact—and without separating this data from grading records—the risk of misinterpretation remains too high to fully endorse."
+  },
+  "A3": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model's core principles: strict explainability, prioritizing equal recall for fairness, and using low-stigma generic emails as the first intervention. The conditions for data inclusion align with my concerns about privacy versus utility. However, I have significant reservations regarding governance issues not fully captured in this specification, specifically the lack of a 'flag expiration' mechanism to prevent permanent stigmatization after recovery. Without rules ensuring that support data never influences grading or disciplinary records and that students are re-evaluated regularly to clear old flags, there is a risk of reinforcing labels rather than offering fresh starts."
+  },
+  "S1": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification because the strict thresholds for Absalon data (requiring large improvements) and sensitive data help mitigate surveillance risks. The focus on 'equal recall' ensures marginalized groups like me are not systematically missed. However, I have serious reservations: the model lacks a mechanism to distinguish between students who are struggling versus those simply misaligned with their program or managing complex lives. Without human review to interpret context before intervention, even accurate predictions could feel stigmatizing and punitive, potentially driving vulnerable students away rather than supporting them."
+  },
+  "S2": {
+    "choice": "object_no_block",
+    "justification": "I object because the specification still permits Absalon data if accuracy improves by 10%, which ignores my concern that tracking login patterns misinterprets part-time work schedules as disengagement. While I appreciate the high explainability threshold and fairness adjustments, using surveillance-style data to define 'struggle' risks pathologizing non-traditional student lives like mine. However, since this is a middle-ground scenario with strict accuracy requirements and excludes low-explainability models entirely, I would not block it if strong human oversight ensures that flags based on digital behavior are contextualized before any contact occurs."
+  },
+  "S3": {
+    "choice": "object_no_block",
+    "justification": "While I appreciate the group's caution on Absalon data (requiring 'large' improvement) and high explainability, this model still risks pathologizing students with health conditions like mine. The threshold for using disability data ('small' improvement = 1-3%) is too low; even minor accuracy gains shouldn't justify potential surveillance of my health management strategies if the system cannot distinguish between disengagement and necessary accommodations. Furthermore, without explicit human review to prevent misinterpreting non-traditional study patterns as failure, I fear this model reinforces a deficit mindset rather than fostering structural inclusivity."
+  },
+  "S4": {
+    "choice": "object_no_block",
+    "justification": "I object because the specification still risks pathologizing neurodivergent students like me with ADHD by using 'Absalon' data, even with a high threshold (10/100). Flagging irregular study patterns as 'difficulties' ignores that my workflow is different, not deficient. While I support the strict explainability and fairness goals, implementing this model without first fixing structural rigidities (e.g., flexible deadlines for all) treats symptoms rather than causes. The model might help some, but it risks alienating those whose struggles stem from a mismatch with the system itself."
+  },
+  "S5": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model's strict thresholds for Absalon data and its prioritization of fairness, as these protect against surveillance creep for international students like me. However, I have strong reservations regarding the 'High' explainability level being acceptable without any improvement in identification. Given my cultural context, vague factors could easily be misinterpreted. Furthermore, relying on historical dropout patterns to define 'difficulties' risks training the model on a biased baseline that misunderstands non-traditional study habits. Without guaranteed human review for flags based on complex data, this system might still label valid adaptation as failure."
+  },
+  "S6": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model with significant reservations regarding the exclusion of Absalon data unless accuracy gains are large, which aligns with my privacy concerns as an international student. However, I worry that 'High' explainability alone may not prevent misinterpretation if cultural or linguistic nuances aren't explicitly considered by advisors. Additionally, while I accept a 5% drop for fairness, the system must guarantee that sensitive data usage never creates permanent records affecting future opportunities. My support is conditional on strict governance ensuring these safeguards are legally binding."
+  },
+  "S7": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model's strict limits on Absalon data and priority on fairness, which protects students like me with dyslexia from being misflagged as failing due to different learning paces. However, I have reservations because the specification allows 'Admissions' data (e.g., high-school GPA) even if it doesn't help identify more struggling students; this risks reinforcing biases against non-traditional backgrounds without clear benefit. Furthermore, while 'generic email' is preferred, the model must ensure these emails trigger access to *specialized* accessibility support rather than generic tutoring, or it will fail neurodivergent students."
+  },
+  "S8": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model with significant reservations. While the high threshold for Absalon data and strict fairness goals address my privacy concerns, I remain worried about 'surveillance creep' in practice. The specification relies on a generic email as the first intervention, which aligns with our group's findings to reduce stigma. However, without explicit guarantees that flagged data will never influence grading or create permanent records of 'at-risk' status for students like me (international, past dropout), I fear this system could still pathologize valid study patterns or cultural differences rather than offering genuine support."
+  },
+  "S9": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model with significant reservations. While the exclusion of Absalon data for low improvements and strict explainability requirements aligns with my need to avoid surveillance, I remain concerned about the threshold for disability data (1-3 students). As a student managing chronic illness, even 'acceptable' use risks misinterpreting health flare-ups as academic failure without robust human context. Furthermore, accepting a 5-student loss in total identification prioritizes fairness correctly but must not reduce resources so much that those identified receive inadequate support. The model is only viable if paired with the governance safeguards we discussed: flag expiration and mandatory human review."
+  }
+}

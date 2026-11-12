@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "Our table found the abstract \"improvement\" percentages hard to weigh against real privacy risks; knowing if catching three extra students matters is difficult without context.\n\nWe identified Q3.4 (Absalon data) and Q3.6 (using sensitive data for fairness) as most critical. Tracking digital activity risks misinterpreting work schedules or health issues as \"struggle,\" potentially surveilling working and international students unfairly.\n\nAnswers diverged on Q3.4 and Q6.2 (\"continuous\" outreach). Some accepted high-accuracy tracking if benefits were large; others, like me, rejected it entirely to avoid surveillance fatigue and misdiagnosis due to lifestyle differences. The tension lies between catching every crisis moment and preserving student dignity. We propose defining \"continuous\" not as real-time monitoring, but as timely contact only after sustained risk patterns are confirmed, balancing urgency with trust."
+    },
+    {
+      "agent": "A1",
+      "text": "I would like to add two key points. First, Q3.6's distinction between \"improving identification\" and \"improving fairness\" was conceptually difficult; we need clearer examples of how sensitive data fixes bias without reinforcing stereotypes. Second, while our table focused on data boundaries, the survey missed a crucial operational constraint: human-in-the-loop oversight. The model should never make automated decisions or send messages directly. It must simply flag cases for advisor review, ensuring a human evaluates context—like a student working late shifts—before any contact occurs. Without this safeguard, even well-designed algorithms risk becoming impersonal surveillance tools that erode the very trust we need to help students."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "For our table, Q4's scales were vague; \"moderate\" vs. \"low\" explanations felt abstract without seeing what a student actually reads. The most critical design factor is **contextual explainability**: the model must not only be transparent but also neuro-inclusive and culturally accessible so diverse students can act on it. Without this, accuracy means nothing.\n\nAnswers split on Q7's selectivity for personalized messages: some prioritized resource balance to prevent advisor burnout, while I chose \"many,\" driven by my fear of missing a struggling peer again. We must acknowledge that those accepting low explainability likely value statistical reach over the trust needed for vulnerable students to engage with support."
+    },
+    {
+      "agent": "A2",
+      "text": "Building on S4's points: our table found Q4's distinction between \"moderate\" and \"low\" explainability unclear without concrete examples of advisor-student dialogues. The most critical design requirement is **contextual explainability**—logic that accounts for cultural and neurodivergent differences, ensuring every student understands *why* they are flagged and can act.\n\nWhere we differed was on Q7's selectivity: while I prioritized \"slightly_many\" to prevent advisor burnout and maintain intervention quality, others chose \"many,\" fearing the catastrophe of missing a single struggling student. Those accepting lower explainability likely prioritize statistical reach or assume advisors can navigate ambiguity. However, our consensus is that without clear, trustworthy logic, accuracy is useless. We must design for human connection first; data serves the relationship, not replaces it."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "Our table found Q5 difficult because quantifying \"acceptable loss\" felt cold and dehumanizing; we struggled to assign a number to missing vulnerable students. The most critical design elements are fairness metrics (Q5) and intervention trust (Q6/7). We must prioritize equal recall so neurodivergent or international students aren't systematically missed due to non-standard study patterns.\n\nAnswers diverged sharply on Q7.2 (\"personalized\" outreach): some favored \"many\" to catch every case, while we chose \"balance\" or fewer. We interpreted \"personalized\" as referencing private behavioral data like login speed. For students with dyslexia or anxiety, this feels like surveillance and accusation, causing disengagement. False positives here destroy trust more than missing a few cases hurts. The model should trigger a human conversation, not pre-judge based on misunderstood metrics."
+    },
+    {
+      "agent": "A3",
+      "text": "I add that while we agreed on equal recall and cautious personalized outreach, our biggest unaddressed concern is the definition of \"personalization.\" If it relies on raw data like Absalon logs without advisor verification, it becomes surveillance. As an advisor, I worry about false positives causing students with learning differences or mental health challenges to disengage due to shame. We must ensure the system flags a need for *conversation*, not specific behavioral accusations. Success shouldn't just be identification rates; it's whether students feel safe enough to accept help. The model must empower human judgment, ensuring personalization comes from empathetic dialogue, not pre-emptive data mining that could alienate those we aim to support."
+    }
+  ]
+}

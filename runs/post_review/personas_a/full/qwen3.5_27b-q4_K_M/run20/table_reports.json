@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "\"Our table found Q3's distinction between 'prediction' and 'support triggers' difficult to answer initially; we struggled with whether sensitive data like disability status should be used for accuracy or purely for fairness access. We identified **Q3 (Data/Privacy)** and **Q4 (Explainability)** as most critical: excluding behavioral tracking like Absalon clicks is vital to prevent misinterpreting work schedules or health needs as academic failure. A key difference was Q3.5.disability, where we debated accepting data without accuracy gains. We concluded this is acceptable only if the system guarantees disability status triggers immediate support access rather than flagging a student as 'high-risk.' Finally, students need an explicit opt-out mechanism to correct false flags based on past dropouts.\""
+    },
+    {
+      "agent": "A1",
+      "text": "I'd add that Q7's trade-off between intervention volume and precision was also tricky. We realized our answer depends heavily on *who* delivers the message: we supported broader outreach for generic emails but were far more selective with personalized advisor time, which must be reserved for high-certainty cases to avoid burnout. Furthermore, the survey didn't fully capture the \"human-in-the-loop\" necessity. A model shouldn't auto-trigger contact; it should only alert an advisor who can verify context—like a student's work hours or health status—before reaching out. Without this human verification step, even accurate predictions risk becoming intrusive surveillance that damages trust rather than offering help."
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "\"Hi everyone from Table 2. Regarding clarity, distinguishing between 'low' and 'moderate' explainability was tricky without concrete examples of what those explanations actually look like for students. We unanimously agreed Q4 is the most critical design factor: if a student cannot understand *why* they are flagged, especially neurodivergent or marginalized peers, it feels like surveillance rather than support.\n\nOur table also highlighted that intervention intensity must match explainability levels; 'very low' clarity should never justify personalized meetings. A key tension emerged in Q7 between prioritizing safety (contacting many) versus avoiding stigma (contacting fewer). Finally, we feel the survey missed the need for a 'sequencing' strategy: perhaps starting with generic emails containing specific reasons before inviting students to mandatory meetings.\""
+    },
+    {
+      "agent": "A2",
+      "text": "\"Adding to S4's points from Table 2: We identified a gap where 'Very Low' explainability was universally rejected for *any* direct contact. The survey forced a binary choice between outreach types, but our discussion revealed that intervention intensity should scale with data clarity. Specifically, we argue the system needs a design rule preventing personalized meetings unless an advisor can articulate a specific, non-surveillance reason based on 'High' or at least 'Moderate' explainability. This ensures trust isn't compromised while still allowing broad safety nets via generic emails for less certain cases.\""
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "\"Table 3 found Q5's trade-off between total efficiency and equal recall challenging to quantify without specific examples of how bias manifests for students with disabilities. We identified fairness (Q5) and explainable interventions (Q6/Q7) as most critical: if a model flags us fairly but cannot clearly explain why, it feels like surveillance rather than support. Our answers diverged on outreach frequency; while many preferred 'continuous' contact to prevent missing crises, some feared the stigma of constant monitoring. We also noted that high selectivity (Q7) risks excluding non-standard learners like me with dyslexia. A key idea missing from the survey is a 'threshold-based' approach: immediate support only for high-risk signals detected via clear rules, balancing urgency with psychological safety.\""
+    },
+    {
+      "agent": "A3",
+      "text": "\"Adding to S7's report, we found Q5's abstract percentage trade-offs difficult without concrete group data, yet all agreed equal recall is non-negotiable for marginalized students. Most critical are linking fairness (Q5) directly to explainability; a fair flag is useless if the reason remains opaque, eroding trust. Our divergence on frequency ('continuously' vs. periodic) highlighted a tension between speed of care and avoiding surveillance fatigue. Finally, we emphasize that 'selectivity' shouldn't just minimize false positives but maximize inclusivity for non-standard learners. The survey missed student agency: students must control how they engage after being flagged, perhaps through an opt-in mechanism rather than automatic escalation.\""
+    }
+  ]
+}

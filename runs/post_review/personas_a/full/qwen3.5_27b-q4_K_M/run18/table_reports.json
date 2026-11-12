@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "\"Hello everyone, I'm S1 from Table 1. We found Q3’s progression clear but emotionally heavy; distinguishing 'moderate' vs 'large' gains felt abstract against our real fear of surveillance. The most critical design questions were linking Q3 (data boundaries) and Q6/Q7 (interventions). Our table strongly agreed that invasive data like Absalon activity must never trigger automated emails, only human review.\n\nWe debated why some preferred broader outreach; likely they prioritize catching every struggling student over avoiding false positives. However, given our experiences with past dropouts or complex life situations, we believe even one unsolicited warning based on click-tracking creates stigma rather than trust.\""
+    },
+    {
+      "agent": "A1",
+      "text": "\"I'd add that from an advisor's perspective, the survey didn't fully capture our need for a mandatory 'human-in-the-loop' step before *any* contact is made. While Q6 lists intervention types, it implies these can be automated based on model scores. Our key takeaway is that using behavioural data (Q3) must legally and technically force a pause where an advisor reviews the context—especially regarding disability or financial struggles—to prevent algorithmic errors from stigmatizing students. We also noted that 'fairness' in Q5 shouldn't just mean equal error rates, but ensuring marginalized groups aren't disproportionately subjected to invasive data collection without proven high-impact benefits.\""
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "\"As a student with ADHD and past dropout experience, our table found Q4's distinction between 'moderate' and 'low' explainability unclear without concrete examples of what I'd actually see. We agreed that high explainability is non-negotiable; vague triggers like Absalon activity cause shame rather than action for neurodivergent students.\n\nRegarding interventions (Q6/Q7), while generic emails can be broad, personalized alerts must be highly selective ('fewer') to avoid false positives feeling invasive. The most critical design factor is ensuring explanations link directly to actionable behaviors I understand. Finally, the survey missed how executive dysfunction makes 'continuously' feel overwhelming; support needs human follow-up, not just automated flags.\""
+    },
+    {
+      "agent": "A2",
+      "text": "\"Building on S4's points regarding explainability and selectivity, I want to highlight a critical operational constraint missing from the survey: advisor capacity. While we agreed 'continuously' is ideal theoretically, our team cannot manually review every flag if the model casts too wide a net without high confidence. Therefore, the design must integrate resource-aware thresholds; perhaps a tiered system where only high-confidence cases trigger immediate human contact, while others receive clear, actionable automated guidance first. Without this safeguard, we risk overwhelming staff and diluting the quality of support for those who need it most.\""
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "As Table 3's student representative, I found Q5 challenging because quantifying acceptable accuracy loss felt abstract without real examples of missed students from marginalized groups. However, we identified **Q4 (Explainability)** and **Q6/Q7 (Intervention Design)** as most critical: fairness is only ethical if the model explains *why* a student like me was flagged—distinguishing dyslexia-related delays from actual failure—and triggers personalized support rather than generic spam. We saw divergence on Q5.1; while some accepted large accuracy drops to ensure equal recall, I argued for \"loss_5\" to balance efficiency and equity. Ultimately, we agreed that without transparent logic preventing stigmatization of non-standard learning styles, high-recall fairness could ironically harm the very students it aims to protect by misinterpreting accommodations as risks."
+    },
+    {
+      "agent": "A3",
+      "text": "Building on S7's points, I want to emphasize our debate around **Q7.2**. While students prioritized \"fewer\" contacts to avoid surveillance feelings, many of us advisors leaned toward a \"balance.\" We worry that strict selectivity misses subtle crises like personal struggles invisible in grades. A crucial insight missing from the survey was the need for an **\"opt-out\" or \"feedback loop\"** mechanism: allowing students to flag false alarms helps refine the model while respecting autonomy. Furthermore, we stressed that **human capacity** is a hard constraint; without sufficient staff to handle personalized follow-ups driven by continuous monitoring (Q6), even the fairest model fails. The design must explicitly link data accuracy to available human resources."
+    }
+  ]
+}

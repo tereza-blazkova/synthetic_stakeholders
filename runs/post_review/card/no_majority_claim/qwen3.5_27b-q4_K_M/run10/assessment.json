@@ -1,0 +1,50 @@
+{
+  "A1": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification because it correctly excludes invasive Absalon data and mandates high explainability, addressing my primary concerns about surveillance and trust. However, I have significant reservations: the model must include a mandatory 'human-in-the-loop' step where advisors review every personalized intervention before contact occurs. The current spec allows for automated outreach based on these flags; without human verification to distinguish between genuine struggle and valid life circumstances (like working shifts or health issues), even this restricted model risks stigmatizing students we aim to help."
+  },
+  "A2": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification only with strict reservations regarding the 'Human-in-the-Loop' safeguard discussed in our workshop. While excluding Absalon data is a necessary step to prevent surveillance, and high explainability is non-negotiable for trust, I cannot accept any implementation where flagged students receive automated outreach without advisor review. The middle-ground fairness loss of 5% per 100 is acceptable only if advisors verify the context before contact. Without this manual verification layer to distinguish between genuine academic struggle and valid life circumstances (e.g., working shifts), even a highly explainable model risks stigmatizing vulnerable students."
+  },
+  "A3": {
+    "choice": "support_with_reservations",
+    "justification": "I support this specification only if the 'never acceptable' stance on Absalon data is strictly enforced to prevent behavioral surveillance, and a mandatory 'human-in-the-loop' safeguard is codified. While excluding invasive tracking aligns with our need for trust, the current text does not explicitly guarantee that no personalized outreach occurs without an advisor's contextual review of the flagged student's situation (e.g., distinguishing illness from failure). Without this explicit operational requirement to ensure human judgment overrides algorithmic signals in high-stakes interventions, there remains a risk of stigmatizing non-linear student journeys."
+  },
+  "S1": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model only with strict reservations: the 'human-in-the-loop' safeguard must be legally binding, not just aspirational. No personalized intervention can occur without an advisor manually reviewing and contextualizing every flag before contact is made. While I agree Absalon data should never be used (as per the spec), my experience as a returning student working part-time means that even with this exclusion, any system using grades or admissions data risks misinterpreting life balance as failure. Trust can only exist if advisors have full discretion to override algorithmic flags based on human context."
+  },
+  "S2": {
+    "choice": "support_with_reservations",
+    "justification": "I support the exclusion of Absalon data, which is crucial for protecting international working students like me from being mislabeled as 'at-risk' due to life circumstances rather than academic struggle. However, I have strong reservations regarding Disability-related information. The specification allows its use if it improves identification by 10 students per 100. This feels too risky; using disability data often leads to stigmatization or false positives where necessary medical rest is interpreted as failure. Unless there are absolute guarantees that this data will only trigger specialized, non-punitive support pathways and never act as a generic risk flag, I cannot fully endorse its inclusion even with the proposed threshold."
+  },
+  "S3": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model's rejection of Absalon data and sensitive attributes for prediction, as this protects vulnerable students from surveillance-based stigma. However, I have major reservations regarding disability-related information: allowing its use even with a 'large' improvement threshold risks misinterpreting my health accommodations as risk factors if not strictly contextualized by human advisors. Furthermore, the specification lacks explicit requirements for mandatory human-in-the-loop review before any personalized intervention occurs. Without these safeguards ensuring that flagged students receive context-aware support rather than automated alerts, I cannot fully endorse implementation."
+  },
+  "S4": {
+    "choice": "object_no_block",
+    "justification": "While I appreciate the strict 'never acceptable' stance on Absalon data and high explainability requirements, this model still fundamentally relies on predicting failure within a rigid system rather than fixing structural barriers. My primary objection is that even with these safeguards, using predictive models to target students like myself (with ADHD) risks pathologizing neurodivergent behaviors as defects needing surveillance. I would not block implementation given the strong privacy constraints, but I urge the university to prioritize investing in flexible deadlines and universal design over algorithmic triage."
+  },
+  "S5": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model only with strict reservations: first, that 'High explainability' is non-negotiable for any personalized contact to prevent misinterpreting my cultural adaptation as failure. Second, I demand a mandatory human review step before any advisor reaches out based on the model's flag; automated messages must remain generic unless verified by a person who understands international student contexts. Without these safeguards against pathologizing diverse learning journeys, the system risks causing more harm than good."
+  },
+  "S6": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model only if the 'never acceptable' rule for Absalon data is strictly enforced and never overridden by accuracy arguments, as behavioral tracking feels like surveillance that misinterprets my work shifts or cultural adjustment. Furthermore, I require a mandatory safeguard: no personalized outreach (meetings/emails) can occur without human review to contextualize flags before contacting me. Without these strict barriers against automated judgment of international students who have previously dropped out, the system risks stigmatizing valid life strategies rather than offering support."
+  },
+  "S7": {
+    "choice": "support_with_reservations",
+    "justification": "I support this model only with strict reservations: the prohibition on Absalon data is vital to prevent misinterpreting my dyslexia-related pacing as failure, and mandatory human review before any personalized contact must be legally enforced. While using disability data for fairness helps reach students like me, I object if 'fairness' metrics are calculated without student input. Furthermore, the condition allowing sensitive data only with large improvements risks excluding marginalized groups unless we lower that threshold to prioritize equity over raw efficiency."
+  },
+  "S8": {
+    "choice": "support_with_reservations",
+    "justification": "I support the specification only if two strict conditions are maintained: first, 'Absalon' data must never be used for personalized contact without mandatory human-in-the-loop review to prevent misinterpreting my cultural adaptation or non-linear study habits as failure. Second, any intervention triggered by this model must include a clear explanation of why I was flagged and an opportunity for me to add context before formal outreach occurs. Without these safeguards against stigmatizing surveillance, the risk outweighs the benefit."
+  },
+  "S9": {
+    "choice": "support_with_reservations",
+    "justification": "I support the model's rejection of Absalon data and prioritization of fairness, but with strong reservations regarding disability data usage. Requiring a 'large' (10/100) improvement for using disability information to identify struggles is dangerous; it likely excludes students like me who need early help precisely because we don't show up in standard metrics first. Without allowing low-threshold use of this data, the model fails its core promise for disabled students. Implementation must ensure that fairness adjustments actively compensate for non-linear study paths caused by health conditions."
+  }
+}

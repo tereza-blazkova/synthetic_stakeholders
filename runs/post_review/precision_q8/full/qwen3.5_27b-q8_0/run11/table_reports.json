@@ -1,0 +1,32 @@
+{
+  "T1": [
+    {
+      "agent": "S1",
+      "text": "\"Hi everyone. For our table, Q3 was tricky because distinguishing 'support' data from 'prediction' data felt abstract; specifically, how disability or financial aid info shouldn't predict failure but enable accommodations. We found the most critical design elements are **high explainability** and ensuring interventions don't feel like surveillance.\n\nWe noticed strong disagreement on using sensitive data for accuracy versus fairness, with some fearing it pathologizes students (like those working part-time or managing health) while others saw value in catching hidden needs early. On Q7 selectivity, we debated whether casting a wide net is safer than risking desensitization from false alarms.\n\nOne idea not covered: the model must explicitly account for *declared* life contexts (work hours, medical exemptions) to avoid misinterpreting them as disengagement before flagging anyone.\""
+    },
+    {
+      "agent": "A1",
+      "text": "\"Adding to S1's points: As an advisor, I emphasize that **explainability isn't just a feature; it's the prerequisite for ethical action**. We cannot use complex behavioral data like Absalon logs if we can't clearly articulate *why* to the student in plain language. Without this transparency, even well-intentioned outreach feels punitive and erodes trust.\n\nWe also stressed that 'accuracy' shouldn't drive us toward sensitive data usage unless it directly improves fairness for marginalized groups, not just overall detection rates. Finally, a key idea missing from the survey is **human-in-the-loop oversight**: no automated flag should trigger direct contact without an advisor verifying the context first to ensure we aren't misinterpreting valid life circumstances as academic failure.\""
+    }
+  ],
+  "T2": [
+    {
+      "agent": "S4",
+      "text": "\"For our table, Q6.2 on outreach frequency was challenging; while we agreed 'continuous' contact could be a lifeline for neurodivergent students like me, it felt dangerous without strict explainability guarantees. We identified Q4 as the most critical design constraint: if explanations are vague (Moderate/Low), interventions must stop entirely to prevent stigmatization of diverse learning styles or cultural adaptations. Answers split on urgency versus privacy; some prioritized catching crises immediately, while others feared surveillance would alienate international students. A key idea not in the survey is that 'continuous' support must be conditional: it should only trigger instantly when high-explainability factors are met (e.g., missed deadlines), otherwise delaying contact preserves dignity and trust.\""
+    },
+    {
+      "agent": "A2",
+      "text": "I would add that for us advisors, Q4's \"Moderate\" vs. \"Low\" distinction was also unclear; if I cannot articulate a single clear reason to a student, can I truly offer support? We agreed the core design principle is a \"hard stop\": no outreach occurs without high explainability regarding specific academic metrics like credits or grades. The main divergence lay between catching students immediately versus protecting them from feeling surveilled. Our proposal: allow continuous monitoring only when triggers are transparently verifiable by the student (e.g., missed deadlines). If data relies on complex behavioral patterns, we must delay contact to accumulate clearer evidence, ensuring every intervention builds trust rather than anxiety or stigma across diverse groups."
+    }
+  ],
+  "T3": [
+    {
+      "agent": "S7",
+      "text": "For our table on Fairness and Intervention, Q5 was challenging because asking us to accept fewer total students helped for \"fairness\" felt morally difficult; however, we concluded **equal recall** is non-negotiable so marginalized groups like me with dyslexia aren't missed. The most critical design aspect is linking this fairness directly to the intervention: continuous detection is vital, but it must trigger only low-pressure, voluntary support to avoid surveillance fatigue.\n\nWe saw strong disagreement on frequency (Q6) and personalization (Q7). While many want immediate help, others fear constant monitoring feels stigmatizing. Our key idea not in the survey is **decoupling detection from intervention**: let the model run continuously internally for fairness, but ensure outreach remains human-led, voluntary, and precise to build trust rather than anxiety."
+    },
+    {
+      "agent": "A3",
+      "text": "Building on S7's excellent summary, I want to emphasize two critical gaps our table identified. First, while we agreed **equal recall** (Q5) is essential for fairness, we must ensure that identifying more students from marginalized groups doesn't overwhelm our limited advisor capacity; a fair model failing due to resource shortages harms everyone. Second, regarding Q7's intervention selectivity, the survey assumes personalized outreach is always superior, but we found it risks stigma if not paired with high precision. Our added recommendation: prioritize **voluntary human connection** over automated personalization. The system should flag risk internally and continuously (as S7 noted), but only invite students to a confidential meeting rather than sending data-heavy emails that feel like surveillance. Trust must drive design, not just accuracy metrics."
+    }
+  ]
+}

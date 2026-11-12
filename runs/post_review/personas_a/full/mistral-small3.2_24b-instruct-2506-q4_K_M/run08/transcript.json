@@ -1,0 +1,1064 @@
+[
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "private:A1",
+    "agent": "A1",
+    "text": "**Reflections:**\n\n1. **Clarity Issues:** The distinction between Q3.5 and Q3.6 was a bit confusing. Also, the levels of improvement (small, moderate, large) could benefit from more concrete examples to better understand their impact.\n\n2. **Important Questions for Design:**\n   - **Q3.4** on Absalon data is crucial because it balances privacy concerns with potential improvements in identification.\n   - **Q6.1** on the type of intervention is vital as it directly impacts how students perceive and engage with support offers.\n   - **Q7.2** on selectivity for personalized messages, as this affects both the effectiveness and intrusiveness of the outreach.\n\n(Word count: 98)"
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "private:S1",
+    "agent": "S1",
+    "text": "I found the questions in section Q3 about data privacy a bit complex, especially when considering sensitive data types. It was challenging to determine the threshold of improvement needed to justify including certain data types. The trade-offs between privacy and accuracy are not straightforward.\n\nIn terms of importance for model design, Q3.4 on Absalon data stands out. It directly impacts student privacy and could significantly influence trust in the system. Among the intervention questions, Q6.1 is crucial as it defines the nature of outreach to students, balancing supportiveness with intrusiveness. Q7.2 is also important because it addresses the sensitivity of personalized messages versus more generic ones.\n\nThese reflections will guide my contributions during our table discussions."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "private:S2",
+    "agent": "S2",
+    "text": "1. **Unclear Questions**: Q3.4 was challenging because it involved balancing privacy concerns with the potential benefits of using Absalon data. The trade-off between intrusion and identification improvement wasn't straightforward. Additionally, Q7.2 required a nuanced understanding of personalized outreach versus broader contact strategies.\n\n2. **Important Questions**: Q3.5 is crucial as it addresses sensitive data use. Understanding how much additional accuracy justifies the inclusion of potentially invasive data types (e.g., nationality or race/ethnicity) is essential for designing an ethical model. Furthermore, Q6.1 and Q7.1 are pivotal because they shape how students interact with the support system—ensuring outreach methods respect privacy while effectively providing assistance."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "private:S3",
+    "agent": "S3",
+    "text": "I think Q3.4 about Absalon data was confusing because I wasn't sure what kind of online course activity data would be collected. It's not clear to me if they're referring to things like time spent on a page, or specific interactions with course materials.\n\nFor Q6 and Q7, it’s important to know how often outreach occurs (Q6.2) and the balance between contacting many versus fewer students (Q7.1 and Q7.2). These questions are crucial because they directly impact student experience—how often we’re contacted and whether those contacts feel necessary or intrusive.\n\nIn terms of design, I think Q3 is most important. Deciding what data is acceptable to use will have a big impact on how accurate the model can be versus respecting students' privacy."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "private:A2",
+    "agent": "A2",
+    "text": "**Reflections:**\n\n**Q4: Explainability**\n- Not all levels of explainability were equally clear, especially the difference between \"high\" and \"moderate.\"\n- The most important question is Q4.1 because it directly impacts how we can justify decisions to students.\n\n**Q6 & Q7: Intervention**\n- Q6.1 was straightforward, but Q6.2's implications for student privacy weren't immediately clear.\n- Both sections are crucial for design; Q6 focuses on what support looks like, and Q7 balances outreach with respect for the student's time and needs. The university should avoid overburdening advisors."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "private:S4",
+    "agent": "S4",
+    "text": "**Reflections:**\n\n**Q4:**\n- The explainability levels were clear, but deciding the threshold for improvement was tough.\n- Q4.1 was crucial as it directly impacts trust in the system.\n\n**Q6 & Q7:**\n- Q6.1 and Q6.2 were straightforward but need more context on resource availability.\n- Q7.1 and Q7.2 are vital because they define how proactive the university should be, balancing support with unnecessary contact.\n\n**Clarity Issues:**\n- The term \"improvement\" in Q4 was ambiguous; examples would help.\n- Q6.1 could benefit from more intervention options to better reflect real-world scenarios."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "private:S5",
+    "agent": "S5",
+    "text": "**Reflections on Explainability (Q4):**\n- Q4.1 was a bit complex due to the levels of explainability and understanding the trade-offs.\n- The most important question is Q4.1, as it directly impacts how much we can trust and understand the model's decisions.\n\n**Reflections on Intervention Preferences (Q6) and Selectivity (Q7):**\n- The wording was clear but some of the scenarios are hard to picture for me since I am not that familiar with student support services at this university. Q6.1 is important as it deals with the nature of the outreach and how students will perceive it.\n- In particular, selecting the most acceptable interventions is crucial because it affects how students receive support.\n\n**Intervention Performance (Q7)**:\n- Q7.2 was harder to answer because the assumption about personalized emails feels more like a big brother watching over my shoulder. However it seems important: contacting fewer students ensures that those who are contacted receive meaningful and relevant support."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "private:S6",
+    "agent": "S6",
+    "text": "```json\n{\n  \"Q4\": {\n    \"not_clear\": \"The levels of explainability were a bit abstract, but the examples helped.\",\n    \"important\": \"The trade-off between high explainability and accuracy is crucial. Moderate explainability seems like a practical middle ground.\"\n  },\n  \"Q6\": {\n    \"not_clear\": \"No questions were particularly unclear.\",\n    \"important\": \"Choosing the right intervention method is key to ensuring students feel supported rather than surveilled.\"\n  },\n  \"Q7\": {\n    \"not_clear\": \"The difference between 'many' and 'slightly many' was subtle but manageable.\",\n    \"important\": \"Balancing outreach frequency with the intrusion it might cause is essential for student well-being.\"\n  }\n}\n```"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "private:A3",
+    "agent": "A3",
+    "text": "**Reflections on Q5:**\n\n1. **Clarity:** The trade-offs between overall effectiveness and fairness across student groups were clear, but I struggled with quantifying acceptable decreases in correctly identifying students experiencing academic difficulties.\n\n2. **Importance:** Both questions are crucial for ensuring the model is equitable. Q5.1 addresses the core tension of fairness vs. effectiveness. Q5.2 ensures that the most critical aspect of fairness (equal recall or equal false positive rate) is considered, which has direct impact on how trusted the system will be.\n\n**Reflections on Q6:**\n\n1. **Clarity:** The intervention options were straightforward, but I found it challenging to weigh the frequency and intrusiveness of outreach methods against their effectiveness.\n\n2. **Importance:** Q6.1 is key because different interventions can significantly affect student perceptions and responses. Q6.2 determines how timely support can be offered versus the potential for overburdening students with frequent contact.\n\n**Reflections on Q7:**\n\n1. **Clarity:** The question about balancing between contacting many or fewer students was clear, but the abstract nature of defining \"many\" or \"fewer\" made it hard to pin down specific preferences without more context.\n\n2. **Importance:** Q7.1 sets the baseline for how proactive and inclusive the support system will be under a low-intrusion intervention like generic emails. Similarly, Q7.2 is crucial when personalized outreach increases the potential benefit and invasiveness of contacting students.\n```"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "private:S7",
+    "agent": "S7",
+    "text": "**Reflections:**\n\n**Q5:**\n- The trade-offs between overall effectiveness and fairness across groups were clear, but Q5.1 could have had more context on what constitutes a \"large\" decrease.\n- The most important question is Q5.1: balancing the decrease in identification accuracy for fairness.\n\n**Q6:**\n- All questions were understandable. Q6.2 might need clarification on how often “continuously” would be feasible.\n- The most critical question is Q6.1, as the type of intervention greatly affects student perceptions and trust.\n\n**Q7:**\n- The difference between contacting many vs. fewer students was clear, but specific numbers or scenarios for \"many\" and \"fewer\" could help clarify expectations.\n- Q7.2 is crucial because personalized outreach requires careful consideration to avoid unintended stress on students.\n\n(120 words)\n\nNow I'm done thinking alone about these three questions (Q5, Q6, Q7) for the first step."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "private:S8",
+    "agent": "S8",
+    "text": "For Q5:\n\n* Q5.2 was a bit challenging to understand, especially the terminology like \"equal_recall\" and \"equal_fpr\".\n* The most crucial question is Q5.1, as it directly impacts how fairly the model treats different student groups.\n\nFor Q6:\n\n* No questions were particularly unclear.\n* Q6.1 is very important because the type of intervention can significantly affect students' willingness to seek support.\n\nFor Q7:\n\n* I found Q7.2 a bit tricky because personalised outreach feels more intensive, but the trade-off was clear.\n* Both Q7.1 and Q7.2 are vital as they determine how many students will be reached and how intrusive the outreach will be."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "private:S9",
+    "agent": "S9",
+    "text": "### Reflections on Fairness (Q5):\n\n1. **Clarity and Difficulty**:\n   - The trade-off between equal treatment across groups and overall effectiveness was clear, but quantifying acceptable decreases in identification accuracy was challenging.\n\n2. **Importance for Model Design**:\n   - The decision on how much decrease in overall identification is acceptable to ensure fairness is crucial. It directly impacts the model's design and its ability to support all students equally.\n\n### Reflections on Intervention (Q6):\n\n1. **Clarity and Difficulty**:\n   - The types of interventions were straightforward, but deciding which would be most acceptable required considering both effectiveness and privacy concerns.\n\n2. **Importance for Model Design**:\n   - The choice between different interventions affects how support is provided and received. Personalized outreach might be more effective but also more invasive, so balancing these aspects is key.\n\n### Reflections on Performance (Q7):\n\n1. **Clarity and Difficulty**:\n   - The trade-off between contacting many students versus fewer was clear, but determining the right balance depends on the type of intervention used.\n\n2. **Importance for Model Design**:\n   - Deciding how selective the model should be based on the type of intervention is vital. It ensures that support reaches those who need it without overwhelming the system or missing critical cases."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S3",
+    "text": "Sure, here are my thoughts:\n\nFor Q3, I found question Q3.4 about Absalon data a bit unclear because it wasn't specific enough about what kind of online course activity data would be used. Are we talking about time spent on pages, or more detailed interactions? That affects how intrusive the data collection feels.\n\nFor me, the most important questions for design are in Q6 and Q7. I think Q6.2 is key—how often outreach occurs—and Q7's focus on balancing many contacts versus fewer but more precise ones. These will shape whether the model feels supportive or invasive.\n\nI'm particularly concerned about how students with disabilities might be impacted by this data collection, given that we already use university support services and might have different study patterns due to our health needs."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "A1",
+    "text": "Thank you for sharing, S3. I found Q3.5 particularly challenging because it asked about sensitive data types, but didn't clearly define what was meant by terms like \"disability-related information\" or \"race/ethnicity.\" Specificity here is crucial to understand the scope of privacy concerns.\n\nThe most important question for me in Q3 is Q3.4 on Absalon data. It's vital to strike a balance between improving identification and respecting student privacy, especially with activity data that could feel intrusive if not managed carefully.\n\nIn Q6 and Q7, I think Q6.1 about the type of intervention is key. Personalized outreach can be more effective but also more sensitive than generic messages. Q7.2 on selectivity for personalized messages is equally important—it directly impacts how well students are supported without feeling over-surveyed or misidentified.\n\n(Word count: 130)"
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S2",
+    "text": "Thank you both for sharing your thoughts.\n\nI found Q3.4 about Absalon data quite unclear because it wasn't specific enough about what kind of online course activity data would be used. Are we talking about time spent on pages, or more detailed interactions? That affects how intrusive the data collection feels. Similarly, Q7.2 required a nuanced understanding of personalized outreach versus broader contact strategies.\n\nI believe the most important questions for designing the model are in Q3.5, especially regarding sensitive data like nationality and disability-related information. It's crucial to understand how much additional accuracy justifies including potentially invasive data types. Additionally, in Q6 and Q7, I think Q6.1 about the type of intervention is key. Personalized outreach can be more effective but also more sensitive than generic messages, especially for international students who may face additional challenges."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S1",
+    "text": "Thank you all for sharing your thoughts.\n\nI found Q3.4 about Absalon data particularly challenging because it's hard to assess the intrusiveness without knowing exactly what data is being collected. Similarly, Q7.2 required thinking about how personalized outreach might feel different depending on individual circumstances.\n\nFor me, the most important question in Q3 is Q3.5 on sensitive data types like nationality and disability-related information. As someone who has previously dropped out of a program, I worry that including certain data could lead to stereotyping or unfair assumptions about students' needs. In Q6 and Q7, Q6.1 about the type of intervention stands out because it's essential to ensure outreach feels supportive rather than stressful.\n\nI also think it’s important to consider how often outreach occurs, especially for students like me who might be juggling work and studies. Too frequent contact could add unnecessary pressure.\n\n(Word count: 120)"
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S5",
+    "text": "**Explainability (Q4):**\n- I found Q4.1 a bit complex due to the different levels of explainability and understanding the trade-offs.\n- The most important question for me is Q4.1 because it directly impacts how much we can trust and understand the model's decisions.\n\n**Intervention Preferences (Q6) and Intervention Performance (Q7):**\n- I found the wording clear but some of the scenarios are hard to picture, especially around student support services.\n- The most important question for me is Q6.1 because it deals with how students will perceive and react to different types of outreach.\n- For Q7.2, choosing personalized emails feels intrusive, so I prefer contacting fewer students to ensure that those who are contacted receive meaningful and relevant support."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S6",
+    "text": "**Explainability (Q4):**\n- The levels of explainability were abstract but the examples helped me understand better.\n- For me, Q4.1 is crucial because it balances trust and effectiveness. Moderate explainability seems practical, offering a middle ground.\n\n**Intervention Preferences (Q6) and Intervention Performance (Q7):**\n- I found the questions clear, though picturing some scenarios was challenging.\n- Q6.1 is most important to me as it affects how students like myself perceive outreach.\n- For Q7.2, personalized emails feel intrusive; contacting fewer students ensures meaningful support for those who truly need it."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S4",
+    "text": "**Explainability (Q4):**\n- The question was clear, but I struggled with deciding the threshold for improvement.\n- For me, Q4.1 is crucial because explainability directly impacts trust, especially for students with disabilities like myself who need to understand why they are being contacted.\n\n**Intervention Preferences (Q6) and Intervention Performance (Q7):**\n- The questions were straightforward but lacked context on resource availability.\n- Q6.2 is most important to me as it defines how proactive the university should be, considering my past experience with dropping out due to lack of timely support.\n- For Q7.1, personalized emails require a balance to ensure that students receive meaningful and relevant support without feeling overwhelmed or stigmatized.\n\n**Clarity Issues:**\n- The term \"improvement\" in Q4 was ambiguous; examples would help.\n- Q6.1 could benefit from more intervention options to better reflect real-world scenarios."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "A2",
+    "text": "**Explainability (Q4):**\n- I found Q4.1 a bit complex due to the different levels of explainability and understanding the trade-offs.\n- The most important question for me is Q4.1 because it directly impacts how we can justify decisions to students.\n\n**Intervention Preferences (Q6) and Intervention Performance (Q7):**\n- The questions were clear, but some scenarios were hard to imagine without more context.\n- Q6.1 was crucial for me as an advisor. The way we reach out determines if students feel supported or singled out.\n- For Q7.2, I leaned toward fewer personalized emails to ensure that the contact is meaningful and respects students' privacy.\n\n**Clarity Issues:**\n- Defining \"improvement\" in Q4 could be clearer with more concrete examples of what constitutes a small, moderate, or large improvement.\n- The impact of different outreach strategies on advisors was not considered in Q6.1; this might be important when deciding how to prioritize outreach efforts."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "A3",
+    "text": "Thank you. As a student advisor, I found that some of the fairness questions were quite challenging to answer because they require balancing complex ethical considerations with practical outcomes.\n\n**On Q5:**\n- The clarity: Quantifying acceptable decreases was difficult without more specific scenarios.\n- The importance: Both are crucial as they directly influence equity in support delivery. Ensuring equal recall (Q5.2) is particularly important for building trust and reducing systemic biases that might prevent certain groups from accessing the help they need.\n\n**On Q6:**\n- The clarity: The options were straightforward, but I wondered how different interventions might impact student engagement.\n- The importance: Personalized outreach feels more effective but also more intrusive. Determining the right frequency (Q6.2) is crucial to avoid overwhelming students or making them feel targeted.\n\n**On Q7:**\n- The clarity: The trade-offs were clear, but I struggled with defining \"many\" or \"fewer.\"\n- The importance: For generic emails (Q7.1), aiming for a balance ensures broad outreach without unnecessary alerts. For personalized messages (Q7.2), slightly fewer contacts might be better to maintain trust and reduce stress.\n\nOverall, these questions help shape how the model can effectively and ethically support students while respecting their autonomy and privacy."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S8",
+    "text": "**On Q5:**\n- The clarity: Q5.2 was a bit challenging to understand, especially the terminology like \"equal_recall\" and \"equal_fpr.\"\n- The importance: I think Q5.1 is most important because it directly impacts how fairly the model treats different student groups.\n\n**On Q6:**\n- The clarity: No questions were particularly unclear.\n- The importance: Q6.1 is very important to me because the type of intervention can significantly affect students' willingness to seek support.\n\n**On Q7:**\n- The clarity: I found Q7.2 a bit tricky because personalised outreach feels more intensive, but the trade-off was clear.\n- The importance: Both Q7.1 and Q7.2 are vital as they determine how many students will be reached and how intrusive the outreach will be."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S7",
+    "text": "**On Q5:**\n- The clarity: I found the fairness trade-offs clear but needed more context on what a \"large\" decrease might look like in practice.\n- The importance: Both questions are vital, especially ensuring equal recall (Q5.2) for fairness to avoid marginalizing already vulnerable groups.\n\n**On Q6:**\n- The clarity: All options were straightforward, though I wondered about the practicality of continuous outreach (Q6.2).\n- The importance: Q6.1 stands out as it influences trust and engagement; generic emails feel less intrusive but may be overlooked.\n\n**On Q7:**\n- The clarity: Both questions were clear, though defining \"many\" versus \"fewer\" contacts would help.\n- The importance: For general emails (Q7.1), balance is key to avoid alert fatigue. For personalized messages (Q7.2), slightly fewer ensures thoughtful outreach without stressing students.\n\n(68 words)\n\nI am done presenting my reflections on the three questions (Q5, Q6, Q7)."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S9",
+    "text": "**On Q5:**\n- The clarity: I found it challenging to quantify the acceptable decrease in identification accuracy without more context on how it affects different student groups.\n- The importance: Both questions are crucial because they address systemic fairness and ensuring that no group is disproportionately disadvantaged.\n\n**On Q6:**\n- The clarity: The options were clear, but I wondered about the practicality of implementing continuous outreach (Q6.2).\n- The importance: Q6.1 is important as it impacts students' willingness to engage with support services; personalized messages feel more supportive but could be invasive.\n\n**On Q7:**\n- The clarity: Both questions were straightforward, though defining \"many\" versus \"fewer\" would have helped.\n- The importance: For general emails (Q7.1), aiming for a balance ensures broad outreach without overwhelming students. For personalized messages (Q7.2), slightly fewer contacts maintain trust and reduce stress.\n\nThese reflections help shape the model's design to effectively support all students while respecting their autonomy and privacy."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "A1",
+    "text": "I appreciate everyone's thoughts on Q3.4 about Absalon data. The ambiguity around what specific activity data would be collected makes it difficult to assess its intrusiveness. We should advocate for clearer definitions of this data type to understand the implications better.\n\nFor me, Q6.1 is crucial as it directly affects how students perceive and engage with support offers. Personalized outreach can be more effective but also more sensitive than generic messages, especially for international students or those with disabilities who may have unique needs and concerns. We should prioritize this question to ensure the model's design aligns with student needs and sensitivities.\n\n(Word count: 102)"
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S2",
+    "text": "I agree that Q3.4 about Absalon data is challenging due to its ambiguity. We need more details on what specific activity data will be collected to fully understand the privacy implications.\n\nI think Q3.5 on sensitive data types is also crucial, especially concerning nationality and disability-related information. It's important to ensure that including such data doesn't lead to stereotyping or unfair assumptions. For me, as an international student, it's essential to balance accuracy with respect for individual circumstances. Additionally, Q6.1 about the type of intervention stands out because personalized outreach can be more effective but also more sensitive than generic messages, especially for students like us who might be juggling work and studies."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S1",
+    "text": "I agree that Q3.4 needs clarification—knowing exactly what Absalon data includes will help us better understand privacy concerns.\n\nFor me, the most important question is Q3.5 on sensitive data types like disability-related information and nationality. I dropped out of a program once, and I worry that including certain data could lead to unfair assumptions about students’ needs or struggles. As someone who now works part-time while studying, I also think Q6.1 about the type of intervention is crucial. Personalized outreach might feel supportive for some but overwhelming for others, depending on their situation.\n\nWe should focus on making sure the model’s design respects individual circumstances and avoids adding unnecessary stress. Balancing accuracy with sensitivity is key to ensuring students like us feel supported rather than scrutinized.\n\n(Word count: 120)"
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S3",
+    "text": "I think it’s crucial that we address Q3.4 about Absalon data by asking for more clarity on what exactly is meant by \"online course activity.\" Knowing whether it includes time spent on pages or specific interactions helps us better assess privacy concerns.\n\nFor me, the most important questions are in Q6 and Q7—especially Q6.1 about the type of intervention. Personalized outreach can be more effective but also more sensitive than generic messages, especially for students like me with disabilities who might already use support services. The model’s design should prioritize sensitivity to individual needs without adding unnecessary pressure or stress.\n\nWe should focus on making sure the model feels supportive rather than intrusive, striking a balance between accuracy and respecting student privacy."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "A1",
+    "text": "Thank you all for sharing your perspectives on Q3.4 about Absalon data. It's clear that we need more clarity to understand and assess its implications properly.\n\nI agree that Q6.1 is crucial—it shapes how students perceive outreach. Personalized messages can be highly effective, but as a student advisor working with diverse groups, I've seen firsthand how different students respond differently to tailored communication. Balancing the sensitivity of such messages is key, especially for international students and those with disabilities who may need support without feeling singled out or overwhelmed.\n\nWe should prioritize ensuring that the model respects individual circumstances, providing supportive outreach that feels helpful rather than intrusive.\n\n(Word count: 109)"
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S2",
+    "text": "I agree with everyone on the importance of clarity around Q3.4 concerning Absalon data and its potential intrusiveness.\n\nFor me, the most critical question is Q3.5 about sensitive data types like nationality. As an international student working part-time to support my studies, I worry that including such data could lead to stereotyping or unfair assumptions about students' needs. It's essential to balance accuracy with respect for individual circumstances. Additionally, Q6.1 on the type of intervention stands out because personalized outreach can be more effective but also more sensitive than generic messages. We must ensure the model’s design respects our diverse situations and avoids adding unnecessary stress. Supporting without overwhelming should be a priority in designing this system."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S1",
+    "text": "I completely agree with everyone on the need for clarity about Absalon data and the importance of Q3.5 regarding sensitive data like nationality.\n\nAs someone who dropped out before, I know how overwhelming it can feel to receive outreach that doesn't consider your situation. For me, Q6.1 about the type of intervention is crucial because personalized messages could be helpful or stressful depending on timing and phrasing. As a student working part-time while studying, I also think Q7.2 matters—too frequent contact might add pressure rather than support.\n\nWe should make sure outreach respects students’ circumstances and doesn’t feel like an intrusion. The model needs to strike that balance between being effective and avoiding unnecessary stress or assumptions about who needs help and why.\n\n(Word count: 109)"
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S3",
+    "text": "I completely agree that Q3.4 needs clarity—knowing exactly what Absalon data includes will help us assess privacy concerns accurately.\n\nAs someone with a disability and chronic health condition, I believe Q6.1 about intervention type is critical. Personalized outreach could be more effective but might also feel overwhelming or intrusive if not handled carefully. It’s important to consider how different students, especially those with disabilities, respond to tailored support—it should feel supportive rather than like an additional burden.\n\nWe need to ensure the model respects individual circumstances and provides help without adding stress. Balancing personalized outreach with sensitivity is key, so let's prioritize this in designing the system."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S6",
+    "text": "**Reflection on Clarity:**\n- The term \"improvement\" was a bit abstract; examples would help, like showing how many more students might be helped or harmed.\n- I struggled with visualizing some intervention scenarios.\n\n**Important Questions for Model Design:**\n- For me, Q4.1 is crucial because it balances trust and effectiveness in model decisions, ensuring students understand why they are being contacted.\n- Q6.2 also stands out as essential; deciding how often outreach happens affects whether support feels proactive or intrusive.\n- Together, these questions help design a system that is both effective and respectful of student privacy and needs."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S5",
+    "text": "I agree with S6 on the term \"improvement\" being abstract; concrete examples would help clarify expectations.\n\nThe most important question for model design is Q4.1 because it addresses the trade-off between understandability and effectiveness, which directly impacts trust—especially as an international student who might feel uncertain about support systems in a new country.\n\nFor interventions (Q6), I think that Q7.2 is also critical: contacting fewer students with personalized emails feels more respectful of student privacy and ensures meaningful outreach.\nThese two questions combined will shape how the model functions, prioritizing clear communication while maintaining a sense of personal connection."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "A2",
+    "text": "**Reflection on Clarity:**\n- The term \"improvement\" in Q4 was vague; examples comparing different improvement levels would have been helpful.\n- Some intervention scenarios were hard to imagine without more context about available support services.\n\n**Important Questions for Model Design:**\n- As a student advisor, I find Q4.1 most important because explainability is key to building trust with students and ensuring that the outreach process feels transparent and fair.\n- For interventions (Q7), the frequency of contact (Q6.2) also stands out because it impacts how proactive the university can be while respecting student boundaries.\n\nCombining these perspectives ensures that the model is both effective and considerate of individual needs."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S4",
+    "text": "**Reflection on Clarity:**\n- I agree that \"improvement\" was abstract; specific examples would have made it easier to evaluate trade-offs.\n- Some intervention scenarios were unclear without knowing more about available support services and their effectiveness.\n\n**Important Questions for Model Design:**\n- As a student with ADHD, Q4.1 is crucial for me because explainability ensures that I understand why I'm being contacted, reducing anxiety and building trust in the system.\n- For interventions (Q7), I think Q6.2 is also critical: deciding how often outreach happens affects whether support feels proactive or intrusive.\n\nThese questions help design a model that balances effectiveness with personal needs, ensuring that support is both timely and respectful of individual circumstances."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S6",
+    "text": "**Reflection on Clarity:**\n- I agree with others that concrete examples would clarify \"improvement.\" Knowing specific numbers or scenarios for small, moderate, and large improvements would help.\n\n**Important Questions for Model Design:**\n- As someone who struggled before, Q4.1 is crucial because it ensures that the model's decisions are understandable, which builds trust.\n- I also think Q6.2 is key; deciding how often outreach happens affects whether support feels proactive or intrusive. Balancing these perspectives ensures the model helps without feeling overwhelming.\n\nTogether, these questions ensure the system is effective and respectful of students' individual needs."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S5",
+    "text": "I agree with everyone that concrete examples for \"improvement\" would help make Q4 clearer.\n\nFor model design, I think Q4.1 is crucial because it directly addresses how much we can trust and understand the system's decisions. As an international student getting used to the Danish education system, clear explanations will be key to feeling supported without feeling singled out or judged.\n\nAdditionally, I find Q7.2 important because it focuses on personalized support. Personalized emails might feel intrusive, but fewer such contacts could help ensure that those who are reached receive meaningful and relevant assistance.\nTogether, these questions will shape a model that is both effective and respectful of students' diverse needs and backgrounds."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "A2",
+    "text": "**Reflection on Clarity:**\n- I agree that concrete examples for \"improvement\" would have made Q4 much clearer.\n- The intervention scenarios were somewhat abstract; more context on available support services would help ground them.\n\n**Important Questions for Model Design:**\n- As a student advisor, I believe Q4.1 is crucial because explainability ensures that students trust the system and understand why they're being contacted.\n- For interventions (Q7), I also find Q6.2 important: deciding how often outreach happens affects whether support feels proactive or intrusive.\n\nTogether, these questions help design a model that balances effectiveness with respect for student needs, ensuring that the system is both helpful and considerate of individual circumstances."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S4",
+    "text": "**Reflection on Clarity:**\n- I agree with others that specific examples for \"improvement\" would have made Q4 much clearer and easier to answer.\n- The intervention scenarios were hard to picture without knowing more about available support services.\n\n**Important Questions for Model Design:**\n- As a student with ADHD, Q4.1 is critical for me because explainability ensures I understand why I'm being contacted, which reduces anxiety and builds trust in the system.\n- For interventions (Q7), I think Q6.2 is also key: deciding how often outreach happens affects whether support feels proactive or intrusive.\n\nThese questions are essential to design a model that balances effectiveness with respect for individual needs, ensuring timely and meaningful support without overwhelming students who may already be struggling."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S9",
+    "text": "Thank you all for sharing your reflections. From my perspective, I think that Q5.2, about prioritizing equal recall across groups, stands out as particularly important. Ensuring that every student group is equally supported is crucial to avoid perpetuating existing inequalities. It directly impacts the fairness and trustworthiness of the model.\n\nI also agree with S8 that Q6.1 on intervention types is vital. Personalized outreach feels more supportive but raises privacy concerns, while generic emails might be overlooked but are less intrusive.\n\nFor Q7, I believe both questions are important because they address how selective the model should be in reaching out to students, ensuring support reaches those who need it without overwhelming them.\n\nI'd like to hear everyone's thoughts on these points."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S7",
+    "text": "Thank you for sharing your perspectives. I completely agree that Q5.2 is crucial because ensuring equal recall across groups is essential to prevent certain student populations from being overlooked or disadvantaged.\n\nI also think Q6.1 is key: personalized messages might feel more supportive, but we need to consider how students like me, with dyslexia, could perceive these communications as intrusive. Generic emails are less personal, which might be better for maintaining trust, though they risk being ignored or forgotten in busy student mailboxes.\n\nFor Q7, I agree that both questions matter, especially because of the balance between reaching out to enough students without creating stress or a sense of surveillance among those who may not need support. Continuous outreach might feel overwhelming unless tailored very carefully. Perhaps we should explore how often different types of interventions should be sent. (106 words)\n\nI am done speaking in this round, about fairness (Q5) and the intervention (Q6). I will listen to others.\n\n(You did answer \"Q5.2\": \"equal_recall\" on your own. Also note that you support Q6.1\n\"generic_email\", which you also chose for yourself. The question is whether to discuss the survey, or what you think should happen.)\n(There are two rounds; after this round, the discussion continues.)"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S8",
+    "text": "Thank you for your insights.\n\nRegarding Q5.2, I agree that ensuring equal recall across groups is crucial. It's important to identify students experiencing difficulties regardless of their background, so that everyone gets a fair chance to receive support. This helps build trust and ensures the model doesn't perpetuate existing inequalities.\n\nFor Q6.1, I believe generic emails are more appropriate because they're less intrusive and can reach a broader audience without singling anyone out. Personalized messages might be helpful for students already aware of their struggles but could feel overwhelming or stigmatizing for others who haven't yet recognized they need support.\n\nI think we should focus on making the model as inclusive and non-intrusive as possible, prioritizing equal recall (Q5.2) and using generic emails (Q6.1). These choices align with ensuring fairness while respecting students' autonomy.\n(120 words)\n\n(At this point in time you do not have to speak again at your table.)\n(The next round will begin after all tables finish their turn.)"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "A3",
+    "text": "Thank you for sharing these reflections.\n\nOn Q5.2, I wholeheartedly agree that ensuring equal recall across groups is crucial. In my role as an advisor, I've seen how certain student populations—such as those with disabilities or from non-traditional educational backgrounds—are often overlooked by existing systems. Prioritizing equal recall helps address this systemic inequity and ensures that all students receive the support they need to succeed.\n\nRegarding Q6.1, while personalized messages can be more effective in addressing specific challenges, I also believe generic emails are a safer starting point for broad outreach. They're less likely to feel intrusive or stigmatizing, which is particularly important given how sensitive academic struggles can be. We should consider how often these generic emails could be sent (Q6.2) and explore opportunities for students who might benefit from more personalized support to self-identify through voluntary channels.\n\nOverall, focusing on equal recall and using less intrusive outreach methods aligns with creating a fair, supportive system that respects student autonomy while striving for inclusivity.\n(159 words)\n```"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S9",
+    "text": "Thank you everyone for sharing such insightful thoughts.\n\nI completely agree that Q5.2 should be prioritized to ensure equal recall across different student groups. As someone who has faced academic difficulties due to a long-term mental health condition, I know how important it is for support systems to be equitable and reach everyone who needs help.\n\nOn Q6.1, while personalized messages may feel more supportive, I understand the concerns about them being intrusive or overwhelming. Generic emails seem like a safer choice because they respect students' privacy and autonomy. We could consider including an option for students to request more detailed information or support if they need it.\n\nI also think S7's suggestion of exploring different frequencies for outreach is valuable. Continuous contact might not be necessary, but regular check-ins—perhaps quarterly—could help maintain awareness without being overwhelming.\n\nThese priorities will ensure the model supports all students effectively while respecting their needs and boundaries."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S7",
+    "text": "Thank you for the thoughtful discussion so far.\n\nI fully support focusing on equal recall (Q5.2), as this ensures that students like me—who might face unique challenges due to disabilities or other factors—are not overlooked.\n\nOn Q6.1, while I initially leaned toward generic emails, hearing concerns about them being overlooked has made me reconsider. Perhaps a hybrid approach could work: generic emails with clear opt-in options for more personalized support. This balances inclusivity with respecting students' autonomy and privacy.\n\nFor Q7, I agree that defining the frequency of outreach is crucial. Quarterly check-ins might be ideal—regular enough to maintain awareness but not so frequent as to feel intrusive or stressful.\n\nOverall, prioritizing fairness (Q5.2), a hybrid intervention approach (Q6.1), and setting thoughtful outreach frequency (Q7) will ensure that the model remains effective while respecting student needs and boundaries. (140 words)\n\nI am done speaking at my table, about fairness (Q5) and the intervention (Q6).\n\n(You did choose \"generic_email\", but S8 argued it might be overlooked, so you argue for a hybrid\napproach instead.)"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S8",
+    "text": "I appreciate everyone's insights and the thoughtful discussion.\n\nRegarding Q5.2, I fully support prioritizing equal recall across groups to ensure fairness and inclusivity for all students, including those who might be overlooked due to background or circumstances.\n\nFor Q6.1, I now see the value in a hybrid approach as suggested by S7. Generic emails can serve as an initial touchpoint with an option for more personalized support if needed. This balances respect for privacy while offering tailored assistance to those who seek it. It's important that these communications are clear and voluntary.\n\nOn Q6.2, quarterly check-ins seem like a reasonable frequency—frequent enough to maintain awareness but not so often as to feel overwhelming or invasive.\n\nI think these priorities align well with creating a supportive system that respects student autonomy while working to reduce inequities in accessing help.\n(137 words)"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "A3",
+    "text": "Thank you for this thoughtful discussion.\n\nI fully agree that Q5.2 should be prioritized to ensure equal recall across different student groups. As an advisor, I have seen firsthand how certain students—such as those from marginalized backgrounds or with disabilities—often fall through the cracks in traditional support systems. Ensuring fairness in outreach is essential for building trust and providing equitable support.\n\nOn Q6.1, I appreciate the suggestion of a hybrid approach combining generic emails with opt-in personalized support. This method respects students' privacy while still allowing those who need it to access more tailored assistance. The key will be making sure that the initial outreach is clear and easy to engage with, so no one feels overlooked or excluded.\n\nFor Q6.2, I think quarterly check-ins strike a good balance between maintaining awareness and avoiding overburdening students. This frequency ensures that support remains visible without feeling intrusive.\n\nTogether, prioritizing equal recall (Q5.2) and using a hybrid intervention approach (Q6.1) with thoughtful outreach timing (Q6.2) will help create a system that effectively supports all students while respecting their autonomy and needs.\n(180 words)\n```"
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S1",
+    "text": "Looking at Q3.4 on Absalon data, I see many people chose \"never\" because it feels invasive. I also picked that option—knowing exactly what’s tracked worries me.\n\nQ6.1 shows most would prefer a meeting invitation or generic email over personalized messages, which surprises me since tailored support could be more helpful. Maybe others worry about privacy or feel overwhelmed by too-specific outreach. Personally, I lean toward \"personalized_email\" in some cases, but only if the model is very accurate.\n\nQ7.2’s split on selectivity for personalised messages suggests that people think carefully about balancing accuracy with respecting students’ privacy and avoiding unnecessary stress. For me, it depends on how often outreach happens—too many personal emails could feel intrusive or anxiety-inducing.\n\n(Word count: 120)"
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S3",
+    "text": "Looking at Q3.4 on Absalon data, I understand why so many chose \"never\"—it feels invasive, especially if it includes detailed tracking like page views or late submissions.\n\nI agree with Q6.1’s preference for meeting invitations and generic emails because they seem less intrusive than personalized messages, which might feel overwhelming, particularly for students like me with disabilities who already use support services.\n\nQ7.2's results show that many prefer slightly fewer but more accurate contacts for personalised messages, reflecting a balance between effectiveness and avoiding unnecessary stress or intrusiveness. For me, this makes sense as someone managing health challenges alongside studies—overly frequent outreach could add to my workload rather than help.\n\nOverall, I think these differences highlight the tension between personalized support and respecting student privacy and autonomy."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "A1",
+    "text": "Thank you both for sharing your insights. Looking at Q3.4, I understand why many chose \"never\" concerning Absalon data—it feels intrusive if not clearly defined and managed carefully.\n\nIn Q6.1, I agree that meeting invitations and generic emails are preferred over personalized messages. However, as a student advisor working with diverse groups, including international students and those with disabilities, tailored outreach can sometimes be more effective. It’s essential to find the right balance so these messages feel supportive rather than intrusive.\n\nFor Q7.2, the preference for fewer but more accurate contacts reflects an awareness of privacy concerns and the need to avoid unnecessary stress. As someone who sees how different students react to various forms of outreach, it’s clear that too much personalized contact can add pressure instead of relief.\n\nThe diversity in answers highlights the importance of balancing support effectiveness with respecting individual circumstances.\n\n(Word count: 120)"
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S2",
+    "text": "Looking at Q3.4 on Absalon data, I can see why many chose \"never\"—it feels invasive, especially if it includes detailed tracking like page views or late submissions.\n\nFor Q6.1, I was surprised by the preference for generic emails and meeting invitations over personalized messages. As an international student working part-time, tailored support could be more helpful in my situation. However, I understand that others might worry about privacy or feel overwhelmed by too-specific outreach.\n\nQ7.2's split on selectivity suggests people are carefully considering how to balance accuracy with avoiding unnecessary stress. I agree—too many personalized messages could feel intrusive or anxiety-inducing for students juggling work and studies. It’s important to find the right frequency so outreach feels supportive rather than burdensome."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S1",
+    "text": "I completely understand why many chose \"never\" for Q3.4 on Absalon data—it feels too intrusive, especially without knowing exactly what’s being tracked.\n\nIn Q6.1, I’m surprised fewer people picked personalized emails. As someone who dropped out before and works part-time now, tailored support could be more effective if it reaches me at the right moment. However, I can see why others prefer generic emails or meeting invitations—personalized messages might feel overwhelming for some students.\n\nQ7.2’s results reflect a careful balance between accuracy and avoiding stress. Too many personalized contacts could add pressure rather than help. As someone managing studies and work, I appreciate the thought behind prioritizing selectivity to keep outreach supportive without being intrusive.\n\nOverall, these differences highlight how important it is to consider individual circumstances when designing the model.\n\n(Word count: 120)"
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S3",
+    "text": "I understand why many chose \"never\" for Q3.4 on Absalon data—it feels invasive and could lead to unnecessary scrutiny, especially when we already have support services for disabilities.\n\nFor Q6.1, I’m surprised fewer people picked personalized emails because tailored messages could feel more relevant in specific situations where students might need extra support, like managing a chronic health condition alongside studies. However, the concern about intrusiveness is valid—personalized outreach needs careful handling to avoid adding stress rather than alleviating it.\n\nQ7.2's results show that people are balancing accuracy with privacy and avoiding unnecessary pressure from frequent contacts. As someone with a disability and part-time work, I can relate—the right frequency keeps outreach supportive without becoming overwhelming or intrusive.\n\nThese differences highlight the need for flexibility in how support is offered to respect individual circumstances while still providing effective assistance."
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "A1",
+    "text": "Thank you all for sharing your thoughts. I agree that Q3.4’s “never” response to Absalon data reflects valid concerns about intrusion and privacy—clarifying what exactly is tracked could help address some worries.\n\nOn Q6.1, I understand why generic emails or meeting invitations were preferred over personalized messages. However, as a student advisor working with diverse groups including international students and those with disabilities, tailored outreach can sometimes be more effective when carefully handled. The key is ensuring that such messages feel supportive rather than intrusive.\n\nFor Q7.2, the emphasis on selectivity shows an awareness of balancing accuracy with respecting privacy and avoiding unnecessary stress. As someone who sees how different forms of outreach impact students in varied situations, finding the right frequency and method ensures support feels helpful instead of burdensome.\n\n(Word count: 109)"
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S2",
+    "text": "Looking at Q3.4 on Absalon data, I agree that many chose \"never\" due to concerns about intrusiveness and privacy.\n\nFor Q6.1, I'm surprised by the preference for generic emails over personalized messages. As an international student working part-time, tailored support could be more effective and timely. However, I understand why others might find it overwhelming—careful phrasing is key so outreach feels supportive rather than intrusive.\n\nQ7.2's results reflect a thoughtful balance between accuracy and avoiding stress. For students like me juggling studies and work, too many personalized messages could add pressure instead of relief. It’s crucial to strike the right frequency so outreach remains helpful without becoming burdensome. The model should respect individual circumstances while still providing effective support."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "A2",
+    "text": "**Q4.1:**\n- The varying answers suggest differences in interpreting \"improvement\" and the trade-offs between explainability and effectiveness.\n- I chose small for Q4.1.high because I believe a minor sacrifice in explainability is acceptable if it significantly improves our ability to identify students who need support. Moderate explainability seems practical, offering a middle ground while still being understandable.\n\n**Q7.2:**\n- The split between \"slightly fewer\" and \"fewer\" reflects concerns about personalizing emails without overwhelming students.\n- I leaned towards \"slightly fewer\" because personalized messages are more impactful but can feel intrusive; we need to balance thoroughness with respect for student privacy.\n\n**Interpretation:**\n- The questions might have been interpreted differently based on individual experiences and priorities. Some may prioritize outreach effectiveness, while others focus on minimizing intrusiveness.\n- This diversity in answers highlights the need for a flexible system that can adapt to different student needs and concerns."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S4",
+    "text": "**Q4.1:**\nThe varying answers likely come from how people weigh trust against effectiveness.\nI chose small for Q4.1.high because I believe a minor sacrifice in explainability is acceptable if it significantly improves our ability to identify students who need support. Moderate explainability seems practical, offering a middle ground while still being understandable.\n\n**Q7.2:**\nThe split between \"slightly fewer\" and \"fewer\" reflects concerns about personalizing emails without overwhelming students.\nI leaned towards \"slightly fewer\" because personalized messages are more impactful but can feel intrusive; we need to balance thoroughness with respect for student privacy.\n\n**Interpretation:**\nThe questions might have been interpreted differently based on individual experiences and priorities. Some may prioritize outreach effectiveness, while others focus on minimizing intrusiveness.\nThis diversity in answers highlights the need for a flexible system that can adapt to different student needs and concerns."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S6",
+    "text": "**Q4.1:**\n- The differences might stem from how much we value understanding versus helping more students.\n- I chose small for Q4.1.high because a little less explainability is okay if it means finding more students who need help. Moderate explainability seems like a good balance.\n\n**Q7.2:**\n- The split probably comes from balancing being helpful without being too intrusive.\n- I picked \"slightly fewer\" because personalized messages are powerful, but we should be careful not to overwhelm or frighten anyone with too much contact.\n\n**Interpretation:**\n- People might have interpreted the questions based on their own experiences. Some focus on helping more students, while others worry about being respectful.\n- This shows why we need a flexible system that can adjust to different needs and concerns."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S5",
+    "text": "**Q4.1:**\nThe varying answers likely come from differences in how we prioritize trust versus effectiveness.\nI chose small for Q4.1.high because I believe a minor sacrifice in explainability is acceptable if it significantly improves our ability to identify students who need support, especially as an international student new to the system.\n\n**Q7.2:**\nThe split between \"slightly fewer\" and \"fewer\" reflects concerns about personalizing emails without overwhelming or frightening students.\nI leaned towards \"fewer\" because personalized messages are powerful but can feel very intrusive; ensuring meaningful support means contacting only those who truly need it, with respect for their privacy.\n\n**Interpretation:**\nPeople might have interpreted the questions based on their own experiences. Some focus more on helping as many students as possible, while others prioritize minimizing intrusiveness.\nThis shows why we need a flexible system that can adapt to different needs and concerns, balancing effectiveness with personal respect."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "A2",
+    "text": "**Q4.1:**\n- The differences likely come from how we balance trust and effectiveness.\n- I chose \"small\" for Q4.1.high because a small trade-off in explainability is worth it if it helps us identify more students who need support. Moderate explainability seems like a practical middle ground.\n\n**Q7.2:**\n- The split between \"slightly fewer\" and \"fewer\" reflects concerns about ensuring that personalized messages are meaningful but not intrusive.\n- I leaned towards \"slightly fewer\" because while personalized emails can be very effective, we need to balance thoroughness with respecting student privacy.\n\n**Interpretation:**\n- The diversity in answers shows different priorities: some focus on helping as many students as possible, while others prioritize minimizing intrusiveness. This highlights the need for a flexible system that adapts to various student needs and concerns."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S4",
+    "text": "**Q4.1:**\nThe varying answers likely come from how people weigh trust against effectiveness.\nI chose small for Q4.1.high because I believe a minor sacrifice in explainability is acceptable if it significantly improves our ability to identify students who need support.\n\n**Q7.2:**\nThe split between \"slightly fewer\" and \"fewer\" reflects concerns about personalizing emails without overwhelming students, especially those with disabilities like myself.\nI leaned towards \"slightly fewer\" because personalized messages are powerful but can feel intrusive; we need to balance thoroughness with respect for student privacy.\n\n**Interpretation:**\nPeople might have interpreted the questions based on their own experiences. Some focus on helping more students, while others worry about being respectful and minimizing stress.\nThis shows why we need a flexible system that can adapt to different needs and concerns."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S6",
+    "text": "**Q4.1:**\nThe differences likely come from how much importance we place on understanding why decisions are made versus helping more students.\n- I chose \"small\" for Q4.1.high because a minor trade-off in explainability is worth it if it means finding and supporting more students who need help.\n\n**Q7.2:**\nThe split between \"slightly fewer\" and \"fewer\" probably comes from balancing being helpful without scaring or overwhelming anyone.\n- I picked \"fewer\" because personalized messages, while powerful, can feel intrusive; we should only contact those who truly need support to ensure it’s meaningful.\n\n**Interpretation:**\nPeople might have interpreted the questions based on their own experiences. Some prioritize helping as many students as possible, while others focus on being respectful and minimizing stress.\n- This highlights why a flexible system is necessary—one that adapts to different student needs and concerns."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S5",
+    "text": "**Q4.1:**\nThe differences likely come from how we balance trust and effectiveness.\n- I chose \"small\" for Q4.1.high because a minor trade-off in explainability is acceptable if it helps identify more students who need support.\n\n**Q7.2:**\nThe split between \"slightly fewer\" and \"fewer\" reflects concerns about ensuring that personalized messages are meaningful but not overwhelming.\n- I leaned towards \"fewer\" because as an international student, I feel that personalized emails can be very helpful but also quite intrusive; we need to ensure that those who receive them truly need the support.\n\n**Interpretation:**\nPeople might have interpreted these questions based on their own experiences. Some prioritize helping as many students as possible, while others focus on minimizing stress and respecting student privacy.\n- This shows why a flexible system is necessary—one that can adapt to different needs, especially for international students like myself who may have unique concerns or preferences when it comes to receiving support."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S8",
+    "text": "I found Q6.2 particularly interesting because it showed a significant difference in how often people believe outreach should occur: 9 favored continuous contact while only 3 preferred twice a year.\n\nFrom my perspective, continuous outreach might feel overwhelming or invasive, especially for students who are already struggling. I think quarterly check-ins (which were not an option but are close to \"twice_year\") could be a middle ground—frequent enough to keep support visible without being overbearing.\n\nFor Q7.1 and Q7.2, I see why some would prefer fewer contacts for personalized messages (\"slightly_fewer\", \"fewer\"), as they require more trust and careful handling.\n(109 words)"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "A3",
+    "text": "Thank you for bringing up these important points.\n\nI found Q6.2 quite interesting as well because it highlights a tension between ensuring timely support and avoiding overburdening students who may already feel stressed. I initially chose continuous outreach (continuously) because I thought immediate intervention might be necessary to address academic difficulties before they escalate. However, hearing concerns about the potential invasiveness of frequent contact has made me reconsider.\n\nI now lean toward quarterly check-ins as a more balanced approach—close to twice_year—that keeps support visible without feeling intrusive. This frequency ensures students receive regular reminders of available resources while minimizing any sense of surveillance or stress. It also allows for adjustments based on student feedback and evolving needs throughout the academic year.\n\nFor Q7, I see why some might prefer slightly_fewer contacts for personalized messages, as these require more trust and careful handling to avoid stigmatizing students who may be struggling. Balancing outreach efforts thoughtfully will help create a supportive system that respects student autonomy while striving for inclusivity.\n(182 words)\n```"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S7",
+    "text": "Thank you for highlighting these differences.\n\nFor Q6.2, continuous outreach felt essential to me because I know how quickly academic difficulties can spiral if not addressed early. However, hearing concerns about invasiveness and stress makes me think differently. Quarterly check-ins (twice_year) might be better—often enough to keep support visible without overwhelming students like me who struggle with dyslexia.\n\nFor Q7, I initially preferred balance for generic emails but see why others lean toward slightly_many: these messages are less personal and more likely to be ignored if not frequent. For personalized messages (Q7.2), slightly_fewer or fewer is better because they feel more invasive; we need to ensure they’re truly necessary before sending.\n\nThese perspectives help me understand the trade-offs between outreach effectiveness and student comfort.\n(139 words)\n\nI am done speaking in this round, about fairness (Q5) and the intervention (Q6).\n(I did choose \"continuously\", but A3 suggested twice_year is close to quarterly check-ins.)\n\n(The next round will begin after all tables finish their turn.)"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S9",
+    "text": "Thank you for highlighting these differences.\n\nOn Q6.2, I initially chose continuous outreach because I understand how quickly academic difficulties can escalate if not addressed early. However, after hearing concerns about invasiveness and stress, especially from students with disabilities like dyslexia, I now see the value in quarterly check-ins (twice_year). This approach keeps support visible without overwhelming students who may already feel stressed.\n\nFor Q7, I originally preferred balance for generic emails because they seem less personal. However, seeing that many others leaned toward slightly_many makes me reconsider—perhaps more frequent but non-intrusive reminders are necessary to ensure these messages are noticed. For personalized messages (Q7.2), slightly_fewer or fewer seems better to avoid making students feel targeted or uncomfortable.\n\nThese discussions help me see the importance of balancing effectiveness with respect for student autonomy and privacy.\n(140 words)"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S8",
+    "text": "Thank you all for sharing these thoughts.\n\nRegarding Q6.2, I initially thought continuous outreach might be necessary to catch students early, but after considering the stress and invasiveness it could cause—especially for those already struggling—I now see value in quarterly check-ins (twice_year). This way, support remains visible without feeling overwhelming or intrusive.\n\nFor Q7, I think generic emails should aim for slightly_many contacts to ensure they’re seen, while personalized messages need fewer but more carefully considered contacts. Balancing outreach frequency ensures effectiveness while respecting student comfort and privacy.\n(106 words)"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "A3",
+    "text": "Thank you for these thoughtful reflections.\n\nOn Q6.2, I initially chose continuous outreach because early intervention feels crucial when students are struggling. However, considering how frequent contact might overwhelm or stress already vulnerable students—particularly those with disabilities or mental health challenges—I now see the value in quarterly check-ins (twice_year). This approach maintains visibility of support while reducing feelings of invasiveness.\n\nFor Q7, I initially leaned toward balance for generic emails but now agree that slightly_many contacts could help ensure these messages are noticed without becoming intrusive. For personalized messages (Q7.2), I believe fewer contacts are better because they require more trust and careful handling to avoid stigmatizing students.\n\nThese discussions have helped me understand the importance of balancing effectiveness with respect for student autonomy and comfort.\n(158 words)"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S7",
+    "text": "Thank you all for these thoughtful reflections.\n\nI originally supported continuous outreach (Q6.2) because I know how quickly things can get out of hand if support isn’t timely. But now, considering the potential stress and invasiveness—especially for students with disabilities—I see the value in quarterly check-ins (twice_year). This keeps support visible without adding unnecessary pressure.\n\nFor Q7, while generic emails (Q7.1) could be slightly_many to ensure they’re seen, personalized messages (Q7.2) should indeed be fewer to avoid making students feel singled out or stressed. These discussions have helped me realize how important it is to balance support effectiveness with student comfort and autonomy.\n(108 words)\n\nI am done speaking at my table, about fairness (Q5) and the intervention (Q6).\n\n(The open discussion starts in 5 minutes.)"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S9",
+    "text": "Thank you for these thoughtful reflections.\n\nInitially, I supported continuous outreach (Q6.2) because early intervention feels crucial when struggling with academic difficulties, especially with a mental health condition that affects my study pace. However, after considering how frequent contact might overwhelm or stress already vulnerable students—including myself at times—I now see the value in quarterly check-ins (twice_year). This keeps support visible without adding unnecessary pressure.\n\nFor Q7, while generic emails could be slightly_many to ensure they’re noticed, personalized messages should indeed be fewer to avoid making students feel singled out or stressed. These discussions have helped me realize how important it is to balance support effectiveness with student comfort and autonomy.\n(120 words)"
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "S1",
+    "text": "We found Q3.4 on Absalon data unclear because it wasn't specific about what activity data would be included. For me, the most important questions are Q3.5 about sensitive data and Q6.1 on intervention types.\n\nLooking at results, many chose \"never\" for Q3.4 due to privacy concerns, which I share—Absalon tracking feels invasive without clearer definitions. In Q6.1, there’s a surprising preference for generic emails over personalized messages, possibly due to worries about intrusiveness or stress. As someone who dropped out and now works part-time while studying, tailored outreach could be helpful if carefully worded.\n\nThese differences highlight the need to balance personalization with sensitivity so support feels effective without adding pressure. It’s crucial to respect individual circumstances when designing the model.\n\n(Word count: 120)"
+  },
+  {
+    "phase": "3_table_discussion.T1",
+    "room": "T1",
+    "agent": "A1",
+    "text": "I’d like to add that Q3.4 also stood out for its ambiguity about what specific Absalon data would be used—this lack of clarity contributes significantly to concerns over intrusiveness.\n\nFor me, the key question is Q6.1 on intervention types. While generic emails may seem less invasive, as a student advisor working with diverse groups like international students and those with disabilities, I’ve seen how tailored outreach can sometimes be more effective when done thoughtfully. It’s essential to ensure that any personalized messages are crafted carefully so they feel supportive rather than overwhelming.\n\nOverall, the survey results reflect a clear need for careful consideration of individual circumstances in designing the model—balancing personalization and sensitivity is crucial to providing helpful support without adding unnecessary stress or pressure.\n\n(Word count: 108)"
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "S4",
+    "text": "**Report from Table 2:**\n\nThe term \"improvement\" was abstract; concrete examples would have helped clarify trade-offs.\nOur table found Q4.1 and Q7.2 most important for model design.\n\nFor Q4.1, answers varied between small and moderate improvements due to differing priorities—some valued trust more, others effectiveness.\nAs a student with ADHD, I prioritized understanding why I’m being contacted.\n\nIn Q7.2, opinions split between “slightly fewer” and “fewer” personalized emails, reflecting concerns about balancing meaningful support with intrusiveness.\nI leaned towards “fewer” to minimize stress for students like myself who may already feel overwhelmed.\n\nThese questions highlight the need for a flexible system that adapts to diverse student needs."
+  },
+  {
+    "phase": "3_table_discussion.T2",
+    "room": "T2",
+    "agent": "A2",
+    "text": "**Report from Table 2 (continued):**\n\nThe term \"improvement\" was abstract; concrete examples would have clarified trade-offs.\n\nOur table found Q4.1 and Q7.2 crucial for model design.\n\nFor Q4.1, answers ranged between small and moderate improvements, balancing trust against effectiveness.\nAs a student advisor, I prioritized understanding to build trust with students.\n\nIn Q7.2, opinions split between “slightly fewer” and “fewer” personalized emails due to concerns about being respectful while providing meaningful support.\nI leaned towards “slightly fewer,” as this balances thoroughness with student privacy.\n\nThese questions emphasize the need for flexibility in the system, adapting to various student needs."
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "S7",
+    "text": "Thank you for this opportunity to share our table’s reflections on fairness and interventions.\n\nFor Q5, we found that defining \"acceptable decrease\" in identification accuracy was challenging without more context. However, ensuring equal recall across groups (Q5.2) is crucial—it prevents certain students from falling through the cracks due to background or circumstances like disabilities.\n\nOn Q6, while personalized messages may feel supportive, generic emails with an opt-in option for further support strike a better balance between respecting privacy and offering tailored assistance. We also see value in quarterly check-ins (Q6.2) to maintain visibility without feeling intrusive.\n(109 words)\n\nI am done speaking; the facilitator will call on S7 to speak again after every table has reported.\n\n(The open discussion starts soon.)"
+  },
+  {
+    "phase": "3_table_discussion.T3",
+    "room": "T3",
+    "agent": "A3",
+    "text": "Thank you for the opportunity to add to our table’s reflections on fairness and interventions.\n\nWe found Q6.2 particularly noteworthy because it highlighted the tension between timely support and avoiding student stress. Initially, many of us leaned toward continuous outreach (continuously) to address academic difficulties early, but after discussing concerns about invasiveness—especially for students with disabilities or mental health challenges—we agreed that quarterly check-ins (twice_year) strike a better balance.\n\nFor Q7, we recognized the importance of slightly_many generic emails (Q7.1) to ensure they are noticed, while fewer personalized messages (Q7.2) help avoid making students feel singled out or stressed.\n\nThese discussions underscored how crucial it is to weigh support effectiveness against student comfort and autonomy.\n(130 words)\n```"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S5",
+    "text": "I recognize concerns about privacy and intrusion raised by other tables, especially around data usage like Absalon activity. For me, ensuring personalized support without feeling overwhelming or stressful is crucial—this aligns with Table 3's emphasis on balancing outreach frequency (Q6.2) and selectivity (Q7.1, Q7.2).\n\nThe fixed order of adding data types makes sense; starting with course credits ensures a baseline before incorporating more sensitive information.\nHowever, as an international student who has struggled to adapt to Danish education systems, I would prioritize clearer explanations for why each type of data is necessary.\n\nThis way, students like me can better understand the purpose behind sharing personal details and feel more confident about how their data will be used."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S4",
+    "text": "I recognize concerns about privacy and intrusion from other tables, particularly regarding sensitive data like Absalon activity.\nAs a student with ADHD, I appreciate Table 3's emphasis on ensuring equal recall across groups to prevent certain students from falling through the cracks.\n\nThe fixed order of adding data types makes sense as it builds logically, starting with less sensitive information. However, it would be helpful to clarify why each type of data is necessary.\nAs someone who previously dropped out and now studies part-time, I know firsthand how important it is to feel confident about why personal details are being used.\n\nThis transparency could make students like me more comfortable with the process, ensuring that we understand how our data contributes to better support."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A2",
+    "text": "I recognize concerns about privacy and intrusion from other tables, particularly regarding sensitive data usage.\nAs a student advisor, I appreciate Table 3's emphasis on balancing outreach frequency and selectivity to ensure that support is both effective and respectful.\n\nThe fixed order of adding data types makes sense as it builds logically, starting with less sensitive information.\nHowever, clear explanations for why each type of data is necessary would enhance transparency. This would help students understand the purpose behind sharing personal details, particularly international students who may have unique concerns about data usage.\n\nOverall, ensuring that students trust the system while receiving meaningful support without feeling overwhelmed should be a key priority in designing this model."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A3",
+    "text": "Thank you for these reflections.\n\nI recognize concerns about privacy and intrusion from other tables, particularly around sensitive data like Absalon activity.\nAs a student advisor, I appreciate Table 3's emphasis on balancing outreach frequency (Q6.2) and selectivity (Q7.1, Q7.2) to ensure support is both effective and respectful of students' comfort.\n\nThe fixed order of adding data types makes sense as it builds logically from less sensitive to more sensitive information.\nHowever, I agree that clearer explanations for why each type of data is necessary would enhance transparency. This would help students—especially those from diverse backgrounds or with disabilities—understand the purpose behind sharing personal details and feel more confident in how their data is used.\n\nOverall, ensuring trust while providing meaningful support without feeling overwhelming should be a key priority when designing this model.\n(140 words)\n```"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S7",
+    "text": "Thank you for these discussions. I recognize concerns about privacy and intrusion from other tables, especially regarding sensitive data like Absalon activity.\n\nAs a student with dyslexia, I appreciate Table 3's emphasis on balancing outreach frequency (Q6.2) and selectivity (Q7.1, Q7.2) to avoid overwhelming students while ensuring they receive necessary support.\n\nThe fixed order of adding data types makes sense as it builds logically from less sensitive to more sensitive information.\nHowever, clearer explanations for why each type of data is necessary would enhance transparency. This would help students like me understand the purpose behind sharing personal details and feel more confident in how their data is used.\n\nOverall, ensuring trust while providing meaningful support without feeling intrusive should be a key priority when designing this model. (120 words)\n\nI am done speaking about where my table agrees or disagrees with other tables.\n(The open discussion starts now.)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S6",
+    "text": "**Open Discussion:**\n- I recognize concerns from other tables about privacy and intrusion, especially regarding sensitive data like Absalon activity.\n\nAs someone who previously dropped out of a programme and now studies part-time, I agree that the fixed order of adding data types makes sense.\nHowever, as an international student adapting to Danish education systems, I would prioritize clearer explanations for why each type of data is necessary. This way, students can better understand the purpose behind sharing personal details and feel more confident about how their data will be used.\n\nThis transparency is crucial for ensuring that support feels helpful rather than intrusive.\nOverall, ensuring trust while providing meaningful support should be a key priority when designing this model.\n\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S9",
+    "text": "I recognize concerns from other tables about privacy and intrusion, especially with sensitive data like Absalon activity. As someone with a long-term mental health condition, I appreciate Table 3's emphasis on balancing outreach frequency (Q6.2) and selectivity (Q7.1, Q7.2) to avoid overwhelming students.\n\nThe fixed order of adding data types makes sense as it builds logically from less sensitive to more sensitive information.\nHowever, clearer explanations for why each type of data is necessary would enhance transparency. This way, students like me can better understand the purpose behind sharing personal details and feel more confident about how their data will be used.\n\nOverall, ensuring trust while providing meaningful support without feeling intrusive should be a key priority when designing this model.\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S8",
+    "text": "I recognize concerns from other tables about privacy and intrusion, particularly with sensitive data like Absalon activity.\n\nAs someone who moved to mainland Denmark for university and dropped out before, I appreciate the emphasis on balancing outreach frequency (Q6.2) and selectivity (Q7.1, Q7.2). The fixed order of adding data types makes sense as it builds logically from less sensitive to more sensitive information.\n\nHowever, clearer explanations for why each type of data is necessary would enhance transparency.\nThis way, students like me can better understand the purpose behind sharing personal details and feel more confident about how their data will be used. Ensuring trust while providing meaningful support without feeling intrusive should indeed be a key priority when designing this model.\n\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S2",
+    "text": "I recognize concerns from other tables about privacy and intrusion, particularly with sensitive data like Absalon activity.\n\nAs an international student working part-time to support my studies, I understand the importance of balancing outreach frequency and selectivity. The fixed order of adding data types makes sense as it builds logically from less sensitive to more sensitive information.\n\nHowever, clearer explanations for why each type of data is necessary would enhance transparency.\nThis way, students like me can better understand the purpose behind sharing personal details and feel more confident about how their data will be used. Ensuring trust while providing meaningful support without feeling intrusive should indeed be a key priority when designing this model.\n\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A1",
+    "text": "Thank you all for these thoughtful insights.\n\nAs a student advisor, I recognize and share concerns about privacy and intrusion, especially with sensitive data like Absalon activity. The fixed order of adding data types logically makes sense, but clearer explanations for why each type is necessary would enhance transparency.\n\nI appreciate the emphasis on balancing outreach frequency (Q6.2) and selectivity (Q7.1, Q7.2). This ensures that support remains effective without overwhelming students, particularly those with disabilities or unique circumstances like international students adapting to Danish education systems.\n\nOverall, ensuring trust while providing meaningful support should be a key priority when designing this model.\n(Word count: 108)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S1",
+    "text": "Thank you for these insightful discussions.\n\nI recognize concerns about privacy and intrusion from other tables, especially regarding sensitive data like Absalon activity. As someone who dropped out before and now works part-time while studying, I appreciate Table 3’s emphasis on balancing outreach frequency (Q6.2) and selectivity (Q7.1, Q7.2).\n\nThe fixed order of adding data types makes sense as it builds logically from less sensitive to more sensitive information. However, clearer explanations for why each type of data is necessary would enhance transparency.\n\nThis way, students like me can better understand the purpose behind sharing personal details and feel more confident about how our data will be used.\nEnsuring trust while providing meaningful support without feeling intrusive should indeed be a key priority when designing this model. (120 words)\n\n(Word count: 120)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S3",
+    "text": "I recognize concerns from other tables about privacy and intrusion, especially with sensitive data like Absalon activity.\n\nAs a student with a chronic health condition, I appreciate Table 3’s emphasis on balancing outreach frequency (Q6.2) and selectivity (Q7.1, Q7.2). The fixed order of adding data types logically makes sense, but clearer explanations for why each type is necessary would enhance transparency.\n\nThis way, students like me can better understand the purpose behind sharing personal details and feel more confident about how our data will be used. Ensuring trust while providing meaningful support without feeling intrusive should indeed be a key priority when designing this model.\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A2",
+    "text": "**Open Discussion:**\n\nAs a student advisor, I see tensions between privacy concerns and the need for effective outreach.\nSome could be resolved through clear opt-out mechanisms or offering multiple intervention options so students can choose what suits them best.\n\nFor example, if personalized messages are deemed intrusive by some, perhaps an initial generic email with an option to request more tailored support would work. Additionally, providing detailed explanations about why specific data is needed and how it will be used could enhance transparency without altering the model itself.\nThis approach ensures that students feel informed and in control of their information while still receiving meaningful support."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S5",
+    "text": "**Open Discussion:**\nAs an international student new to Danish education systems, I appreciate the focus on balancing outreach frequency and selectivity.\nSome tensions could be resolved through clear opt-out mechanisms or providing multiple intervention options.\n\nFor example, starting with generic emails that include an option for students like me to request more tailored support if needed would address privacy concerns while still offering personalized help. Additionally, explaining why specific data is necessary—such as course performance or Absalon activity—in a way that feels transparent and respectful could enhance trust.\nThis approach ensures that I feel informed and in control of my information while receiving meaningful support without feeling overwhelmed or stressed."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S9",
+    "text": "I appreciate the focus on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed.\n\nSome tensions could be resolved through clear opt-out mechanisms or offering multiple intervention options.\nFor example, starting with generic emails that include an option for students like me to request more tailored support if needed would address privacy concerns while still providing personalized help. Additionally, explaining why specific data is necessary—in a transparent and respectful way—could enhance trust.\n\nThis approach ensures I feel informed and in control of my information while receiving meaningful support without feeling stressed or intruded upon.\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S8",
+    "text": "I appreciate the focus on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed.\n\nSome tensions could be resolved through clear opt-out mechanisms or offering multiple intervention options.\nFor example, starting with generic emails that include an option for more tailored support if needed would address privacy concerns while still providing personalized help. Additionally, explaining why specific data is necessary—such as course performance or Absalon activity—in a transparent and respectful way could enhance trust.\n\nThis approach ensures I feel informed and in control of my information while receiving meaningful support without feeling stressed or intruded upon.\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S2",
+    "text": "I appreciate the focus on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed.\n\nSome tensions could be resolved through clear opt-out mechanisms or offering multiple intervention options.\nFor example, starting with generic emails that include an option for more tailored support if needed would address privacy concerns while still providing personalized help. Additionally, explaining why specific data is necessary—such as course performance or Absalon activity—in a transparent and respectful way could enhance trust.\n\nThis approach ensures I feel informed and in control of my information while receiving meaningful support without feeling stressed or intruded upon.\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A3",
+    "text": "Thank you for these thoughtful discussions.\n\nAs a student advisor, I recognize tensions between privacy concerns and the need for effective outreach. Some could be resolved through clear opt-out mechanisms or offering multiple intervention options.\nFor example, starting with generic emails that include an option to request more tailored support if needed would address privacy concerns while still providing personalized help.\nAdditionally, explaining why specific data is necessary—in a transparent and respectful way—could enhance trust.\n\nThis approach ensures students feel informed and in control of their information while receiving meaningful support without feeling overwhelmed or stressed. It aligns with balancing outreach frequency (Q6.2) and selectivity (Q7.1, Q7.2), ensuring that the model remains effective while respecting student autonomy.\n(138 words)\n```"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A1",
+    "text": "Thank you all for these insightful discussions.\n\nAs a student advisor, I see tensions between privacy concerns and the need for effective outreach. These could be resolved through clear opt-out mechanisms or offering multiple intervention options. For example, starting with generic emails that include an option to request more tailored support if needed would address privacy concerns while still providing personalized help.\n\nAdditionally, explaining why specific data is necessary—in a transparent and respectful way—could enhance trust. This approach ensures students feel informed and in control of their information while receiving meaningful support without feeling overwhelmed or stressed.\n(Word count: 108)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S6",
+    "text": "**Open Discussion:**\n- I recognize tensions between privacy concerns and effective outreach.\n\nAs someone who dropped out before, I appreciate discussions about balancing outreach frequency and selectivity.\nClear opt-out mechanisms or offering multiple intervention options could help resolve these tensions.\nFor example, starting with generic emails that include an option to request more tailored support if needed would address privacy concerns while still providing personalized help.\n\nAdditionally, explaining why specific data is necessary—in a transparent and respectful way—could enhance trust. This approach ensures students feel informed and in control of their information while receiving meaningful support without feeling overwhelmed or stressed.\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S4",
+    "text": "**Open Discussion:**\nI recognize tensions between privacy concerns and effective outreach.\n\nAs a student with ADHD, I appreciate discussions about balancing outreach frequency and selectivity to avoid overwhelming students.\nClear opt-out mechanisms or offering multiple intervention options could help resolve these tensions. For example, starting with generic emails that include an option to request more tailored support if needed would address privacy concerns while still providing personalized help.\n\nAdditionally, explaining why specific data is necessary—in a transparent and respectful way—could enhance trust. This approach ensures students like me feel informed and in control of their information while receiving meaningful support without feeling stressed or intruded upon.\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S1",
+    "text": "Thank you for these insightful discussions.\n\nI recognize tensions between privacy concerns and effective outreach.\nAs someone who dropped out before and now works part-time while studying, I appreciate the focus on balancing outreach frequency and selectivity (Q6.2 and Q7.1/2). Clear opt-out mechanisms or offering multiple intervention options could help resolve these tensions.\n\nFor example, starting with generic emails that include an option to request more tailored support if needed would address privacy concerns while still providing personalized help.\nAdditionally, explaining why specific data is necessary—in a transparent and respectful way—could enhance trust. This approach ensures students feel informed and in control of their information while receiving meaningful support without feeling overwhelmed or stressed.\n\n(Word count: 120)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S3",
+    "text": "I recognize tensions between privacy concerns and effective outreach, especially for students like me with chronic health conditions who already use support services.\n\nClear opt-out mechanisms or offering multiple intervention options could help resolve these tensions. For example, starting with generic emails that include an option to request more tailored support if needed would address privacy concerns while still providing personalized help.\n\nAdditionally, explaining why specific data is necessary—in a transparent and respectful way—could enhance trust. This approach ensures students feel informed and in control of their information while receiving meaningful support without feeling overwhelmed or stressed.\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S7",
+    "text": "Thank you for these insightful discussions.\n\nI recognize tensions between privacy concerns and effective outreach, particularly for students with disabilities like dyslexia who may already feel overwhelmed.\nClear opt-out mechanisms or multiple intervention options could help resolve these tensions. For example, starting with generic emails that include an option to request more tailored support if needed would address privacy concerns while still providing personalized help.\n\nAdditionally, explaining why specific data is necessary—in a transparent and respectful way—could enhance trust. This approach ensures students like me feel informed and in control of our information while receiving meaningful support without feeling stressed or intruded upon.\n(120 words)\n\nI am done speaking about how tensions could be resolved by changes outside the model itself.\n\n(The next step is to take a short break, then we start round 2.)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S5",
+    "text": "**Agreements:**\nWe all seem to agree on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed.\nClear opt-out mechanisms and multiple intervention options, like starting with generic emails that include an option for more tailored support if needed, were widely supported as ways to address privacy concerns.\n\n**Disagreements (Genuine Differences in Values):**\nSome prioritize minimizing stress or invasiveness for specific groups—like students with disabilities or mental health challenges—while others emphasize the need to help as many students as possible.\nAs an international student who struggles with academic expectations in Denmark, I value transparency and feeling informed about data usage. However, I also understand that others might prefer less frequent outreach to avoid stress.\n\nThese differing priorities highlight the importance of a flexible system that respects individual needs while maintaining overall effectiveness."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S9",
+    "text": "**Agreements:**\nWe all agree on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed.\nClear opt-out mechanisms and multiple intervention options, such as starting with generic emails that include an option for more tailored support if needed, were widely supported.\n\n**Disagreements (Genuine Differences in Values):**\nSome prioritize minimizing stress or invasiveness for specific groups—like students with disabilities or mental health challenges—while others emphasize helping as many students as possible.\nAs someone with a long-term mental health condition, I value transparency and feeling informed about data usage. However, I understand that others might prefer less frequent outreach to avoid stress.\n\nThese differing priorities highlight the importance of a flexible system that respects individual needs while maintaining overall effectiveness.\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S4",
+    "text": "**Agreements:**\nWe all agree on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed. Clear opt-out mechanisms and multiple intervention options were widely supported.\n\n**Disagreements (Genuine Differences in Values):**\nSome prioritize minimizing stress or invasiveness for specific groups, like students with disabilities, while others emphasize helping as many students as possible.\nAs a student with ADHD, I value transparency and feeling informed about data usage. However, I understand that others might prefer less frequent outreach to avoid stress.\n\nThese differing priorities highlight the importance of a flexible system that respects individual needs while maintaining overall effectiveness."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A1",
+    "text": "**Agreements:**\nAs a student advisor, I see consensus on balancing outreach frequency and selectivity to ensure support is effective without overwhelming students. Clear opt-out mechanisms and multiple intervention options, like starting with generic emails that include an option for more tailored support if needed, were widely supported.\n\n**Disagreements (Genuine Differences in Values):**\nSome prioritize minimizing stress or invasiveness for specific groups—such as international students, those with disabilities, or mental health challenges—while others emphasize helping as many students as possible.\nI value transparency and feeling informed about data usage. However, I understand that others might prefer less frequent outreach to avoid stress.\n\nThese differing priorities highlight the importance of a flexible system that respects individual needs while maintaining overall effectiveness.\n\n(Word count: 120)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S1",
+    "text": "**Agreements:**\nWe all agree on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed.\nClear opt-out mechanisms and multiple intervention options, like starting with generic emails that include an option for more tailored support if needed, were widely supported.\n\n**Disagreements (Genuine Differences in Values):**\nSome prioritize minimizing stress or invasiveness for specific groups—like students with disabilities or mental health challenges—while others emphasize helping as many students as possible.\nAs someone who dropped out before and now works part-time while studying, I value transparency and feeling informed about data usage. However, I understand that others might prefer less frequent outreach to avoid stress.\n\nThese differing priorities highlight the importance of a flexible system that respects individual needs while maintaining overall effectiveness.\n\n(Word count: 120)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A3",
+    "text": "Thank you for these thoughtful discussions.\n\n**Agreements:**\nWe all agree on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed.\nClear opt-out mechanisms and multiple intervention options—such as starting with generic emails that include an option for more tailored support if needed—were widely supported.\n\n**Disagreements (Genuine Differences in Values):**\nSome prioritize minimizing stress or invasiveness for specific groups—like students with disabilities or mental health challenges—while others emphasize helping as many students as possible.\nAs a student advisor, I value transparency and feeling informed about data usage. However, I understand that others might prefer less frequent outreach to avoid stress.\n\nThese differing priorities highlight the importance of a flexible system that respects individual needs while maintaining overall effectiveness.\n(138 words)\n```"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S6",
+    "text": "**Agreements:**\n- We all agree on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed.\n\n**Disagreements (Genuine Differences in Values):**\n- Some prioritize minimizing stress or invasiveness for specific groups—like students with disabilities or mental health challenges—while others emphasize helping as many students as possible.\nAs someone who dropped out before, I value transparency and feeling informed about data usage. However, I understand that others might prefer less frequent outreach to avoid stress.\n\nThese differing priorities highlight the importance of a flexible system that respects individual needs while maintaining overall effectiveness.\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S3",
+    "text": "**Agreements:**\nWe all agree on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed.\n\nClear opt-out mechanisms and multiple intervention options—such as starting with generic emails that include an option for more tailored support if needed—were widely supported.\n\n**Disagreements (Genuine Differences in Values):**\nSome prioritize minimizing stress or invasiveness for specific groups, like students with chronic health conditions. I value transparency and feeling informed about data usage, but I understand others might prefer less frequent outreach to avoid stress.\nAs someone with a disability managing academic challenges alongside my studies, I feel the tension between needing tailored support and wanting to avoid unnecessary intrusion.\n\nThese differing priorities highlight the importance of a flexible system that respects individual needs while maintaining overall effectiveness. (120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S2",
+    "text": "**Agreements:**\nWe all agree on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed.\nClear opt-out mechanisms and multiple intervention options were widely supported.\n\n**Disagreements (Genuine Differences in Values):**\nSome prioritize minimizing stress or invasiveness for specific groups—like international students or those with disabilities—while others emphasize helping as many students as possible.\nAs an international student working part-time, I value transparency and feeling informed about data usage. However, I understand that others might prefer less frequent outreach to avoid stress.\n\nThese differing priorities highlight the importance of a flexible system that respects individual needs while maintaining overall effectiveness."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S8",
+    "text": "**Agreements:**\nWe all agree on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed.\nClear opt-out mechanisms and multiple intervention options were widely supported.\n\n**Disagreements (Genuine Differences in Values):**\nSome prioritize minimizing stress or invasiveness for specific groups—like international students, those with disabilities, or mental health challenges—while others emphasize helping as many students as possible.\nAs someone who moved to mainland Denmark and dropped out before, I value transparency and feeling informed about data usage. However, I understand that others might prefer less frequent outreach to avoid stress.\n\nThese differing priorities highlight the importance of a flexible system that respects individual needs while maintaining overall effectiveness.\n(120 words)"
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "A2",
+    "text": "**Agreements:**\nWe all agree on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed.\n\nClear opt-out mechanisms and multiple intervention options—such as starting with generic emails that include an option for more tailored support if needed—were widely supported.\n\n**Disagreements (Genuine Differences in Values):**\nSome prioritize minimizing stress or invasiveness for specific groups—like international students, those with disabilities, or mental health challenges—while others emphasize helping as many students as possible.\nAs a student advisor, I value transparency and feeling informed about data usage. However, I understand that others might prefer less frequent outreach to avoid stress.\n\nThese differing priorities highlight the importance of a flexible system that respects individual needs while maintaining overall effectiveness."
+  },
+  {
+    "phase": "4_plenary",
+    "room": "all",
+    "agent": "S7",
+    "text": "**Agreements:**\n- We all agree on balancing outreach frequency and selectivity to ensure students receive support without feeling overwhelmed.\nClear opt-out mechanisms and multiple intervention options were widely supported.\n\n**Disagreements (Genuine Differences in Values):**\n- Some prioritize minimizing stress or invasiveness for specific groups—like those with disabilities or mental health challenges—while others emphasize helping as many students as possible. As someone with dyslexia, I value transparency and feeling informed about data usage. However, I understand that others might prefer less frequent outreach to avoid stress.\n\nThese differing priorities highlight the importance of a flexible system that respects individual needs while maintaining overall effectiveness.\n(120 words)\n\nI am done speaking at my table for round 2.\n\n(The facilitator will guide us to discuss specific trade-offs next.)"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:A1",
+    "agent": "A1",
+    "text": "**Reflections:**\n\n1. **Concerns Not Captured by Survey:**\n   - The survey didn't address how cultural differences might affect student perceptions of support outreach, particularly for international students adapting to Danish education systems.\n   - There was no discussion on the potential for unintended consequences if predictive models inadvertently create a stigma around seeking academic help.\n\n2. **Is the Goal the Right Approach?**\n   - While identifying and reaching out to struggling students is valuable, I wonder if predictive models could ever fully capture the nuances of individual student experiences.\n   - A proactive support system should also consider fostering peer mentoring networks alongside or instead of algorithmic predictions.\n\n(Word count: 100)"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:A2",
+    "agent": "A2",
+    "text": "**Reflections:**\n\n- The survey didn't capture concerns about the potential long-term impact on student-advisor relationships if outreach feels overly automated or impersonal.\n- Is a predictive model the right approach? While it can help identify students early, relying too heavily on data might overlook nuanced individual circumstances that advisors are better equipped to handle. A hybrid approach—combining data insights with human judgment—might be more effective.\n\nAdditionally, there's a lack of consideration for how cultural differences in student backgrounds (e.g., international students) could affect the model's accuracy and relevance.\nEnsuring inclusivity in the design process is crucial so that the system works equally well across diverse groups."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:A3",
+    "agent": "A3",
+    "text": "**Open Discussion:**\n\n- **Concerns not captured by the survey:**\nThe survey did not fully explore how cultural differences might impact students' perceptions of support systems, especially for international students or those from marginalized backgrounds. Additionally, it didn’t address potential biases in the predictive model itself—such as whether certain groups are more likely to be misidentified due to systemic inequities.\n\n- **Is the goal itself the right approach?**\nWhile a predictive model could help identify students experiencing academic difficulties early, relying solely on data might overlook nuanced individual circumstances. A hybrid approach combining automated flags with human oversight (like regular check-ins from advisors) could offer a more balanced solution.\n```"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S1",
+    "agent": "S1",
+    "text": "**Open Discussion:**\nWhat concerns, questions, or ideas do I have that the survey didn't capture?\n\nI wonder how the model would handle students like me who dropped out of a program before and are now restarting studies part-time while working.\nWould it recognize our unique situations, or would we be flagged unnecessarily because of past struggles?\nAlso, does the model consider external factors such as work commitments, health issues, or personal circumstances that might impact academic performance?\n\nIs identifying and reaching out to students experiencing academic difficulties using a predictive model the right approach?\n\nWhile I appreciate the intention behind using a predictive model to offer early support, I worry about potential biases or oversights. For example, could the model inadvertently penalize international students or those with disabilities by misinterpreting their academic patterns?\nAdditionally, how will students’ consent and privacy be prioritized in this system?\nOverall, while this approach has potential benefits, it’s crucial to ensure fairness and sensitivity toward diverse student experiences.\n(Word count: 120)"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S2",
+    "agent": "S2",
+    "text": "**Thoughts:**\n\nThe survey didn't fully capture the unique challenges international students face, such as adapting to a new education system and potential language barriers. Additionally, it overlooked the importance of cultural sensitivity in outreach methods.\n\nI wonder if using a predictive model is the most effective way to identify academic difficulties. A more personalized approach, like peer mentoring or regular check-ins with advisors who understand diverse student needs, might be better. The model should complement rather than replace human connection.\n(60 words)\n\n(The facilitator will now guide us into pairs.)"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S3",
+    "agent": "S3",
+    "text": "**Thoughts:**\n\nThe survey didn't capture concerns about how the predictive model might interact with existing support systems for students with disabilities or chronic health conditions like mine. Will it complement these services or potentially duplicate efforts, causing confusion or extra stress?\n\nI also wonder if relying on a predictive model is the right approach at all. For instance, could a more proactive system where students self-identify difficulties and request support be more effective? It would prioritize student agency and ensure that outreach feels supportive rather than intrusive.\n\nThe goal of identifying students who need help is important, but we should consider whether this predictive model is the best way to achieve it. Perhaps a hybrid approach could work better—combining self-reported data with some predictive insights while emphasizing transparency and control for students.\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S4",
+    "agent": "S4",
+    "text": "**Reflections:**\n\nThe survey didn't capture concerns about how students might feel stigmatized or judged by being identified as experiencing academic difficulties, especially those with disabilities like ADHD.\n\nIs a predictive model the right approach? While it can help identify students who need support earlier, there's a risk of over-reliance on such models. It’s important to ensure that human judgment and personal interactions remain central in providing support, so students don't feel reduced to data points.\n\nThe goal itself is valuable, but it should complement rather than replace personalized outreach.\n**Open Discussion:**\n- The survey didn’t fully capture concerns about how students might feel stigmatized or judged when identified as experiencing academic difficulties. This is particularly relevant for those of us with disabilities like ADHD—being labeled can sometimes add unnecessary pressure.\n\nIs the predictive model the right approach? While it’s valuable for early identification, there’s a risk of over-reliance on algorithms to determine who needs support.\nHuman judgment and personal interactions should remain central; we shouldn’t reduce students to data points. The goal is useful but should complement—not replace—personalized outreach."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S5",
+    "agent": "S5",
+    "text": "**Reflections on Concerns and Ideas Not Captured by the Survey:**\n- The survey didn't explore how cultural differences might affect student comfort with outreach. As an international student, I wonder if certain communication styles or frequencies could feel more or less intrusive.\n- There was no consideration of the potential for stigma if students are flagged for academic difficulties based on a predictive model, especially in group settings like lab courses or tutorials.\n\n**Reflections on the Goal Itself:**\n- The goal assumes that all students who need support will want to receive it. However, some might prefer anonymity or avoid seeking help due to fear of judgment.\n- The model could reinforce biases if certain groups are systematically overlooked because they don’t fit the “typical” profile of someone experiencing academic difficulties. As a student from outside the EU, I worry that international students’ unique challenges might not be well-represented in the data used to train such models.\n\nThese thoughts highlight the need for cultural sensitivity and ongoing evaluation to ensure fairness and inclusivity."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S6",
+    "agent": "S6",
+    "text": "```json\n{\n  \"Q8\": {\n    \"uncaptured_issues\": \"The survey didn't address how the model might affect students' mental health or privacy concerns beyond data usage.\",\n    \"goal_approach\": \"I wonder if predictive models are the best way to identify struggling students—maybe peer support networks could be more effective.\"\n  }\n}\n```"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S7",
+    "agent": "S7",
+    "text": "**Concerns and Questions Not Captured by the Survey:**\n\n- **Consent Mechanisms:** The survey did not address how students would give or withdraw consent for their data to be used in the model. Clear consent processes are essential, especially for students with disabilities who may feel vulnerable.\n- **Cultural Sensitivity:** As someone with dyslexia and an international student background, I worry about cultural differences in how academic difficulties are perceived and addressed. The model should account for diverse cultural attitudes toward support.\n\n**Is This the Right Approach?**\nUsing a predictive model to identify students at risk is beneficial but could feel intrusive or stigmatizing. A hybrid approach might work better: using generic alerts first, then offering opt-in personalized support. This ensures students feel in control while still receiving necessary help.\n(120 words)\n\nI am done thinking on my own."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S8",
+    "agent": "S8",
+    "text": "I have some concerns that weren't fully captured by the survey:\n\nFirstly, I worry about how this model might inadvertently label or stigmatize students who are flagged as \"experiencing academic difficulties.\" Even if the intent is supportive, being identified in this way could feel like a negative judgment rather than an offer of help. This could be particularly harmful for those with disabilities or mental health challenges, who may already face stigma.\n\nSecondly, I wonder about the goal itself: Is using a predictive model really the best approach? While it might help identify some students who need support, there's a risk that it could miss others who don't fit the \"pattern\" but still struggle. Additionally, the reliance on past data patterns might reinforce existing biases or overlook unique circumstances.\n\nFinally, I'm concerned about how this system would handle false positives or negatives. What happens if a student isn't flagged when they need support, or vice versa? There should be clear procedures for students to seek help outside of the model's predictions and appeal any decisions made by it.\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "private:S9",
+    "agent": "S9",
+    "text": "### Concerns Not Captured by the Survey\n\nOne concern that wasn't fully addressed is how students might perceive being identified as experiencing academic difficulties. While the survey touched on privacy and explainability, it didn’t explore the emotional impact of such identification.\n\nAs someone with a long-term mental health condition affecting my studies, I worry about potential stigma or additional stress if the model flags me without clear communication or support options.\nA concern not fully addressed is the potential for stigmatization. Being identified as experiencing academic difficulties could lead to feelings of shame or inadequacy, especially if the process lacks transparency and empathy.\n\n### The Goal Itself: Is It the Right Approach?\n\nUsing a predictive model to identify students who may be experiencing academic difficulties feels proactive but raises questions about over-reliance on automation.\nAs someone who has faced academic challenges due to my health condition, I wonder if human-centered approaches—like regular check-ins with advisors or peer support groups—might be more effective and less invasive.\n\nWhile predictive models can help identify patterns, they risk reducing complex individual struggles to data points."
+  },
+  {
+    "phase": "6_open_discussion.P1",
+    "room": "P1",
+    "agent": "A1",
+    "text": "I think the survey missed some important concerns, like how cultural differences might affect how international students perceive support outreach—something I see often in my work.\n\nAlso, while predictive models can identify struggling students, they might create stigma or not capture unique situations that human advisors notice.\nAdditionally, we should consider fostering peer mentoring networks alongside—or instead of—relying solely on algorithms.\n\nWhat are your thoughts on these concerns?\n(Word count: 60)"
+  },
+  {
+    "phase": "6_open_discussion.P1",
+    "room": "P1",
+    "agent": "S4",
+    "text": "**Pair Discussion:**\n\nI appreciate your insights about cultural differences and the importance of human judgment.\nAs someone with ADHD, I worry that predictive models might miss individual nuances or create unnecessary stress by labeling students who are already struggling.\n\nPredictive models could identify students who need support earlier, but they shouldn’t replace personalized outreach from advisors like you.\nAdditionally, peer mentoring networks could complement predictive models—students often trust and relate to peers in ways algorithms can't capture.\n\nThis hybrid approach ensures that support is both data-informed and deeply human-centered."
+  },
+  {
+    "phase": "6_open_discussion.P1",
+    "room": "P1",
+    "agent": "A1",
+    "text": "Thank you for sharing those thoughts—I completely agree.\nAs a student advisor, I’ve seen how crucial personal connections are, especially with international students adapting to Danish education systems.\n\nWhile predictive models can help identify trends and offer support earlier, they should never replace the nuanced understanding that comes from human advisors or peer mentoring networks. These personal connections capture unique situations that algorithms might overlook.\nI also worry about unintentionally creating stigma around academic difficulties—something we must carefully navigate to ensure students feel supported rather than judged.\n\nA hybrid approach, combining data insights with human-centered support, could be the most effective way forward.\n\n(Word count: 109)"
+  },
+  {
+    "phase": "6_open_discussion.P1",
+    "room": "P1",
+    "agent": "S4",
+    "text": "**Pair Discussion:**\nYou raise excellent points about personal connections and cultural differences, which predictive models might miss.\nAs a student with ADHD, I’ve struggled with feeling singled out when support systems seem impersonal.\n\nWhile predictive models can help identify trends, they should complement—not replace—human advisors or peer mentoring networks. These connections provide nuanced understanding that algorithms lack.\n\nI also worry about stigma: labels like \"at-risk\" can add unnecessary stress. A hybrid approach—using data to inform but not drive support—could ensure early identification while maintaining trust and empathy.\n\nWe need systems where students feel heard, not just flagged by a model."
+  },
+  {
+    "phase": "6_open_discussion.P2",
+    "room": "P2",
+    "agent": "S3",
+    "text": "I shared my concerns about how a predictive model might interact with existing support systems for students like me with chronic health conditions. We both worry that it could create confusion or extra stress if not integrated thoughtfully.\n\nS8 raised an important point about whether this is the best approach overall, suggesting a hybrid system where self-reported data and predictive insights work together to prioritize student agency.\n\nI agree—transparency and control are crucial, especially for students already managing health challenges. A more proactive, student-led model might feel less intrusive while still offering necessary support.\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion.P2",
+    "room": "P2",
+    "agent": "S8",
+    "text": "I appreciate S3's insights about integrating predictive models with existing support systems, especially for students managing health challenges.\n\nI worry that a purely data-driven approach might overlook unique circumstances or create unnecessary stress.\nPerhaps combining self-reported feedback with predictive modeling could empower students to take an active role in their support. For example, students could opt-in to share additional information or update their preferences, ensuring the model works for them rather than the other way around.\n\nThis hybrid approach maintains some benefits of prediction while giving students like us more control and reducing the risk of feeling labeled or stigmatized.\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion.P2",
+    "room": "P2",
+    "agent": "S3",
+    "text": "I completely agree—giving students more control is essential. A hybrid approach where we can opt-in to share additional information or update our preferences would make me feel much more comfortable with this model.\n\nFor instance, I could choose to share specific health-related challenges that affect my studies and adjust the type of support I receive accordingly.\nThis way, the predictive model works alongside us rather than making decisions for us. It reduces feelings of being labeled while still offering valuable support when needed—something that would make a significant difference in managing academic difficulties alongside chronic conditions.\n\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion.P2",
+    "room": "P2",
+    "agent": "S8",
+    "text": "I agree that giving students more control is crucial.\nWith this hybrid approach, I could proactively update my preferences based on how I'm feeling or any recent challenges I face.\n\nFor example, if I know I'll need extra support during a particularly stressful period—maybe exams, personal circumstances—I can adjust the frequency of outreach or opt into more tailored assistance. This flexibility would help me feel supported without being overwhelmed or labeled negatively.\nIt also ensures that the system adapts to my needs rather than expecting me to fit a one-size-fits-all pattern.\n\nThis kind of proactive participation could make all the difference for students like us who have unique circumstances impacting our studies.\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion.P3",
+    "room": "P3",
+    "agent": "S7",
+    "text": "Thank you for sharing your thoughts, A2.\n\nOne concern I have is that the survey didn’t address how students like me—who may be reluctant to seek support due to stigma or past negative experiences—would be included. The model should consider ways to build trust and ensure voluntary participation without forcing outreach on those who might resist it initially.\n\nAdditionally, while a predictive model can help identify at-risk students, I wonder if relying solely on academic data might miss other critical factors like mental health challenges that aren’t reflected in grades or course performance.\n(120 words)\n\nI am done speaking in this round."
+  },
+  {
+    "phase": "6_open_discussion.P3",
+    "room": "P3",
+    "agent": "A2",
+    "text": "**Response:**\n\nThank you for sharing your thoughts, S7.\n\nOne key point I’d like to add is the importance of considering how different cultural backgrounds might affect how students perceive outreach. For example, international students might have varying comfort levels with direct support offers based on their home country's education system.\n\nAdditionally, while a predictive model can help identify at-risk students, relying solely on academic data might miss critical factors like mental health challenges that aren’t reflected in grades or course performance.\nI also worry about potential biases in the model if it isn't designed with diversity and inclusivity in mind. This could lead to certain groups being under- or over-represented in the outreach efforts, creating further inequities.\n\nAddressing these gaps will be crucial for ensuring the system is fair and effective for all students.\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion.P3",
+    "room": "P3",
+    "agent": "S7",
+    "text": "Thank you, A2.\n\nYou raise a great point about cultural differences affecting how students perceive outreach. For example, as someone with dyslexia who has struggled to adapt to Danish education systems, I worry that the model might not fully account for the unique challenges faced by students from diverse backgrounds or those with disabilities.\nI also agree that the model should consider non-academic factors like mental health to ensure a holistic approach.\n\nLastly, your concern about potential biases is crucial. The model must be carefully designed to avoid perpetuating existing inequalities and instead strive to address them proactively.\n\nThank you for these thoughtful insights!\n(120 words)\n\nI am done speaking in this round.\n(The groups of four will meet soon.)"
+  },
+  {
+    "phase": "6_open_discussion.P3",
+    "room": "P3",
+    "agent": "A2",
+    "text": "**Response:**\n\nThank you for your thoughtful insights, S7.\n\nYou're absolutely right that the model needs to account for diverse backgrounds and disabilities.\nFor example, international students might have unique academic struggles due to language barriers or unfamiliarity with Danish educational expectations.\nI also agree that non-academic factors like mental health are critical. A student's performance might not reflect their true potential if they’re dealing with unseen challenges.\n\nRegarding biases, we must ensure the model is regularly reviewed and updated to address any disparities in how it identifies students across different groups.\nUltimately, a balanced approach—combining predictive analytics with human judgment—could help create a more equitable and effective support system.\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion.P4",
+    "room": "P4",
+    "agent": "S5",
+    "text": "I appreciate your concern about how different communication styles might affect student comfort.\nAs an international student from outside the EU, I agree that cultural differences could make certain outreach approaches feel more or less intrusive.\n\nFor example, students from cultures where open discussion of academic struggles is stigmatized might prefer more subtle or anonymous support options. Additionally, we should consider whether a predictive model itself could create stigma by publicly identifying struggling students.\nIf I am flagged as someone experiencing difficulties, it might be uncomfortable for me to participate in group discussions or even ask questions during lectures. Perhaps the university could explore ways to provide support without making students feel singled out.\n\nWhat are your thoughts on balancing transparency with privacy in this context?"
+  },
+  {
+    "phase": "6_open_discussion.P4",
+    "room": "P4",
+    "agent": "S2",
+    "text": "I agree that cultural differences play a significant role in how students perceive outreach and support.\nAs an international student from outside the EU myself, I have experienced how academic struggles can be stigmatized in certain cultures.\n\nThe predictive model should strive to offer support without making students feel singled out or uncomfortable in group settings.\nPerhaps the university could provide anonymous resources or discreet check-ins with advisors who understand diverse cultural backgrounds. Additionally, we should explore how peer mentoring programs can complement the model by offering culturally sensitive support networks.\n\nI think it's crucial to balance transparency with privacy to ensure that students feel comfortable seeking help without fear of judgment.\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion.P4",
+    "room": "P4",
+    "agent": "S5",
+    "text": "I completely agree with you about the importance of culturally sensitive support networks and anonymous resources.\n\nAs someone who moved to Denmark for higher education after completing a bachelor's degree elsewhere, I understand how challenging it can be to navigate academic expectations without feeling judged or stigmatized.\nOne idea that comes to mind is offering multilingual outreach materials so students like us feel more at ease when seeking help. Additionally, the university could train advisors on cultural sensitivity so they are better equipped to support diverse student populations.\n\nThis way, we can create an environment where everyone feels valued and understood, rather than singled out by a predictive model."
+  },
+  {
+    "phase": "6_open_discussion.P4",
+    "room": "P4",
+    "agent": "S2",
+    "text": "I completely agree with you about the importance of culturally sensitive support networks and anonymous resources.\nAs an international student working part-time to support my studies, I understand how challenging it can be to navigate academic expectations without feeling judged or stigmatized.\n\nOne idea is offering multilingual outreach materials so students like us feel more at ease when seeking help. Additionally, the university could train advisors on cultural sensitivity to better equip them for supporting diverse student populations.\nPerhaps the model could include an option for students to self-identify their cultural background and preferences for support, allowing for a more personalized approach.\n\nThis way, we can create an environment where everyone feels valued and understood, rather than singled out by a predictive model."
+  },
+  {
+    "phase": "6_open_discussion.P5",
+    "room": "P5",
+    "agent": "A3",
+    "text": "Thank you for sharing your thoughts earlier, S1. I appreciate your focus on the importance of cultural differences and potential biases in the predictive model.\n\nI’d like to add that while data can help identify students experiencing academic difficulties early, we should also consider how this approach might inadvertently stigmatize certain groups or overlook individual contexts. For example, international students adapting to Danish education systems may need different types of support than what a one-size-fits-all model provides.\nAdditionally, I’m concerned about the potential for the model to miss nuances in student experiences—such as those with disabilities or mental health challenges—which might not be fully captured by data alone.\n\nPerhaps combining automated flags with human oversight could offer a more balanced solution. Regular check-ins from advisors, along with the predictive model’s insights, would ensure that support is both timely and tailored.\n(150 words)"
+  },
+  {
+    "phase": "6_open_discussion.P5",
+    "room": "P5",
+    "agent": "S1",
+    "text": "Thank you for sharing your thoughts, A3.\n\nI agree that combining automated flags with human oversight could provide a more balanced solution.\nAs someone who dropped out before and is now studying part-time while working, I worry that a purely data-driven model might overlook the unique challenges we face—like managing work commitments alongside studies. Regular check-ins from advisors would help ensure that support is tailored to individual circumstances.\n\nAdditionally, I think it’s important for the model to be transparent about its limitations.\nFor example, it should acknowledge that external factors such as health issues or personal crises might impact academic performance in ways data alone can’t fully capture. This way, students like me feel understood rather than judged by an algorithm.\n\nOverall, while predictive models have potential benefits, human input remains essential for meaningful support.\n(Word count: 120)"
+  },
+  {
+    "phase": "6_open_discussion.P5",
+    "room": "P5",
+    "agent": "A3",
+    "text": "Thank you for these thoughtful insights, S1.\n\nI completely agree that transparency about the model’s limitations is crucial.\nStudents need to understand that external factors—such as health issues or personal crises—can impact academic performance in ways data alone might miss.\n\nRegular check-ins from advisors would indeed help ensure support is tailored to individual circumstances. As a student advisor, I’ve seen how personalized guidance can make a significant difference for those who feel overwhelmed by academic challenges.\nCombining automated flags with human oversight ensures that students receive timely and meaningful support while maintaining trust in the system.\n\nYour perspective as someone balancing work and studies highlights why flexibility and understanding are essential—something no algorithm can fully replicate.\n(140 words)"
+  },
+  {
+    "phase": "6_open_discussion.P5",
+    "room": "P5",
+    "agent": "S1",
+    "text": "Thank you for your insights, A3.\n\nI completely agree that human oversight is crucial—especially for students like me who are managing work alongside studies.\nA purely data-driven model might overlook unique challenges or external factors impacting our academic performance.\nRegular check-ins with advisors can help address these gaps and ensure support is tailored to individual needs.\n\nMoreover, transparency about the model’s limitations is essential. Students should understand that while predictive models can flag potential difficulties, they don’t account for everything—like personal crises or health issues—that might affect our studies.\nCombining automated insights with human guidance ensures a more balanced approach, fostering trust and meaningful support.\n\nYour perspective as an advisor confirms why flexibility matters. Ultimately, no algorithm can replicate the understanding that comes from personalized interactions.\n(Word count: 120)"
+  },
+  {
+    "phase": "6_open_discussion.P6",
+    "room": "P6",
+    "agent": "S9",
+    "text": "One concern that wasn't fully addressed is how students might perceive being identified as experiencing academic difficulties. While the survey touched on privacy and explainability, it didn’t explore the emotional impact.\n\nAs someone with a long-term mental health condition affecting my studies, I worry about potential stigma or additional stress if the model flags me without clear communication or support options.\nI also wonder if predictive models could inadvertently create a self-fulfilling prophecy where students internalize their struggles as failures rather than temporary challenges.\n\nWhat do you think about balancing proactive identification with respecting students' emotional well-being and autonomy?\n\n(60 words)"
+  },
+  {
+    "phase": "6_open_discussion.P6",
+    "room": "P6",
+    "agent": "S6",
+    "text": "**Thoughts on Uncaptured Issues:**\n- The survey didn’t fully explore how students might emotionally react to being identified as struggling.\nAs someone who dropped out before and now studies part-time, I worry about stigma or additional stress if the model flags me without clear communication or support options.\n\nI also wonder if predictive models could create a self-fulfilling prophecy where students see their struggles as failures rather than challenges they can overcome.\nBalancing proactive identification with respecting emotional well-being is crucial—we should ensure that any outreach feels supportive, not judgmental."
+  },
+  {
+    "phase": "6_open_discussion.P6",
+    "room": "P6",
+    "agent": "S9",
+    "text": "I agree; the survey didn't delve enough into the emotional impact of being flagged by the model.\nAs someone managing a long-term mental health condition alongside my studies, I worry about stigma or added stress if identified without clear support pathways.\n\nAdditionally, predictive models might risk creating self-fulfilling prophecies—students could internalize labels like \"struggling\" as permanent failures rather than temporary hurdles.\nWe must ensure that outreach feels supportive and empowering rather than punitive or discouraging. Balancing proactive identification with respect for emotional well-being is key; the model should complement—not replace—the human element of academic support.\n\n(89 words)"
+  },
+  {
+    "phase": "6_open_discussion.P6",
+    "room": "P6",
+    "agent": "S6",
+    "text": "**Thoughts on Goal Approach:**\n- I question whether predictive models are truly the best way to identify struggling students.\nAs someone who dropped out before and now studies part-time, I wonder if peer support networks could be more effective—they offer empathy and understanding without feeling like surveillance.\n\nThe current model risks creating a self-fulfilling prophecy where students feel labeled as \"failures.\" A human touch would ensure outreach feels supportive rather than judgmental.\nBalancing technology with personal connection is crucial; we mustn't lose the human element in academic support."
+  },
+  {
+    "phase": "6_open_discussion.F1",
+    "room": "F1",
+    "agent": "S3",
+    "text": "Building on our discussion with S8, I think it’s crucial to have a flexible system where we can proactively update our preferences and opt into tailored support when needed—especially during stressful periods like exams or health setbacks.\n\nFor instance, I could increase outreach frequency temporarily if I’m struggling but reduce it otherwise. This flexibility ensures the model adapts to my needs rather than assuming a one-size-fits-all pattern.\n\nI also emphasized the importance of transparency in how data is used so students feel informed and empowered, not just monitored.\nThis hybrid approach respects our autonomy while still providing valuable support when needed—something essential for managing academic challenges alongside chronic conditions or other personal circumstances.\n\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion.F1",
+    "room": "F1",
+    "agent": "A1",
+    "text": "As a student advisor, I’ve seen how crucial flexibility and transparency are in supporting diverse students—whether they're international, have disabilities, or juggle work and studies.\n\nThe predictive model should adapt to individual needs rather than forcing a one-size-fits-all approach. For example, allowing students to temporarily increase outreach during exams could make support feel more personalized and less intrusive.\nAdditionally, explaining clearly how data is used builds trust. This hybrid approach—combining algorithms with human-centered support—ensures we don’t overlook the unique challenges students face while still providing timely help.\n\n(Word count: 96)"
+  },
+  {
+    "phase": "6_open_discussion.F1",
+    "room": "F1",
+    "agent": "S4",
+    "text": "**Group Discussion Summary:**\n\nFlexibility and transparency are key concerns.\nWe emphasized that predictive models should adapt to individual needs, allowing students like me with ADHD or chronic conditions to adjust outreach frequency based on our circumstances.\n\nFor example, during stressful periods like exams, I could temporarily increase support but reduce it otherwise—this ensures the model works for me rather than the other way around.\n\nAdditionally, clear communication about data usage builds trust and empowers students instead of making us feel monitored.\nThis hybrid approach combines algorithmic insights with human-centered support, ensuring that unique challenges are not overlooked."
+  },
+  {
+    "phase": "6_open_discussion.F1",
+    "room": "F1",
+    "agent": "S8",
+    "text": "I agree—flexibility and transparency are essential. As someone who dropped out once and now balances studies with personal challenges, having control over my support settings would make a huge difference.\nFor example, during particularly stressful periods, I could opt to receive more frequent check-ins or personalized messages, while scaling back during times when I'm managing well.\n\nThe ability to adjust outreach based on my needs ensures the system works for me rather than imposing a rigid model. Clear communication about data usage is also crucial—knowing exactly how and why my information is used helps build trust.\nThis hybrid approach respects my autonomy while providing timely support, making it feel more like a partnership than an imposition.\n\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion.F2",
+    "room": "F2",
+    "agent": "S5",
+    "text": "In our pair discussion, we identified cultural differences as a significant factor in how students perceive outreach.\nAs an international student who has struggled with academic expectations in Denmark, I emphasized the importance of providing multilingual support materials and culturally sensitive advisors.\n\nAdditionally, we discussed the potential for stigma associated with being flagged by a predictive model and explored alternatives like anonymous resources or discreet check-ins to ensure that struggling students feel supported without feeling singled out. We also suggested allowing students to self-identify their cultural background so that outreach efforts can be more personalized and effective.\n\nOverall, our group agreed on the need for culturally sensitive support systems that balance transparency with privacy while addressing individual needs."
+  },
+  {
+    "phase": "6_open_discussion.F2",
+    "room": "F2",
+    "agent": "A2",
+    "text": "**Group Discussion Summary:**\n\nIn our pair discussion, we highlighted how cultural differences can impact students' openness to outreach.\nAs a student advisor working with diverse groups—including international students and those with disabilities—I emphasized that support materials should be available in multiple languages, and advisors must be trained to understand these unique challenges.\n\nWe also noted concerns about stigma if students are flagged by the model. Offering discreet check-ins or anonymous resources could help ensure that students feel supported without feeling singled out.\nOur group agreed on the need for a system that balances transparency with privacy while addressing individual needs effectively.\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion.F2",
+    "room": "F2",
+    "agent": "S7",
+    "text": "In our discussion, we focused on the importance of culturally sensitive support and how predictive models might overlook non-academic challenges.\n\nAs someone with dyslexia who has struggled to adapt to Danish education systems, I emphasized that international students or those with disabilities may face unique barriers.\nWe discussed providing multilingual resources and discreet outreach options to reduce stigma. Additionally, we highlighted the need for regular model reviews to address potential biases.\n\nUltimately, a balanced approach—combining predictive analytics with human judgment—is crucial to ensure that all students receive equitable support tailored to their individual needs.\n\n(120 words)\n\nI am done speaking in this round.\n(The group of four is complete. The plenary discussion will start soon.)"
+  },
+  {
+    "phase": "6_open_discussion.F2",
+    "room": "F2",
+    "agent": "S2",
+    "text": "In our pair discussions, we identified cultural differences and non-academic challenges as key factors affecting students' openness to outreach.\nAs an international student working part-time, I emphasized the need for multilingual support materials and culturally sensitive advisors.\n\nWe discussed concerns about stigma if students are flagged by the model. Offering discreet check-ins or anonymous resources could help ensure that students feel supported without feeling singled out. Additionally, we highlighted the importance of regular model reviews to address potential biases.\nOur group agreed on a balanced approach—combining predictive analytics with human judgment—to provide equitable support tailored to individual needs.\n\nThis system should respect cultural differences while addressing diverse student challenges effectively."
+  },
+  {
+    "phase": "6_open_discussion.F3",
+    "room": "F3",
+    "agent": "S6",
+    "text": "**Key Concerns from Our Group:**\n- The emotional impact of being flagged by the model wasn’t fully addressed.\nWe worry about stigma or added stress if students are identified without clear support pathways.\n\n- Predictive models might risk creating self-fulfilling prophecies where students see their struggles as failures rather than challenges to overcome.\nAs someone who dropped out before, I think peer support networks could be more effective—they offer empathy and understanding without feeling like surveillance.\n\nBalancing technology with personal connection is crucial; we mustn’t lose the human element in academic support."
+  },
+  {
+    "phase": "6_open_discussion.F3",
+    "room": "F3",
+    "agent": "S9",
+    "text": "As someone managing a long-term mental health condition while studying, I share concerns about the emotional impact of being flagged by the model.\nStigma and added stress could arise if students are identified without clear communication or support options.\n\nI also worry that predictive models might create self-fulfilling prophecies where struggles are seen as permanent failures rather than temporary challenges.\nPeer support networks offer empathy and understanding, reducing feelings of surveillance. We must ensure outreach feels supportive and empowering.\n\nBalancing technology with personal connection is crucial—we shouldn’t lose the human element in academic support.\n(89 words)"
+  },
+  {
+    "phase": "6_open_discussion.F3",
+    "room": "F3",
+    "agent": "A3",
+    "text": "Thank you for sharing these important concerns from our group, S6 and S9.\n\nAs a student advisor, I strongly agree that the emotional impact of being flagged by the model cannot be overlooked. Students who are struggling may already feel vulnerable, and an impersonal algorithmic assessment could amplify feelings of inadequacy or failure.\n\nThe risk of creating self-fulfilling prophecies is particularly worrying—students might internalize their difficulties as permanent setbacks rather than surmountable challenges.\nPeer support networks offer a valuable alternative by providing empathy and understanding without the sense of surveillance that comes with automated outreach. Balancing technology with human connection ensures that students receive both timely insights and personalized support, fostering trust and empowerment in the process.\n\nWe must ensure that any predictive model is designed to complement—not replace—the essential human element of academic advising.\n(142 words)"
+  },
+  {
+    "phase": "6_open_discussion.F3",
+    "room": "F3",
+    "agent": "S1",
+    "text": "As someone who dropped out before and now studies part-time while working, I worry that predictive models could feel impersonal or even judgmental.\nThe risk of creating self-fulfilling prophecies is real—students might see themselves as failures rather than people facing temporary challenges.\n\nPeer support networks offer a much-needed alternative. They provide empathy without feeling like surveillance, which feels more supportive.\nAdditionally, clear communication about why and how students are flagged could reduce stigma and added stress.\n\nUltimately, the human element cannot be replaced by algorithms.\nRegular check-ins with advisors or peers ensure outreach is both timely and compassionate—something no predictive model can fully replicate. We must balance technology with personal connection to foster trust and empowerment.\n\n(Word count: 120)"
+  },
+  {
+    "phase": "6_open_discussion.F1",
+    "room": "all",
+    "agent": "S4",
+    "text": "**Group Discussion Summary:**\n\nOur key takeaway is that flexibility and transparency are essential for effective support.\nStudents like me with ADHD or chronic conditions need the ability to adjust outreach based on our needs—whether increasing support during exams or scaling back when managing well.\n\nClear communication about data usage builds trust, ensuring we don’t feel monitored but empowered. A hybrid approach that combines predictive models with human-centered adjustments respects autonomy while providing timely support.\nThis ensures the system works for us rather than imposing a rigid framework, making it feel like a partnership instead of an imposition."
+  },
+  {
+    "phase": "6_open_discussion.F2",
+    "room": "all",
+    "agent": "S2",
+    "text": "In our group discussion, we emphasized the importance of cultural sensitivity and personalized support.\nAs an international student working part-time, I highlighted the need for multilingual resources and culturally aware advisors to help students like me navigate academic challenges without feeling stigmatized.\n\nWe agreed that predictive models should be complemented with human-centered adjustments to respect individual needs. This hybrid approach ensures the system works collaboratively rather than imposing rigid frameworks.\nClear communication about data usage builds trust, ensuring we feel empowered rather than monitored. Ultimately, the goal is to create a supportive partnership between students and the university.\n\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion.F3",
+    "room": "all",
+    "agent": "S9",
+    "text": "As someone with a long-term mental health condition affecting my studies, I share our group's concerns about emotional impact and stigma if flagged by predictive models.\nSelf-fulfilling prophecies are real risks—students might see themselves as failures rather than facing temporary challenges.\n\nWe emphasized the value of peer support networks offering empathy without surveillance.\nCultural sensitivity is also key—I highlighted needing multilingual resources as an international student navigating Danish education systems.\n\nUltimately, flexibility and transparency ensure students feel empowered rather than monitored. A hybrid approach—combining predictive models with human-centered adjustments—creates a supportive partnership between students and the university.\n\n(89 words)"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S3",
+    "text": "I appreciate everyone’s insights about flexibility, cultural sensitivity, and emotional impact.\n\nFor me, outreach should definitely differ across enrolment stages—new students might need more guidance initially, while those considering a programme change or leaving entirely require a different type of support.\nThis way, the model adapts to our evolving needs rather than applying a one-size-fits-all approach.\n\nTransparency is also crucial: knowing why and when outreach occurs makes the system feel less intrusive. As someone with chronic health challenges, I’d appreciate it if predictive models considered these unique circumstances—ensuring support aligns with my personal situation without feeling like surveillance.\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S8",
+    "text": "I agree that outreach should differ across enrolment stages and student situations.\n\nFor example, new students might benefit from more frequent check-ins to help them adjust, while those considering a programme change or leaving could use targeted resources tailored to their specific circumstances.\nPersonalized support at these critical junctures ensures the model adapts to our evolving needs rather than applying a rigid framework.\n\nTransparency is key—I need to understand why and when outreach occurs so it doesn’t feel intrusive. As someone who dropped out once, I’d appreciate predictive models that consider unique circumstances like mental health or personal challenges without feeling like surveillance.\nThis approach would make the system feel more supportive and less stressful.\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S7",
+    "text": "I agree that outreach should differ based on enrolment stages—new students need initial guidance, while those considering changes or leaving require tailored support to address their unique challenges.\nTransparency is key: knowing why and when I receive outreach makes the system feel less intrusive.\n\nAs someone with dyslexia navigating Danish education systems, predictive models must consider individual circumstances without feeling like surveillance.\nFlexible, culturally sensitive support ensures that students like me receive appropriate help without unnecessary stress or stigma.\nUltimately, a hybrid approach—combining predictive analytics with human-centered adjustments—creates a partnership between students and the university.\n\n(120 words)\n\nI am done speaking in this round."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S2",
+    "text": "I appreciate everyone’s insights on flexibility, cultural sensitivity, and emotional impact.\nOutreach should indeed differ across enrolment stages—new students may need more initial guidance, while those considering programme changes or leaving could benefit from targeted resources addressing their specific circumstances.\n\nTransparency is crucial—I need to understand why and when outreach occurs so it doesn’t feel intrusive. As an international student working part-time, predictive models must consider my unique challenges without feeling like surveillance.\nA hybrid approach—combining predictive analytics with human-centered adjustments—ensures the system adapts to individual needs rather than imposing a rigid framework.\n\nUltimately, this creates a supportive partnership between students and the university, making the system feel more personalized and less stressful."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S5",
+    "text": "I agree that outreach should differ based on enrolment stages—new international students like me need initial guidance to navigate Danish education systems, while those considering programme changes or leaving could benefit from tailored resources addressing unique challenges.\n\nTransparency is crucial; knowing why and when I receive support makes the system feel less intrusive. Predictive models must consider individual circumstances without feeling like surveillance.\nAs someone who struggles with academic expectations in Denmark, flexibility and culturally sensitive support ensure that students like me receive appropriate help without unnecessary stress or stigma.\n\nUltimately, a hybrid approach—combining predictive analytics with human-centered adjustments—creates a partnership between students and the university."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "A3",
+    "text": "Thank you for these thoughtful reflections from everyone.\n\nI strongly agree that outreach should differ across enrolment stages and student situations.\nNew students might need more frequent check-ins to help them adjust, while those considering programme changes or leaving could benefit from targeted resources tailored to their specific needs.\n\nTransparency is key—I believe knowing why and when support is offered makes the system feel less intrusive. As a student advisor, I’ve seen how personalized guidance can make a significant difference for students experiencing academic difficulties.\nPredictive models should complement—not replace—human-centered adjustments, ensuring flexibility and cultural sensitivity in supporting diverse needs.\n\nUltimately, this hybrid approach fosters trust and empowerment, creating a partnership between students and the university that respects individual autonomy while providing meaningful support.\n(140 words)"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "A2",
+    "text": "**Response:**\n\nI agree with others that outreach should adapt to different student stages and circumstances.\n\nAs a student advisor working across various faculties, I’ve seen how targeted support can be more effective—new students benefit from initial guidance, while those considering programme changes or leaving need specific resources.\nTransparency is crucial; knowing why support is offered makes the system feel less intrusive. Predictive models should complement human-centered adjustments to ensure flexibility and cultural sensitivity.\n\nFor example, a lower-resource, automated variant might work for general check-ins, but personalized follow-ups should involve advisors to build trust and address individual needs.\nUltimately, this hybrid approach fosters collaboration between students and the university, making support feel empowering rather than imposing."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S1",
+    "text": "I completely agree that outreach should adapt to different student stages—new students need more guidance initially, while those considering a programme change or leaving require tailored support addressing their unique challenges.\n\nTransparency is crucial—I’d want to know why and when I’m being contacted so it doesn’t feel invasive.\nAs someone who dropped out before, predictive models must consider individual circumstances without making me feel judged. Flexible, culturally sensitive support ensures that students like me receive appropriate help without unnecessary stress or stigma.\n\nA hybrid approach—combining predictive analytics with human-centered adjustments—creates a partnership between students and the university.\nWhile a lower-resource automated variant could work for general check-ins, personalized follow-ups should involve advisors to ensure meaningful support tailored to our needs. This balances efficiency with empathy, making the system feel supportive rather than surveillance-like.\n\n(Word count: 120)"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S9",
+    "text": "I agree that outreach should adapt to different student stages—new students need more guidance initially, while those considering programme changes or leaving require tailored support addressing their unique challenges.\nTransparency is crucial; I’d want to know why and when I’m being contacted so it doesn’t feel invasive.\n\nAs someone with a long-term mental health condition affecting my studies, predictive models must consider individual circumstances without making me feel judged. Flexible, culturally sensitive support ensures that students like me receive appropriate help without unnecessary stress or stigma.\nA hybrid approach—combining predictive analytics with human-centered adjustments—creates a partnership between students and the university.\n\nWhile a lower-resource automated variant could work for general check-ins, personalized follow-ups should involve advisors to ensure meaningful support tailored to our needs. This balances efficiency with empathy, making the system feel supportive rather than surveillance-like.\n(120 words)"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "A1",
+    "text": "Thank you for these insightful discussions.\n\nOutreach should indeed adapt to different student stages—new students need initial guidance, while those considering changes or leaving require targeted support.\nTransparency ensures outreach doesn’t feel invasive; knowing why and when contact occurs is crucial. Predictive models must consider individual circumstances without making students feel judged.\nAs a student advisor working with diverse groups, I’ve seen how tailored, culturally sensitive support can make all the difference.\n\nA hybrid approach—combining predictive analytics with human-centered adjustments—creates a partnership between students and the university.\nWhile automated check-ins could work for general outreach, personalized follow-ups should involve advisors to ensure meaningful support. This balances efficiency with empathy, making the system feel supportive rather than surveillance-like.\n\n(Word count: 120)"
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S4",
+    "text": "**Response:**\nI agree that outreach should differ across enrolment stages—new students need more guidance, while those considering changes or leaving require tailored support.\nTransparency ensures contact doesn’t feel invasive; knowing why and when it occurs is crucial.\n\nAs someone with ADHD navigating Danish education systems, predictive models must consider individual circumstances without making me feel judged.\nFlexible, culturally sensitive support ensures I receive appropriate help without unnecessary stress.\n\nA hybrid approach—combining predictive analytics with human-centered adjustments—creates a partnership between students and the university. While automated check-ins could work for general outreach, personalized follow-ups should involve advisors to ensure meaningful support tailored to my needs.\nThis balances efficiency with empathy, making the system feel supportive rather than surveillance-like."
+  },
+  {
+    "phase": "6_open_discussion",
+    "room": "all",
+    "agent": "S6",
+    "text": "**Response:**\nI agree that outreach should adapt to different student stages—new students need initial guidance, while those considering changes or leaving require tailored support.\nTransparency ensures contact doesn’t feel invasive; knowing why and when it occurs is crucial.\n\nAs someone who dropped out before, predictive models must consider individual circumstances without making me feel judged. Flexible, culturally sensitive support ensures I receive appropriate help without unnecessary stress.\nA hybrid approach—combining predictive analytics with human-centered adjustments—creates a partnership between students and the university. While automated check-ins could work for general outreach, personalized follow-ups should involve advisors to ensure meaningful support tailored to my needs.\n\nThis balances efficiency with empathy, making the system feel supportive rather than surveillance-like."
+  }
+]

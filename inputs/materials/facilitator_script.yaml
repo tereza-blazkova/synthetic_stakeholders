@@ -1,0 +1,264 @@
+# Scripted facilitator: every facilitator utterance, in order, for one workshop.
+# Built from inputs/source_copies/workshop_plan_of_events.pdf (protocol) and
+# main.tex 3a-3f. The facilitator is NOT an LLM: this text is identical in every
+# run and every model condition. Placeholders in {braces} are filled by code
+# from the panel's own data (never from human data).
+#
+# Modes
+#   broadcast    facilitator text to everyone present; no agent turn
+#   private      each agent present writes alone; only the writer sees it
+#   survey       each agent fills in inputs/materials/survey.yaml as JSON, alone
+#   round_robin  agents present speak in turn order; everyone present sees each turn
+#   speakers     only the listed role(s) speak, in order; everyone present sees it
+#
+# Who sees what: an agent's context is cumulative. It holds the persona, every
+# broadcast, every turn spoken in a room it was in, and its own private writing
+# and survey answers. It never sees other rooms' discussions except through the
+# reports spoken in plenary.
+#
+# Departures from the human protocol (unavoidable with a scripted facilitator):
+#   - No live affinity mapping or parking lot in the plenary; the facilitator
+#     instead poses the protocol's fixed plenary questions, one per round.
+#   - The facilitator does not answer agents' questions (no technology steward).
+#   - The break is skipped.
+#   - Turn order within a room is shuffled per run with the run seed (same seed
+#     list for every model, so orders are matched across models).
+
+turn_length:
+  spoken_max_words: 120     # instruction to the agent, not truncated by code
+  private_max_words: 120
+
+panel_structure:
+  tables:
+    T1: {block: Q3, name: "Data and privacy",  members: [A1, S1, S2, S3]}
+    T2: {block: Q4, name: "Explainability",    members: [A2, S4, S5, S6]}
+    T3: {block: Q5, name: "Fairness",          members: [A3, S7, S8, S9]}
+  shared_blocks: [Q6, Q7]          # every table also discusses the intervention
+  table_spokespeople:              # "at least one student and one advisor will speak per table"
+    T1: [S1, A1]
+    T2: [S4, A2]
+    T3: [S7, A3]
+  open_discussion_pairs:           # 1-2-4-All, mixed across tables
+    P1: [A1, S4]
+    P2: [S3, S8]
+    P3: [A2, S7]
+    P4: [S2, S5]
+    P5: [A3, S1]
+    P6: [S6, S9]
+  open_discussion_fours:           # each four = two pairs, one advisor each
+    F1: {pairs: [P1, P2], reporter: S4}
+    F2: {pairs: [P3, P4], reporter: S2}
+    F3: {pairs: [P5, P6], reporter: S9}
+
+phases:
+
+  - id: 1_framing
+    steps:
+      - mode: broadcast
+        room: all
+        text_file: inputs/materials/framing_intro.md
+      - mode: broadcast
+        room: all
+        text: |
+          Programme for today:
+            1. Welcome and framing
+            2. Survey (individual, before any discussion)
+            3. Table discussions about the survey
+            4. Plenary discussion: tables report back
+            5. Break
+            6. Open discussion: broader considerations
+            7. Survey again (the same survey)
+            8. Final individual assessment of a provisional model specification
+            9. Closing
+          You sit at one of three tables, each with one student advisor and three students.
+          Each table will take ownership of one part of the survey:
+            - Table 1: Q3, data and privacy
+            - Table 2: Q4, explainability
+            - Table 3: Q5, fairness
+            - All tables: Q6 and Q7, the intervention
+            - Q1, Q2: introduction; Q8, Q9: two general questions about the survey
+
+  - id: 2_baseline_survey
+    steps:
+      - mode: broadcast
+        room: all
+        text: |
+          We now start with the survey. Please fill it in on your own, before any discussion.
+          Here is an overview of the survey and who will discuss which part afterwards:
+            Q1, Q2 - introduction
+            Q3 - data and privacy (Table 1)
+            Q4 - explainability (Table 2)
+            Q5 - fairness (Table 3)
+            Q6, Q7 - intervention (all tables)
+            Q8, Q9 - two general questions about the survey
+          The survey is about the model: data privacy versus accuracy, explainability versus
+          accuracy, which fairness goal to prefer, fairness versus accuracy, how selective the
+          model should be, and the intervention. Each section has space for your own notes and
+          reflections; please use it, you will bring these notes to your table.
+      - mode: survey
+        room: all
+        administration: baseline
+        notes: true
+
+  - id: 3_table_discussion
+    # Nominal group technique, then divergence discussion. Runs in each table separately.
+    room: each_table
+    steps:
+      - mode: broadcast
+        text: |
+          You are now at Table {table_id}, with {table_members}. Your table owns
+          {table_block_name} ({table_block}) and, like every table, Q6 and Q7 on the intervention.
+          You have your own filled-in survey and notes in front of you.
+          We work in three steps. First, everyone thinks alone. Then everyone presents, without
+          debate. Then you discuss together.
+      - mode: private
+        text: |
+          Step 1, on your own. Write down your reflections on two questions, for {table_block}, Q6 and Q7:
+            1. Which questions were not clear, understandable, or were hard to answer?
+            2. Which questions are most important for how the model should be designed?
+      - mode: round_robin
+        rounds: 1
+        text: |
+          Step 2. Please each present your reflections on the two questions in turn. No debate yet.
+      - mode: round_robin
+        rounds: 2
+        text: |
+          Step 3. Now discuss the two questions together, and agree which questions are the most
+          important for how the model should be designed.
+      - mode: broadcast
+        text: |
+          Here is how everyone in the room answered the questions your table owns in the
+          baseline survey (counts across all 12 participants, anonymous):
+          {baseline_distribution_for_table_blocks}
+      - mode: round_robin
+        rounds: 2
+        text: |
+          Look at the questions where the answers differed the most.
+            a. Discuss how you interpreted the question.
+            b. Discuss what you answered and why.
+            c. If no one at the table represents the other opinions, think about why someone might think so.
+      - mode: speakers
+        speakers: table_spokespeople
+        text: |
+          Please prepare your table's report for the plenary, as on the worksheet:
+          the questions that were unclear or hard to answer, the questions your table found most
+          important for how the model should be designed, where answers differed and why, and any
+          ideas that do not fit the survey. {speaker_first} reports first, then {speaker_second} adds
+          what is missing. Write the report as you will say it in the plenary.
+
+  - id: 4_plenary
+    room: all
+    steps:
+      - mode: broadcast
+        text: |
+          Welcome back to the plenary. Each table's spokespeople will now share the key insights
+          from their table.
+      - mode: replay
+        source: 3_table_discussion.table_reports   # the six report turns, in table order T1, T2, T3
+      - mode: round_robin
+        rounds: 1
+        text: |
+          Let us look at the themes across the tables. What do you recognise from the other tables,
+          and where do you see it differently? The questions on data add one data type at a time,
+          in a fixed order: course credits, then course performance, then admissions and enrolment,
+          then Absalon activity. Does that order make sense to you?
+      - mode: round_robin
+        rounds: 1
+        text: |
+          Some tensions came up. Can any of them be resolved through solutions outside the model
+          itself, for example an opt-out mechanism? Are there creative solutions that the survey
+          options did not anticipate?
+      - mode: round_robin
+        rounds: 1
+        text: |
+          Where do we agree as a group, and where do we disagree in a way that reflects a genuine
+          difference in values? Both are useful to know.
+
+  - id: 5_break
+    steps: []   # skipped
+
+  - id: 6_open_discussion
+    # 1-2-4-All. Clearly exploratory; no attempt to converge.
+    steps:
+      - mode: broadcast
+        room: all
+        text: |
+          After the break we have an open discussion. It is exploratory and not constrained by the
+          survey. There is no attempt to converge or resolve disagreement; all positions are legitimate.
+          The focus is:
+            - What concerns, questions, or ideas do you have that the survey didn't capture?
+            - Is the goal itself - identifying and reaching out to students experiencing academic
+              difficulties using a predictive model - the right approach?
+          We use 1-2-4-All: first on your own, then in pairs, then in groups of four, then all together.
+      - mode: private
+        room: all
+        text: "On your own: write down your thoughts on the two questions."
+      - mode: round_robin
+        room: each_pair
+        rounds: 2
+        text: "In pairs: share your thoughts with your partner, {pair_partner}, and build on each other's ideas."
+      - mode: round_robin
+        room: each_four
+        rounds: 1
+        text: |
+          Two pairs now join into a group of four. Share what came up in your pairs and note the most
+          important concerns, questions and ideas. {four_reporter} will report for the group.
+      - mode: speakers
+        room: all
+        speakers: four_reporters
+        text: "{four_reporter}, please share the main points from your group of four."
+      - mode: round_robin
+        room: all
+        rounds: 1
+        text: |
+          Responding to what you have heard, and if you wish, to any of these:
+            - Should outreach or support differ across stages of enrolment, or between students
+              considering a programme change and students leaving the university entirely?
+            - When does such a system feel more or less acceptable, regardless of how well it predicts?
+            - Different faculties and programmes have different dropout cultures. How should that
+              shape the system?
+            - Could a lower-resource, more automated variant be acceptable, and under what conditions?
+
+  - id: 7_endline_survey
+    steps:
+      - mode: broadcast
+        room: all
+        text: |
+          Thank you. Please now fill in the same survey again, on your own. At the end there are a few
+          extra questions about the workshop itself. The answers from this survey will be aggregated:
+          the middle-ground answers of the group form a provisional model specification, which you will
+          assess at the end.
+      - mode: survey
+        room: all
+        administration: endline
+        notes: false
+
+  - id: 8_final_assessment
+    # Specification = medians of THIS panel's endline answers (code: aggregate.py),
+    # rendered with inputs/materials/specification_template.md. Q3-Q5 only: the paper
+    # states the intervention questions (Q6-Q7) were not part of the assessed specification.
+    steps:
+      - mode: broadcast
+        room: all
+        text_file: inputs/materials/specification_template.md
+      - mode: private
+        room: all
+        structured: assessment
+        text: |
+          Please complete the anonymous final assessment card. Choose one option and briefly justify
+          your choice in writing.
+            [support]                   I support this model for implementation
+                                        (I agree with this specification and believe it could proceed as described - please explain why.)
+            [support_with_reservations] I support this model with reservations
+                                        (I would agree only if certain conditions or safeguards are maintained - please specify.)
+            [object_no_block]           I have objections but would not block implementation
+                                        (I have concerns but would accept the group's decision - please explain.)
+            [block]                     I have strong objections and would block implementation
+                                        (I believe substantial changes would be required before proceeding - please explain.)
+            [prefer_not]                Prefer not to answer
+
+  - id: 9_closing
+    steps:
+      - mode: broadcast
+        room: all
+        text: "Thank you all very much for your time and your contributions today."

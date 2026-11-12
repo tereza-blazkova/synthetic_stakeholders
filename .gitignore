@@ -1,0 +1,45 @@
+# --- environment and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# --- raw call logs: 5.5 GB, too large for GitHub (parsed per-run outputs are kept)
+runs/**/calls.jsonl
+runs/_logs/
+runs/post_review/_logs/
+runs/**/*.log
+runs/_smoke/
+runs/_superseded/
+runs/**/_fake/
+
+# --- copies of the EWS manuscript (not public); see inputs/SOURCES.md
+inputs/source_copies/
+
+# --- internal working files
+CLAUDE.md
+notes/
+synthetic_stakeholders_ucloud/
+synthetic_stakeholders_ucloud.zip
+paper/longpaper/
+paper/aes_template/
+
+# --- commercial font (not redistributable); figures fall back to Arial
+src/fonts/Helvetica.ttf
+
+# --- LaTeX build files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.xdv
+*.synctex.gz
+poster/preview.png
