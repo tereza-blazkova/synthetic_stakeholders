@@ -13,8 +13,8 @@ across repeated runs. The single manipulated factor is the LLM family: Qwen 3.5 
 Gemma 3 27B and Mistral Small 3.2 24B, all open weights at 4-bit (Ollama `q4_K_M`),
 20 seeded runs each.
 
-The human workshop is reported in a separate manuscript (Blazkova, Kizilcec, Koenecke
-and Bjerre-Nielsen, under review). This repository uses only the workshop *materials*
+The human workshop is reported in a separate manuscript (Blazkova, Kizilcec, Bjerre-Nielsen
+and Koenecke, under review). This repository uses only the workshop *materials*
 participants saw and the workshop *outcomes* (selection rules, chosen model, final
 votes). It contains no individual-level data.
 
