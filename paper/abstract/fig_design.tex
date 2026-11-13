@@ -30,7 +30,8 @@
   \node[stage=hum] (h3) at (2*\dx,0)  {3\,h deliberation};
   \node[stage=hum] (h4) at (3*\dx,0)  {Endline survey};
   \node[derived] (h5) at (4*\dx,0)    {Median rules};
-  \node[derived] (h6) at (5*\dx,0)    {Logistic regression\\+ performance};
+  % three lines: grows upward so its bottom edge lines up with the other boxes
+  \node[derived, anchor=south] (h6) at (5*\dx,-4.5mm) {Logistic regression\\+ performance};
 
   % ---- synthetic lane ----
   \node[stage=syn] (s1) at (0,-\dy)     {12 LLM agents\\(fictional personas)};
@@ -52,6 +53,7 @@
   % the comparisons: the same survey, before and after deliberation
   \draw[cmp] (h2.south) -- node[cmplabel] {compare\\baseline} (s2.north);
   \draw[cmp] (h4.south) -- node[cmplabel] {compare\\endline} (s4.north);
+  \draw[cmp] (h6.south) -- node[cmplabel] {compare\\model} (s6.north);
 
   % lane labels, the manipulated factor, the programmatic (not simulated) steps
   \node[lane, text=black!70] at ($(h1.west)+(-1.5mm,0)$) {Human\\workshop};
